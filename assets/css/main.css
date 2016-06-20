@@ -126,12 +126,12 @@ i:focus {
 .centered {
   text-align: center; }
 
-ul {
+ul, ol {
   list-style: none;
   margin-left: 0;
   padding-left: 1em;
   text-indent: -1em; }
-  ul li:before {
+  ul li:before, ol li:before {
     content: "\0BB \020"; }
 
 .menu.transition.visible {

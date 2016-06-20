@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
   $('.ui.embed').embed();
 
   var pathname = window.location.pathname;
-  $("#menu > a.item", ".labels > a").each(function(index) {
+  $("#menu > a.item").each(function(index) {
     if (pathname.toUpperCase().indexOf($(this).attr('href').toUpperCase()) != -1)
       $(this).addClass("active");
   });

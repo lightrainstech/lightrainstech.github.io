@@ -8,7 +8,7 @@
  * http://opensource.org/licenses/MIT
  *
  */
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic&subset=latin');
 /*!
  * # Semantic UI 2.1.8 - Reset
  * http://github.com/semantic-org/semantic-ui/
@@ -529,9 +529,9 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   background: #FFFFFF;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 1.4285em;
+  line-height: 1.6em;
   color: rgba(0, 0, 0, 0.87);
   font-smoothing: antialiased;
 }
@@ -545,7 +545,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   line-height: 1.2857em;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   font-weight: bold;
@@ -595,7 +595,7 @@ h5:last-child {
 
 p {
   margin: 0em 0em 1em;
-  line-height: 1.4285em;
+  line-height: 1.6em;
 }
 
 p:first-child {
@@ -692,7 +692,7 @@ input::selection {
   vertical-align: baseline;
   background: #E0E1E2 none;
   color: rgba(0, 0, 0, 0.6);
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0em 0.25em 0em 0em;
   padding: 0.78571429em 1.5em 0.78571429em;
   text-transform: none;
@@ -4567,7 +4567,7 @@ input::selection {
 /* Text Container */
 
 .ui.text.container {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   max-width: 700px !important;
   line-height: 1.5;
 }
@@ -4902,7 +4902,7 @@ input::selection {
   border: none;
   margin: calc(2rem -  0.14285em ) 0em 1rem;
   padding: 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2857em;
   text-transform: none;
@@ -9358,7 +9358,7 @@ img.ui.bordered.image {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
   line-height: 1.2142em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   padding: 0.67861429em 1em;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -11485,7 +11485,7 @@ ol.ui.list ol li,
 .ui.list > .item .header {
   display: block;
   margin: 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -13936,7 +13936,7 @@ ol.ui.horizontal.list li:before,
 /* Title */
 
 .ui.steps .step .title {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1.14285714em;
   font-weight: bold;
 }
@@ -14562,7 +14562,7 @@ ol.ui.horizontal.list li:before,
 .ui.form input[type="time"],
 .ui.form input[type="text"],
 .ui.form input[type="url"] {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   margin: 0em;
   outline: none;
   -webkit-appearance: none;
@@ -17896,7 +17896,7 @@ ol.ui.horizontal.list li:before,
   display: -ms-flexbox;
   display: flex;
   margin: 1rem 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   font-weight: normal;
   border: 1px solid rgba(34, 36, 38, 0.15);
@@ -20085,7 +20085,7 @@ Floated Menu / Item
   margin: 1em 0em;
   background: #F8F8F9;
   padding: 1em 1.5em;
-  line-height: 1.4285em;
+  line-height: 1.6em;
   color: rgba(0, 0, 0, 0.87);
   -webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
   transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease, box-shadow 0.1s ease;
@@ -20109,7 +20109,7 @@ Floated Menu / Item
 
 .ui.message .header {
   display: block;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   margin: -0.14285em 0em 0rem 0em;
 }
@@ -20188,7 +20188,7 @@ Floated Menu / Item
   cursor: pointer;
   position: absolute;
   margin: 0em;
-  top: 0.78575em;
+  top: 0.7em;
   right: 0.5em;
   opacity: 0.7;
   -webkit-transition: opacity 0.1s ease;
@@ -20764,7 +20764,7 @@ Floated Menu / Item
 .ui.card > .content > .header {
   display: block;
   margin: '';
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.85);
 }
 
@@ -20774,7 +20774,7 @@ Floated Menu / Item
 .ui.card > .content > .header:not(.ui) {
   font-weight: bold;
   font-size: 1.28571429em;
-  margin-top: -0.21425em;
+  margin-top: -0.3em;
   line-height: 1.2857em;
 }
 
@@ -21783,8 +21783,8 @@ a.ui.card:hover,
 
 .ui.items > .item > .content > .header {
   display: inline-block;
-  margin: -0.21425em 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: -0.3em 0em 0em;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.85);
 }
@@ -21832,7 +21832,7 @@ a.ui.card:hover,
   margin-top: 0.6em;
   max-width: auto;
   font-size: 1em;
-  line-height: 1.4285em;
+  line-height: 1.6em;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -22252,7 +22252,7 @@ a.ui.card:hover,
 
 .ui.statistics .statistic > .value,
 .ui.statistic > .value {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 4rem;
   font-weight: normal;
   line-height: 1em;
@@ -22267,7 +22267,7 @@ a.ui.card:hover,
 
 .ui.statistics .statistic > .label,
 .ui.statistic > .label {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.87);
@@ -22818,7 +22818,7 @@ a.ui.card:hover,
 
 .ui.accordion .title:not(.ui) {
   padding: 0.5em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -22876,7 +22876,7 @@ a.ui.card:hover,
 
 .ui.accordion.menu .item .title > .dropdown.icon {
   float: right;
-  margin: 0.21425em 0em 0em 1em;
+  margin: 0.3em 0em 0em 1em;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -25782,7 +25782,7 @@ a.ui.nag {
   min-width: min-content;
   z-index: 1900;
   border: 1px solid #D4D4D5;
-  line-height: 1.4285em;
+  line-height: 1.6em;
   max-width: 250px;
   background: #FFFFFF;
   padding: 0.833em 1em;
@@ -25795,7 +25795,7 @@ a.ui.nag {
 
 .ui.popup > .header {
   padding: 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1.125em;
   line-height: 1.2;
   font-weight: bold;

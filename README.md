@@ -1,3 +1,3 @@
-# lightrainstech.github.io
+# Lightrains Technolabs Pvt Ltd
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+[![lightrains](http://forthebadge.com/images/badges/built-with-love.svg)](http://lightrains.com)

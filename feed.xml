@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lightrains Technolabs Pvt Ltd</title>
+    <title>Lightrains Technolabs</title>
     <description>Design and build applications utilizing blockchain technology</description>
     <link>http://lightrains.com/</link>
     <atom:link href="http://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 20 Jun 2016 23:05:42 +0530</pubDate>
-    <lastBuildDate>Mon, 20 Jun 2016 23:05:42 +0530</lastBuildDate>
+    <pubDate>Fri, 24 Jun 2016 12:14:44 +0530</pubDate>
+    <lastBuildDate>Fri, 24 Jun 2016 12:14:44 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>What is a DAO aka Decentralized Autonomous Organization</title>
+        <description>&lt;p&gt;A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community&lt;/p&gt; &lt;p&gt;Essentially, it’s a non-human specific entity, who’s sole duty is to abide by a specific programmatic set of rules; or by the rules granted to it by decentralized consensus (majority decides what to do in a distributed manner).&lt;/p&gt; &lt;p&gt;So far, all contracts we listed were owned and executed by other accounts probably held by humans. But there is no discrimination against robots or humans in the Ethereum ecosystem and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other contracts.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;“On the Blockchain, no one knows you’re a fridge” - Richard Brown&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;what-is-a-dao-token&quot;&gt;What is a DAO token&lt;/h3&gt; &lt;p&gt;A DAO leverages smart contracts on the Ethereum blockchain so that anyone, anywhere in the world can be empowered to participate. In exchange for their early help, participants receive DAO tokens which hold many benefits.&lt;/p&gt; &lt;p&gt;Owning DAO tokens functions in a similar way to having shareholder rights in an actual company. &lt;br /&gt; &lt;strong&gt;By owning DAO tokens…&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;You can submit proposals for funding&lt;/li&gt; &lt;li&gt;You can vote on which proposals are funded&lt;/li&gt; &lt;li&gt;Receive profits from funded projects&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;technical&quot;&gt;Technical&lt;/h2&gt; &lt;p&gt;The code of a given DAO will be difficult to alter once the system is up and running, including bug fixes that would be trivial in centralised code. Corrections for a DAO would require writing new code and agreement to migrate all the funds. Although the code is visible to all, it is hard to repair, thus leaving known security holes open to exploitation unless a moratorium is called to enable...</description>
+        <pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</guid>
+        
+        <category>DAO</category>
+        
+        <category>The DAO</category>
+        
+        
+      </item>
     
       <item>
         <title>Compile and Deploy Solidity Contract</title>
@@ -304,6 +318,59 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
         
         <category>Bitcoin</category>
         
+        
+      </item>
+    
+      <item>
+        <title>Cryptocurrency 101 - Part 2/3 - Why use cryptocurrencies instead of cash?</title>
+        <description>&lt;p&gt;This is probably the most common question asked.
+First, we need to take a look at the evolution of trade:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initially, trade was done through a barter system. You have an asset I want, I have an asset you want, let’s trade. Here, a apple farmer can trade his apples to a sheep herder for wool.&lt;/li&gt;
+  &lt;li&gt;Here, we run into a problem. What if you don’t have something I want? Metals, particularly gold and silver, were often used as a mechanism for trade.&lt;/li&gt;
+  &lt;li&gt;With the rise of kingdoms and nations, many wanted to show their reign and would melt metals and recast them to showcase an emblem with their nation.&lt;/li&gt;
+  &lt;li&gt;Eventually, nations realized that metals weren’t efficient, and paper money was created.&lt;/li&gt;
+  &lt;li&gt;With the rise of the internet, we now have online banking, where currency is just digital figures.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a simple look, but it’s obvious that cryptocurrencies are the next evolution of trade.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Like most features in evolution, the unregulated — capitalistic supply/demand — aspect is based off the Great Recession of 2007.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;ui header medium source&quot;&gt;Sources&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://bitcoin.stackexchange.com/q/182/30316&lt;/li&gt;
+  &lt;li&gt;https://medium.com/@sebfung/cryptocurrencies-101-c1c0a5a3cc2&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 12 Jan 2016 00:00:00 +0530</pubDate>
+        <link>http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</guid>
+        
+        <category>Cryptocurrency</category>
+        
+        <category>Handbook</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Cryptocurrency 101 - Part 1/3 - The Basics</title>
+        <description>&lt;h2 id=&quot;what-is-a-cryptocurrency&quot;&gt;What is a Cryptocurrency?&lt;/h2&gt; &lt;p&gt;A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider.&lt;/p&gt; &lt;p&gt;Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers.&lt;/p&gt; &lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt; &lt;p&gt;Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency.&lt;/p&gt; &lt;h2 id=&quot;what-gives-them-their-value&quot;&gt;What gives them their value?&lt;/h2&gt; &lt;p&gt;They have value because they are scarce, fungible (one &lt;a href=&quot;https://bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; is as good as another), easily transferred, and easily verified. The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today.&lt;/p&gt; &lt;p&gt;They aren’t backed by anything because they’re a commodity. What is gold backed by?&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another.&lt;/p&gt; &lt;/blockquote&gt; &lt;h2 id=&quot;advantages-of-cryptocurrency&quot;&gt;Advantages of...</description>
+        <pubDate>Fri, 08 Jan 2016 00:00:00 +0530</pubDate>
+        <link>http://lightrains.com/blogs/cryptocurrency-101</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101</guid>
+        
+        <category>Cryptocurrency</category>
+        
+        
+        <category>Cryptocurrency</category>
         
       </item>
     

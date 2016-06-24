@@ -46,7 +46,8 @@ h2 {
 .masthead {
   padding: 5rem 0 4rem 0; }
   .masthead h1 {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-weight: 400; }
   .masthead h2 {
     font-size: 1.6rem;
     line-height: 2.4rem; }
@@ -69,6 +70,8 @@ h2 {
 
 .footer {
   padding: 2.5rem 0; }
+  .footer .slogan {
+    font-size: 12px; }
 
 .ui.text {
   font-size: 1.2rem; }
@@ -244,3 +247,7 @@ pre.highlight {
     display: none !important; } }
 .ui.menu.grid > .computer.only.row {
   padding: 0; }
+
+.fullw {
+  width: 100%;
+  margin-top: 40px; }

@@ -1,3 +1,6 @@
+(function () {
+   'use strict';
+}());
 jQuery(document).ready(function($) {
   jQuery('.dropdown').dropdown();
   $('.logoo').popup();
@@ -5,15 +8,15 @@ jQuery(document).ready(function($) {
   $('.ui.embed').embed();
 
   $('#moobmen').on('click', function() {
-    $('.ui.sidebar')
-    .sidebar('setting', 'transition', 'uncover')
-    .sidebar('toggle');
+    $('.ui.sidebar').sidebar('setting', 'transition', 'uncover').sidebar('toggle');
   });
 
   var pathname = window.location.pathname;
   $("#menu > a.item").each(function(index) {
-    if (pathname.toUpperCase().indexOf($(this).attr('href').toUpperCase()) != -1)
-    $(this).addClass("active");
+    if (pathname.toUpperCase().indexOf($(this).attr('href').toUpperCase()) != -1) {
+      $(this).addClass("active");
+    }
+
   });
 
   $('.right.menu.open').on("click",function(e){
@@ -50,15 +53,17 @@ jQuery(window).load(function() {
 
 if(jQuery().lightbox) {
   lightbox.option({
-    'disableScrolling': true,
+    'disableScrolling': true
   });
 }
 
 function applyDayNightClass() {
   var d = new Date();
   var n = d.getHours();
-  if (n > 19)
+  if (n > 19) {
     $('body').addClass("night");
-  else
+  }
+  else {
     $('body').addClass("day");
+  }
 }

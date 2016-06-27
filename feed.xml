@@ -5,8 +5,8 @@
     <description>Design and build applications utilizing blockchain technology</description>
     <link>http://lightrains.com/</link>
     <atom:link href="http://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Jun 2016 00:00:21 +0530</pubDate>
-    <lastBuildDate>Sat, 25 Jun 2016 00:00:21 +0530</lastBuildDate>
+    <pubDate>Mon, 27 Jun 2016 15:56:49 +0530</pubDate>
+    <lastBuildDate>Mon, 27 Jun 2016 15:56:49 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -17,9 +17,7 @@
 
 &lt;p&gt;Our design goal was to better match how we look to our values and the users we serve. A small team inside the company worked to find something that appeared crisp, approachable, smart, friendly, and connected.&lt;/p&gt;
 
-&lt;h2 id=&quot;path-to-the-current-logo&quot;&gt;Path to the current logo&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;h2 id=&quot;how-it-evolved&quot;&gt;How it Evolved.&lt;/h2&gt;
 
 &lt;h2 id=&quot;though-it-was-time-for-change&quot;&gt;Though it was time for change,&lt;/h2&gt;
 &lt;p&gt;We’re still the same team: focused on Consulting &amp;amp; Development on &lt;a href=&quot;/consulting/blockchain-consulting&quot;&gt;Blockchain&lt;/a&gt;, &lt;a href=&quot;/consulting/drupal-consulting-development&quot;&gt;Drupal&lt;/a&gt; and &lt;a href=&quot;/consulting/es6-javascript-development&quot;&gt;ES6&lt;/a&gt;.&lt;/p&gt;
@@ -67,6 +65,33 @@ COO&lt;/p&gt;
         
         <category>Smart Contract</category>
         
+        
+      </item>
+    
+      <item>
+        <title>Histup Social Media Wall</title>
+        <description>&lt;p&gt;A novel and Unique Method of Digital Branding
+We Sync and Brought together the user generated and branded content Social Media Feeds into one place from over four Social Networks.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-hitsup-works-for-you&quot;&gt;How Hitsup Works for you&lt;/h2&gt;
+&lt;p&gt;Connect &amp;amp; Merges Social Media Feeds: Connect yours or your company’s social media updates or feeds to a single social Media Wall. Hitsup merges content from any of your social platforms into homogenous streams. So, for instance, one stream can contain posts of Twitter, Facebook and Google+. All posts have the same data-format, no matter where they were composed.&lt;/p&gt;
+
+&lt;p&gt;Unified Social Media Content: Hitsup seamlessly integrate unified social content into your website, application or content management system&lt;/p&gt;
+
+&lt;h2 id=&quot;configure-streams-online-in-your-browser&quot;&gt;Configure streams online in your browser.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Embed Hitsup’s adaptive and beautifully designed stream widget&lt;/li&gt;
+  &lt;li&gt;Each stream comes with its own profile page&lt;/li&gt;
+  &lt;li&gt;No technical knowledge required&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/hitsup-social</link>
+        <guid isPermaLink="true">http://lightrains.com/work/hitsup-social</guid>
+        
+        
+        <category>Drupal</category>
         
       </item>
     
@@ -134,7 +159,7 @@ COO&lt;/p&gt;
         <title>MetroMatinee</title>
         <description>&lt;p&gt;MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.&lt;/p&gt;
 
-&lt;h3 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h3&gt;
+&lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt;
 &lt;p&gt;Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionalty. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.&lt;/p&gt;
 
 &lt;h3 id=&quot;project-goals-requirements-and-outcome&quot;&gt;Project (goals, requirements and outcome):&lt;/h3&gt;
@@ -402,6 +427,20 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
         
         <category>Cryptocurrency</category>
         
+        <category>Handbook</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pegke Loyalty</title>
+        <description>&lt;p&gt;Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items.&lt;/p&gt; &lt;p&gt;Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest.&lt;/p&gt; &lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt; &lt;p&gt;Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;High quality contributed modules which enable it to scale well to support very high traffic.&lt;/li&gt; &lt;li&gt;Out of the box rich content management features and can be extended to match the very specific requirements of our website.&lt;/li&gt; &lt;li&gt;An intuitive admin interface, enabling our web editorial team to update the site quickly and easily&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Advanced CSS/JS Aggregation&lt;/li&gt; &lt;li&gt;Location&lt;/li&gt; &lt;li&gt;Metatag&lt;/li&gt; &lt;li&gt;Views&lt;/li&gt; &lt;li&gt;Ubercart&lt;/li&gt; &lt;li&gt;Session Limit&lt;/li&gt; &lt;li&gt;Token&lt;/li&gt; &lt;li&gt;Support Ticketing System&lt;/li&gt; &lt;li&gt;Mandrill&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;why-these-modulesthemedistribution-were-chosen&quot;&gt;Why these modules/theme/distribution were chosen:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Advanced CSS/JS Aggregation:&lt;/strong&gt; Make sure we are not making too many unnecessary http requests and wasting our resources.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our...</description>
+        <pubDate>Sat, 13 Jun 2015 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/pegke-loyalty</link>
+        <guid isPermaLink="true">http://lightrains.com/work/pegke-loyalty</guid>
+        
+        
+        <category>Drupal</category>
         
       </item>
     

@@ -6,7 +6,8 @@ body {
   font-family: 'Merriweather Sans', sans-serif; }
 
 h1, h3, h4, h5 {
-  font-family: "Merriweather", serif; }
+  font-family: 'Merriweather', serif;
+  word-spacing: -0.125em; }
 
 h2 {
   font-weight: 300;
@@ -67,6 +68,8 @@ h2 {
     background-image: linear-gradient(to top, transparent, transparent 2px, #2e8b38 2px, #2e8b38 2.5px, transparent 2.5px); } }
 .page-text .author {
   font-style: italic; }
+.page-text p {
+  text-justify: inter-character; }
 
 .footer {
   padding: 2.5rem 0; }
@@ -251,3 +254,6 @@ pre.highlight {
 .fullw {
   width: 100%;
   margin-top: 40px; }
+
+.social i:hover {
+  text-decoration: none !important; }

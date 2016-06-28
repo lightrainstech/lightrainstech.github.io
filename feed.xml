@@ -1,1 +1,481 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Lightrains Technolabs</title><description>Design and build applications utilizing blockchain technology</description><link>http://lightrains.com/</link><atom:link href="http://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 28 Jun 2016 08:09:05 +0530</pubDate><lastBuildDate>Tue, 28 Jun 2016 08:09:05 +0530</lastBuildDate><generator>Jekyll v3.1.6</generator><item><title>Evolving the Identity</title><description>&lt;p&gt;Big news! Today, after five years, we’re releasing an updated brand identity, which includes a new logo, colors, and font. You’ll see the new look anywhere we’re out in public, like our website, Facebook, and Twitter; very soon you’ll see it in all of our products, as well.&lt;/p&gt;&lt;p&gt;We started by distilling the essence of our brand down to its colors on a clean white background—and built it back up.&lt;/p&gt;&lt;p&gt;Our design goal was to better match how we look to our values and the users we serve. A small team inside the company worked to find something that appeared crisp, approachable, smart, friendly, and connected.&lt;/p&gt;&lt;h2 id=&quot;how-it-evolved&quot;&gt;How it Evolved.&lt;/h2&gt;&lt;h2 id=&quot;though-it-was-time-for-change&quot;&gt;Though it was time for change,&lt;/h2&gt;&lt;p&gt;We’re still the same team: focused on Consulting &amp;amp; Development on &lt;a href=&quot;/consulting/blockchain-consulting&quot;&gt;Blockchain&lt;/a&gt;, &lt;a href=&quot;/consulting/drupal-consulting-development&quot;&gt;Drupal&lt;/a&gt; and &lt;a href=&quot;/consulting/es6-javascript-development&quot;&gt;ES6&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;As we begin this new chapter in Vision’s history, we are appreciative of each one of our customers, who collaborate with us daily to create next generation technology. We look forward to continued partnership and great things to come.&lt;/p&gt;&lt;p&gt;Sincerely,&lt;/p&gt;&lt;p&gt;Nikhil MohanCOO&lt;/p&gt;</description><pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate><link>http://lightrains.com/blogs/new-brand-identity-lightrains-tech</link><guid isPermaLink="true">http://lightrains.com/blogs/new-brand-identity-lightrains-tech</guid><category>Brand</category><category>Typography</category></item><item><title>What is a DAO aka Decentralized Autonomous Organization</title><description>&lt;p&gt;A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community&lt;/p&gt; &lt;p&gt;Essentially, it’s a non-human specific entity, who’s sole duty is to abide by a specific programmatic set of rules; or by the rules granted to it by decentralized consensus (majority decides what to do in a distributed manner).&lt;/p&gt; &lt;p&gt;So far, all contracts we listed were owned and executed by other accounts probably held by humans. But there is no discrimination against robots or humans in the Ethereum ecosystem and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other contracts.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;“On the Blockchain, no one knows you’re a fridge” - Richard Brown&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;what-is-a-dao-token&quot;&gt;What is a DAO token&lt;/h3&gt; &lt;p&gt;A DAO leverages smart contracts on the Ethereum blockchain so that anyone, anywhere in the world can be empowered to participate. In exchange for their early help, participants receive DAO tokens which hold many benefits.&lt;/p&gt; &lt;p&gt;Owning DAO tokens functions in a similar way to having shareholder rights in an actual company. &lt;br /&gt; &lt;strong&gt;By owning DAO tokens…&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;You can submit proposals for funding&lt;/li&gt; &lt;li&gt;You can vote on which proposals are funded&lt;/li&gt; &lt;li&gt;Receive profits from funded projects&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;technical&quot;&gt;Technical&lt;/h2&gt; &lt;p&gt;The code of a given DAO will be difficult to alter once the system is up and running, including bug fixes that would be trivial in centralised code. Corrections for a DAO would require writing new code and agreement to migrate all the funds. Although the code is visible to all, it is hard to repair, thus leaving known security holes open to exploitation unless a moratorium is called to enable...</description><pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate><link>http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</link><guid isPermaLink="true">http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</guid><category>DAO</category><category>The DAO</category></item><item><title>Compile and Deploy Solidity Contract</title><description>&lt;p&gt;Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain&lt;/p&gt; &lt;p&gt;For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K.&lt;/p&gt; &lt;h2 id=&quot;step-1-install-solidity-compiler-solc&quot;&gt;Step 1. Install Solidity Compiler Solc&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;Easy way&lt;/strong&gt; Its very easy to install solc using npm the package manager for NodeJS the command is &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install solc&lt;/code&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Easier way Browser-Solidity&lt;/strong&gt; If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Building from Source&lt;/strong&gt; Assuming you are using Ubuntu 14.04&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;And pull the solidity source code&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;step-2-verify-solidity-compiler&quot;&gt;Step 2. Verify Solidity Compiler&lt;/h2&gt; &lt;p&gt;To ensure solc is installed and ready to use, you can verify it by running &lt;code class=&quot;highlighter-rouge&quot;&gt;eth.getCompilers()&lt;/code&gt; in geth console If you have it installed, it should output something like this:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[&#39;Solidity&#39; ] &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;bonus-compile-a-simple-contract&quot;&gt;Bonus. Compile a simple contract&lt;/h2&gt; &lt;p&gt;Let us take this simple contract source:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;This contract offers a unary method: called with a positive integer a, it returns a *...</description><pubDate>Fri, 17 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</link><guid isPermaLink="true">http://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</guid><category>Blockchain</category><category>Smart Contract</category></item><item><title>Histup Social Media Wall</title><description>&lt;p&gt;A novel and Unique Method of Digital BrandingWe Sync and Brought together the user generated and branded content Social Media Feeds into one place from over four Social Networks.&lt;/p&gt;&lt;h2 id=&quot;how-hitsup-works-for-you&quot;&gt;How Hitsup Works for you&lt;/h2&gt;&lt;p&gt;Connect &amp;amp; Merges Social Media Feeds: Connect yours or your company’s social media updates or feeds to a single social Media Wall. Hitsup merges content from any of your social platforms into homogenous streams. So, for instance, one stream can contain posts of Twitter, Facebook and Google+. All posts have the same data-format, no matter where they were composed.&lt;/p&gt;&lt;p&gt;Unified Social Media Content: Hitsup seamlessly integrate unified social content into your website, application or content management system&lt;/p&gt;&lt;h2 id=&quot;configure-streams-online-in-your-browser&quot;&gt;Configure streams online in your browser.&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Embed Hitsup’s adaptive and beautifully designed stream widget&lt;/li&gt;&lt;li&gt;Each stream comes with its own profile page&lt;/li&gt;&lt;li&gt;No technical knowledge required&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/work/hitsup-social</link><guid isPermaLink="true">http://lightrains.com/work/hitsup-social</guid><category>Drupal</category></item><item><title>SCEB Smart Contract Templates for Banking</title><description>&lt;p&gt;SCEB is a platform for financial institutions to take advantage of the blockchain based smart-contracts as templates in everyday banking.&lt;/p&gt;&lt;h2 id=&quot;technology-stack&quot;&gt;Technology Stack&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Ethereum Blockchain&lt;/li&gt;&lt;li&gt;Embark Framework&lt;/li&gt;&lt;li&gt;Solidity - smart-contract language&lt;/li&gt;&lt;li&gt;IPFS - decentralised file storage&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;potential-benefits&quot;&gt;Potential benefits&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Cost Reductions&lt;/li&gt;&lt;li&gt;Efficiency Improvements&lt;/li&gt;&lt;li&gt;Reduce Risk&lt;/li&gt;&lt;li&gt;Reusable contracts&lt;/li&gt;&lt;li&gt;Less paperwork&lt;/li&gt;&lt;/ul&gt;&lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;GRJsL74urwI&quot;&gt;&lt;/div&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/work/smart-contract-templates-banking-sceb</link><guid isPermaLink="true">http://lightrains.com/work/smart-contract-templates-banking-sceb</guid><category>Blockchain</category><category>Smart Contract</category></item><item><title>Canned Emails</title><description>&lt;p&gt;Canned Emails is a minimal site with prewritten emails, useful for people who prefer easy way of doing things.&lt;/p&gt;&lt;p&gt;Canned Emails officially introduced in Google Labs: Canned Responses on Tuesday, October 21, 2008 by Chad Parry, Gmail engineer&lt;/p&gt;&lt;h3 id=&quot;how-to-enable-canned-responses-in-gmail&quot;&gt;How to enable Canned Responses in Gmail&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;The upper right-hand corner of Gmail, then choose Settings.&lt;/li&gt;&lt;li&gt;Click the Labs tab, find Canned Responses, click the Enable radio button to enable Canned Responses, scroll down and click Save Changes.&lt;/li&gt;&lt;li&gt;Compose an email message you’d like to use over and over again, and then click the arrow in the lower right-hand corner of the message window.&lt;/li&gt;&lt;li&gt;The next time someone emails you something that warrants the canned response you created, reply to the message and instead of typing your response, click the arrow button in the lower right-hand corner, select Canned Responses, and then under Insert, choose the canned response you created in the previous step. You’ll then see your response appear in the body of your reply.&lt;/li&gt;&lt;/ol&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/work/canned-emails</link><guid isPermaLink="true">http://lightrains.com/work/canned-emails</guid><category>Open Source</category><category>Smart Contract</category></item><item><title>MetroMatinee</title><description>&lt;p&gt;MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.&lt;/p&gt;&lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt;&lt;p&gt;Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionalty. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.&lt;/p&gt;&lt;h3 id=&quot;project-goals-requirements-and-outcome&quot;&gt;Project (goals, requirements and outcome):&lt;/h3&gt;&lt;p&gt;Technically there were a few key requirements:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;The site must be easy for content editors to manage (of course!)&lt;/li&gt;&lt;li&gt;New articles should be (optionally) pushed to Facebook&lt;/li&gt;&lt;li&gt;Existing users must be easily migrated to the new site, along with their previous profile and comments&lt;/li&gt;&lt;li&gt;The UX must be truly responsive and engaging on all devices&lt;/li&gt;&lt;li&gt;Content pages must be built from existing collections of text, quote, image, and audio “stories”&lt;/li&gt;&lt;li&gt;The site must be able to handle large surges of visitors and traffic spikes - many thousands of concurrent visitors&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Views&lt;/li&gt;&lt;li&gt;Entity API&lt;/li&gt;&lt;li&gt;Entity reference&lt;/li&gt;&lt;li&gt;Entity Reference View Widget&lt;/li&gt;&lt;li&gt;Media&lt;/li&gt;&lt;li&gt;Facebook API&lt;/li&gt;&lt;li&gt;Comment block&lt;/li&gt;&lt;li&gt;Chaos tool suite (ctools)&lt;/li&gt;&lt;li&gt;Feeds&lt;/li&gt;&lt;li&gt;Cookie Control&lt;/li&gt;&lt;li&gt;CDN&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/work/metromatinee</link><guid isPermaLink="true">http://lightrains.com/work/metromatinee</guid><category>Drupal</category></item><item><title>Kerala Startup Mission</title><description>&lt;p&gt;Kerala Startup Mission (KSUM) is India’s first and successful Non Academic Business Incubator, hosted and housed inside Asia’s Largest IT Park Technopark.&lt;/p&gt;&lt;p&gt;We dedicated 2 weeks for a comprehensive study of the information architecture. Having analyzed a suitable structure model for the content, we were able to start the wire-framing stage. Wireframes helped us interconnect all kinds of content types and entities of the website. We took full advantage of Drupal 7 and its new features. The fact that all entities come with fields helped us to create all the interconnections through references.&lt;/p&gt;&lt;p&gt;Overall, the fact that the client was very clear about their requests and needs from the beginning was enormously helpful in our effort to focus more on the concept, the design and the development. Requirements being met, the whole project kept us busy for 5 months. We exclusively worked with SCRUM methods, delivering segments of the website every 10 days.&lt;/p&gt;&lt;h3 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h3&gt;&lt;p&gt;Drupal was chosen because of its wide variety of contributed modules and community support&lt;/p&gt;&lt;h3 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Organic groups&lt;/li&gt;&lt;li&gt;Views&lt;/li&gt;&lt;li&gt;Flag&lt;/li&gt;&lt;li&gt;Rules&lt;/li&gt;&lt;li&gt;ImageCache&lt;/li&gt;&lt;li&gt;Feeds&lt;/li&gt;&lt;li&gt;Facebook Style Statuses&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/work/kerala-startup-mission</link><guid isPermaLink="true">http://lightrains.com/work/kerala-startup-mission</guid><category>Drupal</category></item><item><title>Fungible Loyalty Tokens</title><description>&lt;p&gt;Flot is a blockchain based Inter-Operable Fungible Loyalty Tokens. The ides is to bring all non-competing business into one umbrella and let them share the value of Loyalty Points together hence inter-operable.&lt;/p&gt;&lt;p&gt;Flot is first presented in “ICICI Appathon”, its mobile app development challenge. Flot got special mention from the Jury. The jury comprised Mr. Rajiv Sabharwal, Executive Director, ICICI Bank; Mr. Anup Gupta, Managing Director, Nexus Venture Partners; Mr. Ashish Kumar, Vice President - Cloud, IBM Asia Pacific; and Mr. T.R. Ramachandran, Group Country Manager-India &amp;amp; South Asia, VISA.&lt;/p&gt;&lt;h3 id=&quot;key-elements&quot;&gt;Key elements&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Loyalty points are fungible across platforms&lt;/li&gt;&lt;li&gt;Tamper proof storage&lt;/li&gt;&lt;li&gt;Fungibility&lt;ul&gt;&lt;li&gt;Convertible to Fiat Money/Crypto-currency&lt;/li&gt;&lt;li&gt;Inter-Operable&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Seamless integration with any other platforms.&lt;/li&gt;&lt;li&gt;Easy to manage redeems, no double spend.&lt;/li&gt;&lt;li&gt;Offers and vouchers can be executed as a smart-contract&lt;/li&gt;&lt;li&gt;Multiple activities can trigger loyalty points&lt;/li&gt;&lt;li&gt;Easy to manage micro-loyalty points&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/work/flot-blockchain-loyalty-tokens</link><guid isPermaLink="true">http://lightrains.com/work/flot-blockchain-loyalty-tokens</guid><category>Blockchain</category><category>Ethereum</category><category>Smart Contract</category></item><item><title>Solo PDF Reader</title><description>&lt;p&gt;Solo PDF Reader is simply the best, fast and light PDF reader for rendering PDF files easily. The clean and elegant interface make reading a pleasure. Slide through the pages smoothly as it feels just like reading a real book. Solo PDF Reader automatically scan your device and external memory for PDF files and fetch them immediately after you launch it. The application consumes less memory without any compromise in performance. You will love Solo PDF Reader once you start using it.Solo PDF Reader supports multi-touch zooming, text search, portrait and landscape orientations. More than 50,000 users now use Solo PDF to access, read and share a large variety of PDF types, including documents, portfolios, scanned files, images etc.&lt;/p&gt;&lt;h3 id=&quot;solo-pdf-reader-is-free-to-download-no-hidden-charges&quot;&gt;Solo PDF Reader is free to download. No hidden charges.&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Compatible with almost every Android device.&lt;/li&gt;&lt;li&gt;Solo PDF Reader is the best available app for reading pdf files.&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Solo PDF Reader is faster compared to other Android PDF readers.&lt;/li&gt;&lt;li&gt;View and access recently viewed documents using ‘Recent’ menu.&lt;/li&gt;&lt;li&gt;Easily switch to any page using the slide bar.&lt;/li&gt;&lt;li&gt;Automatically restore last read pages.&lt;/li&gt;&lt;li&gt;Last viewed date available.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Show some love; Share Solo PDF Reader via Facebook, Twitter, LinkedIn.&lt;/p&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/work/solo-pdf-reader</link><guid isPermaLink="true">http://lightrains.com/work/solo-pdf-reader</guid><category>Android</category></item><item><title>How to setup a local test Ethereum Blockchain</title><description>&lt;p&gt;Setting up a private chain is useful for testing purposes or simply for playing around with, I couldn’t find a good tutorial on it so I thought I would write my own. In this tutorial we are working on Ubuntu 14.04 LTS and Go Implementation of Ethereum go-ethereum or simply geth&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;https://github.com/ethereum/go-ethereum/wiki&quot;&gt;geth&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;http://releases.ubuntu.com/14.04/&quot;&gt;ubuntu 14.04&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;the-fist-block---genesis-block&quot;&gt;The Fist Block - Genesis Block&lt;/h2&gt; &lt;p&gt;The Genesis block is the start block of the Blockchain - the first block, block 0, the only block that does not point to a predecessor block. It’s the entry point into the Blockchain database. The Genesis data defines initial parameters of the database and defines a cryptographically valid entry block. You might think thats a flaw in the system being able to decide the starting conditions of the chain, but the consensus algorithm will ensure that no other node will agree with your version of the blockchain unless they have the same genesis block (and some other crucial parameters, discussed later).&lt;/p&gt; &lt;h3 id=&quot;how-to-create-genesis-block&quot;&gt;How to Create Genesis Block&lt;/h3&gt; &lt;p&gt;Great, so how do we make one of these genesis blocks? Well its fairly simple the following JSON is all you really need:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;nonce&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000042&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;mixhash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;difficulty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x4000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;alloc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;coinbase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x00&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parentHash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;extraData&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Custem Ethereum Genesis Block&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;gasLimit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0xffffffff&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;Save the JSON into a file lets call it genesis.json and save in your home directory.&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth...</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</link><guid isPermaLink="true">http://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</guid></item><item><title>What is Ethereum</title><description>&lt;p&gt;Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.&lt;/p&gt;&lt;h2 id=&quot;what-makes-it-different-from-normal-currencies&quot;&gt;What makes it different from normal currencies?&lt;/h2&gt;&lt;p&gt;Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.&lt;/p&gt;&lt;p&gt;However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.&lt;/p&gt;&lt;h2 id=&quot;who-created-it&quot;&gt;Who created it?&lt;/h2&gt;&lt;p&gt;A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.&lt;/p&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/blogs/what-is-ethereum</link><guid isPermaLink="true">http://lightrains.com/blogs/what-is-ethereum</guid></item><item><title>What is Bitcoin the currency</title><description>&lt;p&gt;Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.&lt;/p&gt;&lt;h2 id=&quot;what-makes-it-different-from-normal-currencies&quot;&gt;What makes it different from normal currencies?&lt;/h2&gt;&lt;p&gt;Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.&lt;/p&gt;&lt;p&gt;However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.&lt;/p&gt;&lt;h2 id=&quot;who-created-it&quot;&gt;Who created it?&lt;/h2&gt;&lt;p&gt;A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.&lt;/p&gt;&lt;h2 id=&quot;why-bitcoins&quot;&gt;Why Bitcoins?&lt;/h2&gt;&lt;p&gt;Bitcoins can be used to buy merchandise anonymously. In addition, international payments are easy and cheap because bitcoins are not tied to any country or subject to regulation. Small businesses may like them because there are no credit card fees. Some people just buy bitcoins as an investment, hoping that they’ll go up in value.&lt;/p&gt;&lt;h3 id=&quot;video-by-weusecoins&quot;&gt;Video by WeUseCoins&lt;/h3&gt;&lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;Gc2en3nHxA4&quot;&gt;&lt;/div&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/blogs/what-is-bitcoin-currency</link><guid isPermaLink="true">http://lightrains.com/blogs/what-is-bitcoin-currency</guid></item><item><title>What is Blockchain</title><description>&lt;p&gt;Blockchains are tamper-proof, immutable, time-stamped, transparent ledgers whose applications have the potential to improve many aspects of our lives.&lt;/p&gt;&lt;h2 id=&quot;laboris-nisi-ut-aliquip&quot;&gt;laboris nisi ut aliquip&lt;/h2&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;img src=&quot;/assets/img/5.jpg&quot; alt=&quot;image&quot; class=&quot;ui image fluid lazy&quot; /&gt;&lt;/p&gt;</description><pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate><link>http://lightrains.com/blogs/what-is-blockchain</link><guid isPermaLink="true">http://lightrains.com/blogs/what-is-blockchain</guid><category>Blockchain</category><category>Bitcoin</category></item><item><title>Cryptocurrency 101 - Part 2/3 - Why use cryptocurrencies instead of cash?</title><description>&lt;p&gt;This is probably the most common question asked.First, we need to take a look at the evolution of trade:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Initially, trade was done through a barter system. You have an asset I want, I have an asset you want, let’s trade. Here, a apple farmer can trade his apples to a sheep herder for wool.&lt;/li&gt;&lt;li&gt;Here, we run into a problem. What if you don’t have something I want? Metals, particularly gold and silver, were often used as a mechanism for trade.&lt;/li&gt;&lt;li&gt;With the rise of kingdoms and nations, many wanted to show their reign and would melt metals and recast them to showcase an emblem with their nation.&lt;/li&gt;&lt;li&gt;Eventually, nations realized that metals weren’t efficient, and paper money was created.&lt;/li&gt;&lt;li&gt;With the rise of the internet, we now have online banking, where currency is just digital figures.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This is a simple look, but it’s obvious that cryptocurrencies are the next evolution of trade.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;Like most features in evolution, the unregulated — capitalistic supply/demand — aspect is based off the Great Recession of 2007.&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;div class=&quot;ui header medium source&quot;&gt;Sources&lt;/div&gt;&lt;ul&gt;&lt;li&gt;http://bitcoin.stackexchange.com/q/182/30316&lt;/li&gt;&lt;li&gt;https://medium.com/@sebfung/cryptocurrencies-101-c1c0a5a3cc2&lt;/li&gt;&lt;/ul&gt;</description><pubDate>Tue, 12 Jan 2016 00:00:00 +0530</pubDate><link>http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</link><guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</guid><category>Cryptocurrency</category><category>Handbook</category></item><item><title>Cryptocurrency 101 - Part 1/3 - The Basics</title><description>&lt;h2 id=&quot;what-is-a-cryptocurrency&quot;&gt;What is a Cryptocurrency?&lt;/h2&gt; &lt;p&gt;A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider.&lt;/p&gt; &lt;p&gt;Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers.&lt;/p&gt; &lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt; &lt;p&gt;Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency.&lt;/p&gt; &lt;h2 id=&quot;what-gives-them-their-value&quot;&gt;What gives them their value?&lt;/h2&gt; &lt;p&gt;They have value because they are scarce, fungible (one &lt;a href=&quot;https://bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; is as good as another), easily transferred, and easily verified. The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today.&lt;/p&gt; &lt;p&gt;They aren’t backed by anything because they’re a commodity. What is gold backed by?&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another.&lt;/p&gt; &lt;/blockquote&gt; &lt;h2 id=&quot;advantages-of-cryptocurrency&quot;&gt;Advantages of...</description><pubDate>Fri, 08 Jan 2016 00:00:00 +0530</pubDate><link>http://lightrains.com/blogs/cryptocurrency-101</link><guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101</guid><category>Cryptocurrency</category><category>Handbook</category></item><item><title>Pegke Loyalty</title><description>&lt;p&gt;Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items.&lt;/p&gt; &lt;p&gt;Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest.&lt;/p&gt; &lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt; &lt;p&gt;Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;High quality contributed modules which enable it to scale well to support very high traffic.&lt;/li&gt; &lt;li&gt;Out of the box rich content management features and can be extended to match the very specific requirements of our website.&lt;/li&gt; &lt;li&gt;An intuitive admin interface, enabling our web editorial team to update the site quickly and easily&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Advanced CSS/JS Aggregation&lt;/li&gt; &lt;li&gt;Location&lt;/li&gt; &lt;li&gt;Metatag&lt;/li&gt; &lt;li&gt;Views&lt;/li&gt; &lt;li&gt;Ubercart&lt;/li&gt; &lt;li&gt;Session Limit&lt;/li&gt; &lt;li&gt;Token&lt;/li&gt; &lt;li&gt;Support Ticketing System&lt;/li&gt; &lt;li&gt;Mandrill&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;why-these-modulesthemedistribution-were-chosen&quot;&gt;Why these modules/theme/distribution were chosen:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Advanced CSS/JS Aggregation:&lt;/strong&gt; Make sure we are not making too many unnecessary http requests and wasting our resources.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our...</description><pubDate>Sat, 13 Jun 2015 11:19:48 +0530</pubDate><link>http://lightrains.com/work/pegke-loyalty</link><guid isPermaLink="true">http://lightrains.com/work/pegke-loyalty</guid><category>Drupal</category></item><item><title>PSC HUB is now available as Telegram Bot</title><description>&lt;p&gt;Now Telegram Messenger Users can Get PSC HUB - Kerala PSC Questions as a Telegram Bot, Through this users can&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Get Random Questions in a Chat&lt;/li&gt;&lt;li&gt;Realtime Questions&lt;/li&gt;&lt;li&gt;Your Statistics&lt;/li&gt;&lt;li&gt;Instant Support&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;how-i-get-this-inside-telegram-messenger&quot;&gt;How I get this Inside Telegram Messenger&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Open Telegram Messenger&lt;/li&gt;&lt;li&gt;Search for “pschub”&lt;/li&gt;&lt;li&gt;You will see “PSC HUB Bot”&lt;/li&gt;&lt;li&gt;Just start the bot and enjoy.&lt;/li&gt;&lt;li&gt;Or Simply &lt;a href=&quot;https://telegram.me/pschub_bot&quot;&gt;Click HERE&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;What is a BotBots are simply Telegram accounts operated by software – not people – and they’ll often have AI features. They can do anything – teach, play, search, broadcast, remind, connect, integrate with other services, or even pass commands to the Internet of Things.&lt;/p&gt;</description><pubDate>Sun, 17 May 2015 11:19:48 +0530</pubDate><link>http://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</link><guid isPermaLink="true">http://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</guid><category>Telegram</category></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lightrains Technolabs</title>
+    <description>Design and build applications utilizing blockchain technology</description>
+    <link>http://lightrains.com/</link>
+    <atom:link href="http://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 28 Jun 2016 10:59:53 +0530</pubDate>
+    <lastBuildDate>Tue, 28 Jun 2016 10:59:53 +0530</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Evolving the Identity</title>
+        <description>&lt;p&gt;Big news! Today, after five years, we’re releasing an updated brand identity, which includes a new logo, colors, and font. You’ll see the new look anywhere we’re out in public, like our website, Facebook, and Twitter; very soon you’ll see it in all of our products, as well.&lt;/p&gt;
+
+&lt;p&gt;We started by distilling the essence of our brand down to its colors on a clean white background—and built it back up.&lt;/p&gt;
+
+&lt;p&gt;Our design goal was to better match how we look to our values and the users we serve. A small team inside the company worked to find something that appeared crisp, approachable, smart, friendly, and connected.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-it-evolved&quot;&gt;How it Evolved.&lt;/h2&gt;
+
+&lt;h2 id=&quot;though-it-was-time-for-change&quot;&gt;Though it was time for change,&lt;/h2&gt;
+&lt;p&gt;We’re still the same team: focused on Consulting &amp;amp; Development on &lt;a href=&quot;/consulting/blockchain-consulting&quot;&gt;Blockchain&lt;/a&gt;, &lt;a href=&quot;/consulting/drupal-consulting-development&quot;&gt;Drupal&lt;/a&gt; and &lt;a href=&quot;/consulting/es6-javascript-development&quot;&gt;ES6&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;As we begin this new chapter in Vision’s history, we are appreciative of each one of our customers, who collaborate with us daily to create next generation technology. We look forward to continued partnership and great things to come.&lt;/p&gt;
+
+&lt;p&gt;Sincerely,&lt;/p&gt;
+
+&lt;p&gt;Nikhil Mohan
+COO&lt;/p&gt;
+</description>
+        <pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/new-brand-identity-lightrains-tech</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/new-brand-identity-lightrains-tech</guid>
+        
+        <category>Brand</category>
+        
+        <category>Typography</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>What is a DAO aka Decentralized Autonomous Organization</title>
+        <description>&lt;p&gt;A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community&lt;/p&gt; &lt;p&gt;Essentially, it’s a non-human specific entity, who’s sole duty is to abide by a specific programmatic set of rules; or by the rules granted to it by decentralized consensus (majority decides what to do in a distributed manner).&lt;/p&gt; &lt;p&gt;So far, all contracts we listed were owned and executed by other accounts probably held by humans. But there is no discrimination against robots or humans in the Ethereum ecosystem and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other contracts.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;“On the Blockchain, no one knows you’re a fridge” - Richard Brown&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;what-is-a-dao-token&quot;&gt;What is a DAO token&lt;/h3&gt; &lt;p&gt;A DAO leverages smart contracts on the Ethereum blockchain so that anyone, anywhere in the world can be empowered to participate. In exchange for their early help, participants receive DAO tokens which hold many benefits.&lt;/p&gt; &lt;p&gt;Owning DAO tokens functions in a similar way to having shareholder rights in an actual company. &lt;br /&gt; &lt;strong&gt;By owning DAO tokens…&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;You can submit proposals for funding&lt;/li&gt; &lt;li&gt;You can vote on which proposals are funded&lt;/li&gt; &lt;li&gt;Receive profits from funded projects&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;technical&quot;&gt;Technical&lt;/h2&gt; &lt;p&gt;The code of a given DAO will be difficult to alter once the system is up and running, including bug fixes that would be trivial in centralised code. Corrections for a DAO would require writing new code and agreement to migrate all the funds. Although the code is visible to all, it is hard to repair, thus leaving known security holes open to exploitation unless a moratorium is called to enable...</description>
+        <pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</guid>
+        
+        <category>DAO</category>
+        
+        <category>The DAO</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Compile and Deploy Solidity Contract</title>
+        <description>&lt;p&gt;Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain&lt;/p&gt; &lt;p&gt;For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K.&lt;/p&gt; &lt;h2 id=&quot;step-1-install-solidity-compiler-solc&quot;&gt;Step 1. Install Solidity Compiler Solc&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;Easy way&lt;/strong&gt; Its very easy to install solc using npm the package manager for NodeJS the command is &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install solc&lt;/code&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Easier way Browser-Solidity&lt;/strong&gt; If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Building from Source&lt;/strong&gt; Assuming you are using Ubuntu 14.04&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;And pull the solidity source code&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;step-2-verify-solidity-compiler&quot;&gt;Step 2. Verify Solidity Compiler&lt;/h2&gt; &lt;p&gt;To ensure solc is installed and ready to use, you can verify it by running &lt;code class=&quot;highlighter-rouge&quot;&gt;eth.getCompilers()&lt;/code&gt; in geth console If you have it installed, it should output something like this:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[&#39;Solidity&#39; ] &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;bonus-compile-a-simple-contract&quot;&gt;Bonus. Compile a simple contract&lt;/h2&gt; &lt;p&gt;Let us take this simple contract source:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;This contract offers a unary method: called with a positive integer a, it returns a *...</description>
+        <pubDate>Fri, 17 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Smart Contract</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Histup Social Media Wall</title>
+        <description>&lt;p&gt;A novel and Unique Method of Digital Branding
+We Sync and Brought together the user generated and branded content Social Media Feeds into one place from over four Social Networks.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-hitsup-works-for-you&quot;&gt;How Hitsup Works for you&lt;/h2&gt;
+&lt;p&gt;Connect &amp;amp; Merges Social Media Feeds: Connect yours or your company’s social media updates or feeds to a single social Media Wall. Hitsup merges content from any of your social platforms into homogenous streams. So, for instance, one stream can contain posts of Twitter, Facebook and Google+. All posts have the same data-format, no matter where they were composed.&lt;/p&gt;
+
+&lt;p&gt;Unified Social Media Content: Hitsup seamlessly integrate unified social content into your website, application or content management system&lt;/p&gt;
+
+&lt;h2 id=&quot;configure-streams-online-in-your-browser&quot;&gt;Configure streams online in your browser.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Embed Hitsup’s adaptive and beautifully designed stream widget&lt;/li&gt;
+  &lt;li&gt;Each stream comes with its own profile page&lt;/li&gt;
+  &lt;li&gt;No technical knowledge required&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/hitsup-social</link>
+        <guid isPermaLink="true">http://lightrains.com/work/hitsup-social</guid>
+        
+        
+        <category>Drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>SCEB Smart Contract Templates for Banking</title>
+        <description>&lt;p&gt;SCEB is a platform for financial institutions to take advantage of the blockchain based smart-contracts as templates in everyday banking.&lt;/p&gt;
+
+&lt;h2 id=&quot;technology-stack&quot;&gt;Technology Stack&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ethereum Blockchain&lt;/li&gt;
+  &lt;li&gt;Embark Framework&lt;/li&gt;
+  &lt;li&gt;Solidity - smart-contract language&lt;/li&gt;
+  &lt;li&gt;IPFS - decentralised file storage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;potential-benefits&quot;&gt;Potential benefits&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cost Reductions&lt;/li&gt;
+  &lt;li&gt;Efficiency Improvements&lt;/li&gt;
+  &lt;li&gt;Reduce Risk&lt;/li&gt;
+  &lt;li&gt;Reusable contracts&lt;/li&gt;
+  &lt;li&gt;Less paperwork&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;GRJsL74urwI&quot;&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/smart-contract-templates-banking-sceb</link>
+        <guid isPermaLink="true">http://lightrains.com/work/smart-contract-templates-banking-sceb</guid>
+        
+        
+        <category>Blockchain</category>
+        
+        <category>Smart Contract</category>
+        
+      </item>
+    
+      <item>
+        <title>Canned Emails</title>
+        <description>&lt;p&gt;Canned Emails is a minimal site with prewritten emails, useful for people who prefer easy way of doing things.&lt;/p&gt;
+
+&lt;p&gt;Canned Emails officially introduced in Google Labs: Canned Responses on Tuesday, October 21, 2008 by Chad Parry, Gmail engineer&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-enable-canned-responses-in-gmail&quot;&gt;How to enable Canned Responses in Gmail&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The upper right-hand corner of Gmail, then choose Settings.&lt;/li&gt;
+  &lt;li&gt;Click the Labs tab, find Canned Responses, click the Enable radio button to enable Canned Responses, scroll down and click Save Changes.&lt;/li&gt;
+  &lt;li&gt;Compose an email message you’d like to use over and over again, and then click the arrow in the lower right-hand corner of the message window.&lt;/li&gt;
+  &lt;li&gt;The next time someone emails you something that warrants the canned response you created, reply to the message and instead of typing your response, click the arrow button in the lower right-hand corner, select Canned Responses, and then under Insert, choose the canned response you created in the previous step. You’ll then see your response appear in the body of your reply.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/canned-emails</link>
+        <guid isPermaLink="true">http://lightrains.com/work/canned-emails</guid>
+        
+        
+        <category>Open Source</category>
+        
+        <category>Smart Contract</category>
+        
+      </item>
+    
+      <item>
+        <title>MetroMatinee</title>
+        <description>&lt;p&gt;MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt;
+&lt;p&gt;Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionalty. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.&lt;/p&gt;
+
+&lt;h3 id=&quot;project-goals-requirements-and-outcome&quot;&gt;Project (goals, requirements and outcome):&lt;/h3&gt;
+&lt;p&gt;Technically there were a few key requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The site must be easy for content editors to manage (of course!)&lt;/li&gt;
+  &lt;li&gt;New articles should be (optionally) pushed to Facebook&lt;/li&gt;
+  &lt;li&gt;Existing users must be easily migrated to the new site, along with their previous profile and comments&lt;/li&gt;
+  &lt;li&gt;The UX must be truly responsive and engaging on all devices&lt;/li&gt;
+  &lt;li&gt;Content pages must be built from existing collections of text, quote, image, and audio “stories”&lt;/li&gt;
+  &lt;li&gt;The site must be able to handle large surges of visitors and traffic spikes - many thousands of concurrent visitors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Views&lt;/li&gt;
+  &lt;li&gt;Entity API&lt;/li&gt;
+  &lt;li&gt;Entity reference&lt;/li&gt;
+  &lt;li&gt;Entity Reference View Widget&lt;/li&gt;
+  &lt;li&gt;Media&lt;/li&gt;
+  &lt;li&gt;Facebook API&lt;/li&gt;
+  &lt;li&gt;Comment block&lt;/li&gt;
+  &lt;li&gt;Chaos tool suite (ctools)&lt;/li&gt;
+  &lt;li&gt;Feeds&lt;/li&gt;
+  &lt;li&gt;Cookie Control&lt;/li&gt;
+  &lt;li&gt;CDN&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/metromatinee</link>
+        <guid isPermaLink="true">http://lightrains.com/work/metromatinee</guid>
+        
+        
+        <category>Drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>Kerala Startup Mission</title>
+        <description>&lt;p&gt;Kerala Startup Mission (KSUM) is India’s first and successful Non Academic Business Incubator, hosted and housed inside Asia’s Largest IT Park Technopark.&lt;/p&gt;
+
+&lt;p&gt;We dedicated 2 weeks for a comprehensive study of the information architecture. Having analyzed a suitable structure model for the content, we were able to start the wire-framing stage. Wireframes helped us interconnect all kinds of content types and entities of the website. We took full advantage of Drupal 7 and its new features. The fact that all entities come with fields helped us to create all the interconnections through references.&lt;/p&gt;
+
+&lt;p&gt;Overall, the fact that the client was very clear about their requests and needs from the beginning was enormously helpful in our effort to focus more on the concept, the design and the development. Requirements being met, the whole project kept us busy for 5 months. We exclusively worked with SCRUM methods, delivering segments of the website every 10 days.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h3&gt;
+&lt;p&gt;Drupal was chosen because of its wide variety of contributed modules and community support&lt;/p&gt;
+
+&lt;h3 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Organic groups&lt;/li&gt;
+  &lt;li&gt;Views&lt;/li&gt;
+  &lt;li&gt;Flag&lt;/li&gt;
+  &lt;li&gt;Rules&lt;/li&gt;
+  &lt;li&gt;ImageCache&lt;/li&gt;
+  &lt;li&gt;Feeds&lt;/li&gt;
+  &lt;li&gt;Facebook Style Statuses&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/kerala-startup-mission</link>
+        <guid isPermaLink="true">http://lightrains.com/work/kerala-startup-mission</guid>
+        
+        
+        <category>Drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>Fungible Loyalty Tokens</title>
+        <description>&lt;p&gt;Flot is a blockchain based Inter-Operable Fungible Loyalty Tokens. The ides is to bring all non-competing business into one umbrella and let them share the value of Loyalty Points together hence inter-operable.&lt;/p&gt;
+
+&lt;p&gt;Flot is first presented in “ICICI Appathon”, its mobile app development challenge. Flot got special mention from the Jury. The jury comprised Mr. Rajiv Sabharwal, Executive Director, ICICI Bank; Mr. Anup Gupta, Managing Director, Nexus Venture Partners; Mr. Ashish Kumar, Vice President - Cloud, IBM Asia Pacific; and Mr. T.R. Ramachandran, Group Country Manager-India &amp;amp; South Asia, VISA.&lt;/p&gt;
+
+&lt;h3 id=&quot;key-elements&quot;&gt;Key elements&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Loyalty points are fungible across platforms&lt;/li&gt;
+  &lt;li&gt;Tamper proof storage&lt;/li&gt;
+  &lt;li&gt;Fungibility
+    &lt;ul&gt;
+      &lt;li&gt;Convertible to Fiat Money/Crypto-currency&lt;/li&gt;
+      &lt;li&gt;Inter-Operable&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Seamless integration with any other platforms.&lt;/li&gt;
+  &lt;li&gt;Easy to manage redeems, no double spend.&lt;/li&gt;
+  &lt;li&gt;Offers and vouchers can be executed as a smart-contract&lt;/li&gt;
+  &lt;li&gt;Multiple activities can trigger loyalty points&lt;/li&gt;
+  &lt;li&gt;Easy to manage micro-loyalty points&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/flot-blockchain-loyalty-tokens</link>
+        <guid isPermaLink="true">http://lightrains.com/work/flot-blockchain-loyalty-tokens</guid>
+        
+        
+        <category>Blockchain</category>
+        
+        <category>Ethereum</category>
+        
+        <category>Smart Contract</category>
+        
+      </item>
+    
+      <item>
+        <title>Solo PDF Reader</title>
+        <description>&lt;p&gt;Solo PDF Reader is simply the best, fast and light PDF reader for rendering PDF files easily. The clean and elegant interface make reading a pleasure. Slide through the pages smoothly as it feels just like reading a real book. Solo PDF Reader automatically scan your device and external memory for PDF files and fetch them immediately after you launch it. The application consumes less memory without any compromise in performance. You will love Solo PDF Reader once you start using it.
+Solo PDF Reader supports multi-touch zooming, text search, portrait and landscape orientations. More than 50,000 users now use Solo PDF to access, read and share a large variety of PDF types, including documents, portfolios, scanned files, images etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;solo-pdf-reader-is-free-to-download-no-hidden-charges&quot;&gt;Solo PDF Reader is free to download. No hidden charges.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Compatible with almost every Android device.&lt;/li&gt;
+  &lt;li&gt;Solo PDF Reader is the best available app for reading pdf files.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Solo PDF Reader is faster compared to other Android PDF readers.&lt;/li&gt;
+  &lt;li&gt;View and access recently viewed documents using ‘Recent’ menu.&lt;/li&gt;
+  &lt;li&gt;Easily switch to any page using the slide bar.&lt;/li&gt;
+  &lt;li&gt;Automatically restore last read pages.&lt;/li&gt;
+  &lt;li&gt;Last viewed date available.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Show some love; Share Solo PDF Reader via Facebook, Twitter, LinkedIn.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/solo-pdf-reader</link>
+        <guid isPermaLink="true">http://lightrains.com/work/solo-pdf-reader</guid>
+        
+        
+        <category>Android</category>
+        
+      </item>
+    
+      <item>
+        <title>How to setup a local test Ethereum Blockchain</title>
+        <description>&lt;p&gt;Setting up a private chain is useful for testing purposes or simply for playing around with, I couldn’t find a good tutorial on it so I thought I would write my own. In this tutorial we are working on Ubuntu 14.04 LTS and Go Implementation of Ethereum go-ethereum or simply geth&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;https://github.com/ethereum/go-ethereum/wiki&quot;&gt;geth&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;http://releases.ubuntu.com/14.04/&quot;&gt;ubuntu 14.04&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;the-fist-block---genesis-block&quot;&gt;The Fist Block - Genesis Block&lt;/h2&gt; &lt;p&gt;The Genesis block is the start block of the Blockchain - the first block, block 0, the only block that does not point to a predecessor block. It’s the entry point into the Blockchain database. The Genesis data defines initial parameters of the database and defines a cryptographically valid entry block. You might think thats a flaw in the system being able to decide the starting conditions of the chain, but the consensus algorithm will ensure that no other node will agree with your version of the blockchain unless they have the same genesis block (and some other crucial parameters, discussed later).&lt;/p&gt; &lt;h3 id=&quot;how-to-create-genesis-block&quot;&gt;How to Create Genesis Block&lt;/h3&gt; &lt;p&gt;Great, so how do we make one of these genesis blocks? Well its fairly simple the following JSON is all you really need:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;nonce&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000042&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;mixhash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;difficulty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x4000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;alloc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;coinbase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x00&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parentHash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;extraData&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Custem Ethereum Genesis Block&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;gasLimit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0xffffffff&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;Save the JSON into a file lets call it genesis.json and save in your home directory.&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth...</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>What is Ethereum</title>
+        <description>&lt;p&gt;Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-makes-it-different-from-normal-currencies&quot;&gt;What makes it different from normal currencies?&lt;/h2&gt;
+
+&lt;p&gt;Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.&lt;/p&gt;
+
+&lt;p&gt;However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.&lt;/p&gt;
+
+&lt;h2 id=&quot;who-created-it&quot;&gt;Who created it?&lt;/h2&gt;
+
+&lt;p&gt;A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/what-is-ethereum</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-ethereum</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>What is Bitcoin the currency</title>
+        <description>&lt;p&gt;Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-makes-it-different-from-normal-currencies&quot;&gt;What makes it different from normal currencies?&lt;/h2&gt;
+&lt;p&gt;Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.&lt;/p&gt;
+
+&lt;p&gt;However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.&lt;/p&gt;
+
+&lt;h2 id=&quot;who-created-it&quot;&gt;Who created it?&lt;/h2&gt;
+&lt;p&gt;A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-bitcoins&quot;&gt;Why Bitcoins?&lt;/h2&gt;
+&lt;p&gt;Bitcoins can be used to buy merchandise anonymously. In addition, international payments are easy and cheap because bitcoins are not tied to any country or subject to regulation. Small businesses may like them because there are no credit card fees. Some people just buy bitcoins as an investment, hoping that they’ll go up in value.&lt;/p&gt;
+
+&lt;h3 id=&quot;video-by-weusecoins&quot;&gt;Video by WeUseCoins&lt;/h3&gt;
+&lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;Gc2en3nHxA4&quot;&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/what-is-bitcoin-currency</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-bitcoin-currency</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>What is Blockchain</title>
+        <description>&lt;p&gt;Blockchains are tamper-proof, immutable, time-stamped, transparent ledgers whose applications have the potential to improve many aspects of our lives.&lt;/p&gt;
+
+&lt;h2 id=&quot;laboris-nisi-ut-aliquip&quot;&gt;laboris nisi ut aliquip&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/5.jpg&quot; alt=&quot;image&quot; class=&quot;ui image fluid lazy&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/what-is-blockchain</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-blockchain</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Bitcoin</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Cryptocurrency 101 - Part 2/3 - Why use cryptocurrencies instead of cash?</title>
+        <description>&lt;p&gt;This is probably the most common question asked.
+First, we need to take a look at the evolution of trade:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Initially, trade was done through a barter system. You have an asset I want, I have an asset you want, let’s trade. Here, a apple farmer can trade his apples to a sheep herder for wool.&lt;/li&gt;
+  &lt;li&gt;Here, we run into a problem. What if you don’t have something I want? Metals, particularly gold and silver, were often used as a mechanism for trade.&lt;/li&gt;
+  &lt;li&gt;With the rise of kingdoms and nations, many wanted to show their reign and would melt metals and recast them to showcase an emblem with their nation.&lt;/li&gt;
+  &lt;li&gt;Eventually, nations realized that metals weren’t efficient, and paper money was created.&lt;/li&gt;
+  &lt;li&gt;With the rise of the internet, we now have online banking, where currency is just digital figures.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a simple look, but it’s obvious that cryptocurrencies are the next evolution of trade.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Like most features in evolution, the unregulated — capitalistic supply/demand — aspect is based off the Great Recession of 2007.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;ui header medium source&quot;&gt;Sources&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://bitcoin.stackexchange.com/q/182/30316&lt;/li&gt;
+  &lt;li&gt;https://medium.com/@sebfung/cryptocurrencies-101-c1c0a5a3cc2&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 12 Jan 2016 00:00:00 +0530</pubDate>
+        <link>http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</guid>
+        
+        <category>Cryptocurrency</category>
+        
+        <category>Handbook</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Cryptocurrency 101 - Part 1/3 - The Basics</title>
+        <description>&lt;h2 id=&quot;what-is-a-cryptocurrency&quot;&gt;What is a Cryptocurrency?&lt;/h2&gt; &lt;p&gt;A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider.&lt;/p&gt; &lt;p&gt;Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers.&lt;/p&gt; &lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt; &lt;p&gt;Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency.&lt;/p&gt; &lt;h2 id=&quot;what-gives-them-their-value&quot;&gt;What gives them their value?&lt;/h2&gt; &lt;p&gt;They have value because they are scarce, fungible (one &lt;a href=&quot;https://bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; is as good as another), easily transferred, and easily verified. The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today.&lt;/p&gt; &lt;p&gt;They aren’t backed by anything because they’re a commodity. What is gold backed by?&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another.&lt;/p&gt; &lt;/blockquote&gt; &lt;h2 id=&quot;advantages-of-cryptocurrency&quot;&gt;Advantages of...</description>
+        <pubDate>Fri, 08 Jan 2016 00:00:00 +0530</pubDate>
+        <link>http://lightrains.com/blogs/cryptocurrency-101</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101</guid>
+        
+        <category>Cryptocurrency</category>
+        
+        <category>Handbook</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pegke Loyalty</title>
+        <description>&lt;p&gt;Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items.&lt;/p&gt; &lt;p&gt;Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest.&lt;/p&gt; &lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt; &lt;p&gt;Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;High quality contributed modules which enable it to scale well to support very high traffic.&lt;/li&gt; &lt;li&gt;Out of the box rich content management features and can be extended to match the very specific requirements of our website.&lt;/li&gt; &lt;li&gt;An intuitive admin interface, enabling our web editorial team to update the site quickly and easily&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Advanced CSS/JS Aggregation&lt;/li&gt; &lt;li&gt;Location&lt;/li&gt; &lt;li&gt;Metatag&lt;/li&gt; &lt;li&gt;Views&lt;/li&gt; &lt;li&gt;Ubercart&lt;/li&gt; &lt;li&gt;Session Limit&lt;/li&gt; &lt;li&gt;Token&lt;/li&gt; &lt;li&gt;Support Ticketing System&lt;/li&gt; &lt;li&gt;Mandrill&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;why-these-modulesthemedistribution-were-chosen&quot;&gt;Why these modules/theme/distribution were chosen:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Advanced CSS/JS Aggregation:&lt;/strong&gt; Make sure we are not making too many unnecessary http requests and wasting our resources.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our...</description>
+        <pubDate>Sat, 13 Jun 2015 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/work/pegke-loyalty</link>
+        <guid isPermaLink="true">http://lightrains.com/work/pegke-loyalty</guid>
+        
+        
+        <category>Drupal</category>
+        
+      </item>
+    
+      <item>
+        <title>PSC HUB is now available as Telegram Bot</title>
+        <description>&lt;p&gt;Now Telegram Messenger Users can Get PSC HUB - Kerala PSC Questions as a Telegram Bot, Through this users can&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get Random Questions in a Chat&lt;/li&gt;
+  &lt;li&gt;Realtime Questions&lt;/li&gt;
+  &lt;li&gt;Your Statistics&lt;/li&gt;
+  &lt;li&gt;Instant Support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-i-get-this-inside-telegram-messenger&quot;&gt;How I get this Inside Telegram Messenger&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Open Telegram Messenger&lt;/li&gt;
+  &lt;li&gt;Search for “pschub”&lt;/li&gt;
+  &lt;li&gt;You will see “PSC HUB Bot”&lt;/li&gt;
+  &lt;li&gt;Just start the bot and enjoy.&lt;/li&gt;
+  &lt;li&gt;Or Simply &lt;a href=&quot;https://telegram.me/pschub_bot&quot;&gt;Click HERE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What is a Bot
+Bots are simply Telegram accounts operated by software – not people – and they’ll often have AI features. They can do anything – teach, play, search, broadcast, remind, connect, integrate with other services, or even pass commands to the Internet of Things.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 17 May 2015 11:19:48 +0530</pubDate>
+        <link>http://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</link>
+        <guid isPermaLink="true">http://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</guid>
+        
+        <category>Telegram</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

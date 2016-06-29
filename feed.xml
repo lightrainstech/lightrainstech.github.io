@@ -3,10 +3,10 @@
   <channel>
     <title>Lightrains Technolabs</title>
     <description>Design and build applications utilizing blockchain technology</description>
-    <link>http://lightrains.com/</link>
-    <atom:link href="http://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jun 2016 10:59:53 +0530</pubDate>
-    <lastBuildDate>Tue, 28 Jun 2016 10:59:53 +0530</lastBuildDate>
+    <link>https://lightrains.com/</link>
+    <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 29 Jun 2016 12:07:39 +0530</pubDate>
+    <lastBuildDate>Wed, 29 Jun 2016 12:07:39 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -30,8 +30,8 @@
 COO&lt;/p&gt;
 </description>
         <pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/new-brand-identity-lightrains-tech</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/new-brand-identity-lightrains-tech</guid>
+        <link>https://lightrains.com/blogs/new-brand-identity-lightrains-tech</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/new-brand-identity-lightrains-tech</guid>
         
         <category>Brand</category>
         
@@ -44,8 +44,8 @@ COO&lt;/p&gt;
         <title>What is a DAO aka Decentralized Autonomous Organization</title>
         <description>&lt;p&gt;A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community&lt;/p&gt; &lt;p&gt;Essentially, it’s a non-human specific entity, who’s sole duty is to abide by a specific programmatic set of rules; or by the rules granted to it by decentralized consensus (majority decides what to do in a distributed manner).&lt;/p&gt; &lt;p&gt;So far, all contracts we listed were owned and executed by other accounts probably held by humans. But there is no discrimination against robots or humans in the Ethereum ecosystem and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other contracts.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;“On the Blockchain, no one knows you’re a fridge” - Richard Brown&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;what-is-a-dao-token&quot;&gt;What is a DAO token&lt;/h3&gt; &lt;p&gt;A DAO leverages smart contracts on the Ethereum blockchain so that anyone, anywhere in the world can be empowered to participate. In exchange for their early help, participants receive DAO tokens which hold many benefits.&lt;/p&gt; &lt;p&gt;Owning DAO tokens functions in a similar way to having shareholder rights in an actual company. &lt;br /&gt; &lt;strong&gt;By owning DAO tokens…&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;You can submit proposals for funding&lt;/li&gt; &lt;li&gt;You can vote on which proposals are funded&lt;/li&gt; &lt;li&gt;Receive profits from funded projects&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;technical&quot;&gt;Technical&lt;/h2&gt; &lt;p&gt;The code of a given DAO will be difficult to alter once the system is up and running, including bug fixes that would be trivial in centralised code. Corrections for a DAO would require writing new code and agreement to migrate all the funds. Although the code is visible to all, it is hard to repair, thus leaving known security holes open to exploitation unless a moratorium is called to enable...</description>
         <pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</guid>
+        <link>https://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</guid>
         
         <category>DAO</category>
         
@@ -58,8 +58,8 @@ COO&lt;/p&gt;
         <title>Compile and Deploy Solidity Contract</title>
         <description>&lt;p&gt;Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain&lt;/p&gt; &lt;p&gt;For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K.&lt;/p&gt; &lt;h2 id=&quot;step-1-install-solidity-compiler-solc&quot;&gt;Step 1. Install Solidity Compiler Solc&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;Easy way&lt;/strong&gt; Its very easy to install solc using npm the package manager for NodeJS the command is &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install solc&lt;/code&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Easier way Browser-Solidity&lt;/strong&gt; If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Building from Source&lt;/strong&gt; Assuming you are using Ubuntu 14.04&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;And pull the solidity source code&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;step-2-verify-solidity-compiler&quot;&gt;Step 2. Verify Solidity Compiler&lt;/h2&gt; &lt;p&gt;To ensure solc is installed and ready to use, you can verify it by running &lt;code class=&quot;highlighter-rouge&quot;&gt;eth.getCompilers()&lt;/code&gt; in geth console If you have it installed, it should output something like this:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[&#39;Solidity&#39; ] &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;bonus-compile-a-simple-contract&quot;&gt;Bonus. Compile a simple contract&lt;/h2&gt; &lt;p&gt;Let us take this simple contract source:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;This contract offers a unary method: called with a positive integer a, it returns a *...</description>
         <pubDate>Fri, 17 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</guid>
+        <link>https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</guid>
         
         <category>Blockchain</category>
         
@@ -87,8 +87,8 @@ We Sync and Brought together the user generated and branded content Social Media
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/hitsup-social</link>
-        <guid isPermaLink="true">http://lightrains.com/work/hitsup-social</guid>
+        <link>https://lightrains.com/work/hitsup-social</link>
+        <guid isPermaLink="true">https://lightrains.com/work/hitsup-social</guid>
         
         
         <category>Drupal</category>
@@ -119,8 +119,8 @@ We Sync and Brought together the user generated and branded content Social Media
 &lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;GRJsL74urwI&quot;&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/smart-contract-templates-banking-sceb</link>
-        <guid isPermaLink="true">http://lightrains.com/work/smart-contract-templates-banking-sceb</guid>
+        <link>https://lightrains.com/work/smart-contract-templates-banking-sceb</link>
+        <guid isPermaLink="true">https://lightrains.com/work/smart-contract-templates-banking-sceb</guid>
         
         
         <category>Blockchain</category>
@@ -145,8 +145,8 @@ We Sync and Brought together the user generated and branded content Social Media
 &lt;/ol&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/canned-emails</link>
-        <guid isPermaLink="true">http://lightrains.com/work/canned-emails</guid>
+        <link>https://lightrains.com/work/canned-emails</link>
+        <guid isPermaLink="true">https://lightrains.com/work/canned-emails</guid>
         
         
         <category>Open Source</category>
@@ -191,8 +191,8 @@ We Sync and Brought together the user generated and branded content Social Media
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/metromatinee</link>
-        <guid isPermaLink="true">http://lightrains.com/work/metromatinee</guid>
+        <link>https://lightrains.com/work/metromatinee</link>
+        <guid isPermaLink="true">https://lightrains.com/work/metromatinee</guid>
         
         
         <category>Drupal</category>
@@ -222,8 +222,8 @@ We Sync and Brought together the user generated and branded content Social Media
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/kerala-startup-mission</link>
-        <guid isPermaLink="true">http://lightrains.com/work/kerala-startup-mission</guid>
+        <link>https://lightrains.com/work/kerala-startup-mission</link>
+        <guid isPermaLink="true">https://lightrains.com/work/kerala-startup-mission</guid>
         
         
         <category>Drupal</category>
@@ -255,8 +255,8 @@ We Sync and Brought together the user generated and branded content Social Media
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/flot-blockchain-loyalty-tokens</link>
-        <guid isPermaLink="true">http://lightrains.com/work/flot-blockchain-loyalty-tokens</guid>
+        <link>https://lightrains.com/work/flot-blockchain-loyalty-tokens</link>
+        <guid isPermaLink="true">https://lightrains.com/work/flot-blockchain-loyalty-tokens</guid>
         
         
         <category>Blockchain</category>
@@ -291,8 +291,8 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
 &lt;p&gt;Show some love; Share Solo PDF Reader via Facebook, Twitter, LinkedIn.&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/solo-pdf-reader</link>
-        <guid isPermaLink="true">http://lightrains.com/work/solo-pdf-reader</guid>
+        <link>https://lightrains.com/work/solo-pdf-reader</link>
+        <guid isPermaLink="true">https://lightrains.com/work/solo-pdf-reader</guid>
         
         
         <category>Android</category>
@@ -303,8 +303,8 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
         <title>How to setup a local test Ethereum Blockchain</title>
         <description>&lt;p&gt;Setting up a private chain is useful for testing purposes or simply for playing around with, I couldn’t find a good tutorial on it so I thought I would write my own. In this tutorial we are working on Ubuntu 14.04 LTS and Go Implementation of Ethereum go-ethereum or simply geth&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;https://github.com/ethereum/go-ethereum/wiki&quot;&gt;geth&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;http://releases.ubuntu.com/14.04/&quot;&gt;ubuntu 14.04&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;the-fist-block---genesis-block&quot;&gt;The Fist Block - Genesis Block&lt;/h2&gt; &lt;p&gt;The Genesis block is the start block of the Blockchain - the first block, block 0, the only block that does not point to a predecessor block. It’s the entry point into the Blockchain database. The Genesis data defines initial parameters of the database and defines a cryptographically valid entry block. You might think thats a flaw in the system being able to decide the starting conditions of the chain, but the consensus algorithm will ensure that no other node will agree with your version of the blockchain unless they have the same genesis block (and some other crucial parameters, discussed later).&lt;/p&gt; &lt;h3 id=&quot;how-to-create-genesis-block&quot;&gt;How to Create Genesis Block&lt;/h3&gt; &lt;p&gt;Great, so how do we make one of these genesis blocks? Well its fairly simple the following JSON is all you really need:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;nonce&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000042&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;mixhash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;difficulty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x4000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;alloc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;coinbase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x00&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parentHash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;extraData&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Custem Ethereum Genesis Block&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;gasLimit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0xffffffff&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;Save the JSON into a file lets call it genesis.json and save in your home directory.&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth...</description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</guid>
+        <link>https://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</guid>
         
         
       </item>
@@ -324,8 +324,8 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
 &lt;p&gt;A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/what-is-ethereum</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-ethereum</guid>
+        <link>https://lightrains.com/blogs/what-is-ethereum</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/what-is-ethereum</guid>
         
         
       </item>
@@ -349,8 +349,8 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
 &lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;Gc2en3nHxA4&quot;&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/what-is-bitcoin-currency</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-bitcoin-currency</guid>
+        <link>https://lightrains.com/blogs/what-is-bitcoin-currency</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/what-is-bitcoin-currency</guid>
         
         
       </item>
@@ -369,8 +369,8 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
 &lt;p&gt;&lt;img src=&quot;/assets/img/5.jpg&quot; alt=&quot;image&quot; class=&quot;ui image fluid lazy&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/what-is-blockchain</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/what-is-blockchain</guid>
+        <link>https://lightrains.com/blogs/what-is-blockchain</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/what-is-blockchain</guid>
         
         <category>Blockchain</category>
         
@@ -408,8 +408,8 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 12 Jan 2016 00:00:00 +0530</pubDate>
-        <link>http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</guid>
+        <link>https://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</guid>
         
         <category>Cryptocurrency</category>
         
@@ -422,8 +422,8 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
         <title>Cryptocurrency 101 - Part 1/3 - The Basics</title>
         <description>&lt;h2 id=&quot;what-is-a-cryptocurrency&quot;&gt;What is a Cryptocurrency?&lt;/h2&gt; &lt;p&gt;A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider.&lt;/p&gt; &lt;p&gt;Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers.&lt;/p&gt; &lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt; &lt;p&gt;Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency.&lt;/p&gt; &lt;h2 id=&quot;what-gives-them-their-value&quot;&gt;What gives them their value?&lt;/h2&gt; &lt;p&gt;They have value because they are scarce, fungible (one &lt;a href=&quot;https://bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; is as good as another), easily transferred, and easily verified. The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today.&lt;/p&gt; &lt;p&gt;They aren’t backed by anything because they’re a commodity. What is gold backed by?&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another.&lt;/p&gt; &lt;/blockquote&gt; &lt;h2 id=&quot;advantages-of-cryptocurrency&quot;&gt;Advantages of...</description>
         <pubDate>Fri, 08 Jan 2016 00:00:00 +0530</pubDate>
-        <link>http://lightrains.com/blogs/cryptocurrency-101</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/cryptocurrency-101</guid>
+        <link>https://lightrains.com/blogs/cryptocurrency-101</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/cryptocurrency-101</guid>
         
         <category>Cryptocurrency</category>
         
@@ -436,8 +436,8 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
         <title>Pegke Loyalty</title>
         <description>&lt;p&gt;Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items.&lt;/p&gt; &lt;p&gt;Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest.&lt;/p&gt; &lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt; &lt;p&gt;Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;High quality contributed modules which enable it to scale well to support very high traffic.&lt;/li&gt; &lt;li&gt;Out of the box rich content management features and can be extended to match the very specific requirements of our website.&lt;/li&gt; &lt;li&gt;An intuitive admin interface, enabling our web editorial team to update the site quickly and easily&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Advanced CSS/JS Aggregation&lt;/li&gt; &lt;li&gt;Location&lt;/li&gt; &lt;li&gt;Metatag&lt;/li&gt; &lt;li&gt;Views&lt;/li&gt; &lt;li&gt;Ubercart&lt;/li&gt; &lt;li&gt;Session Limit&lt;/li&gt; &lt;li&gt;Token&lt;/li&gt; &lt;li&gt;Support Ticketing System&lt;/li&gt; &lt;li&gt;Mandrill&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;why-these-modulesthemedistribution-were-chosen&quot;&gt;Why these modules/theme/distribution were chosen:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Advanced CSS/JS Aggregation:&lt;/strong&gt; Make sure we are not making too many unnecessary http requests and wasting our resources.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our...</description>
         <pubDate>Sat, 13 Jun 2015 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/work/pegke-loyalty</link>
-        <guid isPermaLink="true">http://lightrains.com/work/pegke-loyalty</guid>
+        <link>https://lightrains.com/work/pegke-loyalty</link>
+        <guid isPermaLink="true">https://lightrains.com/work/pegke-loyalty</guid>
         
         
         <category>Drupal</category>
@@ -469,8 +469,8 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
 Bots are simply Telegram accounts operated by software – not people – and they’ll often have AI features. They can do anything – teach, play, search, broadcast, remind, connect, integrate with other services, or even pass commands to the Internet of Things.&lt;/p&gt;
 </description>
         <pubDate>Sun, 17 May 2015 11:19:48 +0530</pubDate>
-        <link>http://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</link>
-        <guid isPermaLink="true">http://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</guid>
+        <link>https://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</guid>
         
         <category>Telegram</category>
         

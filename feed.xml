@@ -5,9 +5,23 @@
     <description>Design and build applications utilizing blockchain technology</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Jun 2016 14:51:41 +0530</pubDate>
-    <lastBuildDate>Wed, 29 Jun 2016 14:51:41 +0530</lastBuildDate>
+    <pubDate>Thu, 30 Jun 2016 11:20:59 +0530</pubDate>
+    <lastBuildDate>Thu, 30 Jun 2016 11:20:59 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>ECMAScript 6</title>
+        <description>&lt;p&gt;ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMAScript standard. ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now.&lt;/p&gt; &lt;p&gt;&lt;em&gt;Content is copied shamelessly from &lt;a href=&quot;https://github.com/lukehoban/es6features&quot;&gt;lukehoban/es6features&lt;/a&gt;&lt;/em&gt;&lt;/p&gt; &lt;h2 id=&quot;es6-includes-the-following-new-features&quot;&gt;ES6 includes the following new features:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#arrows&quot;&gt;arrows&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#classes&quot;&gt;classes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#enhanced-object-literals&quot;&gt;enhanced object literals&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#template-strings&quot;&gt;template strings&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#destructuring&quot;&gt;destructuring&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#default--rest--spread&quot;&gt;default + rest + spread&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#let--const&quot;&gt;let + const&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#iterators--forof&quot;&gt;iterators + for..of&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#generators&quot;&gt;generators&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#unicode&quot;&gt;unicode&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#modules&quot;&gt;modules&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#module-loaders&quot;&gt;module loaders&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#map--set--weakmap--weakset&quot;&gt;map + set + weakmap + weakset&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#proxies&quot;&gt;proxies&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#symbols&quot;&gt;symbols&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#subclassable-built-ins&quot;&gt;subclassable built-ins&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#promises&quot;&gt;promises&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#math--number--string--array--object-apis&quot;&gt;math + number + string + array + object APIs&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#binary-and-octal-literals&quot;&gt;binary and octal literals&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#reflect-api&quot;&gt;reflect api&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#tail-calls&quot;&gt;tail calls&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;ecmascript-6-features&quot;&gt;ECMAScript 6 Features&lt;/h2&gt; &lt;h3 id=&quot;arrows&quot;&gt;Arrows&lt;/h3&gt; &lt;p&gt;Arrows are a function shorthand using the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&amp;gt;&lt;/code&gt; syntax. They are syntactically similar to the related feature in C#, Java 8 and CoffeeScript. They support both statement block bodies as well as expression bodies which return the value of the expression. Unlike functions, arrows share the same lexical &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; as their surrounding code.&lt;/p&gt; &lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;// Expression bodies var odds = evens.map(v =&amp;gt; v + 1); var nums = evens.map((v, i) =&amp;gt; v + i); var pairs = evens.map(v =&amp;gt; ({even: v, odd: v + 1})); // Statement bodies nums.forEach(v =&amp;gt; { if (v % 5 === 0) fives.push(v); }); // Lexical this var bob = { _name: &quot;Bob&quot;, _friends: [], printFriends() { this._friends.forEach(f =&amp;gt; console.log(this._name + &quot; knows &quot; + f)); } } &lt;/code&gt;&lt;/pre&gt; &lt;p&gt;More info: &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;MDN Arrow Functions&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;classes&quot;&gt;Classes&lt;/h3&gt; &lt;p&gt;ES6 classes are a simple sugar over the prototype-based OO pattern. Having a single convenient declarative form makes class patterns easier to...</description>
+        <pubDate>Thu, 30 Jun 2016 01:19:48 +0530</pubDate>
+        <link>https://lightrains.com/blogs/es6</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/es6</guid>
+        
+        <category>ES6</category>
+        
+        <category>ECMAScript 2015</category>
+        
+        
+      </item>
     
       <item>
         <title>Evolving the Identity</title>

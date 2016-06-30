@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Team behind the Scene ⚡️ Lightrains Technolabs</title>
+  <title>Categories and Tags ⚡️ Lightrains Technolabs</title>
   <meta name="description" content="Design and build applications utilizing blockchain technology">
 
   <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&subset=latin" rel="stylesheet">
@@ -18,7 +18,7 @@
   
 
 
-  <link rel="canonical" href="https://lightrains.com/about/team">
+  <link rel="canonical" href="https://lightrains.com/tag/es6/atom.xml">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
 
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
@@ -57,7 +57,7 @@
 <meta property="og:image" content="https://lightrains.com/assets/favicons/open-graph.png">
 </head>
 
-<body class="page page-default path-inner">
+<body class="page page-post path-inner">
   <div class="ui labeled icon left sidebar vertical menu" style="">
     <a class="item" href="/">
       <i class="home icon"></i>
@@ -122,62 +122,99 @@
 
     </div>
     <div class="ui container">
-      <h1 id="team-behind-the-scene">Team behind the Scene</h1>
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">Categories and Tags</h1>
+  </header>
+  <div class="ui text page-text">
+    <a name="categories"></a>
+<h3>Categories</h3>
 
-<div class="ui four column stackable grid">
-  
-  <div class="column">
-    <div class="ui fluid card">
-      <div class="image">
-        <img src="//www.gravatar.com/avatar/ec562dd86a88f57838a3a57be91fcc2e?s=300" alt="Photo of Nikhil Mohan" />
-      </div>
-      <div class="content">
-      <div class="header">Nikhil Mohan</div>
-      <div class="meta">
-        <span class="date">Managing Director</span>
-      </div>
-      <div class="description">
-        Co-founder of @lightrainstech
-      </div>
-    </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="ui fluid card">
-      <div class="image">
-        <img src="//www.gravatar.com/avatar/2b802ade9d2814bcc1afb43efff32301?s=300" alt="Photo of Sibiraj P.R." />
-      </div>
-      <div class="content">
-      <div class="header">Sibiraj P.R.</div>
-      <div class="meta">
-        <span class="date">CEO</span>
-      </div>
-      <div class="description">
-        Co-founder of @lightrainstech
-      </div>
-    </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="ui fluid card">
-      <div class="image">
-        <img src="//www.gravatar.com/avatar/71ef81522c0363944c55553b9e6a23b3?s=300" alt="Photo of Pramod J George." />
-      </div>
-      <div class="content">
-      <div class="header">Pramod J George.</div>
-      <div class="meta">
-        <span class="date">Managing Director</span>
-      </div>
-      <div class="description">
-        Co-founder of @lightrainstech
-      </div>
-    </div>
-    </div>
-  </div>
-  
+<div class="row">
+	
+		<div class="col-12 col-lg-12">
+			<a href="/category/Drupal/">Drupal <span class="badge">4</span></a>
+		</div>
+	
+		<div class="col-12 col-lg-12">
+			<a href="/category/Android/">Android <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-12 col-lg-12">
+			<a href="/category/Blockchain/">Blockchain <span class="badge">2</span></a>
+		</div>
+	
+		<div class="col-12 col-lg-12">
+			<a href="/category/Ethereum/">Ethereum <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-12 col-lg-12">
+			<a href="/category/Smart Contract/">Smart Contract <span class="badge">3</span></a>
+		</div>
+	
+		<div class="col-12 col-lg-12">
+			<a href="/category/Open Source/">Open Source <span class="badge">1</span></a>
+		</div>
+	
 </div>
+
+<a name="tags"></a>
+<h3>Tags</h3>
+
+<div class="row">
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Telegram/">Telegram <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Cryptocurrency/">Cryptocurrency <span class="badge">2</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Handbook/">Handbook <span class="badge">2</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Blockchain/">Blockchain <span class="badge">2</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Smart Contract/">Smart Contract <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/DAO/">DAO <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/The DAO/">The DAO <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Brand/">Brand <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Typography/">Typography <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ES6/">ES6 <span class="badge">1</span></a>
+		</div>
+	
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ECMAScript 2015/">ECMAScript 2015 <span class="badge">1</span></a>
+		</div>
+	
+</div>
+
+  </div>
+</article>
 
     </div>
     <div class="fullw mobile hidden">

@@ -4,29 +4,31 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Compile and Deploy Solidity Contract ⚡️ Lightrains Technolabs</title>
-
-  
-
-  
-
-
+  <title>Compile and Deploy Solidity Contract ⚡ Lightrains Technolabs</title>
   <meta name="description" content="Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte">
-
   <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&subset=latin" rel="stylesheet">
-
-  
   <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
-  
-
-
-  
-
-
   <link rel="canonical" href="https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
-
+<meta property="og:url" content="https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compile and Deploy Solidity Contract">
+<meta property="og:image" content="https://lightrains.com/assets/img/blog/deploy-smart-contract.png">
+<meta property="og:description" content="Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte">
+<meta property="og:site_name" content="Lightrains Technolabs">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Nikhil Mohan, ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@lightrainstech">
+<meta name="twitter:creator" content="@niksmac_">
+<meta name="twitter:url" content="https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1">
+<meta name="twitter:title" content="Compile and Deploy Solidity Contract">
+<meta name="twitter:description" content="Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte">
+<meta name="twitter:image" content="https://lightrains.com/assets/img/blog/deploy-smart-contract.png">
+<link href="https://plus.google.com/+Lightrainstech" rel="publisher">
+<meta itemprop="name" content="Compile and Deploy Solidity Contract">
+<meta itemprop="description" content="Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte">
+<meta itemprop="image" content="https://lightrains.com/assets/img/blog/deploy-smart-contract.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
 <link rel="manifest" href="/assets/favicons/manifest.json">
 <meta name="mobile-web-app-capable" content="yes">
@@ -60,11 +62,9 @@
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-768x1004.png">
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
-<meta property="og:image" content="https://lightrains.com/assets/favicons/open-graph.png">
 </head>
-
 <body class="page page-blog path-inner">
-  <div class="ui inverted top sidebar vertical menu" style="">
+ <div class="ui inverted top sidebar vertical menu" style="">
     <a class="item" href="/">
       <i class="home icon"></i>
       Home
@@ -85,85 +85,69 @@
       <i class="send icon"></i>
       Contact
     </a>
-  </div>
-
-  <div class="pusher">
-    <div class="ui container">
+ </div>
+ <div class="pusher">
+   <div class="ui container">
       <header class="site-header">
-  <div class="computer mobile only">
-
-    <div class="ui secondary menu">
+ <div class="computer mobile only">
+   <div class="ui secondary menu">
       <a href="/" class="item left"><svg width="40px" height="40px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>Lightrains Tech</title>
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <path d="M0,256 L0,0 L256,0 L512,0 L512,256 L512,512 L256,512 L0,512 L0,256 Z M132.000051,368.803206 L131.900051,347.303206 C131.900051,335.503206 130.500051,219.803206 130.500051,219.803206 L143.200051,232.903206 C154.100051,244.003206 261.300051,355.003206 264.900051,358.803206 C286.000051,380.703206 289.100051,383.703206 294.500051,386.103206 C306.100051,391.503206 319.600051,388.603206 328.200051,378.903206 C334.800051,371.403206 335.400051,367.903206 336.100051,333.803206 C336.400051,317.303206 336.800051,303.703206 337.000051,303.503206 C337.200051,303.303206 343.300051,307.303206 350.700051,312.503206 C358.000051,317.603206 395.000051,343.103206 403.500051,348.803206 C424.800051,362.903206 435.000051,367.903206 437.300051,365.003206 C440.300051,361.303206 433.200051,349.203206 408.900051,316.903206 C397.000051,301.003206 328.800051,210.803206 325.300051,208.203206 C307.600051,195.503206 282.200051,207.103206 280.000051,228.903206 C279.700051,231.603206 278.400051,287.803206 278.200051,287.903206 C278.000051,288.103206 268.400051,278.603206 256.900051,266.603206 C245.400051,254.703206 151.800051,157.903206 140.500051,146.203206 C117.100051,122.003206 114.100051,119.903206 102.500051,120.003206 C91.400051,120.003206 81.900051,125.803206 76.700051,135.703206 L74.000051,140.803206 C74.000051,140.803206 73.9819537,340.669567 74.62773,357.103137 C75.4375396,377.710988 77.4485705,377.140456 82.400051,382.203206 C90.900051,390.903206 105.200051,393.703206 115.200051,388.503206 C121.800051,385.103206 131.50005,374.303207 132.000051,368.803206 Z" id="lightrains-tech-logo" fill="#000000" transform="translate(256.000000, 256.000000) scale(1, -1) translate(-256.000000, -256.000000) "></path>
+         <path d="M0,256 L0,0 L256,0 L512,0 L512,256 L512,512 L256,512 L0,512 L0,256 Z M132.000051,368.803206 L131.900051,347.303206 C131.900051,335.503206 130.500051,219.803206 130.500051,219.803206 L143.200051,232.903206 C154.100051,244.003206 261.300051,355.003206 264.900051,358.803206 C286.000051,380.703206 289.100051,383.703206 294.500051,386.103206 C306.100051,391.503206 319.600051,388.603206 328.200051,378.903206 C334.800051,371.403206 335.400051,367.903206 336.100051,333.803206 C336.400051,317.303206 336.800051,303.703206 337.000051,303.503206 C337.200051,303.303206 343.300051,307.303206 350.700051,312.503206 C358.000051,317.603206 395.000051,343.103206 403.500051,348.803206 C424.800051,362.903206 435.000051,367.903206 437.300051,365.003206 C440.300051,361.303206 433.200051,349.203206 408.900051,316.903206 C397.000051,301.003206 328.800051,210.803206 325.300051,208.203206 C307.600051,195.503206 282.200051,207.103206 280.000051,228.903206 C279.700051,231.603206 278.400051,287.803206 278.200051,287.903206 C278.000051,288.103206 268.400051,278.603206 256.900051,266.603206 C245.400051,254.703206 151.800051,157.903206 140.500051,146.203206 C117.100051,122.003206 114.100051,119.903206 102.500051,120.003206 C91.400051,120.003206 81.900051,125.803206 76.700051,135.703206 L74.000051,140.803206 C74.000051,140.803206 73.9819537,340.669567 74.62773,357.103137 C75.4375396,377.710988 77.4485705,377.140456 82.400051,382.203206 C90.900051,390.903206 105.200051,393.703206 115.200051,388.503206 C121.800051,385.103206 131.50005,374.303207 132.000051,368.803206 Z" id="lightrains-tech-logo" fill="#000000" transform="translate(256.000000, 256.000000) scale(1, -1) translate(-256.000000, -256.000000) "></path>
         </g>
       </svg></a>
-
-      <a href="/" class="item right"><i class="content right large icon" id="mobmenu"></i></a>
-    </div>
-
-
-  </div>
-  <div class="ui secondary pointing menu large screen only">
-    <div class="left menu">
+      <a href="/" class="item right" id="mobmenu"><i class="content right large icon" ></i></a>
+   </div>
+ </div>
+ <div class="ui secondary pointing menu large screen only">
+   <div class="left menu">
       <a href="/">
         <svg width="64px" height="64px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title>Lightrains Tech</title>
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <path d="M0,256 L0,0 L256,0 L512,0 L512,256 L512,512 L256,512 L0,512 L0,256 Z M132.000051,368.803206 L131.900051,347.303206 C131.900051,335.503206 130.500051,219.803206 130.500051,219.803206 L143.200051,232.903206 C154.100051,244.003206 261.300051,355.003206 264.900051,358.803206 C286.000051,380.703206 289.100051,383.703206 294.500051,386.103206 C306.100051,391.503206 319.600051,388.603206 328.200051,378.903206 C334.800051,371.403206 335.400051,367.903206 336.100051,333.803206 C336.400051,317.303206 336.800051,303.703206 337.000051,303.503206 C337.200051,303.303206 343.300051,307.303206 350.700051,312.503206 C358.000051,317.603206 395.000051,343.103206 403.500051,348.803206 C424.800051,362.903206 435.000051,367.903206 437.300051,365.003206 C440.300051,361.303206 433.200051,349.203206 408.900051,316.903206 C397.000051,301.003206 328.800051,210.803206 325.300051,208.203206 C307.600051,195.503206 282.200051,207.103206 280.000051,228.903206 C279.700051,231.603206 278.400051,287.803206 278.200051,287.903206 C278.000051,288.103206 268.400051,278.603206 256.900051,266.603206 C245.400051,254.703206 151.800051,157.903206 140.500051,146.203206 C117.100051,122.003206 114.100051,119.903206 102.500051,120.003206 C91.400051,120.003206 81.900051,125.803206 76.700051,135.703206 L74.000051,140.803206 C74.000051,140.803206 73.9819537,340.669567 74.62773,357.103137 C75.4375396,377.710988 77.4485705,377.140456 82.400051,382.203206 C90.900051,390.903206 105.200051,393.703206 115.200051,388.503206 C121.800051,385.103206 131.50005,374.303207 132.000051,368.803206 Z" id="lightrains-tech-logo" fill="#000000" transform="translate(256.000000, 256.000000) scale(1, -1) translate(-256.000000, -256.000000) "></path>
+           <path d="M0,256 L0,0 L256,0 L512,0 L512,256 L512,512 L256,512 L0,512 L0,256 Z M132.000051,368.803206 L131.900051,347.303206 C131.900051,335.503206 130.500051,219.803206 130.500051,219.803206 L143.200051,232.903206 C154.100051,244.003206 261.300051,355.003206 264.900051,358.803206 C286.000051,380.703206 289.100051,383.703206 294.500051,386.103206 C306.100051,391.503206 319.600051,388.603206 328.200051,378.903206 C334.800051,371.403206 335.400051,367.903206 336.100051,333.803206 C336.400051,317.303206 336.800051,303.703206 337.000051,303.503206 C337.200051,303.303206 343.300051,307.303206 350.700051,312.503206 C358.000051,317.603206 395.000051,343.103206 403.500051,348.803206 C424.800051,362.903206 435.000051,367.903206 437.300051,365.003206 C440.300051,361.303206 433.200051,349.203206 408.900051,316.903206 C397.000051,301.003206 328.800051,210.803206 325.300051,208.203206 C307.600051,195.503206 282.200051,207.103206 280.000051,228.903206 C279.700051,231.603206 278.400051,287.803206 278.200051,287.903206 C278.000051,288.103206 268.400051,278.603206 256.900051,266.603206 C245.400051,254.703206 151.800051,157.903206 140.500051,146.203206 C117.100051,122.003206 114.100051,119.903206 102.500051,120.003206 C91.400051,120.003206 81.900051,125.803206 76.700051,135.703206 L74.000051,140.803206 C74.000051,140.803206 73.9819537,340.669567 74.62773,357.103137 C75.4375396,377.710988 77.4485705,377.140456 82.400051,382.203206 C90.900051,390.903206 105.200051,393.703206 115.200051,388.503206 C121.800051,385.103206 131.50005,374.303207 132.000051,368.803206 Z" id="lightrains-tech-logo" fill="#000000" transform="translate(256.000000, 256.000000) scale(1, -1) translate(-256.000000, -256.000000) "></path>
           </g>
         </svg>
       </a>
-    </div>
-    <div class="right menu" id="menu">
-      <div class="ui dropdown pointing item">
+   </div>
+   <div class="right menu" id="menu">
+     <div class="ui dropdown pointing item">
         Company<i class="dropdown icon"></i>
-        <div class="menu">
+       <div class="menu">
           <a class="item" href="/about/lightrains">About Us</a>
           <a class="item" href="/about/careers">Careers</a>
           <a class="item" href="/about/team">Team Lightrains</a>
-          <!-- <a class="item" href="/about/technology">Technology</a> -->
-          <div class="ui dropdown left pointing item">
+         <div class="ui dropdown left pointing item">
             Consulting <i class="dropdown icon"></i>
-            <div class="menu">
+           <div class="menu">
               <a class="item" href="/consulting/blockchain-consulting">Blockchain</a>
               <a class="item" href="/consulting/drupal-consulting-development">Drupal</a>
               <a class="item" href="/consulting/es6-javascript-development">ES6</a>
-            </div>
-          </div>
-        </div>
-      </div>
+           </div>
+         </div>
+       </div>
+     </div>
       <a class="item" href="/about/portfolio">Work</a>
       <a class="item" href="/blogs">Blog</a>
       <a class="item" href="/about/contact">Contact</a>
-    </div>
-  </div>
+   </div>
+ </div>
 </header>
-
-    </div>
-    <div class="ui container">
+   </div>
+   <div class="ui container">
       <header class="post-header">
-  <h1 class="post-title">Compile and Deploy Solidity Contract</h1>
+ <h1 class="post-title">Compile and Deploy Solidity Contract</h1>
 </header>
-
 <div class="ui grid stackable">
-  <div class="ui eleven wide column text page-text">
-    
-      <h2 class="post-subtitle" itemprop="name headline">How to Compile and Deploy Solidity Contract in Ethereum console (geth)</h2>
-    
-    
+ <div class="ui eleven wide column text page-text">
+     <h2 class="post-subtitle" itemprop="name headline">How to Compile and Deploy Solidity Contract in Ethereum console (geth)</h2>
       <img class="ui fluid image" src="/assets/img/blog/deploy-smart-contract.png" alt="Compile and Deploy Solidity Contract">
-      <div class="ui hidden divider"></div>
-    
-    
-
+     <div class="ui hidden divider"></div>
 <div class="author">
   by <a href="http://nikhilmohan.in" target="_blank">Nikhil Mohan</a> posted on <span>Fri, Jun 17, 2016</span> in <a href="/tag/blockchain">Blockchain</a> 
-  <div class="ui pointing dropdown icon circular button right floated">
+ <div class="ui pointing dropdown icon circular button right floated">
     <i class="share alternate icon"></i>
-    
-
 <div class="ui menu">
   <a href="https://facebook.com/sharer.php?u=https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1" target="_blank" class="item">
     <i class="facebook icon"></i> Facebook
@@ -178,27 +162,18 @@
     <i class="twitter icon"></i> Twitter
   </a>
 </div>
-
-  </div>
+ </div>
 </div>
 <div class="ui hidden divider"></div>
-
-
-    <p>Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain</p>
-
+   <p>Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain</p>
 <p>For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K.</p>
-
 <h2 id="step-1-install-solidity-compiler-solc">Step 1. Install Solidity Compiler Solc</h2>
-
 <p><strong>Easy way</strong>
 Its very easy to install solc using npm the package manager for NodeJS the command is <code class="highlighter-rouge">npm install solc</code></p>
-
 <p><strong>Easier way Browser-Solidity</strong>
 If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity.</p>
-
 <p><strong>Building from Source</strong>
 Assuming you are using Ubuntu 14.04</p>
-
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-add-repository ppa:george-edison55/cmake-3.x
 sudo apt-get -y update
 sudo apt-get -y install language-pack-en-base
@@ -210,35 +185,26 @@ sudo apt-get -y update
 sudo apt-get -y upgrade
 </code></pre>
 </div>
-
 <p>And pull the solidity source code</p>
-
 <div class="highlighter-rouge"><pre class="highlight"><code>git clone --recursive https://github.com/ethereum/webthree-umbrella.git
 cd webthree-umbrella
 ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo
 ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0
 </code></pre>
 </div>
-
 <h2 id="step-2-verify-solidity-compiler">Step 2. Verify Solidity Compiler</h2>
-
 <p>To ensure solc is installed and ready to use, you can verify it by running <code class="highlighter-rouge">eth.getCompilers()</code> in geth console
 If you have it installed, it should output something like this:</p>
-
 <div class="highlighter-rouge"><pre class="highlight"><code>['Solidity' ]
 </code></pre>
 </div>
-
 <h2 id="bonus-compile-a-simple-contract">Bonus. Compile a simple contract</h2>
-
 <p>Let us take this simple contract source:</p>
-
 <div class="highlighter-rouge"><pre class="highlight"><code>source = "contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"
 </code></pre>
 </div>
 <p>This contract offers a unary method: called with a positive integer a, it returns a * 7.
 You are ready to compile solidity code in the geth JS console using   <code class="highlighter-rouge">eth.compile.solidity</code></p>
-
 <div class="highlighter-rouge"><pre class="highlight"><code>&gt; contract = eth.compile.solidity(source).test
 {
   code: '605280600c6000396000f3006000357c010000000000000000000000000000000000000000000000000000000090048063c6888fa114602e57005b60376004356041565b8060005260206000f35b6000600782029050604d565b91905056',
@@ -272,24 +238,17 @@ You are ready to compile solidity code in the geth JS console using   <code clas
 }
 </code></pre>
 </div>
-
 <p>Now you have a deploy-able contract in your console with which you can deploy it to Ethereum Blockchain</p>
-
 <h3 id="part-22-deploy-the-contract-to-blockchain">Part 2/2 Deploy the contract to blockchain.</h3>
-
 <p><em>Source</em></p>
-
 <ol>
   <li><a href="http://solidity.readthedocs.org/en/latest/frequently-asked-questions.html#basic-questions">Frequently Asked Questions</a></li>
   <li><a href="https://ethereum.gitbooks.io/frontier-guide/content/compiling_contract.html">Compiling a contract</a></li>
 </ol>
-
-    <div class="ui hidden divider"></div>
-
+   <div class="ui hidden divider"></div>
 <div class="ui tiny label">
   All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
 </div>
-
 <h4 class="ui horizontal divider header">Write a comment on Compile and Deploy Solidity Contract</h2>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -300,95 +259,63 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-
-  </div>
-  <div class="ui five wide column">
-    <div class="ui hidden divider"></div>
+ </div>
+ <div class="ui five wide column">
+   <div class="ui hidden divider"></div>
     <h3>Posted In</h3>
 <div class="ui black labels">
-
   <a href="/tag/blockchain/" class="ui label" title="Blogs Tagged Blockchain" >Blockchain</a>
-
   <a href="/tag/smart-contract/" class="ui label" title="Blogs Tagged Smart Contract" >Smart Contract</a>
-
 </div>
-
     <h3>Recent Posts</h3>
-
 <ul>
-
   <li >
     <a class="header" href="/blogs/es6" title="ECMAScript 6">ECMAScript 6</a>
   </li>
-
   <li >
     <a class="header" href="/blogs/new-brand-identity-lightrains-tech" title="Evolving the Identity">Evolving the Identity</a>
   </li>
-
   <li >
     <a class="header" href="/blogs/what-is-dao-decentralized-autonomous-organization" title="What is a DAO aka Decentralized Autonomous Organization">What is a DAO aka Decentralized Autonomous Organization</a>
   </li>
-
   <li >
     <a class="header" href="/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1" title="Compile and Deploy Solidity Contract">Compile and Deploy Solidity Contract</a>
   </li>
-
   <li >
     <a class="header" href="/blogs/setup-local-ethereum-blockchain-private-testnet" title="How to setup a local test Ethereum Blockchain">How to setup a local test Ethereum Blockchain</a>
   </li>
-
   <li >
     <a class="header" href="/blogs/what-is-ethereum" title="What is Ethereum">What is Ethereum</a>
   </li>
-
 </ul>
-
-    
-
 <div class="ui items author white">
-  <div class="item">
-    <a class="ui tiny image" href="http://nikhilmohan.in">
-      <img src="//www.gravatar.com/avatar/ec562dd86a88f57838a3a57be91fcc2e?s=300" alt="Photo of Nikhil Mohan">
-    </a>
-    <div class="content">
+ <div class="item">
+   <div class="content">
       <a class="header" href="http://nikhilmohan.in" rel="author">Nikhil Mohan</a>
-      <div class="description">
+     <div class="description">
         Ξntrepreneur, Ethereum Blockchain enthusiast, co-founder of @lightrainstech.
-      </div>
-      <div class="social">
-        
+     </div>
+     <div class="social">
         <a href="https://in.linkedin.com/in/nikhilmohan7"><i class="linkedin bordered icon"></i></a>
-        
-        
         <a href="http://github.com/niksmac"><i class="github bordered icon"></i></a>
-        
-        
-        <a href="http://twitter.com/niksmac_"><i class="twitter bordered icon"></i></a>
-        
-      </div>
-    </div>
-  </div>
+        <a href="https://twitter.com/niksmac_"><i class="twitter bordered icon"></i></a>
+     </div>
+   </div>
+ </div>
 </div>
-
-
-
-
-  </div>
+ </div>
 </div>
-
-    </div>
-    <div class="fullw mobile hidden">
-      <div class="ui container footer">
-        <div class="footers">
+   </div>
+   <div class="fullw mobile hidden">
+     <div class="ui container footer">
+       <div class="footers">
   +91 471 4000056 <i class="ellipsis vertical icon"></i> 
  <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
  <i class="ellipsis vertical icon"></i> &copy; 2010-2016 All Rights Reserved
-  <p class="slogan">Engineering Blockchain and Smart contracts. Technology Supercharged</p>
+ <p class="slogan">Engineering Blockchain and Smart contracts. Technology Supercharged</p>
 </div>
-
-
-      </div>
-    </div>
+     </div>
+   </div>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -411,15 +338,10 @@ s.setAttribute('data-timestamp', +new Date());
     "postalCode": "695581",
     "streetAddress": "G3B, Thejaswini, Technopark Campus"
   },
-  "logo": "https://lightrains.com/assets/img/lightrins-contact-us.png",
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
   "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
 }
 </script>
-
-  
 <script src="/assets/js/bundle-front.min.js"></script>
-
-
 </div>
 </body>
-</html>

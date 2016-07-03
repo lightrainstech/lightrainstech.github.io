@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/dag-ethereum-blockchain</loc>
+<lastmod>2016-07-03T00:07:20+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/es6</loc>
 <lastmod>2016-06-30T01:19:48+05:30</lastmod>
 </url>
@@ -174,6 +178,12 @@
 </url>
 <url>
 <loc>https://lightrains.com/tag/ecmascript-2015/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/dag/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/principles/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

@@ -5,9 +5,25 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Jul 2016 21:46:14 +0530</pubDate>
-    <lastBuildDate>Sat, 02 Jul 2016 21:46:14 +0530</lastBuildDate>
+    <pubDate>Sun, 03 Jul 2016 08:21:33 +0530</pubDate>
+    <lastBuildDate>Sun, 03 Jul 2016 08:21:33 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>What is DAG in Ethereum Blockchain</title>
+        <description>&lt;p&gt;Dagger Hashimoto is a proposed spec for the mining algorithm for Ethereum 1.0. &lt;strong&gt;Dagger Hashimoto&lt;/strong&gt; aims to simultaneously satisfy two goals:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;strong&gt;ASIC-resistance:&lt;/strong&gt; the benefit from creating specialized hardware for the algorithm should be as small as possible, ideally to the point that even in an economy where ASICs have been developed the speedup is sufficiently small that it is still marginally profitable for users on ordinary computers to mine with spare CPU power.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Light client verifiability:&lt;/strong&gt; a block should be relatively efficiently verifiable by a light client.&lt;/li&gt; &lt;/ol&gt; &lt;h2 id=&quot;why-do-we-need-dag-in-ethereum&quot;&gt;Why do we need DAG in Ethereum?&lt;/h2&gt; &lt;p&gt;Ethereum uses Ethash (Proof of Work system). &lt;em&gt;as of now&lt;/em&gt; &lt;br /&gt; Ethash PoW is memory hard, making it basically ASIC resistant. This basically means that calculating the PoW requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabyte size data) is called a DAG. Clients wishing to store the DAG in a cache should conform to this spec in order to share the cache with other clients:&lt;/p&gt; &lt;h3 id=&quot;where-is-dag-stored&quot;&gt;Where is DAG stored&lt;/h3&gt; &lt;p&gt;The DAG should be stored in a 1GB dump (for the initial epoch, anyway), in a file:&lt;/p&gt; &lt;p&gt;Mac/Linux: &lt;code class=&quot;highlighter-rouge&quot;&gt;$(HOME)/.ethash/full-R&amp;lt;REVISION&amp;gt;-&amp;lt;SEEDHASH&amp;gt;&lt;/code&gt; Windows: &lt;code class=&quot;highlighter-rouge&quot;&gt;$(HOME)/Appdata/Local/Ethash/full-R&amp;lt;REVISION&amp;gt;-&amp;lt;SEEDHASH&amp;gt;&lt;/code&gt;&lt;/p&gt; &lt;h3 id=&quot;format&quot;&gt;Format&lt;/h3&gt; &lt;p&gt;Each file should begin with an 8-byte magic number, &lt;code class=&quot;highlighter-rouge&quot;&gt;0xfee1deadbaddcafe&lt;/code&gt;, written in little-endian format (i.e., bytes &lt;code class=&quot;highlighter-rouge&quot;&gt;fe ca dd ba ad de e1 fe&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;The Ethash algorithm expects the DAG as a two-dimensional array of &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32s&lt;/code&gt; (4-byte unsigned ints), with dimension &lt;code class=&quot;highlighter-rouge&quot;&gt;(n × 16)&lt;/code&gt; where n is a large number. (n starts at &lt;code class=&quot;highlighter-rouge&quot;&gt;16777186&lt;/code&gt; and grows from there.) Following the magic number, the rows of the DAG should be written sequentially into the file, with no delimiter between rows and each &lt;code class=&quot;highlighter-rouge&quot;&gt;unint32&lt;/code&gt; encoded in little-endian format.&lt;/p&gt; &lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt; &lt;ol&gt; &lt;li&gt;&lt;a...</description>
+        <pubDate>Sun, 03 Jul 2016 00:07:20 +0530</pubDate>
+        <link>https://lightrains.com/blogs/dag-ethereum-blockchain</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/dag-ethereum-blockchain</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>DAG</category>
+        
+        <category>Principles</category>
+        
+        
+      </item>
     
       <item>
         <title>ECMAScript 6</title>

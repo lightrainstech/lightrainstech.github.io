@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lightrains Technolabs</title>
-  <meta name="description" content="Blogs Tagged: Cryptocurrency                                            	Cryptocurrency 101 - Part 2/3 - Why use cryptocurrencies instead of cash?			January 12,">
-  <link rel="amphtml" href="https://lightrains.com/amp/tag/cryptocurrency//index.html">
+  <title>Categories and Tags ⚡ Lightrains Technolabs</title>
+  <meta name="description" content="Categories						Drupal 4								Android 1								Blockchain 2								Ethereum 1								Smart Contract 3								Open Source 1			Tags					Telegram 1							Cryptoc">
+  <link rel="amphtml" href="https://lightrains.com/amp/tag/ipfs/atom.xml/index.html">
   <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&subset=latin" rel="stylesheet">
   <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
-  <link rel="canonical" href="https://lightrains.com/tag/cryptocurrency/">
+  <link rel="canonical" href="https://lightrains.com/tag/ipfs/atom.xml">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
 <link rel="manifest" href="/assets/favicons/manifest.json">
@@ -45,7 +45,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
 </head>
-<body class="page page-default path-inner">
+<body class="page page-post path-inner">
  <div class="ui inverted top sidebar vertical menu" style="">
     <a class="item" href="/">
       <i class="home icon"></i>
@@ -113,85 +113,87 @@
 </header>
    </div>
    <div class="ui container">
-     <div class="ui center header aligned text headerimg">
-  <header class="ui center aligned blog">
-   <h1 class="post-title ui header huge" itemprop="name headline" title="">
-      Blogs Tagged: Cryptocurrency
-     </h1>
-    </header>
-   <div class="ui divider hidden"></div>
- </div>
- <div class="ui container">
-   <div class="ui grid stackable">
-     <div class="ten wide column">
-       <div class="row">
-	<div class="col-lg-12"><h2 class="entry-title"><a href="/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash">Cryptocurrency 101 - Part 2/3 - Why use cryptocurrencies instead of cash?</a></h2></div>
-</div>
+      <article class="post">
+  <header class="post-header">
+   <h1 class="post-title">Categories and Tags</h1>
+  </header>
+ <div class="ui text page-text">
+    <a name="categories"></a>
+<h3>Categories</h3>
 <div class="row">
-	<div class="col-lg-2">
-		<div class="post-date">January 12, 2016</div>
-	</div>
-	<div class="col-lg-8">
-		<p></p>
-	</div>
-	<div class="col-lg-2 more">
-		<a href="/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash" class="more-link">MORE &rarr;</a>
-	</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Drupal/">Drupal <span class="badge">4</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Android/">Android <span class="badge">1</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Blockchain/">Blockchain <span class="badge">2</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Ethereum/">Ethereum <span class="badge">1</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Smart Contract/">Smart Contract <span class="badge">3</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Open Source/">Open Source <span class="badge">1</span></a>
+		</div>
 </div>
-<div class="ui hidden divider"></div>
-       <div class="row">
-	<div class="col-lg-12"><h2 class="entry-title"><a href="/blogs/cryptocurrency-101">Cryptocurrency 101 - Part 1/3 - The Basics</a></h2></div>
-</div>
-<div class="row">
-	<div class="col-lg-2">
-		<div class="post-date">January 08, 2016</div>
-	</div>
-	<div class="col-lg-8">
-		<p></p>
-	</div>
-	<div class="col-lg-2 more">
-		<a href="/blogs/cryptocurrency-101" class="more-link">MORE &rarr;</a>
-	</div>
-</div>
-<div class="ui hidden divider"></div>
-       <div class="ui divider hidden"></div>
-<div id="paging">
-  <a href="#" class="ui left disabled labeled icon floated small button"><i class="left arrow icon"></i> Older</a>
-  <a href="#" class="ui right labeled icon right floated small disabled button"><i class="right arrow icon"></i> Newer</a>
-</div>
-   </div>
-   <div class="six wide column">
-      <h3>Categories</h3>
-<div class="ui black labels">
-  <a href="/category/drupal/" class="ui label" title="Blogs Tagged Drupal" >Drupal </a>
-  <a href="/category/android/" class="ui label" title="Blogs Tagged Android" >Android </a>
-  <a href="/category/blockchain/" class="ui label" title="Blogs Tagged Blockchain" >Blockchain </a>
-  <a href="/category/ethereum/" class="ui label" title="Blogs Tagged Ethereum" >Ethereum </a>
-  <a href="/category/smart-contract/" class="ui label" title="Blogs Tagged Smart Contract" >Smart Contract </a>
-  <a href="/category/open-source/" class="ui label" title="Blogs Tagged Open Source" >Open Source </a>
-</div>
+<a name="tags"></a>
 <h3>Tags</h3>
-<div class="ui black labels">
-  <a href="/tag/telegram/" class="ui label" title="Blogs Tagged Telegram" >Telegram </a>
-  <a href="/tag/cryptocurrency/" class="ui label" title="Blogs Tagged Cryptocurrency" >Cryptocurrency </a>
-  <a href="/tag/handbook/" class="ui label" title="Blogs Tagged Handbook" >Handbook </a>
-  <a href="/tag/blockchain/" class="ui label" title="Blogs Tagged Blockchain" >Blockchain </a>
-  <a href="/tag/bitcoin/" class="ui label" title="Blogs Tagged Bitcoin" >Bitcoin </a>
-  <a href="/tag/smart-contract/" class="ui label" title="Blogs Tagged Smart Contract" >Smart Contract </a>
-  <a href="/tag/dao/" class="ui label" title="Blogs Tagged DAO" >DAO </a>
-  <a href="/tag/the-dao/" class="ui label" title="Blogs Tagged The DAO" >The DAO </a>
-  <a href="/tag/brand/" class="ui label" title="Blogs Tagged Brand" >Brand </a>
-  <a href="/tag/typography/" class="ui label" title="Blogs Tagged Typography" >Typography </a>
-  <a href="/tag/es6/" class="ui label" title="Blogs Tagged ES6" >ES6 </a>
-  <a href="/tag/ecmascript-2015/" class="ui label" title="Blogs Tagged ECMAScript 2015" >ECMAScript 2015 </a>
-  <a href="/tag/dag/" class="ui label" title="Blogs Tagged DAG" >DAG </a>
-  <a href="/tag/principles/" class="ui label" title="Blogs Tagged Principles" >Principles </a>
-  <a href="/tag/ipfs/" class="ui label" title="Blogs Tagged IPFS" >IPFS </a>
-  <a href="/tag/decentralization/" class="ui label" title="Blogs Tagged Decentralization" >Decentralization </a>
+<div class="row">
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Telegram/">Telegram <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Cryptocurrency/">Cryptocurrency <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Handbook/">Handbook <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Blockchain/">Blockchain <span class="badge">3</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Smart Contract/">Smart Contract <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/DAO/">DAO <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/The DAO/">The DAO <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Brand/">Brand <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Typography/">Typography <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ES6/">ES6 <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ECMAScript 2015/">ECMAScript 2015 <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/DAG/">DAG <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Principles/">Principles <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/IPFS/">IPFS <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Decentralization/">Decentralization <span class="badge">1</span></a>
+		</div>
 </div>
-   </div>
  </div>
-</div>
+</article>
    </div>
    <div class="fullw mobile hidden">
      <div class="ui container footer">

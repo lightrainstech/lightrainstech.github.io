@@ -2,8 +2,8 @@
 <html amp lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SCEB Smart Contract Templates for Banking</title>
-  <link rel="canonical" href="https://lightrains.com/work/smart-contract-templates-banking-sceb" />
+  <title>Introduction to IPFS</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/ipfs-introduction" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700|Merriweather:400&subset=latin" rel="stylesheet" type='text/css'>
@@ -172,19 +172,19 @@ li:before {
   "@type": "Article",
   "mainEntityOfPage":{
     "@type":"WebPage",
-    "@id":"https://lightrains.com/work/smart-contract-templates-banking-sceb/"
+    "@id":"https://lightrains.com/blogs/ipfs-introduction/"
   },
-  "headline": "SCEB Smart Contract Templates for Banking",
+  "headline": "Introduction to IPFS",
   "about": "Engineering Blockchain and Smart contracts.",
-  "sameAs": "https://lightrains.com/work/smart-contract-templates-banking-sceb/",
+  "sameAs": "https://lightrains.com/blogs/ipfs-introduction/",
   "image": {
     "@type": "ImageObject",
     "url": "https://lightrains.com/assets/img/lightrains-logo.png",
     "height": 1000,
     "width": 700
   },
-  "datePublished": "2016-06-13T11:19:48+05:30",
-  "dateModified": "2016-06-13T11:19:48+05:30",
+  "datePublished": "2016-07-05T00:12:49+05:30",
+  "dateModified": "2016-07-05T00:12:49+05:30",
   "author": {
      "@type": "Person",
      "name": "Nikhil Mohan"
@@ -199,7 +199,7 @@ li:before {
       "height": 60
     }
   },
-  "description": "SCEB is a platform for financial institutions to take advantage of the blockchain based smart-contracts as templates in everyday banking. Technology Stack*..."
+  "description": "IPFS is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In some ways, IPFS is similar to th..."
 }
 </script>
 
@@ -213,33 +213,41 @@ li:before {
   <a href="/about/contact">Contact</a>
 </div>
 
-  <h1 class="post-title ui header huge" itemprop="name headline" title="SCEB Smart Contract Templates for Banking">SCEB Smart Contract Templates for Banking</h1>
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Introduction to IPFS">Introduction to IPFS</h1>
   <div class="content">
     <span class="timespan">
-      Mon, Jun 13, 16
+      Tue, Jul 05, 16
     </span>
-    <p>SCEB is a platform for financial institutions to take advantage of the blockchain based smart-contracts as templates in everyday banking.</p>
+    <p>IPFS is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In some ways, IPFS is similar to the <a href="https://en.wikipedia.org/wiki/World_Wide_Web">World Wide Web</a>, but IPFS could be seen as a single BitTorrent swarm, exchanging objects within one Git repository. In other words, IPFS provides a high-throughput, content-addressed block storage model, with content-addressed hyperlinks.</p>
 
-<h2 id="technology-stack">Technology Stack</h2>
-<ul>
-  <li>Ethereum Blockchain</li>
-  <li>Embark Framework</li>
-  <li>Solidity - smart-contract language</li>
-  <li>IPFS - decentralised file storage</li>
-</ul>
+<h2 id="what-is-ipfs-from-their-readme">What is IPFS? From their README:</h2>
 
-<h2 id="potential-benefits">Potential benefits</h2>
-<ul>
-  <li>Cost Reductions</li>
-  <li>Efficiency Improvements</li>
-  <li>Reduce Risk</li>
-  <li>Reusable contracts</li>
-  <li>Less paperwork</li>
-</ul>
+<blockquote>
+  <p>IPFS is a distributed file system that seeks to connect all computing devices with the same system of files. In some ways, this is similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects. IPFS could become a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy.</p>
+</blockquote>
 
-<div class="ui embed" data-source="youtube" data-id="GRJsL74urwI"></div>
+<p><strong>HTTP is inefficient and expensive</strong>
+HTTP downloads a file from a single computer at a time, instead of getting pieces from multiple computers simultaneously. With video delivery, a P2P approach could save 60% in bandwidth costs.</p>
 
-    <a href="https://lightrains.com/work/smart-contract-templates-banking-sceb" title="SCEB Smart Contract Templates for Banking" class="nonamp">Full Version of SCEB Smart Contract Templates for Banking</a>
+<p><strong>The web’s centralization limits opportunity</strong>
+The Internet has been one of the great equalizers in human history and a real accelerator of innovation. But the increasing consolidation of control is a threat to that.</p>
+
+<p><strong>Our apps are addicted to the backbone</strong>
+Developing world. Offline. Natural disasters. Intermittent connections. All trivial compared to interplanetary networking. The networks we’re using are so 20th Century. We can do better.</p>
+
+<h2 id="how-ipfs-works">How IPFS works</h2>
+<ol>
+  <li>Each file and all of the blocks within it are given a unique fingerprint called a cryptographic hash.</li>
+  <li>IPFS removes duplications across the network and tracks version history for every file.</li>
+  <li>Each network node stores only content it is interested in, and some indexing information that helps figure out who is storing what.</li>
+  <li>When looking up files, you’re asking the network to find nodes storing the content behind a unique hash.</li>
+</ol>
+
+<p><a href="https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf">IPFS Whitepaper</a></p>
+
+<div class="ui embed" data-source="youtube" data-id="8CMxDNuuAiQ"></div>
+
+    <a href="https://lightrains.com/blogs/ipfs-introduction" title="Introduction to IPFS" class="nonamp">Full Version of Introduction to IPFS</a>
   </div>
   
   <div class="related ui segment">

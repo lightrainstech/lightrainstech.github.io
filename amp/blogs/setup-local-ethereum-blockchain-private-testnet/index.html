@@ -237,7 +237,7 @@ li:before {
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000042"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000042"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"mixhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4000"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"alloc"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
@@ -272,7 +272,7 @@ Note the difficulty is set very low in the above genesis block, this allowed my 
 </div>
 
 <p>The last command above generated a new account with address ‘0xcc8C048426978c5877212281b8a75F1B4E71a862’
-Once you’ve generated your account, quit geth with <ctrl-c> and remove every folder except keystore/ from your datadir:</ctrl-c></p>
+Once you’ve generated your account, quit geth with ctrl-c and remove every folder except keystore/ from your datadir:</p>
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>$ cd &lt;your datadir&gt;
@@ -284,9 +284,9 @@ $ rm -rf `ls | grep -v keystore`
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>"alloc": {
-    "&lt;your account address e.g. 0xcc8C048426978c5877212281b8a75F1B4E71a862&gt;": {
-        "balance": "10000000000000000000"
-    }
+  "&lt;your account address e.g. 0xcc8C048426978c5877212281b8a75F1B4E71a862&gt;": {
+    "balance": "10000000000000000000"
+  }
 }
 </code></pre>
 </div>
@@ -297,9 +297,9 @@ $ rm -rf `ls | grep -v keystore`
 
 <div class="highlighter-rouge">
 <pre class="highlight"><code>$ primary = eth.accounts[0];
-  '0xcc8C048426978c5877212281b8a75F1B4E71a862'
+'0xcc8C048426978c5877212281b8a75F1B4E71a862'
 $ balance = web3.fromWei(eth.getBalance(primary), "ether");
-  '10'
+'10'
 </code></pre>
 </div>
 

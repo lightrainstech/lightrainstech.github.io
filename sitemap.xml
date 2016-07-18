@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets</loc>
+<lastmod>2016-07-15T11:19:48+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/ipfs-introduction</loc>
 <lastmod>2016-07-05T00:12:49+05:30</lastmod>
 </url>
@@ -199,6 +203,15 @@
 <loc>https://lightrains.com/tag/decentralization/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/ethereum/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/geth/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/go-ethereum/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -260,6 +273,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/ipfs-introduction/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/useful-ethereum-geth-javascript-snippets/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

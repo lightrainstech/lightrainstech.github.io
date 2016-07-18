@@ -5,9 +5,27 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Jul 2016 16:16:17 +0530</pubDate>
-    <lastBuildDate>Mon, 11 Jul 2016 16:16:17 +0530</lastBuildDate>
+    <pubDate>Mon, 18 Jul 2016 09:34:26 +0530</pubDate>
+    <lastBuildDate>Mon, 18 Jul 2016 09:34:26 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Common useful JavaScript snippets for geth</title>
+        <description>&lt;p&gt;This is a collection of common useful scripts that are handy when you do any kind of developemt on the Ethereum Virtual Machine aka EVM.&lt;/p&gt; &lt;p&gt;This collection of scripts are availabe in github &lt;a href=&quot;https://github.com/niksmac/ethereum-scripts&quot;&gt;niksmac/ethereum-scripts&lt;/a&gt;&lt;/p&gt; &lt;h2 id=&quot;print-block-details&quot;&gt;1. Print Block Details&lt;/h2&gt; &lt;p&gt;This function is uswful when you want to print the details of a block in the &lt;code class=&quot;highlighter-rouge&quot;&gt;console&lt;/code&gt;&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function printBlock(block) { console.log(&quot;Block number : &quot; + block.number + &quot;\n&quot; + &quot; hash : &quot; + block.hash + &quot;\n&quot; + &quot; parentHash : &quot; + block.parentHash + &quot;\n&quot; + &quot; nonce : &quot; + block.nonce + &quot;\n&quot; + &quot; sha3Uncles : &quot; + block.sha3Uncles + &quot;\n&quot; + &quot; logsBloom : &quot; + block.logsBloom + &quot;\n&quot; + &quot; transactionsRoot: &quot; + block.transactionsRoot + &quot;\n&quot; + &quot; stateRoot : &quot; + block.stateRoot + &quot;\n&quot; + &quot; miner : &quot; + block.miner + &quot;\n&quot; + &quot; difficulty : &quot; + block.difficulty + &quot;\n&quot; + &quot; totalDifficulty : &quot; + block.totalDifficulty + &quot;\n&quot; + &quot; extraData : &quot; + block.extraData + &quot;\n&quot; + &quot; size : &quot; + block.size + &quot;\n&quot; + &quot; gasLimit : &quot; + block.gasLimit + &quot;\n&quot; + &quot; gasUsed : &quot; + block.gasUsed + &quot;\n&quot; + &quot; timestamp : &quot; + block.timestamp + &quot;\n&quot; + &quot; transactions : &quot; + block.transactions + &quot;\n&quot; + &quot; uncles : &quot; + block.uncles); if (block.transactions != null) { console.log(&quot;--- transactions ---&quot;); block.transactions.forEach( function(e) { printTransaction(e); }) } } &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;check-all-balances&quot;&gt;2. Check all Balances&lt;/h2&gt; &lt;p&gt;Can be used to cheak balances of all accounts inside your keystore; ie, you own both the keys.&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log(&quot; eth.accounts[&quot;+i+&quot;]: &quot; + e + &quot; \tbalance: &quot; + web3.fromWei(eth.getBalance(e), &quot;ether&quot;) + &quot; ether&quot;); i++; }) }; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;get-account-balances-and-including-thedao-tokens&quot;&gt;3. Get Account Balances And Including TheDAO Tokens&lt;/h2&gt;...</description>
+        <pubDate>Fri, 15 Jul 2016 11:19:48 +0530</pubDate>
+        <link>https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Ethereum</category>
+        
+        <category>geth</category>
+        
+        <category>go-ethereum</category>
+        
+        
+      </item>
     
       <item>
         <title>Introduction to IPFS</title>

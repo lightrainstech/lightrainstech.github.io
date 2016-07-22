@@ -5,13 +5,92 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 19 Jul 2016 21:45:56 +0530</pubDate>
-    <lastBuildDate>Tue, 19 Jul 2016 21:45:56 +0530</lastBuildDate>
+    <pubDate>Fri, 22 Jul 2016 09:11:18 +0530</pubDate>
+    <lastBuildDate>Fri, 22 Jul 2016 09:11:18 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
+        <title>Function parameters in es6</title>
+        <description>There are 2 types of function parameters available in es6,
+
+
+  Default Parameters
+  Rest Parameters
+
+
+Default Parameter
+Default parameter are a way to pass a value to the function parameter when there is no value is being passed by the callee during invocation.
+
+We specify this value when defining a function,
+
+function printName ( name = &#39;there&#39; ) {
+  return `Hello,  ${name}`
+}
+
+
+We can even use the default parameter of one parameter as part of an expression for another
+paramter. For eg:
+
+function printName ( name = &#39;there&#39;, fullname = name + &#39; lastName&#39; ) {
+  return `Hello,  ${name} -  ${fullname} `
+}
+
+
+
+Rest Parameters
+The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+
+This is achieved by using a new operator called Spread Operator which is represented by ... 3dots
+
+Spread Operator
+It is used when we want to pass an array to a function as individual arguments of that function. For
+eg:
+
+function sum (x, y, z ) {
+  return x + y + z;
+}
+let values = [1, 2, 3]
+// notice the usage of ...
+sum(...values)
+
+
+
+Another Example
+
+function f(x, ...y) {
+ // y is an Array
+ return x * y.length;
+}
+f(3, &quot;hello&quot;, true) == 6
+
+
+If the last named argument of a function is prefixed with ..., it becomes an array whose elements from 0 (inclusive) to theArgs.length (exclusive) are supplied by the actual arguments passed to the function.
+
+In the above example, theArgs would collect the third argument of the function (because the first one is mapped to a, and the second to b) and all the consecutive argument
+
+Sources:
+
+
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+  https://lightrains.com/blogs/es6#default–rest–spread
+
+</description>
+        <pubDate>Wed, 20 Jul 2016 09:12:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/function-parameteres-ecmascript6-es6</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/function-parameteres-ecmascript6-es6</guid>
+        
+        <category>ES6</category>
+        
+        <category>ES6 Tutorials</category>
+        
+        <category>Ecmascript 6</category>
+        
+        
+      </item>
+    
+      <item>
         <title>Common useful JavaScript snippets for geth</title>
-        <description>&lt;p&gt;This is a collection of common useful scripts that are handy when you do any kind of developemt on the Ethereum Virtual Machine aka EVM.&lt;/p&gt; &lt;p&gt;This collection of scripts are availabe in github &lt;a href=&quot;https://github.com/niksmac/ethereum-scripts&quot;&gt;niksmac/ethereum-scripts&lt;/a&gt;&lt;/p&gt; &lt;h2 id=&quot;print-block-details&quot;&gt;1. Print Block Details&lt;/h2&gt; &lt;p&gt;This function is uswful when you want to print the details of a block in the &lt;code class=&quot;highlighter-rouge&quot;&gt;console&lt;/code&gt;&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function printBlock(block) { console.log(&quot;Block number : &quot; + block.number + &quot;\n&quot; + &quot; hash : &quot; + block.hash + &quot;\n&quot; + &quot; parentHash : &quot; + block.parentHash + &quot;\n&quot; + &quot; nonce : &quot; + block.nonce + &quot;\n&quot; + &quot; sha3Uncles : &quot; + block.sha3Uncles + &quot;\n&quot; + &quot; logsBloom : &quot; + block.logsBloom + &quot;\n&quot; + &quot; transactionsRoot: &quot; + block.transactionsRoot + &quot;\n&quot; + &quot; stateRoot : &quot; + block.stateRoot + &quot;\n&quot; + &quot; miner : &quot; + block.miner + &quot;\n&quot; + &quot; difficulty : &quot; + block.difficulty + &quot;\n&quot; + &quot; totalDifficulty : &quot; + block.totalDifficulty + &quot;\n&quot; + &quot; extraData : &quot; + block.extraData + &quot;\n&quot; + &quot; size : &quot; + block.size + &quot;\n&quot; + &quot; gasLimit : &quot; + block.gasLimit + &quot;\n&quot; + &quot; gasUsed : &quot; + block.gasUsed + &quot;\n&quot; + &quot; timestamp : &quot; + block.timestamp + &quot;\n&quot; + &quot; transactions : &quot; + block.transactions + &quot;\n&quot; + &quot; uncles : &quot; + block.uncles); if (block.transactions != null) { console.log(&quot;--- transactions ---&quot;); block.transactions.forEach( function(e) { printTransaction(e); }) } } &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;check-all-balances&quot;&gt;2. Check all Balances&lt;/h2&gt; &lt;p&gt;Can be used to cheak balances of all accounts inside your keystore; ie, you own both the keys.&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log(&quot; eth.accounts[&quot;+i+&quot;]: &quot; + e + &quot; \tbalance: &quot; + web3.fromWei(eth.getBalance(e), &quot;ether&quot;) + &quot; ether&quot;); i++; }) }; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;get-account-balances-and-including-thedao-tokens&quot;&gt;3. Get Account Balances And Including TheDAO Tokens&lt;/h2&gt;...</description>
+        <description>This is a collection of common useful scripts that are handy when you do any kind of developemt on the Ethereum Virtual Machine aka EVM. This collection of scripts are availabe in github niksmac/ethereum-scripts 1. Print Block Details This function is uswful when you want to print the details of a block in the console function printBlock(block) { console.log(&quot;Block number : &quot; + block.number + &quot;\n&quot; + &quot; hash : &quot; + block.hash + &quot;\n&quot; + &quot; parentHash : &quot; + block.parentHash + &quot;\n&quot; + &quot; nonce : &quot; + block.nonce + &quot;\n&quot; + &quot; sha3Uncles : &quot; + block.sha3Uncles + &quot;\n&quot; + &quot; logsBloom : &quot; + block.logsBloom + &quot;\n&quot; + &quot; transactionsRoot: &quot; + block.transactionsRoot + &quot;\n&quot; + &quot; stateRoot : &quot; + block.stateRoot + &quot;\n&quot; + &quot; miner : &quot; + block.miner + &quot;\n&quot; + &quot; difficulty : &quot; + block.difficulty + &quot;\n&quot; + &quot; totalDifficulty : &quot; + block.totalDifficulty + &quot;\n&quot; + &quot; extraData : &quot; + block.extraData + &quot;\n&quot; + &quot; size : &quot; + block.size + &quot;\n&quot; + &quot; gasLimit : &quot; + block.gasLimit + &quot;\n&quot; + &quot; gasUsed : &quot; + block.gasUsed + &quot;\n&quot; + &quot; timestamp : &quot; + block.timestamp + &quot;\n&quot; + &quot; transactions : &quot; + block.transactions + &quot;\n&quot; + &quot; uncles : &quot; + block.uncles); if (block.transactions != null) { console.log(&quot;--- transactions ---&quot;); block.transactions.forEach( function(e) { printTransaction(e); }) } } 2. Check all Balances Can be used to cheak balances of all accounts inside your keystore; ie, you own both the keys. function checkAllBalances() { var i =0; eth.accounts.forEach( function(e){ console.log(&quot; eth.accounts[&quot;+i+&quot;]: &quot; + e + &quot; \tbalance: &quot; + web3.fromWei(eth.getBalance(e), &quot;ether&quot;) + &quot; ether&quot;); i++; }) }; 3. Get Account Balances And Including TheDAO Tokens function padTokens(s, n) { var o = s.toPrecision(n); while (o.length &amp;lt; n) {...</description>
         <pubDate>Fri, 15 Jul 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets</guid>
@@ -29,7 +108,7 @@
     
       <item>
         <title>Introduction to IPFS</title>
-        <description>&lt;p&gt;IPFS is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In some ways, IPFS is similar to the &lt;a href=&quot;https://en.wikipedia.org/wiki/World_Wide_Web&quot;&gt;World Wide Web&lt;/a&gt;, but IPFS could be seen as a single BitTorrent swarm, exchanging objects within one Git repository. In other words, IPFS provides a high-throughput, content-addressed block storage model, with content-addressed hyperlinks.&lt;/p&gt; &lt;h2 id=&quot;what-is-ipfs-from-their-readme&quot;&gt;What is IPFS? From their README:&lt;/h2&gt; &lt;blockquote&gt; &lt;p&gt;IPFS is a distributed file system that seeks to connect all computing devices with the same system of files. In some ways, this is similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects. IPFS could become a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;strong&gt;HTTP is inefficient and expensive&lt;/strong&gt; HTTP downloads a file from a single computer at a time, instead of getting pieces from multiple computers simultaneously. With video delivery, a P2P approach could save 60% in bandwidth costs.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;The web’s centralization limits opportunity&lt;/strong&gt; The Internet has been one of the great equalizers in human history and a real accelerator of innovation. But the increasing consolidation of control is a threat to that.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Our apps are addicted to the backbone&lt;/strong&gt; Developing world. Offline. Natural disasters. Intermittent connections. All trivial compared to interplanetary networking. The networks we’re using are so 20th Century. We can do better.&lt;/p&gt; &lt;h2 id=&quot;how-ipfs-works&quot;&gt;How IPFS works&lt;/h2&gt; &lt;ol&gt; &lt;li&gt;Each file and all of the blocks within it are given a unique fingerprint called a cryptographic hash.&lt;/li&gt; &lt;li&gt;IPFS removes duplications across the network and tracks version history for every file.&lt;/li&gt; &lt;li&gt;Each network node stores only content it is interested in, and some indexing...</description>
+        <description>IPFS is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In some ways, IPFS is similar to the World Wide Web, but IPFS could be seen as a single BitTorrent swarm, exchanging objects within one Git repository. In other words, IPFS provides a high-throughput, content-addressed block storage model, with content-addressed hyperlinks. What is IPFS? From their README: IPFS is a distributed file system that seeks to connect all computing devices with the same system of files. In some ways, this is similar to the original aims of the Web, but IPFS is actually more similar to a single bittorrent swarm exchanging git objects. IPFS could become a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It is crazy. HTTP is inefficient and expensive HTTP downloads a file from a single computer at a time, instead of getting pieces from multiple computers simultaneously. With video delivery, a P2P approach could save 60% in bandwidth costs. The web’s centralization limits opportunity The Internet has been one of the great equalizers in human history and a real accelerator of innovation. But the increasing consolidation of control is a threat to that. Our apps are addicted to the backbone Developing world. Offline. Natural disasters. Intermittent connections. All trivial compared to interplanetary networking. The networks we’re using are so 20th Century. We can do better. How IPFS works Each file and all of the blocks within it are given a unique fingerprint called a cryptographic hash. IPFS removes duplications across the network and tracks version history for every file. Each network node stores only content it is interested in, and some indexing information that helps figure out who...</description>
         <pubDate>Tue, 05 Jul 2016 00:12:49 +0530</pubDate>
         <link>https://lightrains.com/blogs/ipfs-introduction</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/ipfs-introduction</guid>
@@ -43,7 +122,36 @@
     
       <item>
         <title>What is DAG in Ethereum Blockchain</title>
-        <description>&lt;p&gt;Dagger Hashimoto is a proposed spec for the mining algorithm for Ethereum 1.0. &lt;strong&gt;Dagger Hashimoto&lt;/strong&gt; aims to simultaneously satisfy two goals:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;strong&gt;ASIC-resistance:&lt;/strong&gt; the benefit from creating specialized hardware for the algorithm should be as small as possible, ideally to the point that even in an economy where ASICs have been developed the speedup is sufficiently small that it is still marginally profitable for users on ordinary computers to mine with spare CPU power.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Light client verifiability:&lt;/strong&gt; a block should be relatively efficiently verifiable by a light client.&lt;/li&gt; &lt;/ol&gt; &lt;h2 id=&quot;why-do-we-need-dag-in-ethereum&quot;&gt;Why do we need DAG in Ethereum?&lt;/h2&gt; &lt;p&gt;Ethereum uses Ethash (Proof of Work system). &lt;em&gt;as of now&lt;/em&gt; &lt;br /&gt; Ethash PoW is memory hard, making it basically ASIC resistant. This basically means that calculating the PoW requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabyte size data) is called a DAG. Clients wishing to store the DAG in a cache should conform to this spec in order to share the cache with other clients:&lt;/p&gt; &lt;h3 id=&quot;where-is-dag-stored&quot;&gt;Where is DAG stored&lt;/h3&gt; &lt;p&gt;The DAG should be stored in a 1GB dump (for the initial epoch, anyway), in a file:&lt;/p&gt; &lt;p&gt;Mac/Linux: &lt;code class=&quot;highlighter-rouge&quot;&gt;$(HOME)/.ethash/full-R&amp;lt;REVISION&amp;gt;-&amp;lt;SEEDHASH&amp;gt;&lt;/code&gt; Windows: &lt;code class=&quot;highlighter-rouge&quot;&gt;$(HOME)/Appdata/Local/Ethash/full-R&amp;lt;REVISION&amp;gt;-&amp;lt;SEEDHASH&amp;gt;&lt;/code&gt;&lt;/p&gt; &lt;h3 id=&quot;format&quot;&gt;Format&lt;/h3&gt; &lt;p&gt;Each file should begin with an 8-byte magic number, &lt;code class=&quot;highlighter-rouge&quot;&gt;0xfee1deadbaddcafe&lt;/code&gt;, written in little-endian format (i.e., bytes &lt;code class=&quot;highlighter-rouge&quot;&gt;fe ca dd ba ad de e1 fe&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;The Ethash algorithm expects the DAG as a two-dimensional array of &lt;code class=&quot;highlighter-rouge&quot;&gt;uint32s&lt;/code&gt; (4-byte unsigned ints), with dimension &lt;code class=&quot;highlighter-rouge&quot;&gt;(n × 16)&lt;/code&gt; where n is a large number. (n starts at &lt;code class=&quot;highlighter-rouge&quot;&gt;16777186&lt;/code&gt; and grows from there.) Following the magic number, the rows of the DAG should be written sequentially into the file, with no delimiter between rows and each &lt;code class=&quot;highlighter-rouge&quot;&gt;unint32&lt;/code&gt; encoded in little-endian format.&lt;/p&gt; &lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt; &lt;ol&gt; &lt;li&gt;&lt;a...</description>
+        <description>Dagger Hashimoto is a proposed spec for the mining algorithm for Ethereum 1.0. Dagger Hashimoto aims to simultaneously satisfy two goals:
+
+
+  ASIC-resistance: the benefit from creating specialized hardware for the algorithm should be as small as possible, ideally to the point that even in an economy where ASICs have been developed the speedup is sufficiently small that it is still marginally profitable for users on ordinary computers to mine with spare CPU power.
+  Light client verifiability: a block should be relatively efficiently verifiable by a light client.
+
+
+Why do we need DAG in Ethereum?
+Ethereum uses Ethash (Proof of Work system). as of now 
+Ethash PoW is memory hard, making it basically ASIC resistant. This basically means that calculating the PoW requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabyte size data) is called a DAG. Clients wishing to store the DAG in a cache should conform to this spec in order to share the cache with other clients:
+
+Where is DAG stored
+The DAG should be stored in a 1GB dump (for the initial epoch, anyway), in a file:
+
+Mac/Linux: $(HOME)/.ethash/full-R&amp;lt;REVISION&amp;gt;-&amp;lt;SEEDHASH&amp;gt;
+Windows: $(HOME)/Appdata/Local/Ethash/full-R&amp;lt;REVISION&amp;gt;-&amp;lt;SEEDHASH&amp;gt;
+
+Format
+
+Each file should begin with an 8-byte magic number, 0xfee1deadbaddcafe, written in little-endian format (i.e., bytes fe ca dd ba ad de e1 fe).
+
+The Ethash algorithm expects the DAG as a two-dimensional array of uint32s (4-byte unsigned ints), with dimension (n × 16) where n is a large number. (n starts at 16777186 and grows from there.) Following the magic number, the rows of the DAG should be written sequentially into the file, with no delimiter between rows and each unint32 encoded in little-endian format.
+
+Sources
+
+  Dagger-Hashimoto
+  Ethash DAG
+  Directed acyclic graph - In mathematics and computer science
+
+</description>
         <pubDate>Sun, 03 Jul 2016 00:07:20 +0530</pubDate>
         <link>https://lightrains.com/blogs/dag-ethereum-blockchain</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/dag-ethereum-blockchain</guid>
@@ -59,7 +167,7 @@
     
       <item>
         <title>ECMAScript 6</title>
-        <description>&lt;p&gt;ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMAScript standard. ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now.&lt;/p&gt; &lt;p&gt;&lt;em&gt;Content is copied shamelessly from &lt;a href=&quot;https://github.com/lukehoban/es6features&quot;&gt;lukehoban/es6features&lt;/a&gt;&lt;/em&gt;&lt;/p&gt; &lt;h2 id=&quot;es6-includes-the-following-new-features&quot;&gt;ES6 includes the following new features:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;#arrows&quot;&gt;arrows&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#classes&quot;&gt;classes&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#enhanced-object-literals&quot;&gt;enhanced object literals&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#template-strings&quot;&gt;template strings&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#destructuring&quot;&gt;destructuring&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#default--rest--spread&quot;&gt;default + rest + spread&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#let--const&quot;&gt;let + const&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#iterators--forof&quot;&gt;iterators + for..of&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#generators&quot;&gt;generators&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#unicode&quot;&gt;unicode&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#modules&quot;&gt;modules&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#module-loaders&quot;&gt;module loaders&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#map--set--weakmap--weakset&quot;&gt;map + set + weakmap + weakset&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#proxies&quot;&gt;proxies&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#symbols&quot;&gt;symbols&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#subclassable-built-ins&quot;&gt;subclassable built-ins&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#promises&quot;&gt;promises&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#math--number--string--array--object-apis&quot;&gt;math + number + string + array + object APIs&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#binary-and-octal-literals&quot;&gt;binary and octal literals&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#reflect-api&quot;&gt;reflect api&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;#tail-calls&quot;&gt;tail calls&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;ecmascript-6-features&quot;&gt;ECMAScript 6 Features&lt;/h2&gt; &lt;h3 id=&quot;arrows&quot;&gt;Arrows&lt;/h3&gt; &lt;p&gt;Arrows are a function shorthand using the &lt;code class=&quot;highlighter-rouge&quot;&gt;=&amp;gt;&lt;/code&gt; syntax. They are syntactically similar to the related feature in C#, Java 8 and CoffeeScript. They support both statement block bodies as well as expression bodies which return the value of the expression. Unlike functions, arrows share the same lexical &lt;code class=&quot;highlighter-rouge&quot;&gt;this&lt;/code&gt; as their surrounding code.&lt;/p&gt; &lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;// Expression bodies var odds = evens.map(v =&amp;gt; v + 1); var nums = evens.map((v, i) =&amp;gt; v + i); var pairs = evens.map(v =&amp;gt; ({even: v, odd: v + 1})); // Statement bodies nums.forEach(v =&amp;gt; { if (v % 5 === 0) fives.push(v); }); // Lexical this var bob = { _name: &quot;Bob&quot;, _friends: [], printFriends() { this._friends.forEach(f =&amp;gt; console.log(this._name + &quot; knows &quot; + f)); } } &lt;/code&gt;&lt;/pre&gt; &lt;p&gt;More info: &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions&quot;&gt;MDN Arrow Functions&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;classes&quot;&gt;Classes&lt;/h3&gt; &lt;p&gt;ES6 classes are a simple sugar over the prototype-based OO pattern. Having a single convenient declarative form makes class patterns easier to...</description>
+        <description>ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMAScript standard. ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features in major JavaScript engines is underway now. Content is copied shamelessly from lukehoban/es6features ES6 includes the following new features: arrows classes enhanced object literals template strings destructuring default + rest + spread let + const iterators + for..of generators unicode modules module loaders map + set + weakmap + weakset proxies symbols subclassable built-ins promises math + number + string + array + object APIs binary and octal literals reflect api tail calls ECMAScript 6 Features Arrows Arrows are a function shorthand using the =&amp;gt; syntax. They are syntactically similar to the related feature in C#, Java 8 and CoffeeScript. They support both statement block bodies as well as expression bodies which return the value of the expression. Unlike functions, arrows share the same lexical this as their surrounding code. // Expression bodies var odds = evens.map(v =&amp;gt; v + 1); var nums = evens.map((v, i) =&amp;gt; v + i); var pairs = evens.map(v =&amp;gt; ({even: v, odd: v + 1})); // Statement bodies nums.forEach(v =&amp;gt; { if (v % 5 === 0) fives.push(v); }); // Lexical this var bob = { _name: &quot;Bob&quot;, _friends: [], printFriends() { this._friends.forEach(f =&amp;gt; console.log(this._name + &quot; knows &quot; + f)); } } More info: MDN Arrow Functions Classes ES6 classes are a simple sugar over the prototype-based OO pattern. Having a single convenient declarative form makes class patterns easier to use, and encourages interoperability. Classes support prototype-based inheritance, super calls, instance and static methods and constructors. class SkinnedMesh extends THREE.Mesh { constructor(geometry, materials) { super(geometry, materials); this.idMatrix = SkinnedMesh.defaultMatrix(); this.bones = []; this.boneMatrices...</description>
         <pubDate>Thu, 30 Jun 2016 01:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/es6</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/es6</guid>
@@ -68,28 +176,30 @@
         
         <category>ECMAScript 2015</category>
         
+        <category>Escamscript 6</category>
+        
+        <category>ES6 Tutorials</category>
+        
         
       </item>
     
       <item>
         <title>Evolving the Identity</title>
-        <description>&lt;p&gt;Big news! Today, after five years, we’re releasing an updated brand identity, which includes a new logo, colors, and font. You’ll see the new look anywhere we’re out in public, like our website, Facebook, and Twitter; very soon you’ll see it in all of our products, as well.&lt;/p&gt;
+        <description>Big news! Today, after five years, we’re releasing an updated brand identity, which includes a new logo, colors, and font. You’ll see the new look anywhere we’re out in public, like our website, Facebook, and Twitter; very soon you’ll see it in all of our products, as well.
 
-&lt;p&gt;We started by distilling the essence of our brand down to its colors on a clean white background—and built it back up.&lt;/p&gt;
+We started by distilling the essence of our brand down to its colors on a clean white background—and built it back up.
 
-&lt;p&gt;Our design goal was to better match how we look to our values and the users we serve. A small team inside the company worked to find something that appeared crisp, approachable, smart, friendly, and connected.&lt;/p&gt;
+Our design goal was to better match how we look to our values and the users we serve. A small team inside the company worked to find something that appeared crisp, approachable, smart, friendly, and connected.
 
-&lt;h2 id=&quot;how-it-evolved&quot;&gt;How it Evolved.&lt;/h2&gt;
+Though it was time for change,
+We’re still the same team: focused on Consulting &amp;amp; Development on Blockchain, Drupal and ES6.
 
-&lt;h2 id=&quot;though-it-was-time-for-change&quot;&gt;Though it was time for change,&lt;/h2&gt;
-&lt;p&gt;We’re still the same team: focused on Consulting &amp;amp; Development on &lt;a href=&quot;/consulting/blockchain-consulting&quot;&gt;Blockchain&lt;/a&gt;, &lt;a href=&quot;/consulting/drupal-consulting-development&quot;&gt;Drupal&lt;/a&gt; and &lt;a href=&quot;/consulting/es6-javascript-development&quot;&gt;ES6&lt;/a&gt;.&lt;/p&gt;
+As we begin this new chapter in Vision’s history, we are appreciative of each one of our customers, who collaborate with us daily to create next generation technology. We look forward to continued partnership and great things to come.
 
-&lt;p&gt;As we begin this new chapter in Vision’s history, we are appreciative of each one of our customers, who collaborate with us daily to create next generation technology. We look forward to continued partnership and great things to come.&lt;/p&gt;
+Sincerely,
 
-&lt;p&gt;Sincerely,&lt;/p&gt;
-
-&lt;p&gt;Nikhil Mohan
-COO&lt;/p&gt;
+Nikhil Mohan
+COO
 </description>
         <pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/new-brand-identity-lightrains-tech</link>
@@ -104,7 +214,7 @@ COO&lt;/p&gt;
     
       <item>
         <title>What is a DAO aka Decentralized Autonomous Organization</title>
-        <description>&lt;p&gt;A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community&lt;/p&gt; &lt;p&gt;Essentially, it’s a non-human specific entity, who’s sole duty is to abide by a specific programmatic set of rules; or by the rules granted to it by decentralized consensus (majority decides what to do in a distributed manner).&lt;/p&gt; &lt;p&gt;So far, all contracts we listed were owned and executed by other accounts probably held by humans. But there is no discrimination against robots or humans in the Ethereum ecosystem and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other contracts.&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;“On the Blockchain, no one knows you’re a fridge” - Richard Brown&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;what-is-a-dao-token&quot;&gt;What is a DAO token&lt;/h3&gt; &lt;p&gt;A DAO leverages smart contracts on the Ethereum blockchain so that anyone, anywhere in the world can be empowered to participate. In exchange for their early help, participants receive DAO tokens which hold many benefits.&lt;/p&gt; &lt;p&gt;Owning DAO tokens functions in a similar way to having shareholder rights in an actual company. &lt;br /&gt; &lt;strong&gt;By owning DAO tokens…&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;You can submit proposals for funding&lt;/li&gt; &lt;li&gt;You can vote on which proposals are funded&lt;/li&gt; &lt;li&gt;Receive profits from funded projects&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;technical&quot;&gt;Technical&lt;/h2&gt; &lt;p&gt;The code of a given DAO will be difficult to alter once the system is up and running, including bug fixes that would be trivial in centralised code. Corrections for a DAO would require writing new code and agreement to migrate all the funds. Although the code is visible to all, it is hard to repair, thus leaving known security holes open to exploitation unless a moratorium is called to enable...</description>
+        <description>A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community Essentially, it’s a non-human specific entity, who’s sole duty is to abide by a specific programmatic set of rules; or by the rules granted to it by decentralized consensus (majority decides what to do in a distributed manner). So far, all contracts we listed were owned and executed by other accounts probably held by humans. But there is no discrimination against robots or humans in the Ethereum ecosystem and contracts can create arbitrary actions like any other account would. Contracts can own tokens, participate in crowdsales, and even be voting members of other contracts. “On the Blockchain, no one knows you’re a fridge” - Richard Brown What is a DAO token A DAO leverages smart contracts on the Ethereum blockchain so that anyone, anywhere in the world can be empowered to participate. In exchange for their early help, participants receive DAO tokens which hold many benefits. Owning DAO tokens functions in a similar way to having shareholder rights in an actual company. By owning DAO tokens… You can submit proposals for funding You can vote on which proposals are funded Receive profits from funded projects Technical The code of a given DAO will be difficult to alter once the system is up and running, including bug fixes that would be trivial in centralised code. Corrections for a DAO would require writing new code and agreement to migrate all the funds. Although the code is visible to all, it is hard to repair, thus leaving known security holes open to exploitation unless a moratorium is called to enable bug fixing. wiki Then there is The DAO...</description>
         <pubDate>Thu, 23 Jun 2016 01:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/what-is-dao-decentralized-autonomous-organization</guid>
@@ -118,7 +228,7 @@ COO&lt;/p&gt;
     
       <item>
         <title>Compile and Deploy Solidity Contract</title>
-        <description>&lt;p&gt;Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain&lt;/p&gt; &lt;p&gt;For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K.&lt;/p&gt; &lt;h2 id=&quot;step-1-install-solidity-compiler-solc&quot;&gt;Step 1. Install Solidity Compiler Solc&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;Easy way&lt;/strong&gt; Its very easy to install solc using npm the package manager for NodeJS the command is &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install solc&lt;/code&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Easier way Browser-Solidity&lt;/strong&gt; If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Building from Source&lt;/strong&gt; Assuming you are using Ubuntu 14.04&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;And pull the solidity source code&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;step-2-verify-solidity-compiler&quot;&gt;Step 2. Verify Solidity Compiler&lt;/h2&gt; &lt;p&gt;To ensure solc is installed and ready to use, you can verify it by running &lt;code class=&quot;highlighter-rouge&quot;&gt;eth.getCompilers()&lt;/code&gt; in geth console If you have it installed, it should output something like this:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[&#39;Solidity&#39; ] &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;h2 id=&quot;bonus-compile-a-simple-contract&quot;&gt;Bonus. Compile a simple contract&lt;/h2&gt; &lt;p&gt;Let us take this simple contract source:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; &lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;This contract offers a unary method: called with a positive integer a, it returns a *...</description>
+        <description>Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K. Step 1. Install Solidity Compiler Solc Easy way Its very easy to install solc using npm the package manager for NodeJS the command is npm install solc Easier way Browser-Solidity If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity. Building from Source Assuming you are using Ubuntu 14.04 sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade And pull the solidity source code git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 Step 2. Verify Solidity Compiler To ensure solc is installed and ready to use, you can verify it by running eth.getCompilers() in geth console If you have it installed, it should output something like this: [&#39;Solidity&#39; ] Bonus. Compile a simple contract Let us take this simple contract source: source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; This contract offers a unary method: called with a positive integer a, it returns a * 7. You are ready to compile solidity code in the geth JS console using eth.compile.solidity &amp;gt; contract = eth.compile.solidity(source).test { code:...</description>
         <pubDate>Fri, 17 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</guid>
@@ -132,21 +242,21 @@ COO&lt;/p&gt;
     
       <item>
         <title>Histup Social Media Wall</title>
-        <description>&lt;p&gt;A novel and Unique Method of Digital Branding
-We Sync and Brought together the user generated and branded content Social Media Feeds into one place from over four Social Networks.&lt;/p&gt;
+        <description>A novel and Unique Method of Digital Branding
+We Sync and Brought together the user generated and branded content Social Media Feeds into one place from over four Social Networks.
 
-&lt;h2 id=&quot;how-hitsup-works-for-you&quot;&gt;How Hitsup Works for you&lt;/h2&gt;
-&lt;p&gt;Connect &amp;amp; Merges Social Media Feeds: Connect yours or your company’s social media updates or feeds to a single social Media Wall. Hitsup merges content from any of your social platforms into homogenous streams. So, for instance, one stream can contain posts of Twitter, Facebook and Google+. All posts have the same data-format, no matter where they were composed.&lt;/p&gt;
+How Hitsup Works for you
+Connect &amp;amp; Merges Social Media Feeds: Connect yours or your company’s social media updates or feeds to a single social Media Wall. Hitsup merges content from any of your social platforms into homogenous streams. So, for instance, one stream can contain posts of Twitter, Facebook and Google+. All posts have the same data-format, no matter where they were composed.
 
-&lt;p&gt;Unified Social Media Content: Hitsup seamlessly integrate unified social content into your website, application or content management system&lt;/p&gt;
+Unified Social Media Content: Hitsup seamlessly integrate unified social content into your website, application or content management system
 
-&lt;h2 id=&quot;configure-streams-online-in-your-browser&quot;&gt;Configure streams online in your browser.&lt;/h2&gt;
+Configure streams online in your browser.
 
-&lt;ul&gt;
-  &lt;li&gt;Embed Hitsup’s adaptive and beautifully designed stream widget&lt;/li&gt;
-  &lt;li&gt;Each stream comes with its own profile page&lt;/li&gt;
-  &lt;li&gt;No technical knowledge required&lt;/li&gt;
-&lt;/ul&gt;
+
+  Embed Hitsup’s adaptive and beautifully designed stream widget
+  Each stream comes with its own profile page
+  No technical knowledge required
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/hitsup-social</link>
@@ -159,26 +269,26 @@ We Sync and Brought together the user generated and branded content Social Media
     
       <item>
         <title>SCEB Smart Contract Templates for Banking</title>
-        <description>&lt;p&gt;SCEB is a platform for financial institutions to take advantage of the blockchain based smart-contracts as templates in everyday banking.&lt;/p&gt;
+        <description>SCEB is a platform for financial institutions to take advantage of the blockchain based smart-contracts as templates in everyday banking.
 
-&lt;h2 id=&quot;technology-stack&quot;&gt;Technology Stack&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ethereum Blockchain&lt;/li&gt;
-  &lt;li&gt;Embark Framework&lt;/li&gt;
-  &lt;li&gt;Solidity - smart-contract language&lt;/li&gt;
-  &lt;li&gt;IPFS - decentralised file storage&lt;/li&gt;
-&lt;/ul&gt;
+Technology Stack
 
-&lt;h2 id=&quot;potential-benefits&quot;&gt;Potential benefits&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Cost Reductions&lt;/li&gt;
-  &lt;li&gt;Efficiency Improvements&lt;/li&gt;
-  &lt;li&gt;Reduce Risk&lt;/li&gt;
-  &lt;li&gt;Reusable contracts&lt;/li&gt;
-  &lt;li&gt;Less paperwork&lt;/li&gt;
-&lt;/ul&gt;
+  Ethereum Blockchain
+  Embark Framework
+  Solidity - smart-contract language
+  IPFS - decentralised file storage
 
-&lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;GRJsL74urwI&quot;&gt;&lt;/div&gt;
+
+Potential benefits
+
+  Cost Reductions
+  Efficiency Improvements
+  Reduce Risk
+  Reusable contracts
+  Less paperwork
+
+
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/smart-contract-templates-banking-sceb</link>
@@ -193,18 +303,18 @@ We Sync and Brought together the user generated and branded content Social Media
     
       <item>
         <title>Canned Emails</title>
-        <description>&lt;p&gt;Canned Emails is a minimal site with prewritten emails, useful for people who prefer easy way of doing things.&lt;/p&gt;
+        <description>Canned Emails is a minimal site with prewritten emails, useful for people who prefer easy way of doing things.
 
-&lt;p&gt;Canned Emails officially introduced in Google Labs: Canned Responses on Tuesday, October 21, 2008 by Chad Parry, Gmail engineer&lt;/p&gt;
+Canned Emails officially introduced in Google Labs: Canned Responses on Tuesday, October 21, 2008 by Chad Parry, Gmail engineer
 
-&lt;h3 id=&quot;how-to-enable-canned-responses-in-gmail&quot;&gt;How to enable Canned Responses in Gmail&lt;/h3&gt;
+How to enable Canned Responses in Gmail
 
-&lt;ol&gt;
-  &lt;li&gt;The upper right-hand corner of Gmail, then choose Settings.&lt;/li&gt;
-  &lt;li&gt;Click the Labs tab, find Canned Responses, click the Enable radio button to enable Canned Responses, scroll down and click Save Changes.&lt;/li&gt;
-  &lt;li&gt;Compose an email message you’d like to use over and over again, and then click the arrow in the lower right-hand corner of the message window.&lt;/li&gt;
-  &lt;li&gt;The next time someone emails you something that warrants the canned response you created, reply to the message and instead of typing your response, click the arrow button in the lower right-hand corner, select Canned Responses, and then under Insert, choose the canned response you created in the previous step. You’ll then see your response appear in the body of your reply.&lt;/li&gt;
-&lt;/ol&gt;
+
+  The upper right-hand corner of Gmail, then choose Settings.
+  Click the Labs tab, find Canned Responses, click the Enable radio button to enable Canned Responses, scroll down and click Save Changes.
+  Compose an email message you’d like to use over and over again, and then click the arrow in the lower right-hand corner of the message window.
+  The next time someone emails you something that warrants the canned response you created, reply to the message and instead of typing your response, click the arrow button in the lower right-hand corner, select Canned Responses, and then under Insert, choose the canned response you created in the previous step. You’ll then see your response appear in the body of your reply.
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/canned-emails</link>
@@ -219,38 +329,38 @@ We Sync and Brought together the user generated and branded content Social Media
     
       <item>
         <title>MetroMatinee</title>
-        <description>&lt;p&gt;MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.&lt;/p&gt;
+        <description>MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.
 
-&lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt;
-&lt;p&gt;Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionalty. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.&lt;/p&gt;
+Why Drupal was chosen:
+Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionalty. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.
 
-&lt;h3 id=&quot;project-goals-requirements-and-outcome&quot;&gt;Project (goals, requirements and outcome):&lt;/h3&gt;
-&lt;p&gt;Technically there were a few key requirements:&lt;/p&gt;
+Project (goals, requirements and outcome):
+Technically there were a few key requirements:
 
-&lt;ul&gt;
-  &lt;li&gt;The site must be easy for content editors to manage (of course!)&lt;/li&gt;
-  &lt;li&gt;New articles should be (optionally) pushed to Facebook&lt;/li&gt;
-  &lt;li&gt;Existing users must be easily migrated to the new site, along with their previous profile and comments&lt;/li&gt;
-  &lt;li&gt;The UX must be truly responsive and engaging on all devices&lt;/li&gt;
-  &lt;li&gt;Content pages must be built from existing collections of text, quote, image, and audio “stories”&lt;/li&gt;
-  &lt;li&gt;The site must be able to handle large surges of visitors and traffic spikes - many thousands of concurrent visitors&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;h3 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h3&gt;
+  The site must be easy for content editors to manage (of course!)
+  New articles should be (optionally) pushed to Facebook
+  Existing users must be easily migrated to the new site, along with their previous profile and comments
+  The UX must be truly responsive and engaging on all devices
+  Content pages must be built from existing collections of text, quote, image, and audio “stories”
+  The site must be able to handle large surges of visitors and traffic spikes - many thousands of concurrent visitors
 
-&lt;ul&gt;
-  &lt;li&gt;Views&lt;/li&gt;
-  &lt;li&gt;Entity API&lt;/li&gt;
-  &lt;li&gt;Entity reference&lt;/li&gt;
-  &lt;li&gt;Entity Reference View Widget&lt;/li&gt;
-  &lt;li&gt;Media&lt;/li&gt;
-  &lt;li&gt;Facebook API&lt;/li&gt;
-  &lt;li&gt;Comment block&lt;/li&gt;
-  &lt;li&gt;Chaos tool suite (ctools)&lt;/li&gt;
-  &lt;li&gt;Feeds&lt;/li&gt;
-  &lt;li&gt;Cookie Control&lt;/li&gt;
-  &lt;li&gt;CDN&lt;/li&gt;
-&lt;/ul&gt;
+
+Key modules/theme/distribution used:
+
+
+  Views
+  Entity API
+  Entity reference
+  Entity Reference View Widget
+  Media
+  Facebook API
+  Comment block
+  Chaos tool suite (ctools)
+  Feeds
+  Cookie Control
+  CDN
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/metromatinee</link>
@@ -263,25 +373,25 @@ We Sync and Brought together the user generated and branded content Social Media
     
       <item>
         <title>Kerala Startup Mission</title>
-        <description>&lt;p&gt;Kerala Startup Mission (KSUM) is India’s first and successful Non Academic Business Incubator, hosted and housed inside Asia’s Largest IT Park Technopark.&lt;/p&gt;
+        <description>Kerala Startup Mission (KSUM) is India’s first and successful Non Academic Business Incubator, hosted and housed inside Asia’s Largest IT Park Technopark.
 
-&lt;p&gt;We dedicated 2 weeks for a comprehensive study of the information architecture. Having analyzed a suitable structure model for the content, we were able to start the wire-framing stage. Wireframes helped us interconnect all kinds of content types and entities of the website. We took full advantage of Drupal 7 and its new features. The fact that all entities come with fields helped us to create all the interconnections through references.&lt;/p&gt;
+We dedicated 2 weeks for a comprehensive study of the information architecture. Having analyzed a suitable structure model for the content, we were able to start the wire-framing stage. Wireframes helped us interconnect all kinds of content types and entities of the website. We took full advantage of Drupal 7 and its new features. The fact that all entities come with fields helped us to create all the interconnections through references.
 
-&lt;p&gt;Overall, the fact that the client was very clear about their requests and needs from the beginning was enormously helpful in our effort to focus more on the concept, the design and the development. Requirements being met, the whole project kept us busy for 5 months. We exclusively worked with SCRUM methods, delivering segments of the website every 10 days.&lt;/p&gt;
+Overall, the fact that the client was very clear about their requests and needs from the beginning was enormously helpful in our effort to focus more on the concept, the design and the development. Requirements being met, the whole project kept us busy for 5 months. We exclusively worked with SCRUM methods, delivering segments of the website every 10 days.
 
-&lt;h3 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h3&gt;
-&lt;p&gt;Drupal was chosen because of its wide variety of contributed modules and community support&lt;/p&gt;
+Why Drupal was chosen:
+Drupal was chosen because of its wide variety of contributed modules and community support
 
-&lt;h3 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Organic groups&lt;/li&gt;
-  &lt;li&gt;Views&lt;/li&gt;
-  &lt;li&gt;Flag&lt;/li&gt;
-  &lt;li&gt;Rules&lt;/li&gt;
-  &lt;li&gt;ImageCache&lt;/li&gt;
-  &lt;li&gt;Feeds&lt;/li&gt;
-  &lt;li&gt;Facebook Style Statuses&lt;/li&gt;
-&lt;/ul&gt;
+Key modules/theme/distribution used:
+
+  Organic groups
+  Views
+  Flag
+  Rules
+  ImageCache
+  Feeds
+  Facebook Style Statuses
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/kerala-startup-mission</link>
@@ -294,27 +404,27 @@ We Sync and Brought together the user generated and branded content Social Media
     
       <item>
         <title>Fungible Loyalty Tokens</title>
-        <description>&lt;p&gt;Flot is a blockchain based Inter-Operable Fungible Loyalty Tokens. The ides is to bring all non-competing business into one umbrella and let them share the value of Loyalty Points together hence inter-operable.&lt;/p&gt;
+        <description>Flot is a blockchain based Inter-Operable Fungible Loyalty Tokens. The ides is to bring all non-competing business into one umbrella and let them share the value of Loyalty Points together hence inter-operable.
 
-&lt;p&gt;Flot is first presented in “ICICI Appathon”, its mobile app development challenge. Flot got special mention from the Jury. The jury comprised Mr. Rajiv Sabharwal, Executive Director, ICICI Bank; Mr. Anup Gupta, Managing Director, Nexus Venture Partners; Mr. Ashish Kumar, Vice President - Cloud, IBM Asia Pacific; and Mr. T.R. Ramachandran, Group Country Manager-India &amp;amp; South Asia, VISA.&lt;/p&gt;
+Flot is first presented in “ICICI Appathon”, its mobile app development challenge. Flot got special mention from the Jury. The jury comprised Mr. Rajiv Sabharwal, Executive Director, ICICI Bank; Mr. Anup Gupta, Managing Director, Nexus Venture Partners; Mr. Ashish Kumar, Vice President - Cloud, IBM Asia Pacific; and Mr. T.R. Ramachandran, Group Country Manager-India &amp;amp; South Asia, VISA.
 
-&lt;h3 id=&quot;key-elements&quot;&gt;Key elements&lt;/h3&gt;
+Key elements
 
-&lt;ul&gt;
-  &lt;li&gt;Loyalty points are fungible across platforms&lt;/li&gt;
-  &lt;li&gt;Tamper proof storage&lt;/li&gt;
-  &lt;li&gt;Fungibility
-    &lt;ul&gt;
-      &lt;li&gt;Convertible to Fiat Money/Crypto-currency&lt;/li&gt;
-      &lt;li&gt;Inter-Operable&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Seamless integration with any other platforms.&lt;/li&gt;
-  &lt;li&gt;Easy to manage redeems, no double spend.&lt;/li&gt;
-  &lt;li&gt;Offers and vouchers can be executed as a smart-contract&lt;/li&gt;
-  &lt;li&gt;Multiple activities can trigger loyalty points&lt;/li&gt;
-  &lt;li&gt;Easy to manage micro-loyalty points&lt;/li&gt;
-&lt;/ul&gt;
+
+  Loyalty points are fungible across platforms
+  Tamper proof storage
+  Fungibility
+    
+      Convertible to Fiat Money/Crypto-currency
+      Inter-Operable
+    
+  
+  Seamless integration with any other platforms.
+  Easy to manage redeems, no double spend.
+  Offers and vouchers can be executed as a smart-contract
+  Multiple activities can trigger loyalty points
+  Easy to manage micro-loyalty points
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/flot-blockchain-loyalty-tokens</link>
@@ -331,26 +441,26 @@ We Sync and Brought together the user generated and branded content Social Media
     
       <item>
         <title>Solo PDF Reader</title>
-        <description>&lt;p&gt;Solo PDF Reader is simply the best, fast and light PDF reader for rendering PDF files easily. The clean and elegant interface make reading a pleasure. Slide through the pages smoothly as it feels just like reading a real book. Solo PDF Reader automatically scan your device and external memory for PDF files and fetch them immediately after you launch it. The application consumes less memory without any compromise in performance. You will love Solo PDF Reader once you start using it.
-Solo PDF Reader supports multi-touch zooming, text search, portrait and landscape orientations. More than 50,000 users now use Solo PDF to access, read and share a large variety of PDF types, including documents, portfolios, scanned files, images etc.&lt;/p&gt;
+        <description>Solo PDF Reader is simply the best, fast and light PDF reader for rendering PDF files easily. The clean and elegant interface make reading a pleasure. Slide through the pages smoothly as it feels just like reading a real book. Solo PDF Reader automatically scan your device and external memory for PDF files and fetch them immediately after you launch it. The application consumes less memory without any compromise in performance. You will love Solo PDF Reader once you start using it.
+Solo PDF Reader supports multi-touch zooming, text search, portrait and landscape orientations. More than 50,000 users now use Solo PDF to access, read and share a large variety of PDF types, including documents, portfolios, scanned files, images etc.
 
-&lt;h3 id=&quot;solo-pdf-reader-is-free-to-download-no-hidden-charges&quot;&gt;Solo PDF Reader is free to download. No hidden charges.&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Compatible with almost every Android device.&lt;/li&gt;
-  &lt;li&gt;Solo PDF Reader is the best available app for reading pdf files.&lt;/li&gt;
-&lt;/ul&gt;
+Solo PDF Reader is free to download. No hidden charges.
 
-&lt;h3 id=&quot;features&quot;&gt;Features&lt;/h3&gt;
+  Compatible with almost every Android device.
+  Solo PDF Reader is the best available app for reading pdf files.
 
-&lt;ul&gt;
-  &lt;li&gt;Solo PDF Reader is faster compared to other Android PDF readers.&lt;/li&gt;
-  &lt;li&gt;View and access recently viewed documents using ‘Recent’ menu.&lt;/li&gt;
-  &lt;li&gt;Easily switch to any page using the slide bar.&lt;/li&gt;
-  &lt;li&gt;Automatically restore last read pages.&lt;/li&gt;
-  &lt;li&gt;Last viewed date available.&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;Show some love; Share Solo PDF Reader via Facebook, Twitter, LinkedIn.&lt;/p&gt;
+Features
+
+
+  Solo PDF Reader is faster compared to other Android PDF readers.
+  View and access recently viewed documents using ‘Recent’ menu.
+  Easily switch to any page using the slide bar.
+  Automatically restore last read pages.
+  Last viewed date available.
+
+
+Show some love; Share Solo PDF Reader via Facebook, Twitter, LinkedIn.
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/solo-pdf-reader</link>
@@ -363,7 +473,7 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
     
       <item>
         <title>How to setup a local test Ethereum Blockchain</title>
-        <description>&lt;p&gt;Setting up a private chain is useful for testing purposes or simply for playing around with, I couldn’t find a good tutorial on it so I thought I would write my own. In this tutorial we are working on Ubuntu 14.04 LTS and Go Implementation of Ethereum go-ethereum or simply geth&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;https://github.com/ethereum/go-ethereum/wiki&quot;&gt;geth&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;http://releases.ubuntu.com/14.04/&quot;&gt;ubuntu 14.04&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;the-fist-block---genesis-block&quot;&gt;The Fist Block - Genesis Block&lt;/h2&gt; &lt;p&gt;The Genesis block is the start block of the Blockchain - the first block, block 0, the only block that does not point to a predecessor block. It’s the entry point into the Blockchain database. The Genesis data defines initial parameters of the database and defines a cryptographically valid entry block. You might think thats a flaw in the system being able to decide the starting conditions of the chain, but the consensus algorithm will ensure that no other node will agree with your version of the blockchain unless they have the same genesis block (and some other crucial parameters, discussed later).&lt;/p&gt; &lt;h3 id=&quot;how-to-create-genesis-block&quot;&gt;How to Create Genesis Block&lt;/h3&gt; &lt;p&gt;Great, so how do we make one of these genesis blocks? Well its fairly simple the following JSON is all you really need:&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;nonce&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000042&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;mixhash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;difficulty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x4000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;alloc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;coinbase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x00&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;parentHash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;extraData&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Custem Ethereum Genesis Block&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;gasLimit&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;0xffffffff&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt; &lt;/div&gt; &lt;p&gt;Save the JSON into a file lets call it genesis.json and save in your home directory.&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ geth...</description>
+        <description>Setting up a private chain is useful for testing purposes or simply for playing around with, I couldn’t find a good tutorial on it so I thought I would write my own. In this tutorial we are working on Ubuntu 14.04 LTS and Go Implementation of Ethereum go-ethereum or simply geth Prerequisites geth ubuntu 14.04 The Fist Block - Genesis Block The Genesis block is the start block of the Blockchain - the first block, block 0, the only block that does not point to a predecessor block. It’s the entry point into the Blockchain database. The Genesis data defines initial parameters of the database and defines a cryptographically valid entry block. You might think thats a flaw in the system being able to decide the starting conditions of the chain, but the consensus algorithm will ensure that no other node will agree with your version of the blockchain unless they have the same genesis block (and some other crucial parameters, discussed later). How to Create Genesis Block Great, so how do we make one of these genesis blocks? Well its fairly simple the following JSON is all you really need: { &quot;nonce&quot;: &quot;0x0000000000000042&quot;, &quot;mixhash&quot;: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;, &quot;difficulty&quot;: &quot;0x4000&quot;, &quot;alloc&quot;: {}, &quot;coinbase&quot;: &quot;0x0000000000000000000000000000000000000000&quot;, &quot;timestamp&quot;: &quot;0x00&quot;, &quot;parentHash&quot;: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;, &quot;extraData&quot;: &quot;Custem Ethereum Genesis Block&quot;, &quot;gasLimit&quot;: &quot;0xffffffff&quot; } Save the JSON into a file lets call it genesis.json and save in your home directory. $ geth --genesis &amp;lt;genesis json file path&amp;gt; --datadir &amp;lt;some path to an empty folder&amp;gt; --networkid 123 --nodiscover --maxpeers 0 console This command does a few things: It utilises the genesis block json to seed the blockchain It uses the datadir to store all state necessary to maintain the newly created blockchain and other data (declared to prevent you clobbering your main net data, wouldn’t want to overwrite all those blocks...</description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</guid>
@@ -373,17 +483,17 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
     
       <item>
         <title>What is Ethereum</title>
-        <description>&lt;p&gt;Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.&lt;/p&gt;
+        <description>Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.
 
-&lt;h2 id=&quot;what-makes-it-different-from-normal-currencies&quot;&gt;What makes it different from normal currencies?&lt;/h2&gt;
+What makes it different from normal currencies?
 
-&lt;p&gt;Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.&lt;/p&gt;
+Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.
 
-&lt;p&gt;However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.&lt;/p&gt;
+However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.
 
-&lt;h2 id=&quot;who-created-it&quot;&gt;Who created it?&lt;/h2&gt;
+Who created it?
 
-&lt;p&gt;A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.&lt;/p&gt;
+A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/what-is-ethereum</link>
@@ -394,21 +504,21 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
     
       <item>
         <title>What is Bitcoin the currency</title>
-        <description>&lt;p&gt;Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.&lt;/p&gt;
+        <description>Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.
 
-&lt;h2 id=&quot;what-makes-it-different-from-normal-currencies&quot;&gt;What makes it different from normal currencies?&lt;/h2&gt;
-&lt;p&gt;Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.&lt;/p&gt;
+What makes it different from normal currencies?
+Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.
 
-&lt;p&gt;However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.&lt;/p&gt;
+However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.
 
-&lt;h2 id=&quot;who-created-it&quot;&gt;Who created it?&lt;/h2&gt;
-&lt;p&gt;A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.&lt;/p&gt;
+Who created it?
+A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.
 
-&lt;h2 id=&quot;why-bitcoins&quot;&gt;Why Bitcoins?&lt;/h2&gt;
-&lt;p&gt;Bitcoins can be used to buy merchandise anonymously. In addition, international payments are easy and cheap because bitcoins are not tied to any country or subject to regulation. Small businesses may like them because there are no credit card fees. Some people just buy bitcoins as an investment, hoping that they’ll go up in value.&lt;/p&gt;
+Why Bitcoins?
+Bitcoins can be used to buy merchandise anonymously. In addition, international payments are easy and cheap because bitcoins are not tied to any country or subject to regulation. Small businesses may like them because there are no credit card fees. Some people just buy bitcoins as an investment, hoping that they’ll go up in value.
 
-&lt;h3 id=&quot;video-by-weusecoins&quot;&gt;Video by WeUseCoins&lt;/h3&gt;
-&lt;div class=&quot;ui embed&quot; data-source=&quot;youtube&quot; data-id=&quot;Gc2en3nHxA4&quot;&gt;&lt;/div&gt;
+Video by WeUseCoins
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/what-is-bitcoin-currency</link>
@@ -419,16 +529,16 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
     
       <item>
         <title>What is Blockchain</title>
-        <description>&lt;p&gt;Blockchains are tamper-proof, immutable, time-stamped, transparent ledgers whose applications have the potential to improve many aspects of our lives.&lt;/p&gt;
+        <description>Blockchains are tamper-proof, immutable, time-stamped, transparent ledgers whose applications have the potential to improve many aspects of our lives.
 
-&lt;h2 id=&quot;laboris-nisi-ut-aliquip&quot;&gt;laboris nisi ut aliquip&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+laboris nisi ut aliquip
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/5.jpg&quot; alt=&quot;image&quot; class=&quot;ui image fluid lazy&quot; /&gt;&lt;/p&gt;
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/what-is-blockchain</link>
@@ -443,31 +553,31 @@ Solo PDF Reader supports multi-touch zooming, text search, portrait and landscap
     
       <item>
         <title>Cryptocurrency 101 - Part 2/3 - Why use cryptocurrencies instead of cash?</title>
-        <description>&lt;p&gt;This is probably the most common question asked.
-First, we need to take a look at the evolution of trade:&lt;/p&gt;
+        <description>This is probably the most common question asked.
+First, we need to take a look at the evolution of trade:
 
-&lt;ul&gt;
-  &lt;li&gt;Initially, trade was done through a barter system. You have an asset I want, I have an asset you want, let’s trade. Here, a apple farmer can trade his apples to a sheep herder for wool.&lt;/li&gt;
-  &lt;li&gt;Here, we run into a problem. What if you don’t have something I want? Metals, particularly gold and silver, were often used as a mechanism for trade.&lt;/li&gt;
-  &lt;li&gt;With the rise of kingdoms and nations, many wanted to show their reign and would melt metals and recast them to showcase an emblem with their nation.&lt;/li&gt;
-  &lt;li&gt;Eventually, nations realized that metals weren’t efficient, and paper money was created.&lt;/li&gt;
-  &lt;li&gt;With the rise of the internet, we now have online banking, where currency is just digital figures.&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;This is a simple look, but it’s obvious that cryptocurrencies are the next evolution of trade.&lt;/p&gt;
+  Initially, trade was done through a barter system. You have an asset I want, I have an asset you want, let’s trade. Here, a apple farmer can trade his apples to a sheep herder for wool.
+  Here, we run into a problem. What if you don’t have something I want? Metals, particularly gold and silver, were often used as a mechanism for trade.
+  With the rise of kingdoms and nations, many wanted to show their reign and would melt metals and recast them to showcase an emblem with their nation.
+  Eventually, nations realized that metals weren’t efficient, and paper money was created.
+  With the rise of the internet, we now have online banking, where currency is just digital figures.
 
-&lt;blockquote&gt;
-  &lt;p&gt;Like most features in evolution, the unregulated — capitalistic supply/demand — aspect is based off the Great Recession of 2007.&lt;/p&gt;
-&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+This is a simple look, but it’s obvious that cryptocurrencies are the next evolution of trade.
 
-&lt;div class=&quot;ui header medium source&quot;&gt;Sources&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;http://bitcoin.stackexchange.com/q/182/30316&lt;/li&gt;
-  &lt;li&gt;https://medium.com/@sebfung/cryptocurrencies-101-c1c0a5a3cc2&lt;/li&gt;
-&lt;/ul&gt;
+  Like most features in evolution, the unregulated — capitalistic supply/demand — aspect is based off the Great Recession of 2007.
+
+
+
+
+Sources
+
+
+  http://bitcoin.stackexchange.com/q/182/30316
+  https://medium.com/@sebfung/cryptocurrencies-101-c1c0a5a3cc2
+
 </description>
         <pubDate>Tue, 12 Jan 2016 00:00:00 +0530</pubDate>
         <link>https://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</link>
@@ -482,7 +592,7 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
     
       <item>
         <title>Cryptocurrency 101 - Part 1/3 - The Basics</title>
-        <description>&lt;h2 id=&quot;what-is-a-cryptocurrency&quot;&gt;What is a Cryptocurrency?&lt;/h2&gt; &lt;p&gt;A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider.&lt;/p&gt; &lt;p&gt;Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers.&lt;/p&gt; &lt;h2 id=&quot;how-it-works&quot;&gt;How it works&lt;/h2&gt; &lt;p&gt;Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency.&lt;/p&gt; &lt;h2 id=&quot;what-gives-them-their-value&quot;&gt;What gives them their value?&lt;/h2&gt; &lt;p&gt;They have value because they are scarce, fungible (one &lt;a href=&quot;https://bitcoin.org&quot;&gt;Bitcoin&lt;/a&gt; is as good as another), easily transferred, and easily verified. The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today.&lt;/p&gt; &lt;p&gt;They aren’t backed by anything because they’re a commodity. What is gold backed by?&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another.&lt;/p&gt; &lt;/blockquote&gt; &lt;h2 id=&quot;advantages-of-cryptocurrency&quot;&gt;Advantages of...</description>
+        <description>What is a Cryptocurrency? A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider. Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers. How it works Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency. What gives them their value? They have value because they are scarce, fungible (one Bitcoin is as good as another), easily transferred, and easily verified. The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today. They aren’t backed by anything because they’re a commodity. What is gold backed by? Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another. Advantages of Cryptocurrency 1. Land of the Free With...</description>
         <pubDate>Fri, 08 Jan 2016 00:00:00 +0530</pubDate>
         <link>https://lightrains.com/blogs/cryptocurrency-101</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/cryptocurrency-101</guid>
@@ -496,7 +606,7 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
     
       <item>
         <title>Pegke Loyalty</title>
-        <description>&lt;p&gt;Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items.&lt;/p&gt; &lt;p&gt;Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest.&lt;/p&gt; &lt;h2 id=&quot;why-drupal-was-chosen&quot;&gt;Why Drupal was chosen:&lt;/h2&gt; &lt;p&gt;Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;High quality contributed modules which enable it to scale well to support very high traffic.&lt;/li&gt; &lt;li&gt;Out of the box rich content management features and can be extended to match the very specific requirements of our website.&lt;/li&gt; &lt;li&gt;An intuitive admin interface, enabling our web editorial team to update the site quickly and easily&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;key-modulesthemedistribution-used&quot;&gt;Key modules/theme/distribution used:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Advanced CSS/JS Aggregation&lt;/li&gt; &lt;li&gt;Location&lt;/li&gt; &lt;li&gt;Metatag&lt;/li&gt; &lt;li&gt;Views&lt;/li&gt; &lt;li&gt;Ubercart&lt;/li&gt; &lt;li&gt;Session Limit&lt;/li&gt; &lt;li&gt;Token&lt;/li&gt; &lt;li&gt;Support Ticketing System&lt;/li&gt; &lt;li&gt;Mandrill&lt;/li&gt; &lt;/ul&gt; &lt;h2 id=&quot;why-these-modulesthemedistribution-were-chosen&quot;&gt;Why these modules/theme/distribution were chosen:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;Advanced CSS/JS Aggregation:&lt;/strong&gt; Make sure we are not making too many unnecessary http requests and wasting our resources.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Location:&lt;/strong&gt; Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our...</description>
+        <description>Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items. Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest. Why Drupal was chosen: Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities. High quality contributed modules which enable it to scale well to support very high traffic. Out of the box rich content management features and can be extended to match the very specific requirements of our website. An intuitive admin interface, enabling our web editorial team to update the site quickly and easily Key modules/theme/distribution used: Advanced CSS/JS Aggregation Location Metatag Views Ubercart Session Limit Token Support Ticketing System Mandrill Why these modules/theme/distribution were chosen: Advanced CSS/JS Aggregation: Make sure we are not making too many unnecessary http requests and wasting our resources. Location: Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our needs. Metatag: Metatag is one of the unavoidable...</description>
         <pubDate>Sat, 13 Jun 2015 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/pegke-loyalty</link>
         <guid isPermaLink="true">https://lightrains.com/work/pegke-loyalty</guid>
@@ -508,27 +618,27 @@ First, we need to take a look at the evolution of trade:&lt;/p&gt;
     
       <item>
         <title>PSC HUB is now available as Telegram Bot</title>
-        <description>&lt;p&gt;Now Telegram Messenger Users can Get PSC HUB - Kerala PSC Questions as a Telegram Bot, Through this users can&lt;/p&gt;
+        <description>Now Telegram Messenger Users can Get PSC HUB - Kerala PSC Questions as a Telegram Bot, Through this users can
 
-&lt;ul&gt;
-  &lt;li&gt;Get Random Questions in a Chat&lt;/li&gt;
-  &lt;li&gt;Realtime Questions&lt;/li&gt;
-  &lt;li&gt;Your Statistics&lt;/li&gt;
-  &lt;li&gt;Instant Support&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;h2 id=&quot;how-i-get-this-inside-telegram-messenger&quot;&gt;How I get this Inside Telegram Messenger&lt;/h2&gt;
+  Get Random Questions in a Chat
+  Realtime Questions
+  Your Statistics
+  Instant Support
 
-&lt;ul&gt;
-  &lt;li&gt;Open Telegram Messenger&lt;/li&gt;
-  &lt;li&gt;Search for “pschub”&lt;/li&gt;
-  &lt;li&gt;You will see “PSC HUB Bot”&lt;/li&gt;
-  &lt;li&gt;Just start the bot and enjoy.&lt;/li&gt;
-  &lt;li&gt;Or Simply &lt;a href=&quot;https://telegram.me/pschub_bot&quot;&gt;Click HERE&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;What is a Bot
-Bots are simply Telegram accounts operated by software – not people – and they’ll often have AI features. They can do anything – teach, play, search, broadcast, remind, connect, integrate with other services, or even pass commands to the Internet of Things.&lt;/p&gt;
+How I get this Inside Telegram Messenger
+
+
+  Open Telegram Messenger
+  Search for “pschub”
+  You will see “PSC HUB Bot”
+  Just start the bot and enjoy.
+  Or Simply Click HERE
+
+
+What is a Bot
+Bots are simply Telegram accounts operated by software – not people – and they’ll often have AI features. They can do anything – teach, play, search, broadcast, remind, connect, integrate with other services, or even pass commands to the Internet of Things.
 </description>
         <pubDate>Sun, 17 May 2015 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</link>

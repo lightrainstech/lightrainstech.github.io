@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blogs - Explaining Blockchain, React, ES6 and what not. ⚡️ Lightrains Technolabs</title>
-  <meta name="description" content="Engineering blockchain and smart contracts solutions for businesses to approach commerce trading supply chain and identification through transparency and securi">
+  <title>ES6 Data Structures</title>
+  <meta name="description" content="Es6 introduces many new features to embrace the developer as well as the browsers to performin a optimal performant way setset is new type of data structure tha">
   <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400|Merriweather:400&subset=latin" rel="stylesheet">
   <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
-  <link rel="canonical" href="https://lightrains.com/blogs/">
+  <link rel="canonical" href="https://lightrains.com/blogs/es6-data-structres">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
-  <link rel="amphtml" href="https://lightrains.com/amp">
+  <link rel="amphtml" href="https://lightrains.com/amp/blogs/es6-data-structres">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
 <link rel="manifest" href="/assets/favicons/manifest.json">
 <meta name="mobile-web-app-capable" content="yes">
@@ -45,7 +45,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
 </head>
-<body class="page page-default path-inner">
+<body class="page page-blog path-inner">
  <div class="ui inverted top sidebar vertical menu" style="">
     <a class="item" href="/">
       <i class="home icon"></i>
@@ -113,93 +113,81 @@
 </header>
    </div>
    <div class="ui container">
-     <div class="masthead">
- <h1>Engineering Blockchain and Smart contracts.</h1>
- <h2>Solutions for businesses to approach commerce, trading, supply chain and identification through transparency and security powered by blockchain and smart contracts.</h2>
- <div class="ui hidden divider"></div>
- <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" class="ui button big black obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+      <header class="post-header">
+ <h1 class="post-title">ES6 Data Structures</h1>
+</header>
+<div class="ui grid stackable">
+ <div class="ui eleven wide column text page-text">
+     <h2 class="post-subtitle" itemprop="name headline">Ecmascript 6 Data Structures Set and Map</h2>
+      <img class="ui fluid image" src="/assets/img/blog/es6-ds.png" alt="ES6 Data Structures">
+     <div class="ui hidden divider"></div>
+   <p>ES6 introduces many new features to embrace the developer as well as the browsers to perform
+in a optimal performant way.</p>
+<h2 id="set">Set</h2>
+<p>Set is new type of data structure that we can use to store <strong>Unique</strong> values which can be of
+any type but they must all be uniqie.</p>
+<p><strong>Create a Set</strong></p>
+<p>To create a set we use <code class="highlighter-rouge">Set</code> constructor <code class="highlighter-rouge">var mySet = new Set();</code></p>
+<p><strong>Add Values to set</strong></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>let myArray = [1, 4, 1, 5, 5, 7, 8, 9, 0, 0]
+let mySet = new Set(myArray)
+</code></pre>
 </div>
-<div class="ui equal width stackable two column grid">
- <div class="column eight wide">
-    <a href="/blogs/es6-data-structres" title="ES6 Data Structures"><img src="/assets/img/blog/es6-ds.png" alt="ES6 Data Structures" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      ES6 Data Structures
-     <div class="sub header">ES6 introduces many new features to embrace the developer as well as the browsers to perform
-in a optimal performant way.
+<p>Now if you do a <code class="highlighter-rouge">console.log(mySet);</code> you will see
+<code class="highlighter-rouge">Set {1, 4, 5, 7, 8, 9, 0}</code></p>
+<h2 id="map">Map</h2>
+<p>Map is similar to <code class="highlighter-rouge">Set</code> but it manges key-value pair instead of individual values.</p>
+<p><strong>Create a Map</strong></p>
+<p><code class="highlighter-rouge">var myMap = new Map();</code> will create an instance of <code class="highlighter-rouge">Map</code> and to add values to it we can do <code class="highlighter-rouge">let
+myOtherMap = new Map([['a', 2], [1, 'b']])</code></p>
+<p><code class="highlighter-rouge">console.log(myOtherMap);</code> will show <code class="highlighter-rouge">Map {"a" =&gt; 2, 1 =&gt; "b"}</code></p>
+<h2 id="weakset-and-weakmap">WeakSet and WeakMap</h2>
+<p>Similar to regular Map and Set but the difference is that the object references inside them are
+held weakly. So it wont prevent garbage collection.</p>
+   <div class="ui hidden divider"></div>
+<div class="ui tiny label">
+  All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
 </div>
-   </h2>
-    <a href="/blogs/es6-data-structres" title="ES6 Data Structures" class="ui black button">Read More...</a>
+<h4 class="ui horizontal divider header">Write a comment on ES6 Data Structures</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+(function() {
+var d = document, s = d.createElement('script');
+s.src = '//lightrainstechnolabs.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
  </div>
- <div class="column eight wide">
-    <a href="/blogs/function-parameteres-ecmascript6-es6" title="Function parameters in es6"><img src="/assets/img/blog/function-parameteres-es6.png" alt="Function parameters in es6" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      Function parameters in es6
-     <div class="sub header">There are 2 types of function parameters available in es6,
+ <div class="ui five wide column">
+   <div class="ui hidden divider"></div>
+    <h3>Posted In</h3>
+<div class="ui black labels">
+  <a href="/tag/es6/" class="ui label" title="Blogs Tagged ES6" >ES6</a>
+  <a href="/tag/es6-tutorials/" class="ui label" title="Blogs Tagged ES6 Tutorials" >ES6 Tutorials</a>
+  <a href="/tag/ecmascript-6/" class="ui label" title="Blogs Tagged Ecmascript 6" >Ecmascript 6</a>
 </div>
-   </h2>
-    <a href="/blogs/function-parameteres-ecmascript6-es6" title="Function parameters in es6" class="ui black button">Read More...</a>
- </div>
- <div class="column eight wide">
-    <a href="/blogs/useful-ethereum-geth-javascript-snippets" title="Common useful JavaScript snippets for geth"><img src="/assets/img/blog/ethereum-geth-javascript-snippets.png" alt="Common useful JavaScript snippets for geth" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      Common useful JavaScript snippets for geth
-     <div class="sub header">This is a collection of common useful scripts that are handy when you do any kind of developemt on the Ethereum Virtual Machine aka EVM.
-</div>
-   </h2>
-    <a href="/blogs/useful-ethereum-geth-javascript-snippets" title="Common useful JavaScript snippets for geth" class="ui black button">Read More...</a>
- </div>
- <div class="column eight wide">
-    <a href="/blogs/ipfs-introduction" title="Introduction to IPFS"><img src="/assets/img/blog/ipfs-cover.png" alt="Introduction to IPFS" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      Introduction to IPFS
-     <div class="sub header">IPFS is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. In some ways, IPFS is similar to the World Wide Web, but IPFS could be seen as a single BitTorrent...</div>
-   </h2>
-    <a href="/blogs/ipfs-introduction" title="Introduction to IPFS" class="ui black button">Read More...</a>
- </div>
- <div class="column eight wide">
-    <a href="/blogs/dag-ethereum-blockchain" title="What is DAG in Ethereum Blockchain"><img src="/assets/img/blog/dag-ethereum-blockchain.png" alt="What is DAG in Ethereum Blockchain" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      What is DAG in Ethereum Blockchain
-     <div class="sub header">Dagger Hashimoto is a proposed spec for the mining algorithm for Ethereum 1.0. Dagger Hashimoto aims to simultaneously satisfy two goals:
-</div>
-   </h2>
-    <a href="/blogs/dag-ethereum-blockchain" title="What is DAG in Ethereum Blockchain" class="ui black button">Read More...</a>
- </div>
- <div class="column eight wide">
-    <a href="/blogs/es6" title="ECMAScript 6"><img src="/assets/img/blog/ES6-ecmascript6-logo.jpg" alt="ECMAScript 6" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      ECMAScript 6
-     <div class="sub header">ECMAScript 6, also known as ECMAScript 2015, is the latest version of the ECMAScript standard. ES6 is a significant update to the language, and the first update to the language since ES5 was standardized in 2009. Implementation of these features...</div>
-   </h2>
-    <a href="/blogs/es6" title="ECMAScript 6" class="ui black button">Read More...</a>
- </div>
- <div class="column eight wide">
-    <a href="/blogs/new-brand-identity-lightrains-tech" title="Evolving the Identity"><img src="/assets/img/blog/evolving.png" alt="Evolving the Identity" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      Evolving the Identity
-     <div class="sub header">Big news! Today, after five years, we’re releasing an updated brand identity, which includes a new logo, colors, and font. You’ll see the new look anywhere we’re out in public, like our website, Facebook, and Twitter; very soon you’ll see...</div>
-   </h2>
-    <a href="/blogs/new-brand-identity-lightrains-tech" title="Evolving the Identity" class="ui black button">Read More...</a>
- </div>
- <div class="column eight wide">
-    <a href="/blogs/what-is-dao-decentralized-autonomous-organization" title="What is a DAO aka Decentralized Autonomous Organization"><img src="/assets/img/blog/what-is-dao.png" alt="What is a DAO aka Decentralized Autonomous Organization" class="ui image fluid"></a>
-   <h2 class="ui header large">
-      What is a DAO aka Decentralized Autonomous Organization
-     <div class="sub header">A Decentralized autonomous organizations (“DAO”) is a new type of organization, best comparable to a digital company, but without an attached legal entity. Made from irrefutable computer code, it is operated entirely by its community
-</div>
-   </h2>
-    <a href="/blogs/what-is-dao-decentralized-autonomous-organization" title="What is a DAO aka Decentralized Autonomous Organization" class="ui black button">Read More...</a>
- </div>
-</div>
-<div class="ui divider hidden big"></div>
-<div class="ui divider hidden big"></div>
-<div class="ui grid">
- <div class="eight wide column">
-   <div class="pagination">
-      <span class="ui left small labeled icon floated button"><i class="left arrow icon"></i>Previous</span>
-      <span class="page_number ">Page: 1 of 3</span>
-      <a href="/blogs/page2/" class="ui right floated right labeled icon small button">Next<i class="right arrow icon"></i></a>
-   </div>
+    <h3>Recent Posts</h3>
+<ul>
+  <li >
+    <a class="header" href="/blogs/es6-data-structres" title="ES6 Data Structures">ES6 Data Structures</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/function-parameteres-ecmascript6-es6" title="Function parameters in es6">Function parameters in es6</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/useful-ethereum-geth-javascript-snippets" title="Common useful JavaScript snippets for geth">Common useful JavaScript snippets for geth</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/ipfs-introduction" title="Introduction to IPFS">Introduction to IPFS</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/dag-ethereum-blockchain" title="What is DAG in Ethereum Blockchain">What is DAG in Ethereum Blockchain</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/es6" title="ECMAScript 6">ECMAScript 6</a>
+  </li>
+</ul>
  </div>
 </div>
    </div>

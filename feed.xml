@@ -5,9 +5,25 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Jul 2016 13:08:10 +0530</pubDate>
-    <lastBuildDate>Tue, 26 Jul 2016 13:08:10 +0530</lastBuildDate>
+    <pubDate>Fri, 29 Jul 2016 21:27:12 +0530</pubDate>
+    <lastBuildDate>Fri, 29 Jul 2016 21:27:12 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Bitcoins most Intriguing Qualities</title>
+        <description>Bitcoin is an innovative payment network and a new kind of money. Find all you need to know and get started with Bitcoin on bitcoin.org.Some of Bitcoin’s Most Intriguing Qualities Bitcoin Cryptocurrency A cryptocurrency (or crypto currency) is a medium of exchange using cryptography to secure the transactions and to control the creation of additional units of the currency.[1] Cryptocurrencies are a subset of alternative currencies, or specifically of digital currencies. wiki Bitcoin and bitcoin Aren’t the Same Bitcoin with a capital ‘B’ is used when referring to the network, while the currency is spelt with a small ‘b’. There Will Only Ever Be 21 Million bitcoins we can accurately predict, almost to the exact hour, the date the 21 millionth, and last, bitcoin will enter circulation. Bitcoin is Operated by Users, Not Institutions Bitcoin is run through a peer-to-peer network, meaning that there is no central control, but rather the control is decentralised throughout the user base. bitcoins Aren’t Minted; They’re Mined Unlike traditional currency, bitcoins exist as a result of a production process called mining. People use computers to solve complex mathematical algorithms in order to introduce new bitcoins into the economy. bitcoins Are Stored in Digital Wallets, Not Banks User store their bitcoins safely online Bitcoin Transactions are Pseudonymous The true names of buyers and sellers are never revealed. Though each transaction is recorded in a public ledger (blockchain) only their wallet ID’s will be represented, bitcoin is Divisible to 1 Million Bits One bitcoin can be broken down to 1,000,000 bits. 0,00000001 of a bitcoin is known as a satoshi, Bitcoin Network is Virtually ‘Unhackable’ Bitcoin is secured by military-grade cryptography. The only considerable source ever imposing a threat would be quantum computing, which does not yet exist. Bitcoin Computes More Than 100,000 Transactions a Day...</description>
+        <pubDate>Fri, 29 Jul 2016 12:23:22 +0530</pubDate>
+        <link>https://lightrains.com/blogs/intriguing-qualities-of-bitcoin</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/intriguing-qualities-of-bitcoin</guid>
+        
+        <category>Bitcoin</category>
+        
+        <category>Blockchain</category>
+        
+        <category>Cryptocurrency</category>
+        
+        
+      </item>
     
       <item>
         <title>ES6 Data Structures</title>

@@ -81,10 +81,6 @@
 <lastmod>2016-06-13T11:19:48+05:30</lastmod>
 </url>
 <url>
-<loc>https://lightrains.com/blogs/what-is-blockchain</loc>
-<lastmod>2016-06-13T11:19:48+05:30</lastmod>
-</url>
-<url>
 <loc>https://lightrains.com/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash</loc>
 <lastmod>2016-01-12T00:00:00+05:30</lastmod>
 </url>
@@ -179,9 +175,6 @@
 <loc>https://lightrains.com/tag/blockchain/</loc>
 </url>
 <url>
-<loc>https://lightrains.com/tag/bitcoin/</loc>
-</url>
-<url>
 <loc>https://lightrains.com/tag/smart-contract/</loc>
 </url>
 <url>
@@ -233,6 +226,9 @@
 <loc>https://lightrains.com/tag/ecmascript-6/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/bitcoin/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -243,9 +239,6 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/cryptocurrency-101-why-use-cryptocurrencies-instead-cash/</loc>
-</url>
-<url>
-<loc>https://lightrains.com/amp/blogs/what-is-blockchain/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/what-is-bitcoin-currency/</loc>
@@ -312,8 +305,5 @@
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page3/</loc>
-</url>
-<url>
-<loc>https://lightrains.com/blogs/page4/</loc>
 </url>
 </urlset>

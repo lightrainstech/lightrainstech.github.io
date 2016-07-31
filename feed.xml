@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 29 Jul 2016 21:30:42 +0530</pubDate>
-    <lastBuildDate>Fri, 29 Jul 2016 21:30:42 +0530</lastBuildDate>
+    <pubDate>Sun, 31 Jul 2016 07:56:34 +0530</pubDate>
+    <lastBuildDate>Sun, 31 Jul 2016 07:56:34 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -590,21 +590,6 @@ Video by WeUseCoins
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/what-is-bitcoin-currency</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/what-is-bitcoin-currency</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>What is Blockchain</title>
-        <description>Blockchains are tamper-proof, immutable, time-stamped, transparent ledgers whose applications have the potential to improve many aspects of our lives.
-</description>
-        <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
-        <link>https://lightrains.com/blogs/what-is-blockchain</link>
-        <guid isPermaLink="true">https://lightrains.com/blogs/what-is-blockchain</guid>
-        
-        <category>Blockchain</category>
-        
-        <category>Bitcoin</category>
         
         
       </item>

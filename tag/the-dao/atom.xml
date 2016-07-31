@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The DAO Articles</title>
-  <meta name="description" content="Categories drupal 4 android 1 blockchain 2 ethereum 1 smart contract 3 open source 1 tags telegram 1 cryptocurrency 3 handbook 2 blockchain 5 bitcoin 2 smart co">
+  <meta name="description" content="Categories drupal 4 android 1 blockchain 2 ethereum 1 smart contract 3 open source 1 tags telegram 1 cryptocurrency 3 handbook 2 blockchain 4 smart contract 1 d">
   <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400|Merriweather:400&subset=latin" rel="stylesheet">
   <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
   <link rel="canonical" href="https://lightrains.com/tag/the-dao/atom.xml">
@@ -153,10 +153,7 @@
 		<a href="/tag/Handbook/">Handbook <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Blockchain/">Blockchain <span class="badge">5</span></a>
-		</div>
-		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">2</span></a>
+		<a href="/tag/Blockchain/">Blockchain <span class="badge">4</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Smart Contract/">Smart Contract <span class="badge">1</span></a>
@@ -208,6 +205,9 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Ecmascript 6/">Ecmascript 6 <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

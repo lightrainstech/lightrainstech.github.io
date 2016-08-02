@@ -2,8 +2,8 @@
 <html amp lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Cryptocurrency 101 - Part 1/3 - The Basics</title>
-  <link rel="canonical" href="https://lightrains.com/blogs/cryptocurrency-101" />
+  <title>ECMAScript 6 Classes.</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/es6-classes" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400&subset=latin" rel="stylesheet" type='text/css'>
   <style amp-custom="">
@@ -171,19 +171,19 @@ pre, code {
   "@type": "Article",
   "mainEntityOfPage":{
     "@type":"WebPage",
-    "@id":"https://lightrains.com/blogs/cryptocurrency-101/"
+    "@id":"https://lightrains.com/blogs/es6-classes/"
   },
-  "headline": "Cryptocurrency 101 - Part 1/3 - The Basics",
+  "headline": "ECMAScript 6 Classes.",
   "about": "Engineering Blockchain and Smart contracts.",
-  "sameAs": "https://lightrains.com/blogs/cryptocurrency-101/",
+  "sameAs": "https://lightrains.com/blogs/es6-classes/",
   "image": {
     "@type": "ImageObject",
-    "url": "https://lightrains.com/assets/img/blog/cryptocurrency-101.png",
+    "url": "https://lightrains.com/assets/img/blog/es6-classes.png",
     "height": 1000,
     "width": 700
   },
-  "datePublished": "2016-01-08T00:00:00+05:30",
-  "dateModified": "2016-01-08T00:00:00+05:30",
+  "datePublished": "2016-08-01T02:10:00+05:30",
+  "dateModified": "2016-08-01T02:10:00+05:30",
   "author": {
      "@type": "Person",
      "name": "Nikhil Mohan"
@@ -198,7 +198,7 @@ pre, code {
       "height": 60
     }
   },
-  "description": "What is a Cryptocurrency?A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same w..."
+  "description": "ECMAScript 6 (ES6, often referred to as Harmony) is the upcoming sixth major release of the ECMAScript language specification.The technology bringing a lot o..."
 }
 </script>
 
@@ -212,55 +212,72 @@ pre, code {
   <a href="/about/contact">Contact</a>
 </div>
 
-  <h1 class="post-title ui header huge" itemprop="name headline" title="Cryptocurrency 101 - Part 1/3 - The Basics">Cryptocurrency 101 - Part 1/3 - The Basics</h1>
+  <h1 class="post-title ui header huge" itemprop="name headline" title="ECMAScript 6 Classes.">ECMAScript 6 Classes.</h1>
 
   <amp-img
-  src="/assets/img/blog/cryptocurrency-101.png"
-  alt="Cryptocurrency 101 - Part 1/3 - The Basics" height="216" width="360" on="tap:headline-img-lightbox"
+  src="/assets/img/blog/es6-classes.png"
+  alt="ECMAScript 6 Classes." height="216" width="360" on="tap:headline-img-lightbox"
   layout="responsive"
   ></amp-img>
 
   <div class="content">
     <span class="timespan">
-      Fri, Jan 08, 16
+      Mon, Aug 01, 16
     </span>
-    <h2 id="what-is-a-cryptocurrency">What is a Cryptocurrency?</h2>
-<p>A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider.</p>
+    <p>ECMAScript 6 (ES6, often referred to as Harmony) is the upcoming sixth major release of the ECMAScript language specification.The technology bringing a lot of amazing features that we will need to know. One of the main feature that introducing by the  ES6 is “Javascript Classes”.</p>
 
-<p>Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers.</p>
+<h2 id="classes">Classes</h2>
+<p>Classes are the main  new OOP paradigm in ES6 which make code syntatic sugar.That means classes make prototype-based OO pattern much simpler and boosts interoperability.Classes supports inheritance,instance and static methods which makes ES6 more user friendly.</p>
 
-<h2 id="how-it-works">How it works</h2>
-<p>Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency.</p>
+<h2 id="class-body-and-methods">Class body and methods</h2>
+<p>The body of a class is enclosed in curly braces {}.Here we can define methods or constructors.</p>
 
-<h2 id="what-gives-them-their-value">What gives them their value?</h2>
-<p>They have value because they are scarce, fungible (one <a href="https://bitcoin.org">Bitcoin</a> is as good as another), easily transferred, and easily verified.
-The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today.</p>
+<h2 id="constructor">Constructor:</h2>
+<p>A special method for creating and initializing an object created with a class.</p>
 
-<p>They aren’t backed by anything because they’re a commodity. What is gold backed by?</p>
+<p><strong>Example:</strong></p>
 
-<blockquote>
-  <p>Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another.</p>
-</blockquote>
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class Number{
+    constructor(num1, num2) {
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    calcSum() {
+        return this.num1 + this.num2;  
+    }
+    getSum(){
+        return this.calcSum();
+    }
+}
+numOperation = new Number(20, 10);
+console.log(numOperation.getSum);
+</code></pre>
+</div>
 
-<h2 id="advantages-of-cryptocurrency">Advantages of Cryptocurrency</h2>
+<h2 id="subclassing-using-extend-keyword">Subclassing using extend keyword:</h2>
+<p>The extends keyword is used in class declarations or class expressions to create a class as a child of another class.</p>
 
-<h3 id="land-of-the-free">1. Land of the Free</h3>
-<p>With cryptocurrency, you can access your money anywhere you go. Since it is a currency that exists online, there isn’t any inflation or deflation to account for in exchange rates across countries. You are free to fly across borders without worrying about bank holidays or extortionate credit card transaction fees.</p>
+<p><strong>Example:</strong></p>
 
-<h3 id="safe-n-secure">2. Safe n’ Secure</h3>
-<p>Your personal information is kept highly secure with cryptocurrencies. Fraud is rendered impossible because of the irreversible nature of crypto payments. This protects you from risks including identity theft and personal information leakage.</p>
+<div class="highlighter-rouge">
+<pre class="highlight"><code>class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        console.log(this.name + ' makes a noise.');
+    }
+}
+class Dog extends Animal {
+    speak() {
+        console.log(this.name + ' barks.');
+    }
+}
+</code></pre>
+</div>
 
-<h4 id="history-of-cryptocurrency">History of Cryptocurrency</h4>
-<p>The first cryptocurrency was Bitcoin. Bitcoin was created in 2009 by a pseudonymous developer named Satoshi Nakamoto. Bitcoin uses SHA-256, which is a set of cryptographic hash functions designed by the U.S National Security Agency. Bitcoin is a cryptocurrency that is based on the proof-of-work system.</p>
-
-<div class="ui header medium source">Sources</div>
-
-<ul>
-  <li>http://bitcoin.stackexchange.com/q/182/30316</li>
-  <li>http://www.investopedia.com/financial-edge/0212/bitcoin-may-be-the-currency-of-the-future.aspx</li>
-</ul>
-
-    <a href="https://lightrains.com/blogs/cryptocurrency-101" title="Cryptocurrency 101 - Part 1/3 - The Basics" class="nonamp">Full Version of Cryptocurrency 101 - Part 1/3 - The Basics</a>
+    <a href="https://lightrains.com/blogs/es6-classes" title="ECMAScript 6 Classes." class="nonamp">Full Version of ECMAScript 6 Classes.</a>
   </div>
   
   <div class="related ui segment">

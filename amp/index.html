@@ -25,6 +25,7 @@ body {
   line-height: 1.4;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 .h1 {
   font-size: 20px;
@@ -67,7 +68,6 @@ a {
   margin: 0 10px 0 0;
   color: #303030;
   text-transform: uppercase;
-  font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
 }
@@ -100,7 +100,6 @@ body a:focus, body a:hover {
   color: #ff4136;
 }
 .post-title{
-  font-family: 'Merriweather', sans-serif;
   font-size: 35px;
   letter-spacing: -0.02em;
   letter-spacing: -0.04em;
@@ -109,13 +108,8 @@ body a:focus, body a:hover {
   text-align: center;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Merriweather', sans-serif;
-
-}
 .content {
   display: block;
-  font-family: 'Merriweather Sans', sans-serif;
   font-size: 18px;
   font-style: normal;
   letter-spacing: 0.05px;
@@ -144,6 +138,14 @@ li {
 }
 li:before {
   content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
 }
 </style>
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -182,7 +184,7 @@ li:before {
   "sameAs": "https://lightrains.com/",
   "image": {
     "@type": "ImageObject",
-    "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+    "url": "https://lightrains.com/assets/img/blog/",
     "height": 1000,
     "width": 700
   },
@@ -219,6 +221,10 @@ li:before {
 <div class="ampblogs">
   <ul class="ui list">
     
+    
+    <li><a href="/amp/blogs/ethereum-solidity-getting-started/index.html" title="Getting started with Solidity.">Getting started with Solidity.</a></li>
+    
+    <li><a href="/amp/blogs/es6-classes/index.html" title="ECMAScript 6 Classes.">ECMAScript 6 Classes.</a></li>
     
     <li><a href="/amp/blogs/intriguing-qualities-of-bitcoin/index.html" title="Bitcoins most Intriguing Qualities">Bitcoins most Intriguing Qualities</a></li>
     

@@ -5,10 +5,90 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jul 2016 07:56:34 +0530</pubDate>
-    <lastBuildDate>Sun, 31 Jul 2016 07:56:34 +0530</lastBuildDate>
+    <pubDate>Tue, 02 Aug 2016 15:57:05 +0530</pubDate>
+    <lastBuildDate>Tue, 02 Aug 2016 15:57:05 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
+    
+      <item>
+        <title>Getting started with Solidity.</title>
+        <description>Solidity is a high-level language whose syntax is similar to that of JavaScript and it is designed to compile to code for the Ethereum Virtual Machine. As you will see, it is possible to create contracts for voting, crowdfunding, blind auctions, multi-signature wallets and more.
+
+Solidity is the programming language that we use to create Etherem based Smart Contracts.
+
+I have covered the steps to install Solidity in my previous blog Compile and Deploy Solidity
+Contract
+
+Data Types
+
+Booleans
+
+  bool: The possible values are constants true and false.
+
+
+Operators:
+
+
+  ! (logical negation)
+  &amp;amp;&amp;amp; (logical conjunction, “and”)
+  
+    
+      
+        
+           
+          (logical disjunction, “or”)
+        
+      
+    
+  
+  == (equality)
+  != (inequality)
+
+
+Integers
+
+int / uint: Signed and unsigned integers of various sizes. Keywords uint8 to uint256 in steps of 8 (unsigned of 8 up to 256 bits) and int8 to int256. uint and int are aliases for uint256 and int256, respectively.
+
+Address
+address: Holds a 20 byte value (size of an Ethereum address). Address types also have members and serve as base for all contracts.
+
+Next we will look into Expressions and Control Structures
+
+Source
+
+
+  Official Docs
+  Types
+
+</description>
+        <pubDate>Mon, 01 Aug 2016 09:10:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/ethereum-solidity-getting-started/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/ethereum-solidity-getting-started</guid>
+        
+        <category>Ethereum</category>
+        
+        <category>Solidity</category>
+        
+        <category>EVM</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>ECMAScript 6 Classes.</title>
+        <description>ECMAScript 6 (ES6, often referred to as Harmony) is the upcoming sixth major release of the ECMAScript language specification.The technology bringing a lot of amazing features that we will need to know. One of the main feature that introducing by the ES6 is “Javascript Classes”. Classes Classes are the main new OOP paradigm in ES6 which make code syntatic sugar.That means classes make prototype-based OO pattern much simpler and boosts interoperability.Classes supports inheritance,instance and static methods which makes ES6 more user friendly. Class body and methods The body of a class is enclosed in curly braces {}.Here we can define methods or constructors. Constructor: A special method for creating and initializing an object created with a class. Example: class Number{ constructor(num1, num2) { this.num1 = num1; this.num2 = num2; } calcSum() { return this.num1 + this.num2; } getSum(){ return this.calcSum(); } } numOperation = new Number(20, 10); console.log(numOperation.getSum); Subclassing using extend keyword: The extends keyword is used in class declarations or class expressions to create a class as a child of another class. Example: class Animal { constructor(name) { this.name = name; } speak() { console.log(this.name + &#39; makes a noise.&#39;); } } class Dog extends Animal { speak() {...</description>
+        <pubDate>Mon, 01 Aug 2016 02:10:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/es6-classes/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/es6-classes</guid>
+        
+        <category>ES 6</category>
+        
+        <category>Ecmascript 6</category>
+        
+        <category>ES6 Tutorials</category>
+        
+        
+      </item>
     
       <item>
         <title>Bitcoins most Intriguing Qualities</title>

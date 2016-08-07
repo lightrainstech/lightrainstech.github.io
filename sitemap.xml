@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/es6-transpilers</loc>
+<lastmod>2016-08-07T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/ethereum-solidity-getting-started</loc>
 <lastmod>2016-08-01T09:10:00+05:30</lastmod>
 </url>
@@ -240,13 +244,13 @@
 <loc>https://lightrains.com/tag/bitcoin/</loc>
 </url>
 <url>
-<loc>https://lightrains.com/tag/es-6/</loc>
-</url>
-<url>
 <loc>https://lightrains.com/tag/solidity/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/tag/evm/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/transpiler/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
@@ -325,6 +329,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/ethereum-solidity-getting-started/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/es6-transpilers/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

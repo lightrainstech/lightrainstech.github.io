@@ -5,9 +5,92 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Aug 2016 15:58:33 +0530</pubDate>
-    <lastBuildDate>Tue, 02 Aug 2016 15:58:33 +0530</lastBuildDate>
+    <pubDate>Sun, 07 Aug 2016 08:53:32 +0530</pubDate>
+    <lastBuildDate>Sun, 07 Aug 2016 08:53:32 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>ES6 Transpilers</title>
+        <description>What is a Transpiler
+A source-to-source compiler, transcompiler or transpiler is a type of compiler that takes the
+source code of a program written in one programming language as its input and produces the
+equivalent source code in another programming language. A source-to-source compiler translates
+between programming languages that operate at approximately the same level of abstraction, while
+a traditional compiler translates from a higher level programming language to a lower level
+programming language. wiki
+
+List of ES6 Transpilers
+
+  Babel: To transpile ES6 into ES5 for static builds
+  Babelify: To incorporate babel into your Gulp, Grunt, or npm run build process
+  Traceur compiler: ES6 features &amp;gt; ES5. Includes
+classes, generators, promises, destructuring patterns, default parameters &amp;amp; more.
+  es6ify: Traceur compiler wrapped as a Browserify v2 transform
+
+
+ES6 to ES5 Transpilation Example
+For this example we are using Babel’s live transpiler to see the code
+in action.
+
+ES6 Code
+
+import config from &#39;./config/env&#39;;
+import app from &#39;./config/express&#39;;
+
+// listen on port config.port
+app.listen(config.port, () =&amp;gt; {
+  debug(`server started on port ${config.port} (${config.env})`);
+});
+
+export default app;
+
+
+
+ES5 Converted
+
+&#39;use strict&#39;;
+
+Object.defineProperty(exports, &quot;__esModule&quot;, {
+  value: true
+});
+
+var _env = require(&#39;./config/env&#39;);
+
+var _env2 = _interopRequireDefault(_env);
+
+var _express = require(&#39;./config/express&#39;);
+
+var _express2 = _interopRequireDefault(_express);
+
+function _interopRequireDefault(obj) { return obj &amp;amp;&amp;amp; obj.__esModule ? obj : { default: obj }; }
+
+// listen on port config.port
+_express2.default.listen(_env2.default.port, function () {
+  debug(&#39;server started on port &#39; + _env2.default.port + &#39; (&#39; + _env2.default.env + &#39;)&#39;);
+});
+
+exports.default = _express2.default;
+
+
+
+Sources
+
+
+  https://scotch.io
+  https://github.com/bevacqua/es6#introduction
+  https://github.com/addyosmani/es6-tools
+
+</description>
+        <pubDate>Sun, 07 Aug 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/es6-transpilers</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/es6-transpilers</guid>
+        
+        <category>ES6</category>
+        
+        <category>Transpiler</category>
+        
+        
+      </item>
     
       <item>
         <title>Getting started with Solidity.</title>
@@ -94,7 +177,7 @@ class Number{
         this.num2 = num2;
     }
     calcSum() {
-        return this.num1 + this.num2;  
+        return this.num1 + this.num2;
     }
     getSum(){
         return this.calcSum();
@@ -130,7 +213,7 @@ class Dog extends Animal {
         <link>https://lightrains.com/blogs/es6-classes</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/es6-classes</guid>
         
-        <category>ES 6</category>
+        <category>ES6</category>
         
         <category>Ecmascript 6</category>
         

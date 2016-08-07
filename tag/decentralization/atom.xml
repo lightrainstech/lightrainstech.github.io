@@ -175,7 +175,7 @@
 		<a href="/tag/Typography/">Typography <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/ES6/">ES6 <span class="badge">3</span></a>
+		<a href="/tag/ES6/">ES6 <span class="badge">5</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/ECMAScript 2015/">ECMAScript 2015 <span class="badge">1</span></a>
@@ -214,13 +214,13 @@
 		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/ES 6/">ES 6 <span class="badge">1</span></a>
-		</div>
-		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Solidity/">Solidity <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/EVM/">EVM <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Transpiler/">Transpiler <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

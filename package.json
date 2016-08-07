@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "gulp-image-resize": "^0.8.0",
+    "gulp-newer": "^1.2.0",
     "gulp-ruby-sass": "^2.0.6"
   }
 }

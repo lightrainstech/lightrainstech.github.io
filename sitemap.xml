@@ -191,6 +191,12 @@
 <loc>https://lightrains.com/tag/handbook/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/bitcoin/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/principles/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/tag/blockchain/</loc>
 </url>
 <url>
@@ -224,9 +230,6 @@
 <loc>https://lightrains.com/tag/dag/</loc>
 </url>
 <url>
-<loc>https://lightrains.com/tag/principles/</loc>
-</url>
-<url>
 <loc>https://lightrains.com/tag/ipfs/</loc>
 </url>
 <url>
@@ -243,9 +246,6 @@
 </url>
 <url>
 <loc>https://lightrains.com/tag/ecmascript-6/</loc>
-</url>
-<url>
-<loc>https://lightrains.com/tag/bitcoin/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/tag/solidity/</loc>

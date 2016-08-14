@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/what-private-permissioned-blockchain</loc>
+<lastmod>2016-08-12T05:10:00+05:30</lastmod>
+</url>
+<url>
+<loc>https://lightrains.com/blogs/blockchain-for-insurance-industry</loc>
+<lastmod>2016-08-12T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/bitcoin-how-is-useful</loc>
 <lastmod>2016-08-09T05:10:00+05:30</lastmod>
 </url>
@@ -257,6 +265,15 @@
 <loc>https://lightrains.com/tag/transpiler/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/whitepaper/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/private-blockchain/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/permissioned-blockchain/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -339,6 +356,12 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/bitcoin-how-is-useful/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/blockchain-for-insurance-industry/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/what-private-permissioned-blockchain/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

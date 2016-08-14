@@ -6,7 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ethereum Articles | #Ethereum</title>
   <meta name="description" content="Categories drupal 4 android 1 blockchain 2 ethereum 1 smart contract 3 open source 1 tags telegram 1 cryptocurrency 5 handbook 2 bitcoin 3 principles 2 blockcha">
-  <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:400|Merriweather:400&subset=latin" rel="stylesheet">
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Merriweather+Sans:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
   <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
   <link rel="canonical" href="https://lightrains.com/tag/ethereum/atom.xml">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
@@ -163,7 +174,7 @@
 		<a href="/tag/Principles/">Principles <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Blockchain/">Blockchain <span class="badge">4</span></a>
+		<a href="/tag/Blockchain/">Blockchain <span class="badge">6</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Smart Contract/">Smart Contract <span class="badge">1</span></a>
@@ -221,6 +232,15 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Transpiler/">Transpiler <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Whitepaper/">Whitepaper <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Private Blockchain/">Private Blockchain <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Permissioned Blockchain/">Permissioned Blockchain <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

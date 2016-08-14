@@ -5,15 +5,63 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Aug 2016 20:42:46 +0530</pubDate>
-    <lastBuildDate>Tue, 09 Aug 2016 20:42:46 +0530</lastBuildDate>
+    <pubDate>Sun, 14 Aug 2016 20:46:01 +0530</pubDate>
+    <lastBuildDate>Sun, 14 Aug 2016 20:46:01 +0530</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>What Is Bitcoin and how is it useful</title>
-        <description>What Is Bitcoin and how is it useful.
+        <title>What is Private Permissioned Blockchain</title>
+        <description>Properly permissioned blockchain networks differ from unpermissioned blockchain networks solely based on the presence (or absence) of an access control layer built into the blockchain clients.
 
-Bitcoin is a decentralized digital currency, created and held electronically. No one controls it. They’re not printed, produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.
+The first primary difference between a properly conceived permissioned blockchain network and an unpermissioned blockchain network is whether the participants in the network have an ability to restrict who can participate in the consensus mechanism of the blockchain’s network.
+
+Permissioned blockchain networks allow the network to appoint a group of participants in the network who are given the express authority to provide the validation of blocks of transactions. Or, to participate in the consensus mechanism.
+
+Why do we need Permissioned Blockchain
+
+To understand the benefits of permissioned blockchain networks to their participants, we must consider the relative advantages which they have vis a vis their unpermissioned cousins.
+
+We must also consider the relative advantages which permissioned blockchain networks have vis a vis their cousins on the other side of the spectrum: hub and spoke distributed databases.
+
+
+  Governance Over A Permissioned Blockchain is Clearly Defined
+  More Cost Effective
+  Extra layer of security is there. (could be)
+
+
+Sources
+ 1. https://docs.erisindustries.com
+</description>
+        <pubDate>Fri, 12 Aug 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/what-private-permissioned-blockchain</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/what-private-permissioned-blockchain</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Private Blockchain</category>
+        
+        <category>Permissioned Blockchain</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Blockchain for Insurance Industry</title>
+        <description>Insurance companies have been traditionally slow to drive adoption in technologies. These innovation strategies and initiatives are aimed at retaining customers and optimizing pricing and tradability of services. Insurers who have trust at the heart have begun to appreciate with technologies such as blockchain because they believe that a “trustless” system (which pushes identity management, ownership and management of data and processes to the customer) may provide genuine long-term strategic benefits. Whats is meant by trust-less: The greatest advantage of blockchains is its decentralized protocol which is often referred as “Trust to the trust-less world”. Because every part of the system is continually checking and approving the work of the others. Therefore, if any piece of information will be changed on one machine, it won’t be approved by the others as all of them hold the same record. In the banking industry, several blockchain use conditions are being integrated, which range from customer-facing repayment technology to switch and trading services.While the insurance industry (in conditions of technology adoption) lags behind banking, it is nevertheless uniquely positioned to reap the benefits of blockchain technology. Blockchain can address the competitive challenges many incumbents face, including poor customer engagement, limited growth in mature markets, and the trends of digitization. In the next, we format the most appealing insurance-related use circumstances in three categories: enabling progress, increasing efficiency, and lowering cost by automating key techniques. Potential use cases Validate authenticity, ownership, and provenance of goods as well as authenticity of documents (e.g., medical reports) Check for police theft reports/claims history as well as a person’s verified identity and detect patterns of fraudulent behavior related to a specific identity Prove date and time of policy issuance or purchase of a product/asset Confirm subsequent ownership and location changes. How CAN we keep the files on the...</description>
+        <pubDate>Fri, 12 Aug 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/blockchain-for-insurance-industry</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/blockchain-for-insurance-industry</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Whitepaper</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>What Is Bitcoin and how is it useful</title>
+        <description>Bitcoin is a decentralized digital currency, created and held electronically. No one controls it. They’re not printed, produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.
 
 Satoshi Nakamoto, a software developer proposed bitcoin, which was an electronic payment system based on mathematical proof. Idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.
 

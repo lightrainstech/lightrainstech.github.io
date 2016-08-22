@@ -5,9 +5,27 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Aug 2016 20:46:01 +0530</pubDate>
-    <lastBuildDate>Sun, 14 Aug 2016 20:46:01 +0530</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Mon, 22 Aug 2016 19:43:03 +0530</pubDate>
+    <lastBuildDate>Mon, 22 Aug 2016 19:43:03 +0530</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Blockchain for healthcare industry</title>
+        <description>The healthcare providers in the entire world offers high-end technologies for analyzing and determining a particular disease. But there are certain key problems which are need to be rectified in the healthcare industry. 1. Poor data standardization: In today’s healthcare industry, healthcare data is held in some type of centralized location. It may be an EHR system, a data warehouse, a physical file,or a repository run by a health information exchange. Each of this system may have been independently working and stores information it its own particular format. This makes interoperability difficult. Also this will frustrate the patients and providers if they needs to exchange data with some other institution. 2. Compromising quality of data: Quality and accuracy of data is a key concern in healthcare industry. There are various reasons for this: - mistakes from physician or clinician - improper updation of EHR (Electronic Health Record) due to simultaneous editing. - different providers holds different versions of same patients record 3. Security flaws: Flaws in privacy and security is a major issue in healthcare industry. Due to the intensely private and secure nature of healthcare data, these are kept in locations where access is theoretically restricted to certain trusted parties. But if somebody gains access, the security of data fails there. Blockchain helps to rectify the above mentioned flaws in healthcare industry. Let us discuss what blockchain is: Blockchain is a data structure which can be used to create a digital ledger of transactions and share the data amount a distributed network of computers. each participant uses a cryptography to manipulate the ledger in a secure way. We cannot change or remove a block of data once it is recorded on the blockchain ledger. Read what is blockchain Application of Blockchain in healthcare industry The blockchain’s potential benefit to...</description>
+        <pubDate>Mon, 22 Aug 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/blockchain-for-healthcare-usecase</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/blockchain-for-healthcare-usecase</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Healthcare</category>
+        
+        <category>Use Case</category>
+        
+        <category>Whitepaper</category>
+        
+        
+      </item>
     
       <item>
         <title>What is Private Permissioned Blockchain</title>
@@ -142,8 +160,8 @@ in action.
 
 ES6 Code
 
-import config from &#39;./config/env&#39;;
-import app from &#39;./config/express&#39;;
+import config from './config/env';
+import app from './config/express';
 
 // listen on port config.port
 app.listen(config.port, () =&amp;gt; {
@@ -156,17 +174,17 @@ export default app;
 
 ES5 Converted
 
-&#39;use strict&#39;;
+'use strict';
 
 Object.defineProperty(exports, &quot;__esModule&quot;, {
   value: true
 });
 
-var _env = require(&#39;./config/env&#39;);
+var _env = require('./config/env');
 
 var _env2 = _interopRequireDefault(_env);
 
-var _express = require(&#39;./config/express&#39;);
+var _express = require('./config/express');
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -174,7 +192,7 @@ function _interopRequireDefault(obj) { return obj &amp;amp;&amp;amp; obj.__esMod
 
 // listen on port config.port
 _express2.default.listen(_env2.default.port, function () {
-  debug(&#39;server started on port &#39; + _env2.default.port + &#39; (&#39; + _env2.default.env + &#39;)&#39;);
+  debug('server started on port ' + _env2.default.port + ' (' + _env2.default.env + ')');
 });
 
 exports.default = _express2.default;
@@ -308,12 +326,12 @@ class Animal {
         this.name = name;
     }
     speak() {
-        console.log(this.name + &#39; makes a noise.&#39;);
+        console.log(this.name + ' makes a noise.');
     }
 }
 class Dog extends Animal {
     speak() {
-        console.log(this.name + &#39; barks.&#39;);
+        console.log(this.name + ' barks.');
     }
 }
 
@@ -378,7 +396,7 @@ Map is similar to Set but it manges key-value pair instead of individual values.
 Create a Map
 
 var myMap = new Map(); will create an instance of Map and to add values to it we can do let
-myOtherMap = new Map([[&#39;a&#39;, 2], [1, &#39;b&#39;]])
+myOtherMap = new Map([['a', 2], [1, 'b']])
 
 console.log(myOtherMap); will show Map {&quot;a&quot; =&amp;gt; 2, 1 =&amp;gt; &quot;b&quot;}
 
@@ -413,7 +431,7 @@ Default parameter are a way to pass a value to the function parameter when there
 
 We specify this value when defining a function,
 
-function printName ( name = &#39;there&#39; ) {
+function printName ( name = 'there' ) {
   return `Hello,  ${name}`
 }
 
@@ -421,7 +439,7 @@ function printName ( name = &#39;there&#39; ) {
 We can even use the default parameter of one parameter as part of an expression for another
 paramter. For eg:
 
-function printName ( name = &#39;there&#39;, fullname = name + &#39; lastName&#39; ) {
+function printName ( name = 'there', fullname = name + ' lastName' ) {
   return `Hello,  ${name} -  ${fullname} `
 }
 
@@ -618,7 +636,7 @@ COO
     
       <item>
         <title>Compile and Deploy Solidity Contract</title>
-        <description>Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K. Step 1. Install Solidity Compiler Solc Easy way Its very easy to install solc using npm the package manager for NodeJS the command is npm install solc Easier way Browser-Solidity If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity. Building from Source Assuming you are using Ubuntu 14.04 sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade And pull the solidity source code git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 Step 2. Verify Solidity Compiler To ensure solc is installed and ready to use, you can verify it by running eth.getCompilers() in geth console If you have it installed, it should output something like this: [&#39;Solidity&#39; ] Bonus. Compile a simple contract Let us take this simple contract source: source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; This contract offers a unary method: called with a positive integer a, it returns a * 7. You are ready to compile solidity code in the geth JS console using eth.compile.solidity &amp;gt; contract = eth.compile.solidity(source).test { code:...</description>
+        <description>Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K. Step 1. Install Solidity Compiler Solc Easy way Its very easy to install solc using npm the package manager for NodeJS the command is npm install solc Easier way Browser-Solidity If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity. Building from Source Assuming you are using Ubuntu 14.04 sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade And pull the solidity source code git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 Step 2. Verify Solidity Compiler To ensure solc is installed and ready to use, you can verify it by running eth.getCompilers() in geth console If you have it installed, it should output something like this: ['Solidity' ] Bonus. Compile a simple contract Let us take this simple contract source: source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; This contract offers a unary method: called with a positive integer a, it returns a * 7. You are ready to compile solidity code in the geth JS console using eth.compile.solidity &amp;gt; contract = eth.compile.solidity(source).test { code:...</description>
         <pubDate>Fri, 17 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</guid>

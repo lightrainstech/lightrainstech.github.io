@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/blockchain-for-healthcare-usecase</loc>
+<lastmod>2016-08-22T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/what-private-permissioned-blockchain</loc>
 <lastmod>2016-08-12T05:10:00+05:30</lastmod>
 </url>
@@ -274,6 +278,12 @@
 <loc>https://lightrains.com/tag/permissioned-blockchain/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/healthcare/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/use-case/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -362,6 +372,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/what-private-permissioned-blockchain/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/blockchain-for-healthcare-usecase/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

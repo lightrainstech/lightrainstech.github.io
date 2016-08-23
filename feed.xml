@@ -5,27 +5,9 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 Aug 2016 19:43:03 +0530</pubDate>
-    <lastBuildDate>Mon, 22 Aug 2016 19:43:03 +0530</lastBuildDate>
+    <pubDate>Tue, 23 Aug 2016 19:01:04 +0530</pubDate>
+    <lastBuildDate>Tue, 23 Aug 2016 19:01:04 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
-    
-      <item>
-        <title>Blockchain for healthcare industry</title>
-        <description>The healthcare providers in the entire world offers high-end technologies for analyzing and determining a particular disease. But there are certain key problems which are need to be rectified in the healthcare industry. 1. Poor data standardization: In today’s healthcare industry, healthcare data is held in some type of centralized location. It may be an EHR system, a data warehouse, a physical file,or a repository run by a health information exchange. Each of this system may have been independently working and stores information it its own particular format. This makes interoperability difficult. Also this will frustrate the patients and providers if they needs to exchange data with some other institution. 2. Compromising quality of data: Quality and accuracy of data is a key concern in healthcare industry. There are various reasons for this: - mistakes from physician or clinician - improper updation of EHR (Electronic Health Record) due to simultaneous editing. - different providers holds different versions of same patients record 3. Security flaws: Flaws in privacy and security is a major issue in healthcare industry. Due to the intensely private and secure nature of healthcare data, these are kept in locations where access is theoretically restricted to certain trusted parties. But if somebody gains access, the security of data fails there. Blockchain helps to rectify the above mentioned flaws in healthcare industry. Let us discuss what blockchain is: Blockchain is a data structure which can be used to create a digital ledger of transactions and share the data amount a distributed network of computers. each participant uses a cryptography to manipulate the ledger in a secure way. We cannot change or remove a block of data once it is recorded on the blockchain ledger. Read what is blockchain Application of Blockchain in healthcare industry The blockchain’s potential benefit to...</description>
-        <pubDate>Mon, 22 Aug 2016 05:10:00 +0530</pubDate>
-        <link>https://lightrains.com/blogs/blockchain-for-healthcare-usecase</link>
-        <guid isPermaLink="true">https://lightrains.com/blogs/blockchain-for-healthcare-usecase</guid>
-        
-        <category>Blockchain</category>
-        
-        <category>Healthcare</category>
-        
-        <category>Use Case</category>
-        
-        <category>Whitepaper</category>
-        
-        
-      </item>
     
       <item>
         <title>What is Private Permissioned Blockchain</title>

@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 Aug 2016 19:01:04 +0530</pubDate>
-    <lastBuildDate>Tue, 23 Aug 2016 19:01:04 +0530</lastBuildDate>
+    <pubDate>Sat, 27 Aug 2016 18:36:46 +0530</pubDate>
+    <lastBuildDate>Sat, 27 Aug 2016 18:36:46 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
     
@@ -382,6 +382,14 @@ COO
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/amp/blogs/setup-local-ethereum-blockchain-private-testnet/index.html</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/setup-local-ethereum-blockchain-private-testnet</guid>
+        
+        <category>Private Blockchain</category>
+        
+        <category>Blockchain</category>
+        
+        <category>Ethereum</category>
+        
+        <category>Testnet</category>
         
         
       </item>

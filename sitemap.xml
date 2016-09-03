@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/tmux-tips</loc>
+<lastmod>2016-09-03T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/what-private-permissioned-blockchain</loc>
 <lastmod>2016-08-12T05:10:00+05:30</lastmod>
 </url>
@@ -277,6 +281,15 @@
 <loc>https://lightrains.com/tag/permissioned-blockchain/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/development-tools/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/tmux/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/tools/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -365,6 +378,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/what-private-permissioned-blockchain/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/tmux-tips/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

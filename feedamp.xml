@@ -5,10 +5,26 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Aug 2016 18:36:46 +0530</pubDate>
-    <lastBuildDate>Sat, 27 Aug 2016 18:36:46 +0530</lastBuildDate>
+    <pubDate>Sat, 03 Sep 2016 10:06:29 +0530</pubDate>
+    <lastBuildDate>Sat, 03 Sep 2016 10:06:29 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
+    
+      <item>
+        <title>Introduction to Tmux</title>
+        <description>tmux is a “terminal multiplexer”, it enables a number of terminals (or windows) to be accessed and controlled from a single terminal. tmux is intended to be a simple, modern, BSD-licensed alternative to programs such as GNU screen. Install tmux. tmux depends on libevent 2.x. Download it from: libevent.org From source By default, tmux will use the utempter library to update utmp(5), if it is installed. Run configure with --disable-utempter to disable this. To build tmux from a release tarball, do: $ ./configure &amp;amp;&amp;amp; make $ sudo make install To get and build the latest from version control: $ git clone https://github.com/tmux/tmux.git $ cd tmux $ sh autogen.sh $ ./configure &amp;amp;&amp;amp; make Install tmux in Mac OSX Yes, you can do brew install tmux Starting Tmux You can start a tmux session by tmux attach or simply tmux a command. Managing the configuration. You can manage all the configurations with .tmux.conf file. Which will reside in your home folder. You can check with cat ~/.tmux.conf to see whether there is any. Multiple Pane Synchronization What setw synchronise-panes gives us is that it simultaneously sends keyboard input from one pane to the rest of the panes. (In this case, we can...</description>
+        <pubDate>Sat, 03 Sep 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/tmux-tips/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/tmux-tips</guid>
+        
+        <category>Development Tools</category>
+        
+        <category>Tmux</category>
+        
+        <category>Tools</category>
+        
+        
+      </item>
     
       <item>
         <title>What is Private Permissioned Blockchain</title>

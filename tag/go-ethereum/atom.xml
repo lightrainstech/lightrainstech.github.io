@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>go-ethereum Articles | #go-ethereum</title>
-  <meta name="description" content="Categories for category in site categories category 0 category 1 size endfor tags for tag in site tags tag 0 tag 1 size endfor">
+  <title>go-ethereum Articles Tagged #go-ethereum</title>
+  <meta name="description" content="Go ethereum all posts under tag go ethereum">
   <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Merriweather+Sans:400,700,400italic:latin' ] }
@@ -159,10 +159,13 @@
 <h3>Tags</h3>
 <div class="row">
 		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Products/">Products <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Telegram/">Telegram <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Cryptocurrency/">Cryptocurrency <span class="badge">5</span></a>
+		<a href="/tag/Cryptocurrency/">Cryptocurrency <span class="badge">6</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Handbook/">Handbook <span class="badge">2</span></a>
@@ -174,13 +177,13 @@
 		<a href="/tag/Principles/">Principles <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Ethereum/">Ethereum <span class="badge">4</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Private Blockchain/">Private Blockchain <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Blockchain/">Blockchain <span class="badge">7</span></a>
-		</div>
-		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Ethereum/">Ethereum <span class="badge">3</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Testnet/">Testnet <span class="badge">1</span></a>

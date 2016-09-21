@@ -191,14 +191,14 @@ let values = [1, 2, 3]
 sum(...values)
 </code></pre>
 </div>
-<p>Another Example
-<code class="highlighter-rouge">
-function f(x, ...y) {
+<p>Another Example</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>function f(x, ...y) {
  // y is an Array
  return x * y.length;
 }
 f(3, "hello", true) == 6
-</code></p>
+</code></pre>
+</div>
 <p>If the last named argument of a function is prefixed with <code class="highlighter-rouge">...</code>, it becomes an array whose elements from 0 (inclusive) to <code class="highlighter-rouge">theArgs.length</code> (exclusive) are supplied by the actual arguments passed to the function.</p>
 <p>In the above example, <code class="highlighter-rouge">theArgs</code> would collect the third argument of the function (because the first one is mapped to a, and the second to b) and all the consecutive argument</p>
 <p>Sources:</p>

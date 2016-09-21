@@ -453,9 +453,8 @@ for (var n of fibonacci) {
 }
 </code></pre>
 
-<p>Iteration is based on these duck-typed interfaces (using <a href="http://typescriptlang.org">TypeScript</a> type syntax for exposition only):
-<code class="highlighter-rouge">TypeScript
-interface IteratorResult {
+<p>Iteration is based on these duck-typed interfaces (using <a href="http://typescriptlang.org">TypeScript</a> type syntax for exposition only):</p>
+<pre><code class="language-TypeScript">interface IteratorResult {
  done: boolean;
  value: any;
 }
@@ -465,7 +464,7 @@ interface Iterator {
 interface Iterable {
  [Symbol.iterator](): Iterator
 }
-</code></p>
+</code></pre>
 
 <p>More info: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">MDN for…of</a></p>
 
@@ -562,12 +561,14 @@ alert("2π = " + ln(e)*pi*2);
 <p>More MDN info: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">import statement</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">export statement</a></p>
 
 <h3 id="module-loaders">Module Loaders</h3>
-<p>Module loaders support:
-- Dynamic loading
-- State isolation
-- Global namespace isolation
-- Compilation hooks
-- Nested virtualization</p>
+<p>Module loaders support:</p>
+<ul>
+  <li>Dynamic loading</li>
+  <li>State isolation</li>
+  <li>Global namespace isolation</li>
+  <li>Compilation hooks</li>
+  <li>Nested virtualization</li>
+</ul>
 
 <p>The default module loader can be configured, and new loaders can be constructed to evaluate and load code in isolated or constrained contexts.</p>
 
@@ -695,9 +696,11 @@ c["key"] === undefined
 <h3 id="subclassable-built-ins">Subclassable Built-ins</h3>
 <p>In ES6, built-ins like <code class="highlighter-rouge">Array</code>, <code class="highlighter-rouge">Date</code> and DOM <code class="highlighter-rouge">Element</code>s can be subclassed.</p>
 
-<p>Object construction for a function named <code class="highlighter-rouge">Ctor</code> now uses two-phases (both virtually dispatched):
-- Call <code class="highlighter-rouge">Ctor[@@create]</code> to allocate the object, installing any special behavior
-- Invoke constructor on new instance to initialize</p>
+<p>Object construction for a function named <code class="highlighter-rouge">Ctor</code> now uses two-phases (both virtually dispatched):</p>
+<ul>
+  <li>Call <code class="highlighter-rouge">Ctor[@@create]</code> to allocate the object, installing any special behavior</li>
+  <li>Invoke constructor on new instance to initialize</li>
+</ul>
 
 <p>The known <code class="highlighter-rouge">@@create</code> symbol is available via <code class="highlighter-rouge">Symbol.create</code>.  Built-ins now expose their <code class="highlighter-rouge">@@create</code> explicitly.</p>
 

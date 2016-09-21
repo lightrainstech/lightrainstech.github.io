@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Sep 2016 07:06:19 +0530</pubDate>
-    <lastBuildDate>Fri, 09 Sep 2016 07:06:19 +0530</lastBuildDate>
+    <pubDate>Wed, 21 Sep 2016 11:55:27 +0530</pubDate>
+    <lastBuildDate>Wed, 21 Sep 2016 11:55:27 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -46,7 +46,9 @@ We must also consider the relative advantages which permissioned blockchain netw
 
 
 Sources
- 1. https://docs.erisindustries.com
+
+  https://docs.erisindustries.com
+
 </description>
         <pubDate>Fri, 12 Aug 2016 05:10:00 +0530</pubDate>
         <link>https://lightrains.com/blogs/what-private-permissioned-blockchain</link>
@@ -462,12 +464,12 @@ sum(...values)
 
 
 Another Example
-
 function f(x, ...y) {
  // y is an Array
  return x * y.length;
 }
 f(3, &quot;hello&quot;, true) == 6
+
 
 
 If the last named argument of a function is prefixed with ..., it becomes an array whose elements from 0 (inclusive) to theArgs.length (exclusive) are supplied by the actual arguments passed to the function.
@@ -897,21 +899,30 @@ Show some love; Share Solo PDF Reader via Facebook, Twitter, LinkedIn.
     
       <item>
         <title>What is Ethereum</title>
-        <description>Bitcoin is a form of digital currency, created and held electronically. No one controls it. Bitcoins aren’t printed, like dollars or euros – they’re produced by people, and increasingly businesses, running computers all around the world, using software that solves mathematical problems.
+        <description>Ethereum is a public blockchain-based distributed computing platform, featuring smart contract functionality. It provides a decentralized virtual machine, the Ethereum Virtual Machine (EVM), that can execute peer-to-peer contracts using a cryptocurrency called ether.
 
-What makes it different from normal currencies?
 
-Bitcoin can be used to buy things electronically. In that sense, it’s like conventional dollars, euros, or yen, which are also traded digitally.
+  Applications build with Ethereum do not cover all use cases of course, but have specific properties that make them unique:
+  Ethereum applications always execute the code they say they will - there is no ‘security through obscurity’. I don’t need to ‘trust’ anything or anyone, because I can check the app code myself.
+  Ethereum applications are always available, and are guaranteed to be available in the future. There is no downtime.
+Ethereum applications are resistant to many attacks including denial of service (DDoS), which are rendered moot.
 
-However, bitcoin’s most important characteristic, and the thing that makes it different to conventional money, is that it is decentralized. No single institution controls the bitcoin network. This puts some people at ease, because it means that a large bank can’t control their money.
 
-Who created it?
+Important links
 
-A software developer called Satoshi Nakamoto proposed bitcoin, which was an electronic payment system based on mathematical proof. The idea was to produce a currency independent of any central authority, transferable electronically, more or less instantly, with very low transaction fees.
+  ethereum.org
+  wiki
+
+
+
 </description>
         <pubDate>Mon, 13 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/what-is-ethereum</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/what-is-ethereum</guid>
+        
+        <category>Ethereum</category>
+        
+        <category>Cryptocurrency</category>
         
         
       </item>
@@ -1024,6 +1035,8 @@ Bots are simply Telegram accounts operated by software – not people – and th
         <pubDate>Sun, 17 May 2015 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/psc-hub-kerala-psc-questions-available-telegram-bot</guid>
+        
+        <category>Products</category>
         
         <category>Telegram</category>
         

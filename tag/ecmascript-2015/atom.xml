@@ -204,7 +204,7 @@
 		<a href="/tag/Typography/">Typography <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/ES6/">ES6 <span class="badge">5</span></a>
+		<a href="/tag/ES6/">ES6 <span class="badge">6</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/ECMAScript 2015/">ECMAScript 2015 <span class="badge">1</span></a>
@@ -256,6 +256,15 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Tools/">Tools <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Functional JavaSript/">Functional JavaSript <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/JavaSript/">JavaSript <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Functional Programming/">Functional Programming <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

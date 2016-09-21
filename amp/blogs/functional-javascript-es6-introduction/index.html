@@ -1,0 +1,507 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Functional Programming in JavaSript</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/functional-javascript-es6-introduction" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "http://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/functional-javascript-es6-introduction/"
+  },
+  "headline": "Functional Programming in JavaSript",
+  "about": "Engineering Blockchain and Smart contracts.",
+  "sameAs": "https://lightrains.com/blogs/functional-javascript-es6-introduction/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/functional-javascript-es6.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2016-09-21T05:10:00+05:30",
+  "dateModified": "2016-09-21T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computa..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Functional Programming in JavaSript">Functional Programming in JavaSript</h1>
+
+  <amp-img
+  src="/assets/img/blog/functional-javascript-es6.png"
+  alt="Functional Programming in JavaSript" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Wed, Sep 21, 16
+    </span>
+    <p>In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. <a href="https://en.wikipedia.org/wiki/Functional_programming">wiki</a></p>
+
+<p>If you’re looking for a quick start in Functional Programming, JavaScript is the perfect language for you. Here’s why:</p>
+
+<ul>
+  <li>Almost all programmers have tweaked and / or written JavaScript code at some point of time — hence there should be a certain familiarity</li>
+  <li>JavaScript comes as close to a standardized programming language we’ll get — it’s the only programming language available across all web browsers</li>
+  <li>JavaScript comes with a very familiar <code class="highlighter-rouge">C</code> like syntax and should be readable to most programmers</li>
+  <li>Functions have always been first class members in JavaScript, support for Functional Programming is very good and in many ways JavaScript has been ahead of its time</li>
+  <li>JavaScript doesn’t have <code class="highlighter-rouge">Java</code> like Class based <code class="highlighter-rouge">Object Oriented Programming</code> support so in many ways you’re forced to be Functional in JavaScript</li>
+</ul>
+
+<h2 id="main-fancy-words-you-will-hear">Main fancy words you will hear</h2>
+
+<ul>
+  <li><a href="#pure-functions">Pure functions</a></li>
+  <li><a href="#higher-order-functions">Higher-order functions</a></li>
+  <li><a href="#recursion">Recursion</a></li>
+  <li><a href="#functor">Functor</a></li>
+  <li><a href="#compose">Compose</a></li>
+  <li><a href="#destructuring">Destructuring</a></li>
+  <li><a href="#currying">Currying</a></li>
+</ul>
+
+<h3 id="pure-functions">Pure functions</h3>
+<p>Returns the same result given same parameters. It’s execution doesn’t depend on the state of the system.</p>
+
+<p>1) Impure</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">number</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">increment</span><span class="p">();</span>
+<span class="c1">// 2</span>
+</code></pre>
+</div>
+
+<p>2) Pure</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">increment</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="c1">// 2</span>
+</code></pre>
+</div>
+
+<h3 id="higher-order-functions">Higher-order functions</h3>
+<p>Functions that operate on other functions, either by taking them as arguments or by returning them.</p>
+
+<p>1) Sum</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">calculate</span> <span class="o">=</span> <span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">fn</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+<span class="nx">calculate</span><span class="p">(</span><span class="nx">sum</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="c1">// 3</span>
+</code></pre>
+</div>
+
+<p>2) Filter</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">let</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Anna'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Maria'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="kr">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="nx">student</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="nx">students</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isApproved</span><span class="p">);</span>
+<span class="c1">// [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]</span>
+</code></pre>
+</div>
+<p>3) Map</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">byName</span> <span class="o">=</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="nx">students</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">byName</span><span class="p">);</span>
+<span class="c1">// [ 'Anna', 'John', 'Maria' ]</span>
+</code></pre>
+</div>
+
+<p>4) Chaining</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kd">let</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Anna'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Maria'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+<span class="p">];</span>
+
+<span class="kr">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="nx">student</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">byName</span> <span class="o">=</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="nx">students</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isApproved</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">byName</span><span class="p">);</span>
+<span class="c1">// ['Anna', 'Maria']</span>
+</code></pre>
+</div>
+
+<p>5) Reduce</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">totalGrades</span> <span class="o">=</span> <span class="nx">students</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">student</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nx">totalGrades</span>
+<span class="c1">// 19</span>
+</code></pre>
+</div>
+
+<h3 id="recursion">Recursion</h3>
+<p>Whenever a function calls itself, creating a loop.</p>
+
+<p>1) Countdown</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">countdown</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+        <span class="nx">countdown</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">countdown</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="cm">/*
+5
+4
+3
+2
+1
+*/</span>
+</code></pre>
+</div>
+
+<p>2) Factorial</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">factorial</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">num</span> <span class="o">*</span> <span class="nx">factorial</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="c1">//120</span>
+</code></pre>
+</div>
+
+<h3 id="functor">Functor</h3>
+<p>An object that has a map method. The map method of the functor takes it’s own contents and transforms each of them using the transformation callback passed to map, and returns a new functor, which contains the structure as the first functor, but with the transformed values.</p>
+
+<p>1) Adding a value to all the elements in a array</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">plus1</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">=&gt;</span> <span class="nx">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">plus1</span><span class="p">);</span>
+<span class="c1">// [2, 3, 4]</span>
+</code></pre>
+</div>
+
+<h3 id="compose">Compose</h3>
+<p>The composition of two or more functions returns a new function.</p>
+
+<p>1) Combining two functions to generate another one</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">compose</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">g</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>
+<span class="kr">const</span> <span class="nx">toUpperCase</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">exclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">x</span><span class="p">}</span><span class="o">!</span><span class="err">`</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">angry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">toUpperCase</span><span class="p">);</span>
+
+<span class="nx">angry</span><span class="p">(</span><span class="s2">"stop this"</span><span class="p">);</span>
+<span class="c1">// STOP THIS!</span>
+</code></pre>
+</div>
+
+<p>2) Combining three functions to generate another one</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">compose</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">g</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>
+
+<span class="kr">const</span> <span class="nx">toUpperCase</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">exclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">x</span><span class="p">}</span><span class="o">!</span><span class="err">`</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">moreExclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="err">`</span><span class="nx">$</span><span class="p">{</span><span class="nx">x</span><span class="p">}</span><span class="o">!!!!!</span><span class="err">`</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">reallyAngry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">toUpperCase</span><span class="p">,</span> <span class="nx">moreExclaim</span><span class="p">));</span>
+
+<span class="nx">reallyAngry</span><span class="p">(</span><span class="s2">"stop this"</span><span class="p">);</span>
+<span class="c1">// STOP THIS!!!!!!</span>
+</code></pre>
+</div>
+
+<h3 id="destructuring">Destructuring</h3>
+<p>Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or “Pattern Matching”.</p>
+
+<p>1) Select from pattern</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="kr">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="nx">foo</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
+<span class="c1">// 1 2</span>
+</code></pre>
+</div>
+
+<p>2) Accumulates the rest values</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
+<span class="c1">// 1 [2, 3]</span>
+</code></pre>
+</div>
+
+<p>3) Optional parameters</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">ajax</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">"localhost"</span><span class="p">,</span> <span class="na">port</span><span class="p">:</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">80</span><span class="p">},</span> <span class="p">...</span><span class="nx">data</span><span class="p">)</span>  <span class="o">=&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Url:"</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="s2">"Port:"</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="s2">"Rest:"</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+
+<span class="nx">ajax</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="s2">"someHost"</span> <span class="p">},</span> <span class="s2">"additional"</span><span class="p">,</span> <span class="s2">"data"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">);</span>
+<span class="c1">// Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]</span>
+
+<span class="nx">ajax</span><span class="p">({</span> <span class="p">},</span> <span class="s2">"additional"</span><span class="p">,</span> <span class="s2">"data"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">);</span>
+<span class="c1">// Url: localhost Port: 80 Rest: [ 'additional', 'data', 'hello' ]</span>
+</code></pre>
+</div>
+
+<h3 id="currying">Currying</h3>
+<p>Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result.</p>
+
+<p>1) Currying an Object</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">name</span> <span class="o">=&gt;</span> <span class="nx">grade</span> <span class="o">=&gt;</span> <span class="err">`</span><span class="nx">Name</span><span class="err">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">name</span><span class="p">}</span> <span class="o">|</span> <span class="nx">Grade</span><span class="err">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">grade</span><span class="p">}</span><span class="err">`</span><span class="p">;</span>
+
+<span class="nx">student</span><span class="p">(</span><span class="s2">"Matt"</span><span class="p">)(</span><span class="mi">8</span><span class="p">);</span>
+<span class="c1">// Name: Matt | Grade: 8</span>
+</code></pre>
+</div>
+
+<p>2) Currying a Sum</p>
+
+<div class="language-javascript highlighter-rouge">
+<pre class="highlight"><code><span class="kr">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">y</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">addFive</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="nx">increment</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="c1">//4</span>
+
+<span class="nx">addFive</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="c1">// 15</span>
+</code></pre>
+</div>
+
+<h4 id="sources">Sources</h4>
+<p><a href="https://github.com/js-functional/js-funcional">https://github.com/js-functional/js-funcional</a></p>
+
+<p><a href="http://srirangan.net/2011-12-functional-programming-in-javascript">http://srirangan.net/2011-12-functional-programming-in-javascript</a></p>
+
+    <a href="https://lightrains.com/blogs/functional-javascript-es6-introduction" title="Functional Programming in JavaSript" class="nonamp">Full Version of Functional Programming in JavaSript</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/functional-javascript-es6-introduction/index.html" title="Functional Programming in JavaSript">Functional Programming in JavaSript</a></li>
+      
+      <li><a href="/amp/blogs/tmux-tips/index.html" title="Introduction to Tmux">Introduction to Tmux</a></li>
+      
+      <li><a href="/amp/blogs/what-private-permissioned-blockchain/index.html" title="What is Private Permissioned Blockchain">What is Private Permissioned Blockchain</a></li>
+      
+      <li><a href="/amp/blogs/blockchain-for-insurance-industry/index.html" title="Blockchain for Insurance Industry">Blockchain for Insurance Industry</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

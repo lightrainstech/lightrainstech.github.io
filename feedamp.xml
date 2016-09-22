@@ -5,10 +5,28 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 21 Sep 2016 18:55:00 +0530</pubDate>
-    <lastBuildDate>Wed, 21 Sep 2016 18:55:00 +0530</lastBuildDate>
+    <pubDate>Thu, 22 Sep 2016 12:49:46 +0530</pubDate>
+    <lastBuildDate>Thu, 22 Sep 2016 12:49:46 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
+    
+      <item>
+        <title>Open source Blockchain platforms</title>
+        <description>Open source software is revolutionizing technology by enabling companies to speed development, reduce costs, increase innovation, and improve efficiency. Never before has any open source project generated as much attention on the international stage as Bitcoin. But now a days the world is looking into open source Blockchain platforms. Here are some open source Blockchain platforms. 1. Eris erisindustries.com A software that allows anyone to create their own secure, low-cost and run anywhere application using Blockchain and smart contract technology. Communities, government and anybody else can use smart contracts to automate their business with Eris. Eris is free software that allows anyone to build their own secure, low-cost, run-anywhere applications using blockchain and smart contract technology. Features Services: Things that you turn on and off Chains: Develop permissioned chains Contracts: There is a smart contract tool chain in Eris Actions: Every action is step by step. 2. HydraChain hydrachain.com HydraChain is an extension of the Ethereum platform which adds support for creating Permissioned Distributed Ledgers. Its primary domain of application are private chain or consortium chain setups especially in the financial industry. Features Full compatibility to the Ethereum Protocol Accountable Validators Instant finality Native Contracts Customizability Easy Deployment Open source...</description>
+        <pubDate>Thu, 22 Sep 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/opensource-blockchain-platforms/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/opensource-blockchain-platforms</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Platforms</category>
+        
+        <category>Development Tools</category>
+        
+        <category>Open Source</category>
+        
+        
+      </item>
     
       <item>
         <title>Functional Programming in JavaSript</title>

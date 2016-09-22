@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Sep 2016 14:55:02 +0530</pubDate>
-    <lastBuildDate>Thu, 22 Sep 2016 14:55:02 +0530</lastBuildDate>
+    <pubDate>Thu, 22 Sep 2016 16:21:47 +0530</pubDate>
+    <lastBuildDate>Thu, 22 Sep 2016 16:21:47 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -28,17 +28,17 @@
       </item>
     
       <item>
-        <title>Functional Programming in JavaSript</title>
+        <title>Functional Programming in JavaScript</title>
         <description>In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. wiki If you’re looking for a quick start in Functional Programming, JavaScript is the perfect language for you. Here’s why: Almost all programmers have tweaked and / or written JavaScript code at some point of time — hence there should be a certain familiarity JavaScript comes as close to a standardized programming language we’ll get — it’s the only programming language available across all web browsers JavaScript comes with a very familiar C like syntax and should be readable to most programmers Functions have always been first class members in JavaScript, support for Functional Programming is very good and in many ways JavaScript has been ahead of its time JavaScript doesn’t have Java like Class based Object Oriented Programming support so in many ways you’re forced to be Functional in JavaScript Main fancy words you will hear Pure functions Higher-order functions Recursion Functor Compose Destructuring Currying Pure functions Returns the same result given same parameters. It’s execution doesn’t depend on the state of the system. 1) Impure let number = 1; const increment = () =&amp;gt; number += 1; increment(); // 2 2) Pure const increment = n =&amp;gt; n + 1; increment(1); // 2 Higher-order functions Functions that operate on other functions, either by taking them as arguments or by returning them. 1) Sum const sum = (x, y) =&amp;gt; x + y; const calculate = (fn, x, y) =&amp;gt; fn(x, y); calculate(sum, 1, 2); // 3 2) Filter let students = [ {name: 'Anna', grade: 6}, {name:...</description>
         <pubDate>Wed, 21 Sep 2016 05:10:00 +0530</pubDate>
         <link>https://lightrains.com/blogs/functional-javascript-es6-introduction</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/functional-javascript-es6-introduction</guid>
         
-        <category>Functional JavaSript</category>
+        <category>Functional JavaScript</category>
         
         <category>ES6</category>
         
-        <category>JavaSript</category>
+        <category>JavaScript</category>
         
         <category>Functional Programming</category>
         

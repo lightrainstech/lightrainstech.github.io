@@ -1,0 +1,451 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Common useful JavaScript snippets for geth</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "http://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets/"
+  },
+  "headline": "Common useful JavaScript snippets for geth",
+  "about": "Engineering Blockchain and Smart contracts.",
+  "sameAs": "https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/ethereum-geth-javascript-snippets.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2016-07-15T11:19:48+05:30",
+  "dateModified": "2016-07-15T11:19:48+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "This is a collection of common useful scripts that are handy when you do any kind of developemt on the Ethereum Virtual Machine aka EVM.This collection of sc..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Common useful JavaScript snippets for geth">Common useful JavaScript snippets for geth</h1>
+
+  <amp-img
+  src="/assets/img/blog/ethereum-geth-javascript-snippets.png"
+  alt="Common useful JavaScript snippets for geth" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Fri, Jul 15, 16
+    </span>
+    <p>This is a collection of common useful scripts that are handy when you do any kind of developemt on the Ethereum Virtual Machine aka EVM.</p>
+
+<p>This collection of scripts are availabe in github
+<a href="https://github.com/niksmac/ethereum-scripts">niksmac/ethereum-scripts</a></p>
+
+<h2 id="print-block-details">1. Print Block Details</h2>
+<p>This function is uswful when you want to print the details of a block in the <code class="highlighter-rouge">console</code></p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>function printBlock(block) {
+	console.log("Block number     : " + block.number + "\n"
+			+ " hash            : " + block.hash + "\n"
+			+ " parentHash      : " + block.parentHash + "\n"
+			+ " nonce           : " + block.nonce + "\n"
+			+ " sha3Uncles      : " + block.sha3Uncles + "\n"
+			+ " logsBloom       : " + block.logsBloom + "\n"
+			+ " transactionsRoot: " + block.transactionsRoot + "\n"
+			+ " stateRoot       : " + block.stateRoot + "\n"
+			+ " miner           : " + block.miner + "\n"
+			+ " difficulty      : " + block.difficulty + "\n"
+			+ " totalDifficulty : " + block.totalDifficulty + "\n"
+			+ " extraData       : " + block.extraData + "\n"
+			+ " size            : " + block.size + "\n"
+			+ " gasLimit        : " + block.gasLimit + "\n"
+			+ " gasUsed         : " + block.gasUsed + "\n"
+			+ " timestamp       : " + block.timestamp + "\n"
+			+ " transactions    : " + block.transactions + "\n"
+			+ " uncles          : " + block.uncles);
+	if (block.transactions != null) {
+		console.log("--- transactions ---");
+		block.transactions.forEach( function(e) {
+				printTransaction(e);
+				})
+	}
+}
+</code></pre>
+</div>
+
+<h2 id="check-all-balances">2. Check all Balances</h2>
+<p>Can be used to cheak balances of all accounts inside your keystore; ie, you own both the keys.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>function checkAllBalances() {
+	var i =0;
+	eth.accounts.forEach( function(e){
+			console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " +    web3.fromWei(eth.getBalance(e), "ether") + " ether");
+			i++;
+			})
+};
+</code></pre>
+</div>
+
+<h2 id="get-account-balances-and-including-thedao-tokens">3. Get Account Balances And Including TheDAO Tokens</h2>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>function padTokens(s, n) {
+	var o = s.toPrecision(n);
+	while (o.length &lt; n) {
+		o = " " + o;
+	}
+	return o;
+}
+
+function padEthers(s) {
+	var o = s.toFixed(18);
+	while (o.length &lt; 27) {
+		o = " " + o;
+	}
+	return o;
+}
+
+function checkAllBalances() {
+	var theDAOABI = [ { "type": "function", "outputs": [ { "type": "uint256", "name": "", "value": "5e+22" } ], "name": "minTokensToCreate", "inputs": [], "constant": true }, { "type": "function", "outputs": [ { "type": "uint256", "name": "", "value": "2.668900014413644230605979e+24" } ], "name": "totalSupply", "inputs": [], "constant": true }, { "type": "function", "outputs": [ { "type": "uint256", "name": "", "value": "1464426000" } ], "name": "closingTime", "inputs": [], "constant": true }, { "type": "function", "outputs": [], "name": "refund", "inputs": [], "constant": false }, { "type": "function", "outputs": [ { "type": "address", "name": "", "value": "0xda4a4626d3e16e094de3225a751aab7128e96526" } ], "name": "curator", "inputs": [], "constant": true }, { "type": "function", "outputs": [ { "type": "uint256", "name": "balance", "value": "0" } ], "name": "balanceOf", "inputs": [ { "type": "address", "name": "_owner" } ], "constant": true }, { "type": "function", "outputs": [ { "type": "uint256", "name": "_numberOfProposals", "value": "0" } ], "name": "numberOfProposals", "inputs": [], "constant": true }, { "type": "function", "outputs": [ { "type": "address", "name": "", "value": "0x807640a13483f8ac783c557fcdf27be11ea4ac7a" } ], "name": "extraBalance", "inputs": [], "constant": true }, { "type": "function", "outputs": [ { "type": "bool", "name": "", "value": true } ], "name": "isFueled", "inputs": [], "constant": true }, { "type": "function", "outputs": [ { "type": "bool", "name": "success" } ], "name": "createTokenProxy", "inputs": [ { "type": "address", "name": "_tokenHolder" } ], "constant": false }, { "type": "function", "outputs": [ { "type": "uint256", "name": "_voteID" } ], "name": "vote", "inputs": [ { "type": "uint256", "name": "_proposalID" }, { "type": "bool", "name": "_supportsProposal" } ], "constant": false }, { "type": "event", "name": "FuelingToDate", "inputs": [ { "type": "uint256", "name": "value", "indexed": false } ], "anonymous": false }, { "type": "event", "name": "ProposalAdded", "inputs": [ { "type": "uint256", "name": "proposalID", "indexed": true }, { "type": "address", "name": "recipient", "indexed": false }, { "type": "uint256", "name": "amount", "indexed": false }, { "type": "bool", "name": "newCurator", "indexed": false }, { "type": "string", "name": "description", "indexed": false } ], "anonymous": false }, { "type": "event", "name": "ProposalTallied", "inputs": [ { "type": "uint256", "name": "proposalID", "indexed": true }, { "type": "bool", "name": "result", "indexed": false }, { "type": "uint256", "name": "quorum", "indexed": false } ], "anonymous": false } ];
+	var theDAOAddress = "0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413";
+	var theDAO = eth.contract(theDAOABI).at(theDAOAddress);
+	var theDAOTotal = 0;
+	var ethersTotal = 0;
+
+	console.log("  #     Account                                        TheDAO                      ethers");
+	console.log("------- ------------------------------------------ ---------- ---------------------------");
+	var i =0;
+	eth.accounts.forEach( function(e){
+			var tokens = theDAO.balanceOf(e) / parseFloat(1e16);
+			theDAOTotal += parseFloat(tokens);
+			var ethers = web3.fromWei(eth.getBalance(e), "ether");
+			ethersTotal += parseFloat(ethers);
+			console.log("  " + i + "\t" + e + " " + padTokens(tokens, 10) + " " + padEthers(ethers));
+			i++;
+			})
+	console.log("------- ------------------------------------------ ---------- ---------------------------");
+	console.log("  " + i + "                                               " + padTokens(theDAOTotal, 10) + " " + padEthers(ethersTotal));
+};
+</code></pre>
+</div>
+
+<h2 id="find-all-tokens">4. Find all tokens</h2>
+<p>Useful when you want all custom tokens in your blockchain, you ever traded acheieved etc.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>var tokenInterface = [{"type": "function","name": "name","constant": true,"inputs": [],"outputs": [{"name": "","type": "string"}]},{"type": "function","name": "decimals","constant": true,"inputs": [],"outputs": [{"name": "","type": "uint8"}]},{"type": "function","name": "balanceOf","constant": true,"inputs": [{"name": "","type": "address"}],"outputs": [{"name": "","type": "uint256"}]},{"type": "function","name": "symbol","constant": true,"inputs": [],"outputs": [{"name": "","type": "string"}]},{"type": "function","name": "transfer","constant": false,"inputs": [{"name": "_to","type": "address"},{"name": "_value","type": "uint256"}],"outputs": []},{"type": "constructor","inputs": [{"name": "_supply","type": "uint256"},{"name": "_name","type": "string"},{"name": "_decimals","type": "uint8"},{"name": "_symbol","type": "string"}]},{"name": "Transfer","type": "event","anonymous": false,"inputs": [{"indexed": true,"name": "from","type": "address"},{"indexed": true,"name": "to","type": "address"},{"indexed": false,"name": "value","type": "uint256"}]}];
+TokenContract = web3.eth.contract(tokenInterface);
+
+var lowestBlock = 474147; //November 3, 2015 - last time the ABI above was changed
+var highestBlock = eth.getBlock("latest").number;
+//var lowestBlock = 483325; //smaller test case with just one coin (MistCoin)
+//var highestBlock = 484731; //smaller test case with just one coin (MistCoin)
+for (var x=lowestBlock; x &lt; highestBlock; x++) {
+	var transactions = eth.getBlock(x).transactions;
+	for (var y=0; y &lt; transactions.length; y++) {
+		//    if (x % 100 == 0) { console.log("."); }
+		var contractAddr = eth.getTransactionReceipt(transactions[y]).contractAddress;
+		if (contractAddr != null) {
+			var tokenInstance = TokenContract.at(contractAddr);
+			var symbol = "";
+			var decimals = "";
+			var name = "";
+			try {
+				symbol = tokenInstance.symbol();
+			} catch(err) {
+			}
+			try {
+				decimals = tokenInstance.decimals();
+			} catch(err) {
+				//don't do anything here, just catch the error so program doesn't die
+			}
+			try {
+				name = tokenInstance.name();
+			} catch(err) {
+				//don't do anything here, just catch the error so program doesn't die
+			}
+			if (symbol != null &amp;&amp; symbol != "" &amp;&amp; name != null &amp;&amp; name != "") {
+				console.log("-----------");
+				console.log("Contract Address: " + contractAddr);
+				console.log("Name: " + name);
+				console.log("Symbol: " + symbol);
+				console.log("Decimals: " + decimals);
+				console.log("-----------");
+			}
+			//       console.log(contractAddr);  //testing
+		}
+	}
+	//  console.log(eth.getBlock(x).transactions);  //testing
+}
+</code></pre>
+</div>
+
+<h2 id="find-all-non-zero-transactions-in-a-block">5. Find all non-zero transactions in a Block</h2>
+<p>Find Non-Zero Transaction Count In A Range Of Blocks</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>function checkTransactionCount(startBlockNumber, endBlockNumber) {
+	console.log("Searching for non-zero transaction counts between blocks "  + startBlockNumber + " and " + endBlockNumber);
+	for (var i = startBlockNumber; i &lt;= endBlockNumber; i++) {
+		var block = eth.getBlock(i);
+		if (block != null) {
+			if (block.transactions != null &amp;&amp; block.transactions.length != 0) {
+				console.log("Block #" + i + " has " + block.transactions.length + " transactions")
+			}
+		}
+	}
+}
+</code></pre>
+</div>
+
+<h2 id="get-mined-blocks">6. Get mined blocks</h2>
+<p>Get all the blocks mined by a specific address.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code>function getMinedBlocks(miner, startBlockNumber, endBlockNumber) {
+	if (endBlockNumber == null) {
+		endBlockNumber = eth.blockNumber;
+		console.log("Using endBlockNumber: " + endBlockNumber);
+	}
+	if (startBlockNumber == null) {
+		startBlockNumber = endBlockNumber - 10000;
+		console.log("Using startBlockNumber: " + startBlockNumber);
+	}
+	console.log("Searching for miner \"" + miner + "\" within blocks "  + startBlockNumber + " and " + endBlockNumber + "\"");
+
+	for (var i = startBlockNumber; i &lt;= endBlockNumber; i++) {
+		if (i % 1000 == 0) {
+			console.log("Searching block " + i);
+		}
+		var block = eth.getBlock(i);
+		if (block != null) {
+			if (block.miner == miner || miner == "*") {
+				console.log("Found block " + block.number);
+				printBlock(block);
+			}
+			if (block.uncles != null) {
+				for (var j = 0; j &lt; 2; j++) {
+					var uncle = eth.getUncle(i, j);
+					if (uncle != null) {
+						if (uncle.miner == miner || miner == "*") {
+							console.log("Found uncle " + block.number + " uncle " + j);
+							printUncle(block, j, uncle);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+</code></pre>
+</div>
+
+
+    <a href="https://lightrains.com/blogs/useful-ethereum-geth-javascript-snippets" title="Common useful JavaScript snippets for geth" class="nonamp">Full Version of Common useful JavaScript snippets for geth</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/opensource-blockchain-platforms/index.html" title="Open source Blockchain platforms">Open source Blockchain platforms</a></li>
+      
+      <li><a href="/amp/blogs/functional-javascript-es6-introduction/index.html" title="Functional Programming in JavaScript">Functional Programming in JavaScript</a></li>
+      
+      <li><a href="/amp/blogs/tmux-tips/index.html" title="Introduction to Tmux">Introduction to Tmux</a></li>
+      
+      <li><a href="/amp/blogs/what-private-permissioned-blockchain/index.html" title="What is Private Permissioned Blockchain">What is Private Permissioned Blockchain</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

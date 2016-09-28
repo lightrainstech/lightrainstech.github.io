@@ -5,9 +5,23 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Sep 2016 08:17:34 +0530</pubDate>
-    <lastBuildDate>Fri, 23 Sep 2016 08:17:34 +0530</lastBuildDate>
+    <pubDate>Wed, 28 Sep 2016 13:58:48 +0530</pubDate>
+    <lastBuildDate>Wed, 28 Sep 2016 13:58:48 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Noteworthy projects based on Blockchain Technology</title>
+        <description>Decentralized network existed before blockchain. But the key innovation of blockchain is its ability to hold the economic value, as pioneered as Bitcoin network. Currently, the blockchain is used in broad range of decentralized applications in many areas, including commerce, social media, content sharing, internet services, logistics and even government. Here are some Blockchain and Ethereum based projects. Git Money (Bitcoin) Git Money allows anyone to earn money by solving open issues on GitHub. Repository owners put up bounties for tasks and the reward is automatically paid to whoever submits the first successfully merged pull request. How it works Git opportunities: Every day people and companies are paying to get quick assistance with small tasks, find one suitable for you. Git work: An email a day will give you the list of work so that you can choose your work to get paid Get paid: Complete a task, provide your bitcoin address and get paid instantly. Augur (Ethereum) Augur is a prediction market platform that rewards for correctly predicting the future real-world events. Make the predictions by trading virtual shares in the outcome of events happening in the real world, buy shares in those outcomes. If the shares are in correct outcome you’ll win real money as profit. Features No central servers Create your own market Low fees Crowdsourced reporting Safe, automated payments TransActive Grid (Ethereum) TransActive Grid allows neighbors to purchase and sell renewable energy among each other, offering communities with microgrids a way to create a local energy market while reducing emissions and pollution. How it works Distributed Energy Resources: Brooklyn Microgrid is a distributed energy development group in the Park Slope and Gowanus communities of Brooklyn, New York creating a connected network for local energy. TransActive Grid: TransActive Grid is combination of ​software ​and hardware ​that enables...</description>
+        <pubDate>Wed, 28 Sep 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/noteworthy-blockchain-projects</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/noteworthy-blockchain-projects</guid>
+        
+        <category>Blockchain</category>
+        
+        <category>Blockchain Projects</category>
+        
+        
+      </item>
     
       <item>
         <title>Open source Blockchain platforms</title>

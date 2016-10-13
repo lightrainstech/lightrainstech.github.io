@@ -5,9 +5,33 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Sep 2016 13:58:48 +0530</pubDate>
-    <lastBuildDate>Wed, 28 Sep 2016 13:58:48 +0530</lastBuildDate>
+    <pubDate>Thu, 13 Oct 2016 14:55:49 +0530</pubDate>
+    <lastBuildDate>Thu, 13 Oct 2016 14:55:49 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>What does each genesis.json parameter mean?</title>
+        <description>The Genesis block is the start block of the Blockchain - the first block, block 0, the only block that does not point to a predecessor block. Parameters of genesis.json nonce timestamp mixhash difficulty alloc parentHash extraData gasLimit coinbase Parameters and Explanation nonce A 64-bit hash, which proves, combined with the mix-hash, that a sufficient amount of computation has been carried out on this block: the Proof-of-Work (PoW). The combination of nonce and mixhash must satisfy a mathematical condition described in the Yellowpaper, 4.3.4. Block Header Validity, (44), and allows to verify that the Block has really been cryptographically mined and thus, from this aspect, is valid. The nonce is the cryptographically secure mining proof-of-work that proves beyond reasonable doubt that a particular amount of computation has been expended in the determination of this token value. (Yellowpager, 11.5. Mining Proof-of-Work). timestamp A scalar value equal to the reasonable output of Unix time() function at this block inception. This mechanism enforces a homeostasis in terms of the time between blocks. A smaller period between the last two blocks results in an increase in the difficulty level and thus additional computation required to find the next valid block. If the period is too large, the difficulty, and expected time to the next block, is reduced. The timestamp also allows verifying the order of block within the chain (Yellowpaper, 4.3.4. (43)). mixhash A 256-bit hash which proves, combined with the nonce, that a sufficient amount of computation has been carried out on this block: the Proof-of-Work (PoW). The combination of nonce and mixhash must satisfy a mathematical condition described in the Yellowpaper, 4.3.4. Block Header Validity, (44). It allows to verify that the Block has really been cryptographically mined, thus, from this aspect, is valid. difficulty A scalar value corresponding to the difficulty...</description>
+        <pubDate>Thu, 13 Oct 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/genesis-json-parameter-explained-ethereum</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/genesis-json-parameter-explained-ethereum</guid>
+        
+        <category>Ethereum</category>
+        
+        <category>Mining</category>
+        
+        <category>Difficulty</category>
+        
+        <category>DAG</category>
+        
+        <category>Principles</category>
+        
+        <category>Blockchain</category>
+        
+        <category>Genesis Block</category>
+        
+        
+      </item>
     
       <item>
         <title>Noteworthy projects based on Blockchain Technology</title>

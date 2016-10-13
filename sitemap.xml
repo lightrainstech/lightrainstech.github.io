@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/genesis-json-parameter-explained-ethereum</loc>
+<lastmod>2016-10-13T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/noteworthy-blockchain-projects</loc>
 <lastmod>2016-09-28T05:10:00+05:30</lastmod>
 </url>
@@ -326,6 +330,15 @@
 <loc>https://lightrains.com/tag/blockchain-projects/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/mining/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/difficulty/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/genesis-block/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -426,6 +439,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/noteworthy-blockchain-projects/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/genesis-json-parameter-explained-ethereum/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

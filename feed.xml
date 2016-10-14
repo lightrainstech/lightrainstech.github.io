@@ -5,9 +5,93 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 13 Oct 2016 14:57:36 +0530</pubDate>
-    <lastBuildDate>Thu, 13 Oct 2016 14:57:36 +0530</lastBuildDate>
+    <pubDate>Fri, 14 Oct 2016 13:33:59 +0530</pubDate>
+    <lastBuildDate>Fri, 14 Oct 2016 13:33:59 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>How to set up elm development environment</title>
+        <description>Elm is a language that compiles to JavaScript, or in other words, Elm is a language to generate functional JavaScript code.
+
+
+  This guide is talking about installing and setting up elm version 0.17.1
+
+
+Why we need Elm?
+Elm is a programming language for declaratively creating web browser-based graphical user interfaces. Elm is purely functional, and is developed with emphasis on usability, performance, and robustness. It advertises “no runtime exceptions in practice”, made possible by the Elm compiler’s static type checking.
+
+Features of Elm
+
+
+  JavaScript Interop
+  No Runtime Exceptions
+  Great Performance
+  Enforced Semantic Versioning
+
+
+Read details.
+
+1. Installing Elm Platform.
+
+You can download the latest package from here.
+
+OR
+
+
+  Mac Installer
+  Windows Installer
+  Anywhere npm or build from source
+
+
+Configure Your Editor
+
+Before you start you can play around with the online editor to get familiarized with the language.
+
+
+  Atom
+  Emacs
+  Sublime Text
+  Vim
+
+
+Why should you consider using Elm?
+
+Elm offers many benefits over JavaScript, which you’ll see in this course.
+Benefits such as:
+
+  Zero Runtime Exceptions
+  Simplified Debugging
+  Easy Refactoring
+  Helpful Type System &amp;amp; Compiler
+  Improved Productivity
+  Inherently testable code
+  Enforced Semantic Versioning
+
+
+Source
+
+
+  guide.elm-lang.org
+  elmcast.io
+  elm-lang.org
+
+</description>
+        <pubDate>Fri, 14 Oct 2016 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/setup-elm-development-environment</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/setup-elm-development-environment</guid>
+        
+        <category>Elm</category>
+        
+        <category>Elm-lang</category>
+        
+        <category>Development Tools</category>
+        
+        <category>Functional JavaScript</category>
+        
+        <category>Functional Programming</category>
+        
+        
+      </item>
     
       <item>
         <title>What does each genesis.json parameter mean?</title>

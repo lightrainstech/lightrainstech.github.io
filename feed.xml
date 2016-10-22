@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 14 Oct 2016 13:33:59 +0530</pubDate>
-    <lastBuildDate>Fri, 14 Oct 2016 13:33:59 +0530</lastBuildDate>
+    <pubDate>Sat, 22 Oct 2016 12:33:36 +0530</pubDate>
+    <lastBuildDate>Sat, 22 Oct 2016 12:33:36 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -19,6 +19,11 @@
 
 Why we need Elm?
 Elm is a programming language for declaratively creating web browser-based graphical user interfaces. Elm is purely functional, and is developed with emphasis on usability, performance, and robustness. It advertises “no runtime exceptions in practice”, made possible by the Elm compiler’s static type checking.
+
+Update 22, Oct 2016.
+
+  I came across Elm For Beginners amazing set of tutorials by James Moore, i would recommend watching it. Also his note on Development Environment Setup Steps
+
 
 Features of Elm
 

@@ -5,9 +5,50 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 22 Oct 2016 12:33:36 +0530</pubDate>
-    <lastBuildDate>Sat, 22 Oct 2016 12:33:36 +0530</lastBuildDate>
+    <pubDate>Fri, 11 Nov 2016 14:58:57 +0530</pubDate>
+    <lastBuildDate>Fri, 11 Nov 2016 14:58:57 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Liquid Voting</title>
+        <description>Liquid Voting is a blockchain based voting/decision making platform made at hack4people Hackathon by team  lightrains. (niksmac, kp666 &amp;amp; sibizulu)
+
+Corruption exist because of concentrating of power. Our solution brings that power to the masses. This is brought by the power of decentralization on top of a tamper proof public blockchain. The voting platform is so powerful that it can pave the path to liquid democracy. The real impact is when we use the platform for day to day decision making in government activities.
+
+Inspiration
+
+  “A vote is like a rifle: its usefulness depends upon the character of the user.” - Theodore Roosevelt
+
+
+Intentions
+
+
+  Improve Transparency in Voting
+  Reduce security risk
+  Reduce cost of running an election
+  Act as a platform to vote on decisions.
+
+
+Outcome
+
+
+  Built on top of Blockchain
+  Elections are secured by Smart Contracts
+  Cost of infrastructure will be very less (~0.5%)
+
+</description>
+        <pubDate>Fri, 11 Nov 2016 11:19:48 +0530</pubDate>
+        <link>https://lightrains.com/work/liquid-voting-blockchain-election</link>
+        <guid isPermaLink="true">https://lightrains.com/work/liquid-voting-blockchain-election</guid>
+        
+        
+        <category>Blockchain</category>
+        
+        <category>Ethereum</category>
+        
+        <category>Smart Contract</category>
+        
+      </item>
     
       <item>
         <title>How to set up elm development environment</title>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/work/liquid-voting-blockchain-election</loc>
+<lastmod>2016-11-11T11:19:48+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/setup-elm-development-environment</loc>
 <lastmod>2016-10-14T05:10:00+05:30</lastmod>
 </url>
@@ -455,6 +459,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/blogs/setup-elm-development-environment/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/work/liquid-voting-blockchain-election/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

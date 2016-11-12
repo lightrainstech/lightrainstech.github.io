@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Nov 2016 14:58:57 +0530</pubDate>
-    <lastBuildDate>Fri, 11 Nov 2016 14:58:57 +0530</lastBuildDate>
+    <pubDate>Sat, 12 Nov 2016 10:33:13 +0530</pubDate>
+    <lastBuildDate>Sat, 12 Nov 2016 10:33:13 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -15,9 +15,12 @@
 
 Corruption exist because of concentrating of power. Our solution brings that power to the masses. This is brought by the power of decentralization on top of a tamper proof public blockchain. The voting platform is so powerful that it can pave the path to liquid democracy. The real impact is when we use the platform for day to day decision making in government activities.
 
+This platform uses Ethereum Private network as the Blockchain platform, and Solidity Smart contracts to record the votes as well as elections. Votes are saved in a tamper proof manner and the candidate can change the vote if the need arises.
+
 Inspiration
 
-  “A vote is like a rifle: its usefulness depends upon the character of the user.” - Theodore Roosevelt
+  “The ballot is stronger than the bullet.”
+-Abraham Lincoln
 
 
 Intentions
@@ -35,6 +38,16 @@ Outcome
   Built on top of Blockchain
   Elections are secured by Smart Contracts
   Cost of infrastructure will be very less (~0.5%)
+
+
+Project
+
+
+  Master
+  Front End (UI)
+  Back end
+  Election Smart Contract
+  Slides
 
 </description>
         <pubDate>Fri, 11 Nov 2016 11:19:48 +0530</pubDate>

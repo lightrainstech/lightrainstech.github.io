@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/sneak-peak-into-our-vimrc</loc>
+<lastmod>2016-11-29T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/work/liquid-voting-blockchain-election</loc>
 <lastmod>2016-11-11T11:19:48+05:30</lastmod>
 </url>
@@ -353,6 +357,15 @@
 <loc>https://lightrains.com/tag/elm-lang/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/vim/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/vimrc/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/sneak-peak/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -462,6 +475,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/work/liquid-voting-blockchain-election/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/sneak-peak-into-our-vimrc/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

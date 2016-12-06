@@ -5,43 +5,14 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Dec 2016 09:04:06 +0530</pubDate>
-    <lastBuildDate>Sat, 03 Dec 2016 09:04:06 +0530</lastBuildDate>
+    <pubDate>Tue, 06 Dec 2016 20:03:05 +0530</pubDate>
+    <lastBuildDate>Tue, 06 Dec 2016 20:03:05 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
     
       <item>
         <title>Sneak Peak: Our vimrc</title>
-        <description>This is series of articles explaining our development Environment. This time we will be discussing
-about vimrc which is a configuration file that we can use to manage our Vim settings.
-
-You can find the file
-here.
-
-Basic Vim Settings
-
-
-  set number It enables line number in vim
-  set relativenumber Enables relative numbers in vim. Means Vim will adjust line numbers based on
-your current cursor position.
-  set linebreak Break lines at word if you have enabled wraplines.
-  set showbreak=+++ Identify breaked lines with +++
-  set textwidth=100 Line wrap (number of cols)
-  set showmatch Highlight matching brace
-  set hlsearch  Highlight all search results
-  set smartcase Enable smart-case search
-  set ignorecase  Always case-insensitive
-  set incsearch Searches for strings incrementally
-  set autoindent  Auto-indent new lines
-  set smartindent Enable smart-indent
-  set smarttab  Enable smart-tabs
-  set softtabstop=4 Number of spaces per Tab
-  autocmd BufRead,BufNewFile *.md setlocal spell Enables spell check for markdown files, ending with extension md
-  set complete+=kspell Enables spelling auto complete.
-
-
-Advanced Settings
-</description>
+        <description>This is series of articles explaining our development Environment. This time we will be discussing about vimrc which is a configuration file that we can use to manage our Vim settings. You can find the file here. Basic Vim Settings set number It enables line number in vim set relativenumber Enables relative numbers in vim. Means Vim will adjust line numbers based on your current cursor position. set linebreak Break lines at word if you have enabled wraplines. set showbreak=+++ Identify breaked lines with +++ set textwidth=100 Line wrap (number of cols) set showmatch Highlight matching brace set hlsearch Highlight all search results set smartcase Enable smart-case search set ignorecase Always case-insensitive set incsearch Searches for strings incrementally set autoindent Auto-indent new lines set smartindent Enable smart-indent set smarttab Enable smart-tabs set softtabstop=4 Number of spaces per Tab autocmd BufRead,BufNewFile *.md setlocal spell Enables spell check for markdown files, ending with extension md set complete+=kspell Enables spelling auto complete. Advanced Settings set ruler “ Show row and column ruler information set showtabline=0 “ Show tab bar set undolevels=200 “ Number of undo levels set backspace=indent,eol,start “ Backspace behaviours filetype plugin on Enables filetype detection along with plugins. set tabstop=2 Set...</description>
         <pubDate>Tue, 29 Nov 2016 05:10:00 +0530</pubDate>
         <link>https://lightrains.com/amp/blogs/sneak-peak-into-our-vimrc/index.html</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/sneak-peak-into-our-vimrc</guid>

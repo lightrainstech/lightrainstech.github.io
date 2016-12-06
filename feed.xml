@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Dec 2016 09:04:06 +0530</pubDate>
-    <lastBuildDate>Sat, 03 Dec 2016 09:04:06 +0530</lastBuildDate>
+    <pubDate>Tue, 06 Dec 2016 20:03:05 +0530</pubDate>
+    <lastBuildDate>Tue, 06 Dec 2016 20:03:05 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -40,6 +40,27 @@ your current cursor position.
 
 
 Advanced Settings
+
+
+  set ruler “ Show row and column ruler information
+  set showtabline=0 “ Show tab bar
+  set undolevels=200  “ Number of undo levels
+  set backspace=indent,eol,start  “ Backspace behaviours
+  filetype plugin on Enables filetype detection along with plugins.
+  set tabstop=2 Set tabstop to tell vim 2 columns a tab counts for
+  set shiftwidth=2 Set number of space characters inserted for indentation
+  set shiftround Round indent to multiple of ‘shiftwidth’.
+  set expandtab spaces to insert a 
+  set clipboard=unnamed Use the system clipboard
+  set regexpengine=1 Enables regular expression engine
+  set autoread Watch for file changes outside vim
+  set acd Changes the working directory on each load autochdir
+  let mapleader = &quot;\&amp;lt;Space&amp;gt;&quot; Map leader to Space bar
+  nnoremap &amp;lt;leader&amp;gt;&amp;lt;leader&amp;gt; &amp;lt;C-^&amp;gt; Switch buffers
+
+
+Remember
+You can view the help text for any commands by running :help COMMAND eg; :help regexpengine
 </description>
         <pubDate>Tue, 29 Nov 2016 05:10:00 +0530</pubDate>
         <link>https://lightrains.com/blogs/sneak-peak-into-our-vimrc</link>

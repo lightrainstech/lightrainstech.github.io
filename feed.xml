@@ -5,8 +5,8 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Dec 2016 20:03:05 +0530</pubDate>
-    <lastBuildDate>Tue, 06 Dec 2016 20:03:05 +0530</lastBuildDate>
+    <pubDate>Wed, 07 Dec 2016 12:29:30 +0530</pubDate>
+    <lastBuildDate>Wed, 07 Dec 2016 12:29:30 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -128,6 +128,32 @@ Project
         <category>Ethereum</category>
         
         <category>Smart Contract</category>
+        
+      </item>
+    
+      <item>
+        <title>Rover.IM</title>
+        <description>Rover.IM is an Instant messaging platform focusing on data security, performance and privacy.
+
+Rover.IM is an alternative to WhatsApp where we can keep the sensitive data in-house and keep the information private without compromising performance.
+
+Features
+
+  End-to-End encrypted Chat (MTProto)
+  Send/receive documents, photo, audio and video;
+  Conversation archiving
+  Conference rooms aka Group chat
+  Automatic message holding
+  Suitable for Wifi, 3G and Edge
+  Tight data security (StartTLS, SSL and/or VPN)
+
+</description>
+        <pubDate>Thu, 10 Nov 2016 11:19:48 +0530</pubDate>
+        <link>https://lightrains.com/work/rover-im-roverim</link>
+        <guid isPermaLink="true">https://lightrains.com/work/rover-im-roverim</guid>
+        
+        
+        <category>Android</category>
         
       </item>
     

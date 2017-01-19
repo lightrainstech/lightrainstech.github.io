@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Source Articles in Category #OpenSource</title>
+  <meta name="description" content="Open source all posts under category open source">
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Merriweather+Sans:400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://lightrains.com/category/open-source/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
+  <link rel="amphtml" href="https://lightrains.com/amp">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="application-name" content="Lightrains Tech">
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lightrains Tech">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/assets/favicons/favicon-230x230.png">
+<link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+<meta property="twitter:image" content="https://lightrains.com/assets/favicons/twitter.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-320x460.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-640x920.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-640x1096.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-750x1294.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/assets/favicons/apple-touch-startup-image-1182x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/assets/favicons/apple-touch-startup-image-1242x2148.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-748x1024.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-768x1004.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
+</head>
+<body class="page page-post path-inner">
+ <div class="ui inverted top sidebar vertical menu" style="">
+    <a class="item" href="/">
+      <i class="home icon"></i>
+      Home
+    </a>
+    <a class="item" href="/about/lightrains">
+      <i class="smile icon"></i>
+      About
+    </a>
+    <a class="item" href="/about/portfolio">
+      <i class="shipping icon"></i>
+      Work
+    </a>
+    <a class="item" href="/consulting">
+      <i class="spy icon"></i>
+      Expert
+    </a>
+    <a class="item" href="/blogs">
+      <i class="block layout icon"></i>
+      Blog
+    </a>
+    <a class="item" href="/about/contact">
+      <i class="send icon"></i>
+      Contact
+    </a>
+ </div>
+ <div class="pusher">
+   <div class="ui container">
+      <header class="site-header">
+ <div class="widescreen computer mobile only">
+   <div class="ui secondary menu">
+      <a href="/" class="item left" title="Home of Lightrains Technolabs"><svg width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="background:#292724">
+       <path fill="#FFFFFF" fill-rule="evenodd" d="M129.208 137.544l2.8 5.676-.1 21.412c0 11.75-.4 45.114-.7 74.193l-.7 52.782 12.702-13.046c10.902-11.05 22.003-22.5 63.81-65.62 3.3-3.38 16.202-16.73 28.604-29.48 12.5-12.84 25.703-26.49 29.304-30.27 21.102-21.81 24.202-24.8 29.604-27.19 11.602-5.38 25.104-2.49 33.705 7.17 6.6 7.47 7.2 10.96 7.9 44.92.3 16.43.7 29.98.902 30.18.2.2 6.3-3.784 13.7-8.962 7.3-5.08 15.8-10.956 18.8-12.95 3-2.09 8.4-5.774 12-8.363 3.6-2.49 13.5-9.163 22-14.84 21.3-14.04 31.5-19.02 33.8-16.133 3 3.68-4.1 15.733-28.41 47.9-11.905 15.83-22.106 29.28-22.606 29.874-.5.6-3.3 4.184-6.1 8.068-34.707 46.41-51.41 67.72-54.91 70.31-17.703 12.65-43.107 1.1-45.307-20.61-.3-2.69-.7-16.93-1-31.67-.2-14.74-.6-26.99-.8-27.087-.2-.2-9.8 9.26-21.303 21.21-11.5 11.85-23.6 24.3-26.9 27.686-3.3 3.385-15.7 16.13-27.505 28.38-11.8 12.15-26.003 26.79-31.504 32.467-5.5 5.677-19.2 19.72-30.5 31.37-23.4 24.096-26.4 26.19-38.004 26.09-11.1 0-20.605-5.775-25.806-15.635l-2.7-5.08.1-112.533c0-127.87-.6-118.81 8.3-127.87 8.5-8.663 22.806-11.45 32.807-6.273 6.6 3.387 11.004 7.77 14.004 13.944z"/>
+      </svg>
+   </a>
+      <a href="/" class="item right" id="mobmenu"><i class="content right big icon" ></i></a>
+   </div>
+ </div>
+ <div class="ui secondary pointing menu large screen only">
+   <div class="left menu">
+      <a href="/" title="Home of Lightrains Technolabs">
+        <svg  width="64px" height="64px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="background:#292724">
+         <path fill="#FFFFFF" fill-rule="evenodd" d="M129.208 137.544l2.8 5.676-.1 21.412c0 11.75-.4 45.114-.7 74.193l-.7 52.782 12.702-13.046c10.902-11.05 22.003-22.5 63.81-65.62 3.3-3.38 16.202-16.73 28.604-29.48 12.5-12.84 25.703-26.49 29.304-30.27 21.102-21.81 24.202-24.8 29.604-27.19 11.602-5.38 25.104-2.49 33.705 7.17 6.6 7.47 7.2 10.96 7.9 44.92.3 16.43.7 29.98.902 30.18.2.2 6.3-3.784 13.7-8.962 7.3-5.08 15.8-10.956 18.8-12.95 3-2.09 8.4-5.774 12-8.363 3.6-2.49 13.5-9.163 22-14.84 21.3-14.04 31.5-19.02 33.8-16.133 3 3.68-4.1 15.733-28.41 47.9-11.905 15.83-22.106 29.28-22.606 29.874-.5.6-3.3 4.184-6.1 8.068-34.707 46.41-51.41 67.72-54.91 70.31-17.703 12.65-43.107 1.1-45.307-20.61-.3-2.69-.7-16.93-1-31.67-.2-14.74-.6-26.99-.8-27.087-.2-.2-9.8 9.26-21.303 21.21-11.5 11.85-23.6 24.3-26.9 27.686-3.3 3.385-15.7 16.13-27.505 28.38-11.8 12.15-26.003 26.79-31.504 32.467-5.5 5.677-19.2 19.72-30.5 31.37-23.4 24.096-26.4 26.19-38.004 26.09-11.1 0-20.605-5.775-25.806-15.635l-2.7-5.08.1-112.533c0-127.87-.6-118.81 8.3-127.87 8.5-8.663 22.806-11.45 32.807-6.273 6.6 3.387 11.004 7.77 14.004 13.944z"/>
+        </svg>
+      </a>
+   </div>
+   <div class="right menu" id="menu">
+     <div class="ui dropdown pointing item">
+        Company<i class="dropdown icon"></i>
+       <div class="menu">
+          <a class="item" title="About Lightrains Technolabs" href="/about/lightrains">About Us</a>
+          <a class="item" title="Careers at Lightrains Technolabs" href="/about/careers">Careers</a>
+          <a class="item" title="Team of Lightrains Technolabs" href="/about/team">Team Lightrains</a>
+         <div class="ui dropdown left pointing item">
+            Consulting <i class="dropdown icon"></i>
+           <div class="menu">
+              <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain</a>
+              <a class="item" title="ES6, JavaScript Consulting" href="/consulting/es6-javascript-development">ES6</a>
+           </div>
+         </div>
+       </div>
+     </div>
+      <a class="item" href="/about/portfolio">Work</a>
+      <a class="item" title="Blog" href="/blogs">Blog</a>
+      <a class="item" title="Contact Lightrains Technolabs" href="/about/contact">Contact</a>
+   </div>
+ </div>
+</header>
+   </div>
+   <div class="ui container">
+      <article class="post">
+  <header class="post-header">
+   <h1 class="post-title">Categories and Tags</h1>
+  </header>
+ <div class="ui text page-text">
+    <a name="categories"></a>
+<h3>Categories</h3>
+<div class="row">
+		<div class="col-12 col-lg-12">
+			<a href="/category/Drupal/">Drupal <span class="badge">4</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Android/">Android <span class="badge">2</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Blockchain/">Blockchain <span class="badge">3</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Ethereum/">Ethereum <span class="badge">2</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Smart Contract/">Smart Contract <span class="badge">3</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Open Source/">Open Source <span class="badge">1</span></a>
+		</div>
+</div>
+<a name="tags"></a>
+<h3>Tags</h3>
+<div class="row">
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Products/">Products <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Telegram/">Telegram <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Cryptocurrency/">Cryptocurrency <span class="badge">6</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Handbook/">Handbook <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">3</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Principles/">Principles <span class="badge">3</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Ethereum/">Ethereum <span class="badge">5</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Private Blockchain/">Private Blockchain <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Blockchain/">Blockchain <span class="badge">10</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Testnet/">Testnet <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Smart Contract/">Smart Contract <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/DAO/">DAO <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/The DAO/">The DAO <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Brand/">Brand <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Typography/">Typography <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ES6/">ES6 <span class="badge">6</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ECMAScript 2015/">ECMAScript 2015 <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Escamscript 6/">Escamscript 6 <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ES6 Tutorials/">ES6 Tutorials <span class="badge">4</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/DAG/">DAG <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/IPFS/">IPFS <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Decentralization/">Decentralization <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/geth/">geth <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/go-ethereum/">go-ethereum <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Ecmascript 6/">Ecmascript 6 <span class="badge">4</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Solidity/">Solidity <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/EVM/">EVM <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Transpiler/">Transpiler <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Whitepaper/">Whitepaper <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Permissioned Blockchain/">Permissioned Blockchain <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Development Tools/">Development Tools <span class="badge">4</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Tmux/">Tmux <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Tools/">Tools <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Functional JavaScript/">Functional JavaScript <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/JavaScript/">JavaScript <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Functional Programming/">Functional Programming <span class="badge">2</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Platforms/">Platforms <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Open Source/">Open Source <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Blockchain Projects/">Blockchain Projects <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Mining/">Mining <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Difficulty/">Difficulty <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Genesis Block/">Genesis Block <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Elm/">Elm <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Elm-lang/">Elm-lang <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Vim/">Vim <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/vimrc/">vimrc <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Sneak Peak/">Sneak Peak <span class="badge">1</span></a>
+		</div>
+</div>
+ </div>
+</article>
+   </div>
+   <div class="fullw">
+     <div class="ui container footer">
+ <div class="ui container">
+   <div class="footers">
+  +91 471 4000056 <i class="ellipsis vertical icon"></i> 
+ <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All Rights Reserved
+ <p class="slogan">Engineering Blockchain and Smart contracts. Technology Supercharged</p>
+</div>
+ </div>
+     </div>
+   </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-9728278-16', 'lightrains.com');
+  ga('send', 'pageview');
+</script>
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "http://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
+}
+</script>
+<script src="/assets/js/bundle-front.min.js"></script>
+</div>
+</body>

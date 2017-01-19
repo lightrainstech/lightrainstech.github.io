@@ -1,0 +1,317 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to set up elm development environment</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/setup-elm-development-environment" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "http://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/setup-elm-development-environment/"
+  },
+  "headline": "How to set up elm development environment",
+  "about": "Engineering Blockchain and Smart contracts.",
+  "sameAs": "https://lightrains.com/blogs/setup-elm-development-environment/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/elm-development-environment.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2016-10-14T05:10:00+05:30",
+  "dateModified": "2016-10-14T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Elm is a language that compiles to JavaScript, or in other words, Elm is a language to generate functional JavaScript code.> This guide is talking about inst..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="How to set up elm development environment">How to set up elm development environment</h1>
+
+  <amp-img
+  src="/assets/img/blog/elm-development-environment.png"
+  alt="How to set up elm development environment" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Fri, Oct 14, 16
+    </span>
+    <p>Elm is a language that compiles to JavaScript, or in other words, Elm is a language to generate functional JavaScript code.</p>
+
+<blockquote>
+  <p>This guide is talking about installing and setting up elm version 0.17.1</p>
+</blockquote>
+
+<h2 id="why-we-need-elm">Why we need Elm?</h2>
+<p>Elm is a programming language for declaratively creating web browser-based graphical user interfaces. Elm is <code class="highlighter-rouge">purely functional</code>, and is developed with emphasis on usability, performance, and robustness. It advertises “no runtime exceptions in practice”, made possible by the Elm compiler’s static type checking.</p>
+
+<h2 id="update-22-oct-2016">Update 22, Oct 2016.</h2>
+<blockquote>
+  <p>I came across <a href="http://courses.knowthen.com/courses/enrolled/elm-for-beginners">Elm For Beginners</a> amazing set of tutorials by <a href="https://github.com/knowthen">James Moore</a>, i would recommend watching it. Also his note on <a href="https://github.com/knowthen/elm/blob/master/DEVSETUP.md">Development Environment Setup Steps</a></p>
+</blockquote>
+
+<h2 id="features-of-elm">Features of Elm</h2>
+
+<ol>
+  <li>JavaScript Interop</li>
+  <li>No Runtime Exceptions</li>
+  <li>Great Performance</li>
+  <li>Enforced Semantic Versioning</li>
+</ol>
+
+<p>Read <a href="http://elm-lang.org">details</a>.</p>
+
+<h2 id="installing-elm-platform">1. Installing Elm Platform.</h2>
+
+<p>You can download the latest package from <a href="https://github.com/elm-lang/elm-compiler/releases">here</a>.</p>
+
+<p>OR</p>
+
+<ol>
+  <li>Mac <a href="http://install.elm-lang.org/Elm-Platform-0.17.1.pkg">Installer</a>
+</li>
+  <li>Windows <a href="http://install.elm-lang.org/Elm-Platform-0.17.1.exe">Installer</a>
+</li>
+  <li>Anywhere <a href="https://www.npmjs.com/package/elm">npm</a> or <a href="https://github.com/elm-lang/elm-platform">build from source</a>
+</li>
+</ol>
+
+<h2 id="configure-your-editor">Configure Your Editor</h2>
+
+<p>Before you start you can play around with the <a href="http://elm-lang.org/try">online editor</a> to get familiarized with the language.</p>
+
+<ol>
+  <li><a href="https://atom.io/packages/language-elm">Atom</a></li>
+  <li><a href="https://github.com/jcollard/elm-mode">Emacs</a></li>
+  <li><a href="https://packagecontrol.io/packages/Elm%20Language%20Support">Sublime Text</a></li>
+  <li><a href="https://github.com/lambdatoast/elm.vim">Vim</a></li>
+</ol>
+
+<h2 id="why-should-you-consider-using-elm">Why should you consider using Elm?</h2>
+
+<p>Elm offers many benefits over JavaScript, which you’ll see in this course.
+Benefits such as:</p>
+<ul>
+  <li>Zero Runtime Exceptions</li>
+  <li>Simplified Debugging</li>
+  <li>Easy Refactoring</li>
+  <li>Helpful Type System &amp; Compiler</li>
+  <li>Improved Productivity</li>
+  <li>Inherently testable code</li>
+  <li>Enforced Semantic Versioning</li>
+</ul>
+
+<p><strong>Source</strong></p>
+
+<ol>
+  <li><a href="https://guide.elm-lang.org/get_started.html">guide.elm-lang.org</a></li>
+  <li><a href="http://www.elmcast.io/updates-to-elm-vim/">elmcast.io</a></li>
+  <li><a href="http://elm-lang.org/blog/blazing-fast-html-round-two">elm-lang.org</a></li>
+</ol>
+
+    <a href="https://lightrains.com/blogs/setup-elm-development-environment" title="How to set up elm development environment" class="nonamp">Full Version of How to set up elm development environment</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/sneak-peak-into-our-vimrc/index.html" title="Sneak Peak: Our vimrc">Sneak Peak: Our vimrc</a></li>
+      
+      <li><a href="/amp/blogs/setup-elm-development-environment/index.html" title="How to set up elm development environment">How to set up elm development environment</a></li>
+      
+      <li><a href="/amp/blogs/genesis-json-parameter-explained-ethereum/index.html" title="What does each genesis.json parameter mean?">What does each genesis.json parameter mean?</a></li>
+      
+      <li><a href="/amp/blogs/noteworthy-blockchain-projects/index.html" title="Noteworthy projects based on Blockchain Technology">Noteworthy projects based on Blockchain Technology</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cryptocurrency 101 - Part 1/3 - The Basics</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/cryptocurrency-101" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "http://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/cryptocurrency-101/"
+  },
+  "headline": "Cryptocurrency 101 - Part 1/3 - The Basics",
+  "about": "Engineering Blockchain and Smart contracts.",
+  "sameAs": "https://lightrains.com/blogs/cryptocurrency-101/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/cryptocurrency-101.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2016-01-08T00:00:00+05:30",
+  "dateModified": "2016-01-08T00:00:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "What is a Cryptocurrency?A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same w..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Cryptocurrency 101 - Part 1/3 - The Basics">Cryptocurrency 101 - Part 1/3 - The Basics</h1>
+
+  <amp-img
+  src="/assets/img/blog/cryptocurrency-101.png"
+  alt="Cryptocurrency 101 - Part 1/3 - The Basics" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Fri, Jan 08, 16
+    </span>
+    <h2 id="what-is-a-cryptocurrency">What is a Cryptocurrency?</h2>
+<p>A cryptocurrency is essentially an alternative virtual currency that can be used to buy and sell goods and services in the same way as a traditional “fiat” currency. Transactions are made via a secure encrypted channel to transfer money between virtual “wallets”, without needing to go through a traditional bank or credit card provider.</p>
+
+<p>Cryptocurrencies make it easier to transfer funds between two parties in transactions; these transfers are facilitated through the use of public and private keys for security purposes. These fund transfers are done with minimal processing fees, enabling users to avoid the steep fees charged by most banks and financial institutions for wire transfers.</p>
+
+<h2 id="how-it-works">How it works</h2>
+<p>Cryptocurrencies are a bit different to traditional currencies. They offer a “decentralized” medium of exchange, which means that they derive their value from their community of users, unlike traditional currencies that are controlled by central banks and government regulation. This means that the value can fluctuate a lot more like a stock or commodity, dependent on the amount of supply and demand for that currency.</p>
+
+<h2 id="what-gives-them-their-value">What gives them their value?</h2>
+<p>They have value because they are scarce, fungible (one <a href="https://bitcoin.org">Bitcoin</a> is as good as another), easily transferred, and easily verified.
+The only other component they need to have value is a general agreement that they will be used as a medium of exchange or a prevailing belief that they will be in the future. It is the variation in these two factors that accounts for most of the volatility in the value of Bitcoins today.</p>
+
+<p>They aren’t backed by anything because they’re a commodity. What is gold backed by?</p>
+
+<blockquote>
+  <p>Prices are based on supply and demand, the rate at which a cryptocurrency can be exchanged for another.</p>
+</blockquote>
+
+<h2 id="advantages-of-cryptocurrency">Advantages of Cryptocurrency</h2>
+
+<h3 id="land-of-the-free">1. Land of the Free</h3>
+<p>With cryptocurrency, you can access your money anywhere you go. Since it is a currency that exists online, there isn’t any inflation or deflation to account for in exchange rates across countries. You are free to fly across borders without worrying about bank holidays or extortionate credit card transaction fees.</p>
+
+<h3 id="safe-n-secure">2. Safe n’ Secure</h3>
+<p>Your personal information is kept highly secure with cryptocurrencies. Fraud is rendered impossible because of the irreversible nature of crypto payments. This protects you from risks including identity theft and personal information leakage.</p>
+
+<h4 id="history-of-cryptocurrency">History of Cryptocurrency</h4>
+<p>The first cryptocurrency was Bitcoin. Bitcoin was created in 2009 by a pseudonymous developer named Satoshi Nakamoto. Bitcoin uses SHA-256, which is a set of cryptographic hash functions designed by the U.S National Security Agency. Bitcoin is a cryptocurrency that is based on the proof-of-work system.</p>
+
+<div class="ui header medium source">Sources</div>
+
+<ul>
+  <li>http://bitcoin.stackexchange.com/q/182/30316</li>
+  <li>http://www.investopedia.com/financial-edge/0212/bitcoin-may-be-the-currency-of-the-future.aspx</li>
+</ul>
+
+    <a href="https://lightrains.com/blogs/cryptocurrency-101" title="Cryptocurrency 101 - Part 1/3 - The Basics" class="nonamp">Full Version of Cryptocurrency 101 - Part 1/3 - The Basics</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/sneak-peak-into-our-vimrc/index.html" title="Sneak Peak: Our vimrc">Sneak Peak: Our vimrc</a></li>
+      
+      <li><a href="/amp/blogs/setup-elm-development-environment/index.html" title="How to set up elm development environment">How to set up elm development environment</a></li>
+      
+      <li><a href="/amp/blogs/genesis-json-parameter-explained-ethereum/index.html" title="What does each genesis.json parameter mean?">What does each genesis.json parameter mean?</a></li>
+      
+      <li><a href="/amp/blogs/noteworthy-blockchain-projects/index.html" title="Noteworthy projects based on Blockchain Technology">Noteworthy projects based on Blockchain Technology</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

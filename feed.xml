@@ -5,9 +5,25 @@
     <description>Engineering Blockchain and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Jan 2017 09:01:47 +0530</pubDate>
-    <lastBuildDate>Sat, 21 Jan 2017 09:01:47 +0530</lastBuildDate>
+    <pubDate>Sat, 21 Jan 2017 11:06:31 +0530</pubDate>
+    <lastBuildDate>Sat, 21 Jan 2017 11:06:31 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Atlaschain</title>
+        <description>Atlaschain is a Decentralised, Permissioned Blockchain based GIS and digital assets platform. Maps are a precious resource and location is a powerful way to visualise and understand data. However getting data on a map and distributing it in a decentralised manner has been a challenge. We want to make GIS data available to everyone in a decentralised and permissioned (if needed) manner using blockchains. In addition, we want to use the blockchain as a proof of record for the existence of the data. Usage Scenarios for Atlaschain Publishing Public GIS Data on the Atlas Chain: By publishing this data on the Atlas Chain any organisation can take advantage of the properties of the block chain to ensure that an authoritative version of the dataset is available in a decentralised, immutable repository. This would improve the confidence of the public on the transparency and integrity of the data. It would also make it possible for anyone with any type of client to get at the data from different nodes reducing the load on public websites. Exchanging Private Data between a department and its members: There are scenarios where entities like the police force or fire force may want to call up a map of an area with certain extra statistics or information that is not publicly available. In this scenario a series of contracts between a department (like the fire force) and its members would be created in which the GIS Data would be encrypted and exchanged. The department would be able to selectively revoke a contract and remove the data access when needed. Exchanging Private GIS Data: There are often situations where two or more private entities agree to share their geo data for mutual benefit. In this scenario the data would be encrypted and signed by the transacting parties...</description>
+        <pubDate>Sat, 21 Jan 2017 01:01:01 +0530</pubDate>
+        <link>https://lightrains.com/work/atlaschain-gis-blockchain</link>
+        <guid isPermaLink="true">https://lightrains.com/work/atlaschain-gis-blockchain</guid>
+        
+        
+        <category>Blockchain</category>
+        
+        <category>Ethereum</category>
+        
+        <category>Smart Contract</category>
+        
+      </item>
     
       <item>
         <title>Sneak Peak: Our vimrc</title>
@@ -1273,6 +1289,35 @@ Important links
         
         <category>Cryptocurrency</category>
         
+        
+      </item>
+    
+      <item>
+        <title>Ethereum Wallet</title>
+        <description>An Ethereum Wallet, is a simple app to check ethereum balance.
+
+Features
+
+
+  Check your Balance
+  Check Block Statistics
+  Price Statistics
+
+
+Update 2016-05-21
+
+We are abandoning this project because people putting money into this wallet. This was never built to handle the security risks. We build this app as a part of our exploration on the Ethereum Blockchain.
+
+The app is built on ionic framework, feel free to fork away and submit your changes.
+</description>
+        <pubDate>Fri, 15 Apr 2016 11:19:48 +0530</pubDate>
+        <link>https://lightrains.com/work/ethereum-wallet</link>
+        <guid isPermaLink="true">https://lightrains.com/work/ethereum-wallet</guid>
+        
+        
+        <category>Blockchain</category>
+        
+        <category>Ethereum</category>
         
       </item>
     

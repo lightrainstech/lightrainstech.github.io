@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://lightrains.com/blogs/intro-tendermint</loc>
+<lastmod>2017-01-29T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/work/atlaschain-gis-blockchain</loc>
 <lastmod>2017-01-21T01:01:01+05:30</lastmod>
 </url>
@@ -378,6 +382,18 @@
 <loc>https://lightrains.com/tag/sneak-peak/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/byzantine-fault-tolerance/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/bft/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/blockchain-consensus/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/tendermint/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -499,6 +515,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/work/atlaschain-gis-blockchain/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/intro-tendermint/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

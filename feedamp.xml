@@ -5,10 +5,28 @@
     <description>Blockchain Consulting and Smart contracts.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 27 Jan 2017 22:23:04 +0530</pubDate>
-    <lastBuildDate>Fri, 27 Jan 2017 22:23:04 +0530</lastBuildDate>
+    <pubDate>Sun, 29 Jan 2017 21:54:11 +0530</pubDate>
+    <lastBuildDate>Sun, 29 Jan 2017 21:54:11 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
+    
+      <item>
+        <title>Introduction to Tendermint</title>
+        <description>What is Tendermint? Tendermint is software for securely and consistently replicating an application on many machines. To simply put Tendermint is a software which can be used to achieve Byzantine fault tolerance (BFT) in any distributed computing platforms. From managing infrastructure to designing a distributed database, we can use Tendermint. The ability to tolerate machines failing in arbitrary ways, including becoming malicious, is known as Byzantine fault tolerance (BFT). The theory of BFT is decades old, but software implementations have only became popular recently, due largely to the success of “blockchain technology” like Bitcoin and Ethereum. Blockchain technology is just a reformalization of BFT in a more modern setting, with emphasis on peer-to-peer networking and cryptographic authentication. The name derives from the way transactions are batched in blocks, where each block contains a cryptographic hash of the previous one, forming a chain. In practice, the blockchain data structure actually optimizes BFT design. doc Tendermint consists of two chief technical components: a blockchain consensus engine and a generic application interface. The consensus engine, called Tendermint Core, ensures that the same transactions are recorded on every machine in the same order. The application interface, called the Application BlockChain Interface (ABCI), enables the...</description>
+        <pubDate>Sun, 29 Jan 2017 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/intro-tendermint/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/intro-tendermint</guid>
+        
+        <category>Byzantine Fault Tolerance</category>
+        
+        <category>BFT</category>
+        
+        <category>Blockchain Consensus</category>
+        
+        <category>Tendermint</category>
+        
+        
+      </item>
     
       <item>
         <title>Sneak Peak: Our vimrc</title>

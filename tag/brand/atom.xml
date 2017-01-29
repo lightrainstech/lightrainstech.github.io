@@ -298,6 +298,18 @@
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Sneak Peak/">Sneak Peak <span class="badge">1</span></a>
 		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Byzantine Fault Tolerance/">Byzantine Fault Tolerance <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/BFT/">BFT <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Blockchain Consensus/">Blockchain Consensus <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Tendermint/">Tendermint <span class="badge">1</span></a>
+		</div>
 </div>
  </div>
 </article>

@@ -5,9 +5,27 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Feb 2017 19:55:39 +0530</pubDate>
-    <lastBuildDate>Sun, 05 Feb 2017 19:55:39 +0530</lastBuildDate>
+    <pubDate>Mon, 06 Feb 2017 13:47:45 +0530</pubDate>
+    <lastBuildDate>Mon, 06 Feb 2017 13:47:45 +0530</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>What is Bitcoin Segregated Witness aka segwit</title>
+        <description>Segregated Witness is a solution for the Bitcoin Core. It is spearheaded by Pieter Wuille, Johnson Lau, and Eric Lombrozo BIP141. The general idea of segwit is that the signatures in a transaction (aka witness data) are skipped when calculating the transaction id. Segregated Witness is basically an “add-on” that carries signatures and some additional data. Importantly, Segregated Witnesses are completely ignored by old nodes, but recognized by new nodes. Moreover, the data they carry is not hashed along with the other parts of a transaction into the transaction ID. Rationale The transaction size overhead is due to two factors: using a 256 bit hash for P2WSH rather than the 160 bit hash for P2SH; and encoding via P2SH so that old wallets that don’t support segwit can send funds that can be spent using segwit, allowing the receiver to gain segwit’s benefits. Without these two factors, the overhead would be negligible at -3 bytes for P2WPKH and +1 bytes for P2WSH. Segregated Witness Benefits The Segregated Witness soft-fork (segwit) includes a wide range of features, many of which are highly technical. Malleability Fixes: The way the txid is calculated allows anyone to make small modifications to the transaction that will not change its meaning, but will change the txid. This is called third-party malleability. BIP 62 (“dealing with malleability”) attempted to address these issues in a piecemeal manner, but was too complicated to implement as consensus checks and has been withdrawn. Linear scaling of sighash operations: A major problem with simple approaches to increasing the Bitcoin blocksize is that for certain transactions, signature-hashing scales quadratically rather than linearly. Doubling the size of a transaction increases can double both the number of signature operations, and the amount of data that has to be hashed for each of those signatures to...</description>
+        <pubDate>Mon, 06 Feb 2017 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/bitcoin-segregated-witness-segwit</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/bitcoin-segregated-witness-segwit</guid>
+        
+        <category>Segregated Witness</category>
+        
+        <category>Segwit</category>
+        
+        <category>Bitcoin</category>
+        
+        <category>UTXO</category>
+        
+        
+      </item>
     
       <item>
         <title>Introduction to Tendermint</title>

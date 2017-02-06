@@ -1,0 +1,294 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>What is Bitcoin Segregated Witness aka segwit</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/bitcoin-segregated-witness-segwit" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "http://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/bitcoin-segregated-witness-segwit/"
+  },
+  "headline": "What is Bitcoin Segregated Witness aka segwit",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/bitcoin-segregated-witness-segwit/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/bitcoin-segregated-witness-segwit.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2017-02-06T05:10:00+05:30",
+  "dateModified": "2017-02-06T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Segregated Witness is a solution for the Bitcoin Core. It is spearheaded by Pieter Wuille, Johnson Lau, and Eric Lombrozo [BIP141](https://github.com/bitcoin..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="What is Bitcoin Segregated Witness aka segwit">What is Bitcoin Segregated Witness aka segwit</h1>
+
+  <amp-img
+  src="/assets/img/blog/bitcoin-segregated-witness-segwit.png"
+  alt="What is Bitcoin Segregated Witness aka segwit" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Mon, Feb 06, 17
+    </span>
+    <p>Segregated Witness is a solution for the Bitcoin Core. It is spearheaded by Pieter Wuille, Johnson Lau, and Eric Lombrozo <a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141</a>. The general idea of segwit is that the signatures in a transaction (aka witness data) are skipped when calculating the transaction id.</p>
+
+<p>Segregated Witness is basically an “add-on” that carries signatures and some additional data. Importantly, Segregated Witnesses are completely ignored by old nodes, but recognized by new nodes. Moreover, the data they carry is not hashed along with the other parts of a transaction into the transaction ID.</p>
+
+<h2 id="rationale">Rationale</h2>
+
+<p>The transaction size overhead is due to two factors:</p>
+
+<ul>
+  <li>using a 256 bit hash for P2WSH rather than the 160 bit hash for P2SH; and</li>
+  <li>encoding via P2SH so that old wallets that don’t support segwit can send funds that can be spent using segwit, allowing the receiver to gain segwit’s benefits.</li>
+</ul>
+
+<p>Without these two factors, the overhead would be negligible at -3 bytes for P2WPKH and +1 bytes for P2WSH.</p>
+
+<h2 id="segregated-witness-benefits">Segregated Witness Benefits</h2>
+
+<p>The Segregated Witness soft-fork (segwit) includes a wide range of features, many of which are highly technical.</p>
+
+<ul>
+  <li>
+<strong>Malleability Fixes:</strong> The way the txid is calculated allows anyone to make small modifications to the transaction that will not change its meaning, but will change the txid. This is called third-party malleability. BIP 62 (“dealing with malleability”) attempted to address these issues in a piecemeal manner, but was too complicated to implement as consensus checks and has been withdrawn.</li>
+  <li>
+<strong>Linear scaling of sighash operations:</strong> A major problem with simple approaches to increasing the Bitcoin blocksize is that for certain transactions, signature-hashing scales quadratically rather than linearly. Doubling the size of a transaction increases can double both the number of signature operations, and the amount of data that has to be hashed for each of those signatures to be verified. This has been seen in the wild, where an individual block required 25 seconds to validate, and maliciously designed transactions could take over 3 minutes.</li>
+  <li>
+<strong>Increased security for multisig:</strong> Multisig payments currently use P2SH which is secured by the 160-bit HASH160 algorithm (RIPEMD of SHA256). However, if one of the signers wishes to steal all the funds, they can find a collision between a valid address as part of a multisig script and a script that simply pays them all the funds with only 80-bits (2^80) worth of work, which is already within the realm of possibility for an extremely well-resourced attacker.</li>
+  <li>
+<strong>Reducing UTXO growth:</strong> The Unspent Transaction Output (UTXO) database is maintained by each validating Bitcoin node in order to determine whether new transactions are valid or fraudulent. For efficient operation of the network, this database needs to be very quick to query and modify, and should ideally be able to fit in main memory (RAM), so keeping the database’s size in bytes as small as possible is valuable.</li>
+  <li>
+<strong>Block capacity/size increase:</strong> Since old nodes will only download the witness-stripped block, they only enforce the 1 MB block size limit rule on that data. New nodes, which understand the full block with witness data, are therefore free to replace this limit with a new one, allowing for larger block sizes.</li>
+</ul>
+
+<h4 id="further-reading">Further Reading</h4>
+<ol>
+  <li><a href="https://bitcoincore.org/en/segwit_adoption/">Segregated Witness Adoption</a></li>
+  <li><a href="https://bitcoincore.org/en/2016/10/28/segwit-costs/">Segregated Witness Costs and Risks</a></li>
+</ol>
+
+<p><div class="cta-blog">
+  <h2 class="ui center aligned icon white header">
+    <i class="spy icon"></i>
+    Talk to one of our  <a href="/consulting/blockchain-consulting">blockchain consultant</a>.
+  </h2>
+
+  
+ <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="ui button big black obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+
+</div>
+</p>
+
+    <a href="https://lightrains.com/blogs/bitcoin-segregated-witness-segwit" title="What is Bitcoin Segregated Witness aka segwit" class="nonamp">Full Version of What is Bitcoin Segregated Witness aka segwit</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/bitcoin-segregated-witness-segwit/index.html" title="What is Bitcoin Segregated Witness aka segwit">What is Bitcoin Segregated Witness aka segwit</a></li>
+      
+      <li><a href="/amp/blogs/intro-tendermint/index.html" title="Introduction to Tendermint">Introduction to Tendermint</a></li>
+      
+      <li><a href="/amp/blogs/sneak-peak-into-our-vimrc/index.html" title="Sneak Peak: Our vimrc">Sneak Peak: Our vimrc</a></li>
+      
+      <li><a href="/amp/blogs/setup-elm-development-environment/index.html" title="How to set up elm development environment">How to set up elm development environment</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

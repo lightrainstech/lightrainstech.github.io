@@ -245,13 +245,13 @@
 		<a href="/tag/Permissioned Blockchain/">Permissioned Blockchain <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Development Tools/">Development Tools <span class="badge">4</span></a>
+		<a href="/tag/Development Tools/">Development Tools <span class="badge">5</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Tmux/">Tmux <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Tools/">Tools <span class="badge">1</span></a>
+		<a href="/tag/Tools/">Tools <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Functional JavaScript/">Functional JavaScript <span class="badge">2</span></a>
@@ -266,7 +266,7 @@
 		<a href="/tag/Platforms/">Platforms <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Open Source/">Open Source <span class="badge">1</span></a>
+		<a href="/tag/Open Source/">Open Source <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Blockchain Projects/">Blockchain Projects <span class="badge">1</span></a>
@@ -315,6 +315,12 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/UTXO/">UTXO <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/NodeJS/">NodeJS <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/npmjs/">npmjs <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

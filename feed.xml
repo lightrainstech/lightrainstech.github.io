@@ -5,9 +5,27 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 03 Mar 2017 10:47:00 +0530</pubDate>
-    <lastBuildDate>Fri, 03 Mar 2017 10:47:00 +0530</lastBuildDate>
+    <pubDate>Sat, 11 Mar 2017 12:01:28 +0530</pubDate>
+    <lastBuildDate>Sat, 11 Mar 2017 12:01:28 +0530</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>How to set up private ethereum blockchain using ethcore/parity</title>
+        <description>Hope you know what a private blockchain and why do we need one, if not; please take a look at Private Permissioned Blockchain. After youre done with the reading, lets proceed with setting up Parity. Parity: is an Ethereum client, written from the ground-up for correctness-verifiability, modularisation, low-footprint and high-performance. Step 1: Install Parity One-line Binary Installer: This method is way faster than building, though you won’t get the cutting edge features and it only works on Ubuntu and Mac with Homebrew installed. To use the script just run: bash &amp;lt;(curl https://raw.githubusercontent.com/ethcore/scripts/master/install-deps.sh -L) This will install and configure the Parity client for you. Step 2: Development set up. From parity 1.5 and above, it offers a pre-configured development flag to help you get started with ease. Of course you can change the parameters as required. Parity provides an dev engine, which can be used for dapp development and demos. parity –chain dev Features of parity --chain dev Transactions will get sealed at most every 2 seconds The address created with an empty phrase contains a lot of tokens that can be used to send transactions Customizing the development chain The default configuration should work fine in most cases, however it can be customized. The following example spec can be passed to –chain option where accounts contains a custom account with lots of Ether. { &quot;name&quot;: &quot;DevelopmentChain&quot;, &quot;engine&quot;: { &quot;instantSeal&quot;: { &quot;params&quot;: {} } }, &quot;params&quot;: { &quot;accountStartNonce&quot;: &quot;0x0&quot;, &quot;maximumExtraDataSize&quot;: &quot;0x20&quot;, &quot;minGasLimit&quot;: &quot;0x1388&quot;, &quot;networkID&quot; : &quot;0x11&quot; }, &quot;genesis&quot;: { &quot;seal&quot;: { &quot;generic&quot;: &quot;0x0&quot; }, &quot;difficulty&quot;: &quot;0x20000&quot;, &quot;author&quot;: &quot;0x0000000000000000000000000000000000000000&quot;, &quot;timestamp&quot;: &quot;0x00&quot;, &quot;parentHash&quot;: &quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;, &quot;extraData&quot;: &quot;0x&quot;, &quot;gasLimit&quot;: &quot;0x5B8D80&quot; }, &quot;accounts&quot;: { &quot;0000000000000000000000000000000000000001&quot;: { &quot;balance&quot;: &quot;1&quot;, &quot;builtin&quot;: { &quot;name&quot;: &quot;ecrecover&quot;, &quot;pricing&quot;: { &quot;linear&quot;: { &quot;base&quot;: 3000, &quot;word&quot;: 0 } } } }, &quot;0000000000000000000000000000000000000002&quot;: { &quot;balance&quot;: &quot;1&quot;, &quot;builtin&quot;: { &quot;name&quot;: &quot;sha256&quot;, &quot;pricing&quot;: { &quot;linear&quot;: {...</description>
+        <pubDate>Fri, 10 Mar 2017 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/setup-parity-private-blockchains</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/setup-parity-private-blockchains</guid>
+        
+        <category>Parity</category>
+        
+        <category>Private Blockchain</category>
+        
+        <category>Permissioned Blockchain</category>
+        
+        <category>Blockchain</category>
+        
+        
+      </item>
     
       <item>
         <title>Fixing npm permissions</title>

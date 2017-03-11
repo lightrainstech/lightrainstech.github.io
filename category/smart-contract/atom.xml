@@ -179,10 +179,10 @@
 		<a href="/tag/Ethereum/">Ethereum <span class="badge">5</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Private Blockchain/">Private Blockchain <span class="badge">2</span></a>
+		<a href="/tag/Private Blockchain/">Private Blockchain <span class="badge">3</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Blockchain/">Blockchain <span class="badge">11</span></a>
+		<a href="/tag/Blockchain/">Blockchain <span class="badge">12</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Testnet/">Testnet <span class="badge">1</span></a>
@@ -242,7 +242,7 @@
 		<a href="/tag/Whitepaper/">Whitepaper <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Permissioned Blockchain/">Permissioned Blockchain <span class="badge">1</span></a>
+		<a href="/tag/Permissioned Blockchain/">Permissioned Blockchain <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Development Tools/">Development Tools <span class="badge">5</span></a>
@@ -321,6 +321,9 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/npmjs/">npmjs <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Parity/">Parity <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

@@ -1,0 +1,314 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to set up private ethereum blockchain using ethcore/parity</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/setup-parity-private-blockchains" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "http://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://play.google.com/store/apps/developer?id=Lightrains+Technolabs+Pvt+Ltd","https://foursquare.com/v/5281ebdd11d2f33611f594db","https://www.youtube.com/channel/UC7FbfmuIVkfGeYW2u6H_IfQ","http://www.acquia.com/partners/showcase/lightrains-technolabs-pvt-ltd","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/setup-parity-private-blockchains/"
+  },
+  "headline": "How to set up private ethereum blockchain using ethcore/parity",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/setup-parity-private-blockchains/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/parity-private-chain.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2017-03-10T05:10:00+05:30",
+  "dateModified": "2017-03-10T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Hope you know what a private blockchain and why do we need one, if not; please take a look at [Private Permissioned Blockchain](https://lightrains.com/blogs/..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="How to set up private ethereum blockchain using ethcore/parity">How to set up private ethereum blockchain using ethcore/parity</h1>
+
+  <amp-img
+  src="/assets/img/blog/parity-private-chain.png"
+  alt="How to set up private ethereum blockchain using ethcore/parity" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Fri, Mar 10, 17
+    </span>
+    <p>Hope you know what a private blockchain and why do we need one, if not; please take a look at <a href="https://lightrains.com/blogs/what-private-permissioned-blockchain">Private Permissioned Blockchain</a>. After youre done with the reading, lets proceed with setting up Parity.</p>
+
+<p><strong>Parity:</strong> is an Ethereum client, written from the ground-up for correctness-verifiability, modularisation, low-footprint and high-performance.</p>
+
+<h2 id="step-1-install-parity">Step 1: Install Parity</h2>
+<p>One-line Binary Installer: This method is way faster than building, though you won’t get the cutting edge features and it only works on Ubuntu and Mac with Homebrew installed.</p>
+
+<p>To use the script just run:</p>
+
+<blockquote>
+  <p>bash &lt;(curl https://raw.githubusercontent.com/ethcore/scripts/master/install-deps.sh -L)</p>
+</blockquote>
+
+<p>This will install and configure the Parity client for you.</p>
+
+<h2 id="step-2-development-set-up">Step 2: Development set up.</h2>
+<p>From parity 1.5 and above, it offers a pre-configured development flag to help you get started with ease. Of course you can change the parameters as required.</p>
+
+<p>Parity provides an dev engine, which can be used for dapp development and demos.</p>
+
+<blockquote>
+  <p>parity –chain dev</p>
+</blockquote>
+
+<h3 id="features-of-parity---chain-dev">Features of <code class="highlighter-rouge">parity --chain dev</code>
+</h3>
+
+<ol>
+  <li>Transactions will get sealed at most every 2 seconds</li>
+  <li>The address created with an empty phrase contains a lot of tokens that can be used to send transactions</li>
+</ol>
+
+<h2 id="customizing-the-development-chain">Customizing the development chain</h2>
+
+<p>The default configuration should work fine in most cases, however it can be customized. The following example spec can be passed to –chain option where accounts contains a custom account with lots of Ether.</p>
+
+<div class="highlighter-rouge">
+<pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DevelopmentChain"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"engine"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"instantSeal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"accountStartNonce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"maximumExtraDataSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"minGasLimit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x1388"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"networkID"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0x11"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"genesis"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"seal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nt">"generic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20000"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x00"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"parentHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"extraData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"gasLimit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x5B8D80"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"0000000000000000000000000000000000000001"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecrecover"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"0000000000000000000000000000000000000002"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"0000000000000000000000000000000000000003"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ripemd160"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"0000000000000000000000000000000000000004"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"identity"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+        </span><span class="nt">"0x00a329c0648769a73afac7f9381e08fb43dbea72"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1606938044258990275541962092341162602522202993782792835301376"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+
+    <a href="https://lightrains.com/blogs/setup-parity-private-blockchains" title="How to set up private ethereum blockchain using ethcore/parity" class="nonamp">Full Version of How to set up private ethereum blockchain using ethcore/parity</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/setup-parity-private-blockchains/index.html" title="How to set up private ethereum blockchain using ethcore/parity">How to set up private ethereum blockchain using ethcore/parity</a></li>
+      
+      <li><a href="/amp/blogs/fixing-npm-permissions-install-global/index.html" title="Fixing npm permissions">Fixing npm permissions</a></li>
+      
+      <li><a href="/amp/blogs/bitcoin-segregated-witness-segwit/index.html" title="What is Bitcoin Segregated Witness aka segwit">What is Bitcoin Segregated Witness aka segwit</a></li>
+      
+      <li><a href="/amp/blogs/intro-tendermint/index.html" title="Introduction to Tendermint">Introduction to Tendermint</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

@@ -109,7 +109,6 @@
        <div class="menu">
           <a class="item" title="About Lightrains Technolabs" href="/about/lightrains">About Us</a>
           <a class="item" title="Careers at Lightrains Technolabs" href="/about/careers">Careers</a>
-          <a class="item" title="Team of Lightrains Technolabs" href="/about/team">Team Lightrains</a>
          <div class="ui dropdown left pointing item">
             Consulting <i class="dropdown icon"></i>
            <div class="menu">

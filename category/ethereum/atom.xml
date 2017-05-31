@@ -120,13 +120,7 @@
        <div class="menu">
           <a class="item" title="About Lightrains Technolabs" href="/about/lightrains">About Us</a>
           <a class="item" title="Careers at Lightrains Technolabs" href="/about/careers">Careers</a>
-         <div class="ui dropdown left pointing item">
-            Consulting <i class="dropdown icon"></i>
-           <div class="menu">
-              <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain</a>
-              <a class="item" title="ES6, JavaScript Consulting" href="/consulting/es6-javascript-development">ES6</a>
-           </div>
-         </div>
+          <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain Consulting</a>
        </div>
      </div>
       <a class="item" href="/about/portfolio">Work</a>
@@ -146,10 +140,7 @@
 <h3>Categories</h3>
 <div class="row">
 		<div class="col-12 col-lg-12">
-			<a href="/category/Drupal/">Drupal <span class="badge">4</span></a>
-		</div>
-		<div class="col-12 col-lg-12">
-			<a href="/category/Blockchain/">Blockchain <span class="badge">5</span></a>
+			<a href="/category/Blockchain/">Blockchain <span class="badge">6</span></a>
 		</div>
 		<div class="col-12 col-lg-12">
 			<a href="/category/Ethereum/">Ethereum <span class="badge">4</span></a>
@@ -159,6 +150,9 @@
 		</div>
 		<div class="col-12 col-lg-12">
 			<a href="/category/Smart Contract/">Smart Contract <span class="badge">4</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Consulting/">Consulting <span class="badge">3</span></a>
 		</div>
 		<div class="col-12 col-lg-12">
 			<a href="/category/Open Source/">Open Source <span class="badge">1</span></a>

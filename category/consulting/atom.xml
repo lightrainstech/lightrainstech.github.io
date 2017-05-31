@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Drupal Articles in Category #Drupal</title>
-  <meta name="description" content="Drupal all posts under category drupal">
-  <meta property="og:url" content="https://lightrains.com/category/drupal/atom.xml">
+  <title>Consulting Articles in Category #Consulting</title>
+  <meta name="description" content="Consulting all posts under category consulting">
+  <meta property="og:url" content="https://lightrains.com/category/consulting/atom.xml">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Categories and Tags">
   <meta property="og:description" content="">
@@ -14,7 +14,7 @@
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@lightrainstech">
-  <meta name="twitter:url" content="https://lightrains.com/category/drupal/atom.xml">
+  <meta name="twitter:url" content="https://lightrains.com/category/consulting/atom.xml">
   <meta name="twitter:title" content="Categories and Tags">
   <meta name="twitter:description" content="">
   <script type="text/javascript">
@@ -30,7 +30,7 @@
     s.parentNode.insertBefore(wf, s);
   })(); </script>
   <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
-  <link rel="canonical" href="https://lightrains.com/category/drupal/atom.xml">
+  <link rel="canonical" href="https://lightrains.com/category/consulting/atom.xml">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
   <link rel="amphtml" href="https://lightrains.com/amp">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
@@ -120,13 +120,7 @@
        <div class="menu">
           <a class="item" title="About Lightrains Technolabs" href="/about/lightrains">About Us</a>
           <a class="item" title="Careers at Lightrains Technolabs" href="/about/careers">Careers</a>
-         <div class="ui dropdown left pointing item">
-            Consulting <i class="dropdown icon"></i>
-           <div class="menu">
-              <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain</a>
-              <a class="item" title="ES6, JavaScript Consulting" href="/consulting/es6-javascript-development">ES6</a>
-           </div>
-         </div>
+          <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain Consulting</a>
        </div>
      </div>
       <a class="item" href="/about/portfolio">Work</a>
@@ -146,10 +140,7 @@
 <h3>Categories</h3>
 <div class="row">
 		<div class="col-12 col-lg-12">
-			<a href="/category/Drupal/">Drupal <span class="badge">4</span></a>
-		</div>
-		<div class="col-12 col-lg-12">
-			<a href="/category/Blockchain/">Blockchain <span class="badge">5</span></a>
+			<a href="/category/Blockchain/">Blockchain <span class="badge">6</span></a>
 		</div>
 		<div class="col-12 col-lg-12">
 			<a href="/category/Ethereum/">Ethereum <span class="badge">4</span></a>
@@ -159,6 +150,9 @@
 		</div>
 		<div class="col-12 col-lg-12">
 			<a href="/category/Smart Contract/">Smart Contract <span class="badge">4</span></a>
+		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Consulting/">Consulting <span class="badge">3</span></a>
 		</div>
 		<div class="col-12 col-lg-12">
 			<a href="/category/Open Source/">Open Source <span class="badge">1</span></a>

@@ -5,8 +5,8 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 31 May 2017 15:16:29 +0530</pubDate>
-    <lastBuildDate>Wed, 31 May 2017 15:16:29 +0530</lastBuildDate>
+    <pubDate>Wed, 31 May 2017 15:26:05 +0530</pubDate>
+    <lastBuildDate>Wed, 31 May 2017 15:26:05 +0530</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -1166,7 +1166,7 @@ Configure streams online in your browser.
         <guid isPermaLink="true">https://lightrains.com/work/hitsup-social</guid>
         
         
-        <category>Drupal</category>
+        <category>Consulting</category>
         
       </item>
     
@@ -1268,7 +1268,7 @@ Key modules/theme/distribution used:
         <guid isPermaLink="true">https://lightrains.com/work/metromatinee</guid>
         
         
-        <category>Drupal</category>
+        <category>Consulting</category>
         
       </item>
     
@@ -1299,7 +1299,7 @@ Key modules/theme/distribution used:
         <guid isPermaLink="true">https://lightrains.com/work/kerala-startup-mission</guid>
         
         
-        <category>Drupal</category>
+        <category>Consulting</category>
         
       </item>
     
@@ -1526,7 +1526,7 @@ Sources
         <guid isPermaLink="true">https://lightrains.com/work/pegke-loyalty</guid>
         
         
-        <category>Drupal</category>
+        <category>Blockchain</category>
         
       </item>
     

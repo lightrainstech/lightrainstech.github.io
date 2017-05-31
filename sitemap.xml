@@ -233,9 +233,6 @@
 <loc>https://lightrains.com/about/technology</loc>
 </url>
 <url>
-<loc>https://lightrains.com/category/drupal/</loc>
-</url>
-<url>
 <loc>https://lightrains.com/category/blockchain/</loc>
 </url>
 <url>
@@ -246,6 +243,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/category/smart-contract/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/category/consulting/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/category/open-source/</loc>

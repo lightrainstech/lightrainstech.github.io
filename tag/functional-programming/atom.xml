@@ -335,6 +335,15 @@
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Codewall/">Codewall <span class="badge">1</span></a>
 		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/React/">React <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Redux/">Redux <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/State management/">State management <span class="badge">1</span></a>
+		</div>
 </div>
  </div>
 </article>

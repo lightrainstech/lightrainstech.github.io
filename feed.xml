@@ -5,8 +5,8 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Jun 2017 13:10:36 +0530</pubDate>
-    <lastBuildDate>Wed, 07 Jun 2017 13:10:36 +0530</lastBuildDate>
+    <pubDate>Wed, 07 Jun 2017 13:15:31 +0530</pubDate>
+    <lastBuildDate>Wed, 07 Jun 2017 13:15:31 +0530</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
     
       <item>
@@ -42,7 +42,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {createStore } from 'redux'
 import { Provider } from 'react-redux'
-Create your store with `reducer`. We can use a simple basic reducer here...
+
+
+Create your store with reducer. We can use a simple basic reducer here…
 
 function reducer(state = [], action) {
   switch (action.type) {

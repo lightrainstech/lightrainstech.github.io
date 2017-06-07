@@ -257,9 +257,12 @@ npm start
 import ReactDOM from 'react-dom'
 import {createStore } from 'redux'
 import { Provider } from 'react-redux'
-Create your store with `reducer`. We can use a simple basic reducer here...
+</code></pre>
+</div>
+<p>Create your store with <code class="highlighter-rouge">reducer</code>. We can use a simple basic reducer here…</p>
 
-function reducer(state = [], action) {
+<div class="highlighter-rouge">
+<pre class="highlight"><code>function reducer(state = [], action) {
   switch (action.type) {
     case 'ADD_ACTION':
       return [

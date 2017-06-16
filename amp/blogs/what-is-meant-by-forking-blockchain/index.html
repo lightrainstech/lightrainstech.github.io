@@ -2,8 +2,8 @@
 <html amp lang="en">
 <head>
   <meta charset="utf-8">
-  <title>What is DAG in Ethereum Blockchain</title>
-  <link rel="canonical" href="https://lightrains.com/blogs/dag-ethereum-blockchain" />
+  <title>What is meant by forking in a Blockchain?</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/what-is-meant-by-forking-blockchain" />
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-custom="">
 body {
@@ -169,19 +169,19 @@ pre, code {
   "@type": "Article",
   "mainEntityOfPage":{
     "@type":"WebPage",
-    "@id":"https://lightrains.com/blogs/dag-ethereum-blockchain/"
+    "@id":"https://lightrains.com/blogs/what-is-meant-by-forking-blockchain/"
   },
-  "headline": "What is DAG in Ethereum Blockchain",
+  "headline": "What is meant by forking in a Blockchain?",
   "about": "Blockchain Consulting.",
-  "sameAs": "https://lightrains.com/blogs/dag-ethereum-blockchain/",
+  "sameAs": "https://lightrains.com/blogs/what-is-meant-by-forking-blockchain/",
   "image": {
     "@type": "ImageObject",
-    "url": "https://lightrains.com/assets/img/blog/dag-ethereum-blockchain.png",
+    "url": "https://lightrains.com/assets/img/blog/what-is-meant-by-forking-blockchain.png",
     "height": 1000,
     "width": 700
   },
-  "datePublished": "2016-07-03T00:07:20+05:30",
-  "dateModified": "2016-07-03T00:07:20+05:30",
+  "datePublished": "2017-06-16T10:10:00+05:30",
+  "dateModified": "2017-06-16T10:10:00+05:30",
   "author": {
      "@type": "Person",
      "name": "Nikhil Mohan"
@@ -196,7 +196,7 @@ pre, code {
       "height": 60
     }
   },
-  "description": "Dagger Hashimoto is a proposed spec for the mining algorithm for Ethereum 1.0. **Dagger Hashimoto** aims to simultaneously satisfy two goals:1. **ASIC-resist..."
+  "description": "You might heard of the term [forking](https://en.wikipedia.org/wiki/Fork_(software_development) many times in the last few years, if you are in the Blockchai..."
 }
 </script>
 
@@ -210,51 +210,56 @@ pre, code {
   <a href="/about/contact">Contact</a>
 </div>
 
-  <h1 class="post-title ui header huge" itemprop="name headline" title="What is DAG in Ethereum Blockchain">What is DAG in Ethereum Blockchain</h1>
+  <h1 class="post-title ui header huge" itemprop="name headline" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</h1>
 
   <amp-img
-  src="/assets/img/blog/dag-ethereum-blockchain.png"
-  alt="What is DAG in Ethereum Blockchain" height="216" width="360" on="tap:headline-img-lightbox"
+  src="/assets/img/blog/what-is-meant-by-forking-blockchain.png"
+  alt="What is meant by forking in a Blockchain?" height="216" width="360" on="tap:headline-img-lightbox"
   layout="responsive" role="img" tabindex="0"
   ></amp-img>
 
   <div class="content">
     <span class="timespan">
-      Sun, Jul 03, 16
+      Fri, Jun 16, 17
     </span>
-    <p>Dagger Hashimoto is a proposed spec for the mining algorithm for Ethereum 1.0. <strong>Dagger Hashimoto</strong> aims to simultaneously satisfy two goals:</p>
+    <p>You might heard of the term [forking](https://en.wikipedia.org/wiki/Fork_(software_development) many times in the last few years, if you are in the Blockchain industry by any chance. Here we are attempting to provide a clear understanding of what is meant by forking.</p>
 
+<p>It is not a blockchain specific term;</p>
+
+<blockquote>
+  <p>In software engineering, a project fork happens when developers take a copy of source code from one software package and start independent development on it, creating a distinct and separate piece of software.</p>
+</blockquote>
+
+<h2 id="what-is-meant-by-forking-in-blockchain---basics">What is meant by forking in Blockchain - basics</h2>
+<p>At its most basic, a fork is what happens when a <a href="https://en.wikipedia.org/wiki/Blockchain">blockchain</a> diverges into two potential paths forward — either with regard to a network’s transaction history or a new rule in deciding what makes a transaction valid. But forks also can be willingly introduced to the network. This occurs when developers seek to change the rules the software uses to decide whether a transaction is valid or not.</p>
+
+<h3 id="what-is-meant-by-forking-in-blockchain---advanced">What is meant by forking in Blockchain - advanced</h3>
+<p><em>Forking in each and every Blockchain is different, based on the design architecture and use case the chain. We shall look into a more generic scenario.</em></p>
+
+<p><amp-img src="/assets/img/blog/forks.png" alt="Forking in Blockchain" class="ui image fluid" layout="responsive"></amp-img></p>
+
+<p><strong>Fork can happen in following situations</strong></p>
 <ol>
-  <li>
-<strong>ASIC-resistance:</strong> the benefit from creating specialized hardware for the algorithm should be as small as possible, ideally to the point that even in an economy where ASICs have been developed the speedup is sufficiently small that it is still marginally profitable for users on ordinary computers to mine with spare CPU power.</li>
-  <li>
-<strong>Light client verifiability:</strong> a block should be relatively efficiently verifiable by a light client.</li>
+  <li>Anytime two miners find a block at nearly the same time.</li>
+  <li>Developers seek to change the rules the software uses to decide whether a transaction is valid or not.</li>
 </ol>
 
-<h2 id="why-do-we-need-dag-in-ethereum">Why do we need DAG in Ethereum?</h2>
-<p>Ethereum uses Ethash (Proof of Work system). <em>as of now</em> <br>
-Ethash PoW is memory hard, making it basically ASIC resistant. This basically means that calculating the PoW requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabyte size data) is called a DAG. Clients wishing to store the DAG in a cache should conform to this spec in order to share the cache with other clients:</p>
+<h2 id="types-of-forks">Types of Forks</h2>
+<p><strong>Soft fork:</strong> by contrast, is any change that’s backward compatible.</p>
 
-<h3 id="where-is-dag-stored">Where is DAG stored</h3>
-<p>The DAG should be stored in a 1GB dump (for the initial epoch, anyway), in a file:</p>
+<p><strong>Hard fork:</strong> is a software upgrade that introduces a new rule to the network that isn’t compatible with the older software</p>
 
-<p>Mac/Linux: <code class="highlighter-rouge">$(HOME)/.ethash/full-R&lt;REVISION&gt;-&lt;SEEDHASH&gt;</code>
-Windows: <code class="highlighter-rouge">$(HOME)/Appdata/Local/Ethash/full-R&lt;REVISION&gt;-&lt;SEEDHASH&gt;</code></p>
+<p><strong>User-activated soft fork (UASF):</strong> is a controversial idea that explores how a blockchain might add an upgrade that is not directly supported by those who provide the network’s hashing power.</p>
 
-<h3 id="format">Format</h3>
+<h2 id="what-happens-when-the-blockchain-forks">What happens when the blockchain forks?</h2>
+<p>It’s actually quite simple: you get two chains with a shared genesis and are identical up until the forking point, after which they exist exclusively in parallel (unless one is completely abandoned), creating two separate networks.</p>
 
-<p>Each file should begin with an 8-byte magic number, <code class="highlighter-rouge">0xfee1deadbaddcafe</code>, written in little-endian format (i.e., bytes <code class="highlighter-rouge">fe ca dd ba ad de e1 fe</code>).</p>
-
-<p>The Ethash algorithm expects the DAG as a two-dimensional array of <code class="highlighter-rouge">uint32s</code> (4-byte unsigned ints), with dimension <code class="highlighter-rouge">(n × 16)</code> where n is a large number. (n starts at <code class="highlighter-rouge">16777186</code> and grows from there.) Following the magic number, the rows of the DAG should be written sequentially into the file, with no delimiter between rows and each <code class="highlighter-rouge">unint32</code> encoded in little-endian format.</p>
-
-<h4 id="sources">Sources</h4>
 <ol>
-  <li><a href="https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md">Dagger-Hashimoto</a></li>
-  <li><a href="https://github.com/ethereum/wiki/wiki/Ethash-DAG">Ethash DAG</a></li>
-  <li><a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">Directed acyclic graph - In mathematics and computer science</a></li>
+  <li><a href="https://bitcoin.org/en/glossary/fork">https://bitcoin.org/en/glossary/fork</a></li>
+  <li><a href="https://bitcoin.org/en/developer-guide#term-fork">https://bitcoin.org/en/developer-guide#term-fork</a></li>
 </ol>
 
-    <a href="https://lightrains.com/blogs/dag-ethereum-blockchain" title="What is DAG in Ethereum Blockchain" class="nonamp">Full Version of What is DAG in Ethereum Blockchain</a>
+    <a href="https://lightrains.com/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?" class="nonamp">Full Version of What is meant by forking in a Blockchain?</a>
   </div>
   
   <div class="related ui segment">

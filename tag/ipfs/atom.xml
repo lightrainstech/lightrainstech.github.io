@@ -67,7 +67,7 @@
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
 </head>
-<body class="page page-post path-inner">
+<body id="page-post" class="page page-post path-inner">
  <div class="ui inverted top sidebar vertical menu" style="">
     <a class="item" href="/">
       <i class="home icon"></i>

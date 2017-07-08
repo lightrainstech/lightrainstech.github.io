@@ -137,7 +137,7 @@
    </div>
    <div class="ui container">
       <header class="post-header">
- <h1 class="post-title">What is Bitcoin Segregated Witness aka segwit</h1>
+ <h1 class="post-title" id="title">What is Bitcoin Segregated Witness aka segwit</h1>
 </header>
 <div class="ui grid stackable">
  <div class="ui eleven wide column text page-text">
@@ -165,7 +165,8 @@
  </div>
 </div>
 <div class="ui hidden divider"></div>
-   <p>Segregated Witness is a solution for the Bitcoin Core. It is spearheaded by Pieter Wuille, Johnson Lau, and Eric Lombrozo <a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141</a>. The general idea of segwit is that the signatures in a transaction (aka witness data) are skipped when calculating the transaction id.</p>
+    <article>
+     <p>Segregated Witness is a solution for the Bitcoin Core. It is spearheaded by Pieter Wuille, Johnson Lau, and Eric Lombrozo <a href="https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki">BIP141</a>. The general idea of segwit is that the signatures in a transaction (aka witness data) are skipped when calculating the transaction id.</p>
 <p>Segregated Witness is basically an “add-on” that carries signatures and some additional data. Importantly, Segregated Witnesses are completely ignored by old nodes, but recognized by new nodes. Moreover, the data they carry is not hashed along with the other parts of a transaction into the transaction ID.</p>
 <h2 id="rationale">Rationale</h2>
 <p>The transaction size overhead is due to two factors:</p>
@@ -195,6 +196,7 @@
  </h2>
  <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="ui button big black obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
 </div>
+    </article>
    <div class="ui hidden divider"></div>
 <div class="ui tiny label endorsement">
   All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.

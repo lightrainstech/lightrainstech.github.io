@@ -20,6 +20,7 @@ body.page-spa {
 .masthead h2 {
   font-size: 1.7em;
   font-weight: normal;
+  color: #AAA;
 }
 .ui.vertical.stripe {
   padding: 8em 0em;
@@ -73,11 +74,18 @@ body.page-spa {
     font-size: 1.5em;
   }
 }
-.ui.inverted.segment {
-  background: #4effbb;
-  background: -webkit-repeating-linear-gradient(302.4deg, #4effbb, #284c89);
-  background: repeating-linear-gradient(302.4deg, #4effbb, #284c89);
+/*.ui.inverted.segment {
+  background: #5e5e5e;
+  background: -webkit-repeating-linear-gradient(302.4deg, #5e5e5e, #09111e);
+  background: repeating-linear-gradient(302.4deg, #5e5e5e, #09111e);
 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+.ui.inverted.segment {
+  background: url(/assets/img/crowdfunding.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -85,13 +93,6 @@ body.page-spa {
 }
 .ui.secondary.inverted.pointing.menu {
   border: 0;
-}
-.page-spa img.image {
-  -webkit-filter: grayscale(0) !important;
-  -moz-filter: grayscale(0) !important;
-  -ms-filter: grayscale(0) !important;
-  -o-filter: grayscale(0) !important;
-  filter: grayscale(0) !important;
 }
 .ui.segment.ctasegment {
   border-radius: 8px !important;

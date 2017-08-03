@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Difficulty Articles Tagged #Difficulty</title>
   <meta name="description" content="Difficulty all posts under tag difficulty">
-  <meta property="og:url" content="https://lightrains.com/tag/difficulty/atom.xml">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Categories and Tags">
-  <meta property="og:description" content="">
-  <meta property="og:site_name" content="Lightrains Technolabs">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@lightrainstech">
-  <meta name="twitter:url" content="https://lightrains.com/tag/difficulty/atom.xml">
-  <meta name="twitter:title" content="Categories and Tags">
-  <meta name="twitter:description" content="">
+<meta property="og:url" content="https://lightrains.com/tag/difficulty/atom.xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Categories and Tags">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Lightrains Technolabs">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@lightrainstech">
+<meta name="twitter:url" content="https://lightrains.com/tag/difficulty/atom.xml">
+<meta name="twitter:title" content="Categories and Tags">
+<meta name="twitter:description" content="">
   <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Merriweather+Sans:300,400,700,400italic:latin' ] }

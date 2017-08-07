@@ -5,10 +5,24 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Aug 2017 18:48:50 +0530</pubDate>
-    <lastBuildDate>Thu, 03 Aug 2017 18:48:50 +0530</lastBuildDate>
+    <pubDate>Mon, 07 Aug 2017 11:49:41 +0530</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2017 11:49:41 +0530</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
+    
+      <item>
+        <title>Service discovery tools for microservices.</title>
+        <description>Service discovery tools for microservices No application is an island. They constantly communicate with other applications (services) – or, more precisely, instances of applications. Microservice architectures amplify the volume and frequency of these communications. Service discovery is how applications and (micro)services locate each other on a network. Service discovery implementations include both: a central server (or servers) that maintain a global view of addresses and clients that connect to the central server to update and retrieve addresses. Service discovery tools The main objective of service discovery tools is to help services find and talk to one another. In order to perform their duty they need to know where each service is. The concept is not new and many tools existed long before Docker was born. However, containers brought the need for such tools to a completely new level. Why do we need a service discovery mechanism? Get and set dynamic configuration across a distributed system: This is perhaps the most pressing problem that we need to solve. An SCM tool like Puppet/Anisble are great for managing static configurations but they are too heavy for dynamic changes. Service registration: We need to be able to spin up a track and have...</description>
+        <pubDate>Mon, 07 Aug 2017 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/service-discovery-tools-microsrvice/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/service-discovery-tools-microsrvice</guid>
+        
+        <category>Microservices</category>
+        
+        <category>Service discovery</category>
+        
+        
+      </item>
     
       <item>
         <title>What is meant by forking in a Blockchain?</title>

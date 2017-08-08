@@ -85,7 +85,7 @@ body.page-spa {
   background-size: cover;
 }*/
 .ui.inverted.segment {
-  background: url(/assets/img/crowdfunding.jpg) no-repeat center center fixed; 
+  background: url(/assets/img/crowdfunding.jpg) no-repeat center center fixed #333333; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

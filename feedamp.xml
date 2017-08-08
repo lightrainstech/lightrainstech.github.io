@@ -5,10 +5,30 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 07 Aug 2017 11:49:41 +0530</pubDate>
-    <lastBuildDate>Mon, 07 Aug 2017 11:49:41 +0530</lastBuildDate>
+    <pubDate>Tue, 08 Aug 2017 14:00:49 +0530</pubDate>
+    <lastBuildDate>Tue, 08 Aug 2017 14:00:49 +0530</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
+    
+      <item>
+        <title>Solidity Smart contract Security best practices</title>
+        <description>Security of a smart contract is mush important than any other software or piece of code just because of the non-editable nature of it in general. Still, there are no widely adopted security standards or best practices for projects to follow. There are no tools for developers to easily create, test, verify and audit smart contracts, and do so collaboratively. Entire Ethereum community is grateful for researchers and developers of OpenZeppelin/zeppelin-solidity for the standard and well tested contract sources to relay on. External Calls Handling the funds Token standard Integer Division, Overflow and Underflow Fallback functions Race Conditions External Calls Calls to untrusted contracts can introduce several unexpected risks or errors. External calls may execute malicious code in that contract or any other contract that it depends upon. As such, every external call should be treated as a potential security risk, and removed if possible. Understand how send(), transfer(), and call.value()(). Using send() or transfer() will prevent reentrancy but it does so at the cost of being incompatible with any contract whose fallback function requires more than 2,300 gas. Handling the funds When developing a crowdsale smart contract, there are several options for handling the collection of funds. Take a...</description>
+        <pubDate>Mon, 07 Aug 2017 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/smart-contract-best-practices-solidity/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/smart-contract-best-practices-solidity</guid>
+        
+        <category>Smart Contract</category>
+        
+        <category>Solidity</category>
+        
+        <category>ICO</category>
+        
+        <category>Security</category>
+        
+        <category>Handbook</category>
+        
+        
+      </item>
     
       <item>
         <title>Service discovery tools for microservices.</title>

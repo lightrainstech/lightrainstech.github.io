@@ -173,7 +173,7 @@
 		<a href="/tag/Cryptocurrency/">Cryptocurrency <span class="badge">6</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Handbook/">Handbook <span class="badge">2</span></a>
+		<a href="/tag/Handbook/">Handbook <span class="badge">3</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">5</span></a>
@@ -194,7 +194,7 @@
 		<a href="/tag/Testnet/">Testnet <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Smart Contract/">Smart Contract <span class="badge">1</span></a>
+		<a href="/tag/Smart Contract/">Smart Contract <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/DAO/">DAO <span class="badge">1</span></a>
@@ -236,7 +236,7 @@
 		<a href="/tag/go-ethereum/">go-ethereum <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Solidity/">Solidity <span class="badge">1</span></a>
+		<a href="/tag/Solidity/">Solidity <span class="badge">2</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/EVM/">EVM <span class="badge">1</span></a>
@@ -352,6 +352,12 @@
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Service discovery/">Service discovery <span class="badge">1</span></a>
 		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ICO/">ICO <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Security/">Security <span class="badge">1</span></a>
+		</div>
 </div>
  </div>
 </article>
@@ -392,7 +398,7 @@
     "streetAddress": "G3B, Thejaswini, Technopark Campus"
   },
   "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
-  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/@lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
 }
 </script>
 <script src="/assets/js/bundle-front.min.js"></script>

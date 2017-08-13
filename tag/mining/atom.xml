@@ -29,7 +29,9 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })(); </script>
-  <link href="/assets/css/bundle-front.min.css" rel="stylesheet">
+  <link rel="preload" href="/assets/css/bundle-front.min.css" as="style">
+  <link rel="stylesheet" href="/assets/css/bundle-front.min.css">
+  <link href="/assets/js/bundle-front.min.js" rel="preload" as="script">
   <link rel="canonical" href="https://lightrains.com/tag/mining/atom.xml">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
   <link rel="amphtml" href="https://lightrains.com/amp">
@@ -116,10 +118,15 @@
    </div>
    <div class="right menu" id="menu">
      <div class="ui dropdown pointing item">
-        Company<i class="dropdown icon"></i>
+        About<i class="dropdown icon"></i>
        <div class="menu">
           <a class="item" title="About Lightrains Technolabs" href="/about/lightrains">About Us</a>
           <a class="item" title="Careers at Lightrains Technolabs" href="/about/careers">Careers</a>
+       </div>
+     </div>
+     <div class="ui dropdown pointing item">
+        Consulting<i class="dropdown icon"></i>
+       <div class="menu">
           <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain Consulting</a>
           <a class="item" title="Smart Contract Development" href="/consulting/smart-contract-solidity">Smart Contract Development</a>
           <a class="item" title="Initial Coin Offering Consulting" href="/consulting/ico-consulting-services">ICO Consulting</a>

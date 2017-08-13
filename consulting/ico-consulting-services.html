@@ -29,7 +29,9 @@
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })(); </script>
-  <link href="/assets/css/bundle-spa.min.css" rel="stylesheet">
+  <link rel="preload" href="/assets/css/bundle-spa.min.css" as="style">
+  <link rel="stylesheet" href="/assets/css/bundle-spa.min.css">
+  <link href="/assets/js/bundle-front.min.js" rel="preload" as="script">
   <link rel="canonical" href="https://lightrains.com/consulting/ico-consulting-services">
   <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
   <link rel="amphtml" href="https://lightrains.com/amp/consulting/ico-consulting-services">
@@ -72,7 +74,8 @@
    <div class="ui inverted vertical masthead center aligned segment">
    <div class="ui container">
      <div class="ui large secondary inverted pointing menu">
-        <a class="active item" href="/" title="ICO Consulting">ICO Consulting</a>
+        <a class="item" href="/" title="Home">Home</a>
+        <a class="active item" href="/consulting/ico-consulting-services" title="ICO Consulting">ICO Consulting</a>
         <a class="item" href="/consulting/blockchain-consulting" title="Blockchain Consulting">Blockchain Consulting</a>
         <a class="item" href="/consulting/smart-contract-solidity" title="Solidity Smart Contract Development">Smart Contracts</a>
         <a class="item" href="/about/contact">Contact Us</a>
@@ -111,6 +114,13 @@
  <div class="ui text container">
         <a class="ui header" href="/blogs/smart-contract-best-practices-solidity" title="Solidity Smart contract Security best practices"><h3>Solidity Smart contract Security best practices</h3></a>
        <p>Security of a smart contract is more important than any other software or piece of code just because of the non-editable nature of it in general.Still, there ar</p>
+       <div class="ui black labels">
+            <a href="/tag/handbook/" class="ui label" title="Blogs Tagged Handbook">Handbook</a>
+            <a href="/tag/ico/" class="ui label" title="Blogs Tagged ICO">ICO</a>
+            <a href="/tag/security/" class="ui label" title="Blogs Tagged Security">Security</a>
+            <a href="/tag/smart-contract/" class="ui label" title="Blogs Tagged Smart Contract">Smart Contract</a>
+            <a href="/tag/solidity/" class="ui label" title="Blogs Tagged Solidity">Solidity</a>
+       </div>
        <div class="ui hidden divider"></div>
  </div>
 </div>

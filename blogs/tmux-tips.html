@@ -211,8 +211,76 @@ You can start a tmux session by <code class="highlighter-rouge">tmux attach</cod
 <p>Tmux is great, except when you have to restart the computer. You lose all the running programs, working directories, pane layouts etc. There are helpful management tools out there, but they require initial configuration and continuous updates as your workflow evolves or you start new projects.</p>
 <h3 id="3-tmux-sensible">3. <a href="https://github.com/tmux-plugins/tmux-sensible">tmux-sensible</a></h3>
 <p>A set of tmux options that should be acceptable to everyone.</p>
-<p>This is how my own <code class="highlighter-rouge">.tmux.conf</code> file looks like, i shall explain what all are there.
-true<script src="https://gist.github.com/niksmac/76c1381482938d23e8ea2c39f4ef0511.js"> </script></p>
+<p>This is how my own <code class="highlighter-rouge">.tmux.conf</code> file looks like, i shall explain what all are there.</p>
+<noscript><pre>#!/usr/bin/zsh
+
+# Create session if none exists
+new-session -n $HOST
+
+# improve colors
+set -g default-terminal &quot;screen-256color&quot;
+# set -g default-terminal &quot;xterm&quot;
+
+# Change prefix key to backtick and still type backticks
+unbind C-b
+set-option -g prefix `
+bind ` send-prefix
+
+set-window-option -g pane-base-index 1
+set -g base-index 1
+
+set -s escape-time 0
+
+# reset clock
+set -g status-right &#39;%a %d %b | %I:%M %p &#39;
+setw -g clock-mode-style 12
+
+# Statusbar update frequency
+set -g status-interval 1
+
+# set pane colors - highlight the active pane
+set-option -g pane-border-fg colour235 #base02
+set-option -g pane-active-border-fg colour240 #base01
+
+# set color for status bar
+set-option -g renumber-windows on
+
+# intutive pane splitting
+unbind %
+bind | split-window -h -c &quot;#{pane_current_path}&quot;
+bind \ split-window -h -c &quot;#{pane_current_path}&quot;
+bind - split-window -v -c &quot;#{pane_current_path}&quot;
+bind c new-window -c &quot;#{pane_current_path}&quot;
+
+bind-key w run &quot;tmux split-window -l 12 &#39;zsh -ci fzf_windows&#39;&quot;
+
+# pane resizing
+bind k resize -U 5
+bind j resize -D 5
+bind h resize -L 5
+bind l resize -R 5
+
+# pane helpers
+bind Space last-pane
+bind = select-layout even-horizontal
+
+# reload config
+bind r source-file ~/.tmux.conf \; display &quot;Reloaded .tmux.conf&quot;
+
+# send prefix to inner tmux
+bind-key a send-prefix
+
+
+# List of plugins
+set -g @plugin &#39;tmux-plugins/tpm&#39;
+set -g @plugin &#39;tmux-plugins/tmux-resurrect&#39;
+set -g @plugin &#39;tmux-plugins/tmux-sidebar&#39;
+set -g @resurrect-processes &#39;:all:&#39;
+
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run &#39;~/.tmux/plugins/tpm/tpm&#39;</pre></noscript>
+<script src="https://gist.github.com/niksmac/76c1381482938d23e8ea2c39f4ef0511.js"> </script>
 <h4 id="some-good-reads">Some good reads</h4>
 <ol>
   <li><a href="https://robots.thoughtbot.com/a-tmux-crash-course">thoughtbot.com</a></li>

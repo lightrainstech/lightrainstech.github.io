@@ -1,0 +1,221 @@
+body.page-spa {
+  padding: 0;
+}
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em;
+}
+.masthead {
+  .logo.item img {
+    margin-right: 1em;
+  }
+  .ui.menu .ui.button {
+    margin-left: 0.5em;
+  }
+  h1.ui.header {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    font-size: 4em;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+    color: #AAA;
+  }
+
+}
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe h3 {
+  font-size: 2em;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33em;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em;
+}
+
+.quote.stripe.segment {
+  padding: 0em;
+
+  .grid .column {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+}
+
+.footer.segment {
+  padding: 5em 0em;
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+  .masthead.segment {
+    min-height: 350px;
+  }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+}
+.ui.inverted.segment {
+  background: url(/assets/img/crowdfunding.jpg) no-repeat center center fixed #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.ui.secondary.inverted.pointing.menu {
+  border: 0;
+}
+.ui.segment.ctasegment {
+  border-radius: 8px !important;
+  border: 0 none;
+  margin: 30px 0;
+  box-shadow: 0 2px 44px 0 rgba(12, 65, 84, 0.4) !important;
+}
+.ui.pcard {
+  padding: 20px 0 10px 0;
+  background: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 8px 15px 0 rgba(5, 57, 106, .06);
+
+  &:hover {
+    background: #e2faff;
+    transform: scale(1.05);
+    transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+  }
+
+  span {
+    clear: both;
+    display: block;
+  }
+}
+
+// Team page
+
+$prefix: at;
+$totalColumns: 6;
+
+// Custom Prefix
+.#{$prefix} {
+
+  &-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #FFF;
+    border: 1px solid #E2E9ED;
+
+    @for $i from 1 through $totalColumns {
+      &[data-column="#{$i}"] {
+        .#{$prefix}-column {
+          width: percentage(1 / $i);
+          max-width: percentage(1 / $i);
+          min-width: percentage(1 / $i);
+          flex-basis: percentage(1 / $i);
+        }
+      }
+    }
+  }
+
+  &-column {
+    z-index: 0;
+    position: relative;
+    background: #FFF;
+    box-shadow: 0 0 0 1px #E2E9ED;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    &:hover {
+      z-index: 1;
+      box-shadow: 0 8px 50px rgba(#000, 0.2);
+      transform: scale(1.05);
+      transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+    }
+
+    @media (max-width: 800px) {
+      width: 50% !important;
+      max-width: 50% !important;
+      min-width: 50% !important;
+      flex-basis: 50% !important;
+    }
+
+    @media (max-width: 600px) {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 100% !important;
+      flex-basis: 100% !important;
+    }
+  }
+
+  &-user {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    text-align: center;
+
+    &__avatar {
+      width: 98px;
+      height: 98px;
+      border-radius: 100%;
+      margin: 0 auto 20px;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &__name {
+      color: #313435;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.625rem;
+    }
+
+    &__title {
+      color: #6F808A;
+      font-size: 0.875rem;
+      line-height: 2.375rem;
+    }
+    &__description {
+      color: #6F808A;
+      font-size: 0.875rem;
+      line-height: 2.375rem;
+      width: 80%;
+    }
+  }
+}

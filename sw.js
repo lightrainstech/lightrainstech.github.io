@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/guide-launching-successful-ico");
+
   urlsToCache.push("/blogs/smart-contract-best-practices-solidity");
 
   urlsToCache.push("/blogs/service-discovery-tools-microsrvice");
@@ -1111,6 +1113,30 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/security/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/ico-guidelines/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/ico-guidelines/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/initial-coin-offering/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/initial-coin-offering/");
   
 
 

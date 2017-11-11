@@ -5,10 +5,28 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Oct 2017 08:43:31 +0530</pubDate>
-    <lastBuildDate>Sun, 08 Oct 2017 08:43:31 +0530</lastBuildDate>
+    <pubDate>Sat, 11 Nov 2017 23:12:01 +0530</pubDate>
+    <lastBuildDate>Sat, 11 Nov 2017 23:12:01 +0530</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
+    
+      <item>
+        <title>Guide to launching a successful ICO</title>
+        <description>First things first, make sure your customers are going to benefit from your tokens means what is the ROI for investors. If you can convince your potential investors for these questions, consider yourselves half done. What is the purpose of the token in the project? Can it operate without the Token? Is there a proper way to bring the value to the token as well as into the chain where you are running the project and the ICO? You may want to refer to How to determine if you’ve found a real blockchain use case Setting up the Goals Raising money is the actual goal of any ICO right? You will have to have clear understanding on the following aspects of the project How much money do you want to raise and why? How are you going to use the funds? Key points to consider when youre planning an ICO Whitepaper MVP on github Bounty (Terms &amp;amp; Conditions) Project roadmap Setting up a solid team Technical structure of the ICO Legal structure Whitepaper Anything and everything you’re putting on your whitepaper is going to come back to you as money (well, $ETH). Start writing the whitepaper from your knowledge and...</description>
+        <pubDate>Sat, 11 Nov 2017 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/guide-launching-successful-ico/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/guide-launching-successful-ico</guid>
+        
+        <category>ICO</category>
+        
+        <category>ICO Guidelines</category>
+        
+        <category>Handbook</category>
+        
+        <category>Initial Coin Offering</category>
+        
+        
+      </item>
     
       <item>
         <title>Solidity Smart contract Security best practices</title>

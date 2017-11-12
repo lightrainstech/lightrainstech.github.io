@@ -243,7 +243,7 @@
 		<a href="/tag/go-ethereum/">go-ethereum <span class="badge">1</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Solidity/">Solidity <span class="badge">2</span></a>
+		<a href="/tag/Solidity/">Solidity <span class="badge">3</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/EVM/">EVM <span class="badge">1</span></a>
@@ -370,6 +370,15 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Initial Coin Offering/">Initial Coin Offering <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Mineable Token/">Mineable Token <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ERC20/">ERC20 <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/ERC20 tokens/">ERC20 tokens <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

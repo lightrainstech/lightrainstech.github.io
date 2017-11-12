@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/how-to-create-mineable-erc20-tokens");
+
   urlsToCache.push("/blogs/guide-launching-successful-ico");
 
   urlsToCache.push("/blogs/smart-contract-best-practices-solidity");
@@ -1137,6 +1139,42 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/initial-coin-offering/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/mineable-token/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/mineable-token/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/erc20/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/erc20/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/erc20-tokens/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/erc20-tokens/");
   
 
 

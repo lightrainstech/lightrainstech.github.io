@@ -5,10 +5,28 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Nov 2017 23:20:19 +0530</pubDate>
-    <lastBuildDate>Sat, 11 Nov 2017 23:20:19 +0530</lastBuildDate>
+    <pubDate>Sun, 12 Nov 2017 09:51:29 +0530</pubDate>
+    <lastBuildDate>Sun, 12 Nov 2017 09:51:29 +0530</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
+    
+      <item>
+        <title>How to create mineable ERC20 tokens on Ethereum Solidity</title>
+        <description>What is a mineable token? Mining if the process of creating new tokens(achieving consensus on some data), similar to minting in fiat currency, however unlike fiat here in cryptocurrency we have mathematically provable methods. Some major consensus algorithms are and not limited to, Proof of Work Proof of Stake Proof of Authority Proof of Activity PBFT Difference between mineable and minted tokens Mineable tokens are tokens which can be created or minted based some activity. This so called activity can be anything, i.e, It can be as crazy as taking a picture of your cat and add it to the transaction data, depending upon the insanity level of the token programmer/team. Mintable tokens are also a way of creating tokens where you dont have to wait for some activity, you as the contract creator can create a token whenever you want. Most common approaches There are 2 major approaches when we do a mineable token 1. Block Rewards There are some ways to tie your coin supply to a mathematical formula. One of the simplest ways would be to make it a “merged mining” with ether, meaning that anyone who finds a block on ethereum would also get a reward...</description>
+        <pubDate>Sun, 12 Nov 2017 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/how-to-create-mineable-erc20-tokens/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens</guid>
+        
+        <category>Mineable Token</category>
+        
+        <category>Solidity</category>
+        
+        <category>ERC20</category>
+        
+        <category>ERC20 tokens</category>
+        
+        
+      </item>
     
       <item>
         <title>Guide to launching a successful ICO</title>

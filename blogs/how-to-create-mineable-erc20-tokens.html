@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to create mineable ERC20 tokens on Ethereum Solidity #MineableToken</title>
+  <meta name="description" content="What is a mineable token mining if the process of creating new tokens achieving consensus on some data similar to minting in fiat currency however unlike fiat h">
+<meta property="og:url" content="https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to create mineable ERC20 tokens on Ethereum Solidity">
+<meta property="og:image" content="https://lightrains.com/assets/img/blog/minable-erc20-tokens.png">
+<meta name="twitter:image" content="https://lightrains.com/assets/img/blog/minable-erc20-tokens.png">
+<meta property="og:description" content="What is a mineable token?Mining if the process of creating new tokens(achieving consensus on some data), similar to minting in fiat currency, however unlike fia">
+<meta property="og:site_name" content="Lightrains Technolabs">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Nikhil Mohan, ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@lightrainstech">
+<meta name="twitter:creator" content="@niksmac_">
+<meta name="twitter:url" content="https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens">
+<meta name="twitter:title" content="How to create mineable ERC20 tokens on Ethereum Solidity">
+<meta name="twitter:description" content="What is a mineable token?Mining if the process of creating new tokens(achieving consensus on some data), similar to minting in fiat currency, however unlike fia">
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Merriweather+Sans:300,400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  <link rel="preload" href="/assets/css/bundle-front.min.css" as="style">
+  <link rel="stylesheet" href="/assets/css/bundle-front.min.css">
+  <link href="/assets/js/bundle-front.min.js" rel="preload" as="script">
+  <link rel="canonical" href="https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens">
+  <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
+  <link rel="amphtml" href="https://lightrains.com/amp/blogs/how-to-create-mineable-erc20-tokens">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="application-name" content="Lightrains Tech">
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lightrains Tech">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/assets/favicons/favicon-230x230.png">
+<link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+<meta property="twitter:image" content="https://lightrains.com/assets/favicons/twitter.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-320x460.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-640x920.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-640x1096.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-750x1294.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/assets/favicons/apple-touch-startup-image-1182x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/assets/favicons/apple-touch-startup-image-1242x2148.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-748x1024.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-768x1004.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
+</head>
+<body id="page-blog" class="page page-blog path-inner">
+ <div class="ui inverted top sidebar vertical menu" style="">
+    <a class="item" href="/">
+      <i class="home icon"></i>
+      Home
+    </a>
+    <a class="item" href="/about/lightrains">
+      <i class="smile icon"></i>
+      About
+    </a>
+    <a class="item" href="/about/portfolio">
+      <i class="shipping icon"></i>
+      Work
+    </a>
+    <a class="item" href="/consulting">
+      <i class="spy icon"></i>
+      Expert
+    </a>
+    <a class="item" href="/blogs">
+      <i class="block layout icon"></i>
+      Blog
+    </a>
+    <a class="item" href="/about/contact">
+      <i class="send icon"></i>
+      Contact
+    </a>
+ </div>
+ <div class="pusher">
+   <div class="ui container">
+      <header class="site-header">
+ <div class="widescreen computer mobile only">
+   <div class="ui secondary menu">
+      <a href="/" class="item left" title="Home of Lightrains Technolabs"><svg width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="background:#292724">
+       <path fill="#FFFFFF" fill-rule="evenodd" d="M129.208 137.544l2.8 5.676-.1 21.412c0 11.75-.4 45.114-.7 74.193l-.7 52.782 12.702-13.046c10.902-11.05 22.003-22.5 63.81-65.62 3.3-3.38 16.202-16.73 28.604-29.48 12.5-12.84 25.703-26.49 29.304-30.27 21.102-21.81 24.202-24.8 29.604-27.19 11.602-5.38 25.104-2.49 33.705 7.17 6.6 7.47 7.2 10.96 7.9 44.92.3 16.43.7 29.98.902 30.18.2.2 6.3-3.784 13.7-8.962 7.3-5.08 15.8-10.956 18.8-12.95 3-2.09 8.4-5.774 12-8.363 3.6-2.49 13.5-9.163 22-14.84 21.3-14.04 31.5-19.02 33.8-16.133 3 3.68-4.1 15.733-28.41 47.9-11.905 15.83-22.106 29.28-22.606 29.874-.5.6-3.3 4.184-6.1 8.068-34.707 46.41-51.41 67.72-54.91 70.31-17.703 12.65-43.107 1.1-45.307-20.61-.3-2.69-.7-16.93-1-31.67-.2-14.74-.6-26.99-.8-27.087-.2-.2-9.8 9.26-21.303 21.21-11.5 11.85-23.6 24.3-26.9 27.686-3.3 3.385-15.7 16.13-27.505 28.38-11.8 12.15-26.003 26.79-31.504 32.467-5.5 5.677-19.2 19.72-30.5 31.37-23.4 24.096-26.4 26.19-38.004 26.09-11.1 0-20.605-5.775-25.806-15.635l-2.7-5.08.1-112.533c0-127.87-.6-118.81 8.3-127.87 8.5-8.663 22.806-11.45 32.807-6.273 6.6 3.387 11.004 7.77 14.004 13.944z"/>
+      </svg>
+   </a>
+      <a href="/" class="item right" id="mobmenu"><i class="content right big icon" ></i></a>
+   </div>
+ </div>
+ <div class="ui secondary pointing menu large screen only">
+   <div class="left menu">
+      <a href="/" title="Home of Lightrains Technolabs">
+        <svg  width="64px" height="64px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="background:#292724">
+         <path fill="#FFFFFF" fill-rule="evenodd" d="M129.208 137.544l2.8 5.676-.1 21.412c0 11.75-.4 45.114-.7 74.193l-.7 52.782 12.702-13.046c10.902-11.05 22.003-22.5 63.81-65.62 3.3-3.38 16.202-16.73 28.604-29.48 12.5-12.84 25.703-26.49 29.304-30.27 21.102-21.81 24.202-24.8 29.604-27.19 11.602-5.38 25.104-2.49 33.705 7.17 6.6 7.47 7.2 10.96 7.9 44.92.3 16.43.7 29.98.902 30.18.2.2 6.3-3.784 13.7-8.962 7.3-5.08 15.8-10.956 18.8-12.95 3-2.09 8.4-5.774 12-8.363 3.6-2.49 13.5-9.163 22-14.84 21.3-14.04 31.5-19.02 33.8-16.133 3 3.68-4.1 15.733-28.41 47.9-11.905 15.83-22.106 29.28-22.606 29.874-.5.6-3.3 4.184-6.1 8.068-34.707 46.41-51.41 67.72-54.91 70.31-17.703 12.65-43.107 1.1-45.307-20.61-.3-2.69-.7-16.93-1-31.67-.2-14.74-.6-26.99-.8-27.087-.2-.2-9.8 9.26-21.303 21.21-11.5 11.85-23.6 24.3-26.9 27.686-3.3 3.385-15.7 16.13-27.505 28.38-11.8 12.15-26.003 26.79-31.504 32.467-5.5 5.677-19.2 19.72-30.5 31.37-23.4 24.096-26.4 26.19-38.004 26.09-11.1 0-20.605-5.775-25.806-15.635l-2.7-5.08.1-112.533c0-127.87-.6-118.81 8.3-127.87 8.5-8.663 22.806-11.45 32.807-6.273 6.6 3.387 11.004 7.77 14.004 13.944z"/>
+        </svg>
+      </a>
+   </div>
+   <div class="right menu" id="menu">
+     <div class="ui dropdown pointing item">
+        About<i class="dropdown icon"></i>
+       <div class="menu">
+          <a class="item" title="About Lightrains Technolabs" href="/about/lightrains">About Us</a>
+          <a class="item" title="Careers at Lightrains Technolabs" href="/about/careers">Careers</a>
+       </div>
+     </div>
+     <div class="ui dropdown pointing item">
+        Consulting<i class="dropdown icon"></i>
+       <div class="menu">
+          <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain Consulting</a>
+          <a class="item" title="Smart Contract Development" href="/consulting/smart-contract-solidity">Smart Contract Development</a>
+          <a class="item" title="Initial Coin Offering Consulting" href="/consulting/ico-consulting-services">ICO Consulting</a>
+       </div>
+     </div>
+      <a class="item" href="/about/portfolio">Work</a>
+      <a class="item" title="Blog" href="/blogs">Blog</a>
+      <a class="item" title="Contact Lightrains Technolabs" href="/about/contact">Contact</a>
+   </div>
+ </div>
+</header>
+   </div>
+   <div class="ui container">
+      <header class="post-header">
+ <h1 class="post-title" id="title">How to create mineable ERC20 tokens on Ethereum Solidity</h1>
+</header>
+<div class="ui grid stackable">
+ <div class="ui eleven wide column text page-text">
+     <h2 class="post-subtitle" itemprop="name headline">The concept of mineable token is entirely different from mintable tokens.</h2>
+      <img class="ui fluid image" id="tgiv_cover" src="/assets/img/blog/minable-erc20-tokens.png" alt="How to create mineable ERC20 tokens on Ethereum Solidity">
+     <div class="ui hidden divider"></div>
+<div class="author">
+  by <a href="http://nikhilmohan.in" id="tgiv_author" target="_blank">Nikhil Mohan</a> posted on <span>Sun, Nov 12, 2017</span> in <a href="/tag/mineable-token">Mineable Token</a> 
+ <div class="ui pointing dropdown icon circular button right floated">
+    <i class="share alternate icon"></i>
+<div class="ui menu">
+  <a href="https://facebook.com/sharer.php?u=https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens" target="_blank" class="item">
+    <i class="facebook icon"></i> Facebook
+  </a>
+  <a href="https://plus.google.com/share?url=https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens" target="_blank" class="item">
+    <i class="google icon"></i> Google
+  </a>
+  <a href="https://linkedin.com/shareArticle?mini=true&amp;url=https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens" target="_blank" class="item">
+    <i class="linkedin icon"></i> Linkedin
+  </a>
+  <a href="https://twitter.com/share?url=https://lightrains.com/blogs/how-to-create-mineable-erc20-tokens&amp;text=How+to+create+mineable+ERC20+tokens+on+Ethereum+Solidity" class="item" target="_blank">
+    <i class="twitter icon"></i> Twitter
+  </a>
+</div>
+ </div>
+</div>
+<div class="ui hidden divider"></div>
+    <article>
+     <p><strong>What is a mineable token?</strong>
+Mining if the process of creating new tokens(achieving consensus on some data), similar to minting in fiat currency, however unlike fiat here in cryptocurrency we have mathematically provable methods.</p>
+<p>Some major consensus algorithms are and not limited to,</p>
+<ol>
+  <li><a href="https://en.wikipedia.org/wiki/Proof-of-work_system">Proof of Work</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Proof-of-stake">Proof of Stake</a></li>
+  <li><a href="https://github.com/paritytech/parity/wiki/Proof-of-Authority-Chains">Proof of Authority</a></li>
+  <li><a href="https://bitcoin.stackexchange.com/questions/4737/what-is-the-key-difference-between-the-proof-of-activity-proposal-and-proof-of-s">Proof of Activity</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance">PBFT</a></li>
+</ol>
+<h2 id="difference-between-mineable-and-minted-tokens">Difference between mineable and minted tokens</h2>
+<p><strong>Mineable</strong> tokens are tokens which can be created or minted based some activity. This so called activity can be anything, i.e, It can be as crazy as taking a picture of your cat and add it to the transaction data, depending upon the insanity level of the token programmer/team.
+<strong>Mintable</strong> tokens are also a way of creating tokens where you dont have to wait for some activity, you as the contract creator can create a token whenever you want.</p>
+<h2 id="most-common-approaches">Most common approaches</h2>
+<p>There are 2 major approaches when we do a mineable token</p>
+<h3 id="1-block-rewards">1. Block Rewards</h3>
+<p>There are some ways to tie your coin supply to a mathematical formula. One of the simplest ways would be to make it a “merged mining” with ether, meaning that anyone who finds a block on ethereum would also get a reward from your coin, given that anyone calls the reward function on that block. You can do it using the special keyword <code class="highlighter-rouge">coinbase</code> that refers to the miner who finds the block.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>function issueBlockReward() {
+    balanceOf[block.coinbase] += 5;
+}
+</code></pre>
+</div>
+<h3 id="2-proof-of-work-pow">2. Proof of Work (PoW)</h3>
+<p>It’s also possible to add a mathematical formula, so that anyone who can do math can win a reward. On this next example you have to calculate the cubic root of the current challenge gets a point and the right to set the next challenge:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>uint currentChallenge = 1; // Can you figure out the cubic root of this number?
+
+function rewardMathGeniuses(uint answerToCurrentReward, uint nextChallenge) {
+    require(answerToCurrentReward**3 == currentChallenge); // If answer is wrong do not continue
+    balanceOf[msg.sender] += 1; // Reward the player
+    currentChallenge = nextChallenge; // Set the next challenge
+}
+
+</code></pre>
+</div>
+<p>While calculating cubic roots can be hard for someone to do on their heads, they are very easy with a calculator, so this game could be easily broken by a computer. Also since the last winner can choose the next challenge, they could pick something they know and therefore would not be a very fair game to other players. There are tasks that are easy for humans but hard for computers but they are usually very hard to code in simple scripts like these. Instead a fairer system should be one that is very hard for a computer to do, but isn’t very hard for a computer to verify. A great candidate would be to create a hash challenge where the challenger has to generate hashes from multiple numbers until they find one that is lower than a given difficulty.</p>
+<p>But if you like Hashing as a form of random issuance of coins, you can still create your own ethereum based currency that has a proof of work issuance:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>bytes32 public currentChallenge; // The coin starts with a challenge
+uint public timeOfLastProof; // Variable to keep track of when rewards were given
+uint public difficulty = 10**32; // Difficulty starts reasonably low
+
+function proofOfWork(uint nonce){
+    bytes8 n = bytes8(sha3(nonce, currentChallenge)); // Generate a random hash based on input
+    require(n &gt;= bytes8(difficulty)); // Check if it's under the difficulty
+
+    uint timeSinceLastProof = (now - timeOfLastProof); // Calculate time since last reward was given
+    require(timeSinceLastProof &gt;=  5 seconds); // Rewards cannot be given too quickly
+    balanceOf[msg.sender] += timeSinceLastProof / 60 seconds;  // The reward to the winner grows by the minute
+
+    difficulty = difficulty * 10 minutes / timeSinceLastProof + 1;  // Adjusts the difficulty
+
+    timeOfLastProof = now; // Reset the counter
+    currentChallenge = sha3(nonce, currentChallenge, block.blockhash(block.number - 1));  // Save a hash that will be used as the next proof
+}
+</code></pre>
+</div>
+<p>This process of trying to find the number that will give you a reward is what is called mining: if difficulty rises it can be very hard to find a lucky number, but it will always be easy to verify that you found one.</p>
+<p><strong>Further reading</strong></p>
+<ol>
+  <li><a href="http://chimera.labs.oreilly.com/books/1234000001802/ch08.html">Mining and Consensus</a></li>
+  <li><a href="https://ethereum.org/token#proof-of-work">Create your own Cryptocurrency</a></li>
+</ol>
+<div class="cta-blog">
+ <h2 class="ui center aligned icon white header">
+    <i class="spy icon"></i>
+    Talk to one of our  <a href="/consulting/blockchain-consulting">blockchain consultant</a>.
+ </h2>
+ <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="ui button big black obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+</div>
+    </article>
+   <div class="ui hidden divider"></div>
+<div class="ui tiny label endorsement">
+  All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
+</div>
+<h4 class="ui horizontal divider header">Write a comment on How to create mineable ERC20 tokens on Ethereum Solidity</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+(function() {
+var d = document, s = d.createElement('script');
+s.src = '//lightrainstechnolabs.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+ </div>
+ <div class="ui five wide column">
+   <div class="ui hidden divider"></div>
+    <h3>Posted In</h3>
+<div class="ui black labels">
+  <a href="/tag/erc20/" class="ui label" title="Blogs Tagged ERC20" >ERC20</a>
+  <a href="/tag/erc20-tokens/" class="ui label" title="Blogs Tagged ERC20 tokens" >ERC20 tokens</a>
+  <a href="/tag/mineable-token/" class="ui label" title="Blogs Tagged Mineable Token" >Mineable Token</a>
+  <a href="/tag/solidity/" class="ui label" title="Blogs Tagged Solidity" >Solidity</a>
+</div>
+    <h3>Recent Posts</h3>
+<ul>
+  <li >
+    <a class="header" href="/blogs/how-to-create-mineable-erc20-tokens" title="How to create mineable ERC20 tokens on Ethereum Solidity">How to create mineable ERC20 tokens on Ethereum Solidity</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/guide-launching-successful-ico" title="Guide to launching a successful ICO">Guide to launching a successful ICO</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/smart-contract-best-practices-solidity" title="Solidity Smart contract Security best practices">Solidity Smart contract Security best practices</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/service-discovery-tools-microsrvice" title="Service discovery tools for microservices.">Service discovery tools for microservices.</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/state-management-react-with-redux" title="State management in React with Redux">State management in React with Redux</a>
+  </li>
+</ul>
+<div class="ui items author white">
+ <div class="item">
+   <div class="content">
+      <a class="header" href="http://nikhilmohan.in" rel="author">Nikhil Mohan</a>
+     <div class="description">
+        Ξntrepreneur, Ethereum Blockchain enthusiast, co-founder of @lightrainstech.
+     </div>
+     <div class="social">
+        <a href="https://in.linkedin.com/in/niksmac"><i class="linkedin bordered icon"></i></a>
+        <a href="http://github.com/niksmac"><i class="github bordered icon"></i></a>
+        <a href="https://twitter.com/niksmac_"><i class="twitter bordered icon"></i></a>
+        <a href="http://nikhilmohan.in"><i class="browser bordered icon"></i></a>
+     </div>
+   </div>
+ </div>
+</div>
+ </div>
+</div>
+   </div>
+   <div class="fullw">
+     <div class="ui container footer">
+ <div class="ui container">
+   <div class="ui section divider"></div>
+   <div class="footers">
+  +91 471 4000056 <i class="ellipsis vertical icon"></i> 
+ <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All rights reserved
+ <p class="slogan">Blockchain Consulting. Technology Supercharged</p>
+</div>
+ </div>
+     </div>
+   </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-9728278-16', 'lightrains.com');
+  ga('send', 'pageview');
+</script>
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+<script src="/assets/js/bundle-front.min.js"></script>
+</div>
+</body>
+
+<script>if ("serviceWorker" in navigator) {navigator.serviceWorker.register("/sw.js").then(function(registration) {console.log("ServiceWorker registration successful with scope: ",    registration.scope);}).catch(function(err) {console.log("ServiceWorker registration failed: ", err);});}</script>

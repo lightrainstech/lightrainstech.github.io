@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/work/ico-fundraiser-dashboard");
+
   urlsToCache.push("/blogs/how-to-create-mineable-erc20-tokens");
 
   urlsToCache.push("/blogs/guide-launching-successful-ico");

@@ -5,9 +5,47 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Nov 2017 10:06:30 +0530</pubDate>
-    <lastBuildDate>Sun, 12 Nov 2017 10:06:30 +0530</lastBuildDate>
+    <pubDate>Thu, 16 Nov 2017 22:03:51 +0530</pubDate>
+    <lastBuildDate>Thu, 16 Nov 2017 22:03:51 +0530</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>ICO fundraiser platform</title>
+        <description>We engineered this easy to use dashboard to let you publicly sell your tokens in a safe and easy way, assisting both in the pre-sale and sale phases.
+
+Highlights
+
+  Allow anyone in the world to participate. Leverage blockchain technology for a frictionless, global sale.
+  Designed and built with the highest security standards used in OpenZeppelin.
+  Seamlessly accept ETH, BTC or other major blockchain assets, sent from any type of wallet.
+
+
+Features
+
+  KYC registration (Optional)
+  Wallet Creation (Optional)
+  Accepts ETH, BTC or other major blockchain assets
+  Detailed Analytics
+  Multilingual Support
+  Pre-sale options
+  Private investment Management
+  ERC20 standard tokens (Exchange compatible)
+
+
+ico@lxightxraxins.com
+</description>
+        <pubDate>Thu, 16 Nov 2017 01:01:01 +0530</pubDate>
+        <link>https://lightrains.com/work/ico-fundraiser-dashboard</link>
+        <guid isPermaLink="true">https://lightrains.com/work/ico-fundraiser-dashboard</guid>
+        
+        
+        <category>Blockchain</category>
+        
+        <category>Ethereum</category>
+        
+        <category>Smart Contract</category>
+        
+      </item>
     
       <item>
         <title>How to create mineable ERC20 tokens on Ethereum Solidity</title>

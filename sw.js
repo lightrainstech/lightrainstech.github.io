@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/engineering-ico-fundraiser-platform");
+
   urlsToCache.push("/work/ico-fundraiser-dashboard");
 
   urlsToCache.push("/blogs/how-to-create-mineable-erc20-tokens");
@@ -1177,6 +1179,30 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/erc20-tokens/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/fundraiser-platform/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/fundraiser-platform/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/ico-platform/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/ico-platform/");
   
 
 

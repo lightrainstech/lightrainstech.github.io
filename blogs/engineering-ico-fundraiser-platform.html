@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engineering ICO fundraiser platform #FundraiserPlatform</title>
+  <meta name="description" content="We engineered this easy to use investor dashboard to let you publicly sell your tokens in a safe and easy way assisting both in the pre sale and sale phases">
+<meta property="og:url" content="https://lightrains.com/blogs/engineering-ico-fundraiser-platform">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Engineering ICO fundraiser platform">
+<meta property="og:image" content="https://lightrains.com/assets/img/blog/engineering-ico-fundraiser-platform.png">
+<meta name="twitter:image" content="https://lightrains.com/assets/img/blog/engineering-ico-fundraiser-platform.png">
+<meta property="og:description" content="We engineered this easy to use investor dashboard to let you publicly sell your tokens in a safe and easy way, assisting both in the pre-sale and sale phases.">
+<meta property="og:site_name" content="Lightrains Technolabs">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Nikhil Mohan, ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@lightrainstech">
+<meta name="twitter:creator" content="@niksmac_">
+<meta name="twitter:url" content="https://lightrains.com/blogs/engineering-ico-fundraiser-platform">
+<meta name="twitter:title" content="Engineering ICO fundraiser platform">
+<meta name="twitter:description" content="We engineered this easy to use investor dashboard to let you publicly sell your tokens in a safe and easy way, assisting both in the pre-sale and sale phases.">
+  <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Merriweather+Sans:300,400,700,400italic:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  <link rel="preload" href="/assets/css/bundle-front.min.css" as="style">
+  <link rel="stylesheet" href="/assets/css/bundle-front.min.css">
+  <link href="/assets/js/bundle-front.min.js" rel="preload" as="script">
+  <link rel="canonical" href="https://lightrains.com/blogs/engineering-ico-fundraiser-platform">
+  <link rel="alternate" type="application/rss+xml" title="Lightrains Technolabs" href="https://lightrains.com/feed.xml">
+  <link rel="amphtml" href="https://lightrains.com/amp/blogs/engineering-ico-fundraiser-platform">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+<link rel="manifest" href="/assets/favicons/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="application-name" content="Lightrains Tech">
+<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon-180x180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lightrains Tech">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="230x230" href="/assets/favicons/favicon-230x230.png">
+<link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+<meta property="twitter:image" content="https://lightrains.com/assets/favicons/twitter.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-320x460.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-640x920.png">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-640x1096.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-750x1294.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/assets/favicons/apple-touch-startup-image-1182x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/assets/favicons/apple-touch-startup-image-1242x2148.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-748x1024.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/assets/favicons/apple-touch-startup-image-768x1004.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
+</head>
+<body id="page-blog" class="page page-blog path-inner">
+ <div class="ui inverted top sidebar vertical menu" style="">
+    <a class="item" href="/">
+      <i class="home icon"></i>
+      Home
+    </a>
+    <a class="item" href="/about/lightrains">
+      <i class="smile icon"></i>
+      About
+    </a>
+    <a class="item" href="/about/portfolio">
+      <i class="shipping icon"></i>
+      Work
+    </a>
+    <a class="item" href="/consulting">
+      <i class="spy icon"></i>
+      Expert
+    </a>
+    <a class="item" href="/blogs">
+      <i class="block layout icon"></i>
+      Blog
+    </a>
+    <a class="item" href="/about/contact">
+      <i class="send icon"></i>
+      Contact
+    </a>
+ </div>
+ <div class="pusher">
+   <div class="ui container">
+      <header class="site-header">
+ <div class="widescreen computer mobile only">
+   <div class="ui secondary menu">
+      <a href="/" class="item left" title="Home of Lightrains Technolabs"><svg width="48px" height="48px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="background:#292724">
+       <path fill="#FFFFFF" fill-rule="evenodd" d="M129.208 137.544l2.8 5.676-.1 21.412c0 11.75-.4 45.114-.7 74.193l-.7 52.782 12.702-13.046c10.902-11.05 22.003-22.5 63.81-65.62 3.3-3.38 16.202-16.73 28.604-29.48 12.5-12.84 25.703-26.49 29.304-30.27 21.102-21.81 24.202-24.8 29.604-27.19 11.602-5.38 25.104-2.49 33.705 7.17 6.6 7.47 7.2 10.96 7.9 44.92.3 16.43.7 29.98.902 30.18.2.2 6.3-3.784 13.7-8.962 7.3-5.08 15.8-10.956 18.8-12.95 3-2.09 8.4-5.774 12-8.363 3.6-2.49 13.5-9.163 22-14.84 21.3-14.04 31.5-19.02 33.8-16.133 3 3.68-4.1 15.733-28.41 47.9-11.905 15.83-22.106 29.28-22.606 29.874-.5.6-3.3 4.184-6.1 8.068-34.707 46.41-51.41 67.72-54.91 70.31-17.703 12.65-43.107 1.1-45.307-20.61-.3-2.69-.7-16.93-1-31.67-.2-14.74-.6-26.99-.8-27.087-.2-.2-9.8 9.26-21.303 21.21-11.5 11.85-23.6 24.3-26.9 27.686-3.3 3.385-15.7 16.13-27.505 28.38-11.8 12.15-26.003 26.79-31.504 32.467-5.5 5.677-19.2 19.72-30.5 31.37-23.4 24.096-26.4 26.19-38.004 26.09-11.1 0-20.605-5.775-25.806-15.635l-2.7-5.08.1-112.533c0-127.87-.6-118.81 8.3-127.87 8.5-8.663 22.806-11.45 32.807-6.273 6.6 3.387 11.004 7.77 14.004 13.944z"/>
+      </svg>
+   </a>
+      <a href="/" class="item right" id="mobmenu"><i class="content right big icon" ></i></a>
+   </div>
+ </div>
+ <div class="ui secondary pointing menu large screen only">
+   <div class="left menu">
+      <a href="/" title="Home of Lightrains Technolabs">
+        <svg  width="64px" height="64px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="background:#292724">
+         <path fill="#FFFFFF" fill-rule="evenodd" d="M129.208 137.544l2.8 5.676-.1 21.412c0 11.75-.4 45.114-.7 74.193l-.7 52.782 12.702-13.046c10.902-11.05 22.003-22.5 63.81-65.62 3.3-3.38 16.202-16.73 28.604-29.48 12.5-12.84 25.703-26.49 29.304-30.27 21.102-21.81 24.202-24.8 29.604-27.19 11.602-5.38 25.104-2.49 33.705 7.17 6.6 7.47 7.2 10.96 7.9 44.92.3 16.43.7 29.98.902 30.18.2.2 6.3-3.784 13.7-8.962 7.3-5.08 15.8-10.956 18.8-12.95 3-2.09 8.4-5.774 12-8.363 3.6-2.49 13.5-9.163 22-14.84 21.3-14.04 31.5-19.02 33.8-16.133 3 3.68-4.1 15.733-28.41 47.9-11.905 15.83-22.106 29.28-22.606 29.874-.5.6-3.3 4.184-6.1 8.068-34.707 46.41-51.41 67.72-54.91 70.31-17.703 12.65-43.107 1.1-45.307-20.61-.3-2.69-.7-16.93-1-31.67-.2-14.74-.6-26.99-.8-27.087-.2-.2-9.8 9.26-21.303 21.21-11.5 11.85-23.6 24.3-26.9 27.686-3.3 3.385-15.7 16.13-27.505 28.38-11.8 12.15-26.003 26.79-31.504 32.467-5.5 5.677-19.2 19.72-30.5 31.37-23.4 24.096-26.4 26.19-38.004 26.09-11.1 0-20.605-5.775-25.806-15.635l-2.7-5.08.1-112.533c0-127.87-.6-118.81 8.3-127.87 8.5-8.663 22.806-11.45 32.807-6.273 6.6 3.387 11.004 7.77 14.004 13.944z"/>
+        </svg>
+      </a>
+   </div>
+   <div class="right menu" id="menu">
+     <div class="ui dropdown pointing item">
+        About<i class="dropdown icon"></i>
+       <div class="menu">
+          <a class="item" title="About Lightrains Technolabs" href="/about/lightrains">About Us</a>
+          <a class="item" title="Careers at Lightrains Technolabs" href="/about/careers">Careers</a>
+       </div>
+     </div>
+     <div class="ui dropdown pointing item">
+        Consulting<i class="dropdown icon"></i>
+       <div class="menu">
+          <a class="item" title="Blockchain Consulting" href="/consulting/blockchain-consulting">Blockchain Consulting</a>
+          <a class="item" title="Smart Contract Development" href="/consulting/smart-contract-solidity">Smart Contract Development</a>
+          <a class="item" title="Initial Coin Offering Consulting" href="/consulting/ico-consulting-services">ICO Consulting</a>
+       </div>
+     </div>
+      <a class="item" href="/about/portfolio">Work</a>
+      <a class="item" title="Blog" href="/blogs">Blog</a>
+      <a class="item" title="Contact Lightrains Technolabs" href="/about/contact">Contact</a>
+   </div>
+ </div>
+</header>
+   </div>
+   <div class="ui container">
+      <header class="post-header">
+ <h1 class="post-title" id="title">Engineering ICO fundraiser platform</h1>
+</header>
+<div class="ui grid stackable">
+ <div class="ui eleven wide column text page-text">
+     <h2 class="post-subtitle" itemprop="name headline">Allow anyone in the world to participate. Leverage blockchain technology for a frictionless, global sale.</h2>
+      <img class="ui fluid image" id="tgiv_cover" src="/assets/img/blog/engineering-ico-fundraiser-platform.png" alt="Engineering ICO fundraiser platform">
+     <div class="ui hidden divider"></div>
+<div class="author">
+  by <a href="http://nikhilmohan.in" id="tgiv_author" target="_blank">Nikhil Mohan</a> posted on <span>Fri, Nov 17, 2017</span> in <a href="/tag/fundraiser-platform">Fundraiser Platform</a> 
+ <div class="ui pointing dropdown icon circular button right floated">
+    <i class="share alternate icon"></i>
+<div class="ui menu">
+  <a href="https://facebook.com/sharer.php?u=https://lightrains.com/blogs/engineering-ico-fundraiser-platform" target="_blank" class="item">
+    <i class="facebook icon"></i> Facebook
+  </a>
+  <a href="https://plus.google.com/share?url=https://lightrains.com/blogs/engineering-ico-fundraiser-platform" target="_blank" class="item">
+    <i class="google icon"></i> Google
+  </a>
+  <a href="https://linkedin.com/shareArticle?mini=true&amp;url=https://lightrains.com/blogs/engineering-ico-fundraiser-platform" target="_blank" class="item">
+    <i class="linkedin icon"></i> Linkedin
+  </a>
+  <a href="https://twitter.com/share?url=https://lightrains.com/blogs/engineering-ico-fundraiser-platform&amp;text=Engineering+ICO+fundraiser+platform" class="item" target="_blank">
+    <i class="twitter icon"></i> Twitter
+  </a>
+  <a href="https://t.me/iv?url=https://lightrains.com/blogs/engineering-ico-fundraiser-platform&amp;rhash=491229a0db8077" class="item" target="_blank">
+    <i class="send icon"></i> Telegram
+  </a>
+</div>
+ </div>
+</div>
+<div class="ui hidden divider"></div>
+    <article>
+     <p>We engineered this easy to use <a href="/work/ico-fundraiser-dashboard">investor dashboard</a> to let you publicly sell your tokens in a safe and easy way, assisting both in the pre-sale and sale phases.</p>
+<h2 id="highlights">Highlights</h2>
+<ul>
+  <li>Allow anyone in the world to participate. Leverage blockchain technology for a frictionless, global sale.</li>
+  <li>Designed and built with the highest security standards used in OpenZeppelin.</li>
+  <li>Seamlessly accept ETH, BTC or other major blockchain assets, sent from any type of wallet.</li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+  <li>KYC registration (Optional)</li>
+  <li>Wallet Creation (Optional)</li>
+  <li>Accepts ETH, BTC or other major blockchain assets</li>
+  <li>Detailed Analytics</li>
+  <li>Multilingual Support</li>
+  <li>Pre-sale options</li>
+  <li>Private investment Management</li>
+  <li>ERC20 standard tokens (Exchange compatible)</li>
+</ul>
+<h2 id="technology-stack">Technology Stack</h2>
+<p>Considering many facts from performance to security we spend a lot of time choosing the right technology and securing the bits and pieces of the entire application. Also we spend quite a lot of time in making this easy to deploy and get up and running in less than a few minutes with your specification and requirements. Sounds good, right? Cool, lets walk trough the steps.</p>
+<h3 id="1-application">1. Application</h3>
+<p>We use the latest stable version of Node.js for the application with <a href="http://expressjs.com" target="_blank">Express 4</a> as the framework. Express is well known for its <a href="https://expressjs.com/en/advanced/best-practice-performance.html" target="_blank">performance</a> and wide range of <a href="https://expressjs.com/en/advanced/best-practice-security.html" target="_blank">security</a> features comes with it. Many more available as plugins. We also made sure that most of the known issues are patched and available for auditing.</p>
+<h3 id="2-database">2. Database</h3>
+<p>We have chosen the most comfortable database to use with this platform which is <a href="http://mongodb.github.io" target="_blank">Mongodb</a>. Mongodb is famous for its scalability and performance. You never know when are you going to hit your hardware limit, using a NOSQL databse like Mongodb makes it easy for you to scale horizontally in no time.</p>
+<h3 id="3-security">3. Security</h3>
+<p>Security best practices for Express applications in production include:</p>
+<ul>
+  <li>Don’t use deprecated or vulnerable versions of Express</li>
+  <li>Use TLS</li>
+  <li>Use Helmet</li>
+  <li>Use cookies securely</li>
+  <li>Ensure your dependencies are secure</li>
+  <li>Avoid other known vulnerabilities</li>
+  <li>Additional considerations</li>
+</ul>
+<p>Transport Layer Security (TLS) to secure the connection and the data. This technology encrypts data before it is sent from the client to the server, thus preventing some common (and easy) hacks. Although Ajax and POST requests might not be visibly obvious and seem <code class="highlighter-rouge">hidden</code> in browsers, their network traffic is vulnerable to packet sniffing and man-in-the-middle attacks.</p>
+<h3 id="4-payment-processor">4. Payment processor</h3>
+<p>We have multiple methods for accepting the incoming investments, we accept BTC and ETH through independent channels and all the well known crypto assets through <a href="https://shapeshift.io" target="_blank">ShapeShift</a> including your other favourite ERC20 Token (transferrable and supported in ShapeShift)</p>
+<h3 id="5-solidity-contract">5. Solidity Contract</h3>
+<p>Our platform as it is supports an ERC20 token based on <a href="https://github.com/OpenZeppelin/zeppelin-solidity" target="_blank">OpenZeppelin/zeppelin-solidity</a> which is so far the state of the art in the industry.</p>
+<ul>
+  <li>Token contract is available in <a href="https://github.com/lightrainstech/erc20token">lightrainstech/erc20token</a></li>
+  <li>Standard crowdsale contract is available in <a href="https://github.com/lightrainstech/crowdsale">lightrainstech/crowdsale</a></li>
+</ul>
+<h2 id="platform-audit-report">Platform audit report</h2>
+<ul>
+  <li>Read our blog about <a href="/blogs/smart-contract-best-practices-solidity">Solidity Smart contract Security best practices</a></li>
+  <li>Follow <a href="https://github.com/orgs/lightrainstech/projects/1">Kanban Board</a></li>
+  <li><a href="/consulting/blockchain-consulting">Blockchain Consulting &amp; Development</a></li>
+</ul>
+<h2 id="get-a-demo">Get a demo</h2>
+<p>Please fill this <a href="https://goo.gl/forms/oBy5KIK5A6DSGZD83" target="_blank">Google Form</a> and we will get back to you.</p>
+    </article>
+   <div class="ui hidden divider"></div>
+<div class="ui tiny label endorsement">
+  All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
+</div>
+<h4 class="ui horizontal divider header">Write a comment on Engineering ICO fundraiser platform</h2>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+(function() {
+var d = document, s = d.createElement('script');
+s.src = '//lightrainstechnolabs.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+ </div>
+ <div class="ui five wide column">
+   <div class="ui hidden divider"></div>
+    <h3>Posted In</h3>
+<div class="ui black labels">
+  <a href="/tag/erc20/" class="ui label" title="Blogs Tagged ERC20" >ERC20</a>
+  <a href="/tag/erc20-tokens/" class="ui label" title="Blogs Tagged ERC20 tokens" >ERC20 tokens</a>
+  <a href="/tag/fundraiser-platform/" class="ui label" title="Blogs Tagged Fundraiser Platform" >Fundraiser Platform</a>
+  <a href="/tag/ico/" class="ui label" title="Blogs Tagged ICO" >ICO</a>
+  <a href="/tag/ico-platform/" class="ui label" title="Blogs Tagged ICO Platform" >ICO Platform</a>
+  <a href="/tag/solidity/" class="ui label" title="Blogs Tagged Solidity" >Solidity</a>
+</div>
+    <h3>Recent Posts</h3>
+<ul>
+  <li >
+    <a class="header" href="/blogs/engineering-ico-fundraiser-platform" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/how-to-create-mineable-erc20-tokens" title="How to create mineable ERC20 tokens on Ethereum Solidity">How to create mineable ERC20 tokens on Ethereum Solidity</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/guide-launching-successful-ico" title="Guide to launching a successful ICO">Guide to launching a successful ICO</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/smart-contract-best-practices-solidity" title="Solidity Smart contract Security best practices">Solidity Smart contract Security best practices</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/service-discovery-tools-microsrvice" title="Service discovery tools for microservices.">Service discovery tools for microservices.</a>
+  </li>
+  <li >
+    <a class="header" href="/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</a>
+  </li>
+</ul>
+<div class="ui items author white">
+ <div class="item">
+   <div class="content">
+      <a class="header" href="http://nikhilmohan.in" rel="author">Nikhil Mohan</a>
+     <div class="description">
+        Ξntrepreneur, Ethereum Blockchain enthusiast, co-founder of @lightrainstech.
+     </div>
+     <div class="social">
+        <a href="https://in.linkedin.com/in/niksmac"><i class="linkedin bordered icon"></i></a>
+        <a href="http://github.com/niksmac"><i class="github bordered icon"></i></a>
+        <a href="https://twitter.com/niksmac_"><i class="twitter bordered icon"></i></a>
+        <a href="http://nikhilmohan.in"><i class="browser bordered icon"></i></a>
+     </div>
+   </div>
+ </div>
+</div>
+ </div>
+</div>
+   </div>
+   <div class="fullw">
+     <div class="ui container footer">
+ <div class="ui container">
+   <div class="ui section divider"></div>
+   <div class="footers">
+  +91 471 4000056 <i class="ellipsis vertical icon"></i> 
+ <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All rights reserved
+ <p class="slogan">Blockchain Consulting. Technology Supercharged</p>
+</div>
+ </div>
+     </div>
+   </div>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-9728278-16', 'lightrains.com');
+  ga('send', 'pageview');
+</script>
+<script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+<script src="/assets/js/bundle-front.min.js"></script>
+</div>
+</body>
+
+<script>if ("serviceWorker" in navigator) {navigator.serviceWorker.register("/sw.js").then(function(registration) {console.log("ServiceWorker registration successful with scope: ",    registration.scope);}).catch(function(err) {console.log("ServiceWorker registration failed: ", err);});}</script>

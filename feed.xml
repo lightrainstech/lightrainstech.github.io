@@ -5,9 +5,31 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 Nov 2017 22:07:55 +0530</pubDate>
-    <lastBuildDate>Thu, 16 Nov 2017 22:07:55 +0530</lastBuildDate>
+    <pubDate>Fri, 17 Nov 2017 11:22:57 +0530</pubDate>
+    <lastBuildDate>Fri, 17 Nov 2017 11:22:57 +0530</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>Engineering ICO fundraiser platform</title>
+        <description>We engineered this easy to use investor dashboard to let you publicly sell your tokens in a safe and easy way, assisting both in the pre-sale and sale phases. Highlights Allow anyone in the world to participate. Leverage blockchain technology for a frictionless, global sale. Designed and built with the highest security standards used in OpenZeppelin. Seamlessly accept ETH, BTC or other major blockchain assets, sent from any type of wallet. Features KYC registration (Optional) Wallet Creation (Optional) Accepts ETH, BTC or other major blockchain assets Detailed Analytics Multilingual Support Pre-sale options Private investment Management ERC20 standard tokens (Exchange compatible) Technology Stack Considering many facts from performance to security we spend a lot of time choosing the right technology and securing the bits and pieces of the entire application. Also we spend quite a lot of time in making this easy to deploy and get up and running in less than a few minutes with your specification and requirements. Sounds good, right? Cool, lets walk trough the steps. 1. Application We use the latest stable version of Node.js for the application with Express 4 as the framework. Express is well known for its performance and wide range of security features comes with it. Many more available as plugins. We also made sure that most of the known issues are patched and available for auditing. 2. Database We have chosen the most comfortable database to use with this platform which is Mongodb. Mongodb is famous for its scalability and performance. You never know when are you going to hit your hardware limit, using a NOSQL databse like Mongodb makes it easy for you to scale horizontally in no time. 3. Security Security best practices for Express applications in production include: Don’t use deprecated or vulnerable versions of Express Use TLS Use...</description>
+        <pubDate>Fri, 17 Nov 2017 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/engineering-ico-fundraiser-platform</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/engineering-ico-fundraiser-platform</guid>
+        
+        <category>Fundraiser Platform</category>
+        
+        <category>Solidity</category>
+        
+        <category>ERC20</category>
+        
+        <category>ERC20 tokens</category>
+        
+        <category>ICO</category>
+        
+        <category>ICO Platform</category>
+        
+        
+      </item>
     
       <item>
         <title>ICO fundraiser platform</title>
@@ -31,6 +53,8 @@ Features
   Private investment Management
   ERC20 standard tokens (Exchange compatible)
 
+
+Read more about Engineering ICO fundraiser platform
 
 ico@lxightxraxins.com
 </description>

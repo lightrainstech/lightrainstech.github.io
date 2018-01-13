@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/microsoft-coco-framework");
+
   urlsToCache.push("/blogs/engineering-ico-fundraiser-platform");
 
   urlsToCache.push("/work/ico-fundraiser-dashboard");
@@ -1203,6 +1205,54 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/ico-platform/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/enterprise-blockchain/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/enterprise-blockchain/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/microsoft-coco-framework/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/microsoft-coco-framework/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/coco-framework/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/coco-framework/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/scalable-blockchain/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/scalable-blockchain/");
   
 
 

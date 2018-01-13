@@ -182,31 +182,27 @@
 <div class="ui hidden divider"></div>
     <article>
      <p>Facebook released a tool to create React Apps with no need for configurations. If you’re just beginning to learn React, you might want to use create-react-app and get started Immediately.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g create-react-app
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g create-react-app
 create-react-app react-redux-example
 cd react-redux-example/
 npm start
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Redux is a state management tool for react. It’s the most popular tool used to manage state.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save redux
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save redux
+</code></pre></div></div>
 <p>There is a official React bindings for Redux. We can use that for easy binding.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install --save react-redux
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save react-redux
+</code></pre></div></div>
 <p>So we are ready to start with React and Redux</p>
 <h3 id="how-to-connect-react-to-the-redux-store">How to connect React to the Redux store?</h3>
 <h5 id="import-react--reactdom-createstore-from-redux-and-provider-from-react-redux">Import <code class="highlighter-rouge">React</code>,  <code class="highlighter-rouge">ReactDOM</code>, <code class="highlighter-rouge">createStore</code> from redux and <code class="highlighter-rouge">Provider</code> from react-redux</h5>
-<div class="highlighter-rouge"><pre class="highlight"><code>import React from 'react'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React from 'react'
 import ReactDOM from 'react-dom'
 import {createStore } from 'redux'
 import { Provider } from 'react-redux'
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Create your store with <code class="highlighter-rouge">reducer</code>. We can use a simple basic reducer here…</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function reducer(state = [], action) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function reducer(state = [], action) {
   switch (action.type) {
     case 'ADD_ACTION':
       return [
@@ -218,25 +214,21 @@ import { Provider } from 'react-redux'
   }
 }
 let store = createStore(reducer)
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Use the <code class="highlighter-rouge">provider</code> to bind the store in all component</p>
-<div class="highlighter-rouge"><pre class="highlight"><code> ReactDOM.render(
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ReactDOM.render(
   &lt;Provider store={store}&gt;
     &lt;App /&gt;
   &lt;/Provider&gt;,document.getElementById('root')
 )
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Now the store is available in all component. We can import <code class="highlighter-rouge">connect</code> from <code class="highlighter-rouge">react-redux</code> to get the state in components.</p>
 <p>Import <code class="highlighter-rouge">connect</code> in your component first</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>import { connect } from 'react-redux'
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import { connect } from 'react-redux'
+</code></pre></div></div>
 <p>Use <code class="highlighter-rouge">connect</code> to connect the component with the store</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>export default connect()(YourComponentName)
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export default connect()(YourComponentName)
+</code></pre></div></div>
 <p>Use <code class="highlighter-rouge">mapStateToProps</code> and  <code class="highlighter-rouge">mapDispatchToProps</code>  to map the State and Dispatch to the <code class="highlighter-rouge">props</code></p>
     </article>
    <div class="ui hidden divider"></div>
@@ -265,6 +257,9 @@ s.setAttribute('data-timestamp', +new Date());
     <h3>Recent Posts</h3>
 <ul>
   <li >
+    <a class="header" href="/blogs/microsoft-coco-framework" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a>
+  </li>
+  <li >
     <a class="header" href="/blogs/engineering-ico-fundraiser-platform" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a>
   </li>
   <li >
@@ -278,9 +273,6 @@ s.setAttribute('data-timestamp', +new Date());
   </li>
   <li >
     <a class="header" href="/blogs/service-discovery-tools-microsrvice" title="Service discovery tools for microservices.">Service discovery tools for microservices.</a>
-  </li>
-  <li >
-    <a class="header" href="/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</a>
   </li>
 </ul>
 <div class="ui items author white">
@@ -309,7 +301,7 @@ s.setAttribute('data-timestamp', +new Date());
    <div class="footers">
   +91 471 4000056 <i class="ellipsis vertical icon"></i> 
  <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
- <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All rights reserved
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2018 All rights reserved
  <p class="slogan">Blockchain Consulting. Technology Supercharged</p>
 </div>
  </div>

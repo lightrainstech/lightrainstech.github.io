@@ -258,39 +258,37 @@ pre, code {
 
 <p>The default configuration should work fine in most cases, however it can be customized. The following example spec can be passed to –chain option where accounts contains a custom account with lots of Ether.</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code><span class="p">{</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DevelopmentChain"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"engine"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"instantSeal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w"> </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"accountStartNonce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"maximumExtraDataSize"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"minGasLimit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x1388"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"networkID"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0x11"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"genesis"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"seal"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"generic"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0"</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x20000"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x00"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"parentHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"extraData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"gasLimit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x5B8D80"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"0000000000000000000000000000000000000001"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ecrecover"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">3000</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"0000000000000000000000000000000000000002"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sha256"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"0000000000000000000000000000000000000003"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ripemd160"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"0000000000000000000000000000000000000004"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"builtin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"identity"</span><span class="p">,</span><span class="w"> </span><span class="nt">"pricing"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"linear"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">"word"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"0x00a329c0648769a73afac7f9381e08fb43dbea72"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"balance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1606938044258990275541962092341162602522202993782792835301376"</span><span class="w"> </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "name": "DevelopmentChain",
+    "engine": {
+        "instantSeal": { "params": {} }
+    },
+    "params": {
+        "accountStartNonce": "0x0",
+        "maximumExtraDataSize": "0x20",
+        "minGasLimit": "0x1388",
+        "networkID" : "0x11"
+    },
+    "genesis": {
+        "seal": {
+            "generic": "0x0"
+        },
+        "difficulty": "0x20000",
+        "author": "0x0000000000000000000000000000000000000000",
+        "timestamp": "0x00",
+        "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "extraData": "0x",
+        "gasLimit": "0x5B8D80"
+    },
+    "accounts": {
+        "0000000000000000000000000000000000000001": { "balance": "1", "builtin": { "name": "ecrecover", "pricing": { "linear": { "base": 3000, "word": 0 } } } },
+        "0000000000000000000000000000000000000002": { "balance": "1", "builtin": { "name": "sha256", "pricing": { "linear": { "base": 60, "word": 12 } } } },
+        "0000000000000000000000000000000000000003": { "balance": "1", "builtin": { "name": "ripemd160", "pricing": { "linear": { "base": 600, "word": 120 } } } },
+        "0000000000000000000000000000000000000004": { "balance": "1", "builtin": { "name": "identity", "pricing": { "linear": { "base": 15, "word": 3 } } } },
+        "0x00a329c0648769a73afac7f9381e08fb43dbea72": { "balance": "1606938044258990275541962092341162602522202993782792835301376" }
+    }
+}
+</code></pre></div></div>
 
     <a href="https://lightrains.com/blogs/setup-parity-private-blockchains" title="How to set up private ethereum blockchain using ethcore/parity" class="nonamp">Full Version of How to set up private ethereum blockchain using ethcore/parity</a>
   </div>
@@ -300,13 +298,13 @@ pre, code {
     <ul class="ui list">
       
       
+      <li><a href="/amp/blogs/microsoft-coco-framework/index.html" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a></li>
+      
       <li><a href="/amp/blogs/engineering-ico-fundraiser-platform/index.html" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a></li>
       
       <li><a href="/amp/blogs/how-to-create-mineable-erc20-tokens/index.html" title="How to create mineable ERC20 tokens on Ethereum Solidity">How to create mineable ERC20 tokens on Ethereum Solidity</a></li>
       
       <li><a href="/amp/blogs/guide-launching-successful-ico/index.html" title="Guide to launching a successful ICO">Guide to launching a successful ICO</a></li>
-      
-      <li><a href="/amp/blogs/smart-contract-best-practices-solidity/index.html" title="Solidity Smart contract Security best practices">Solidity Smart contract Security best practices</a></li>
       
     </ul>
   </div>

@@ -250,8 +250,7 @@ pre, code {
 <h2 id="erc20-token-standard">ERC20 token standard</h2>
 <p>There were no standard for tokens on etheerum till the <a href="https://github.com/ethereum/EIPs/issues/20">EIP 20</a>. Once that is pulled in now  we have a better standard for the tokens on Ethereum. Using established standards (i.e. the <a href="https://github.com/ethereum/EIPs/issues/20">ERC20 token standard</a>), newly minted tokens are easily integrated into major wallets and exchanges. A general basic example would be;</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>// https://github.com/ethereum/EIPs/issues/20
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// https://github.com/ethereum/EIPs/issues/20
 contract ERC20 {
     function totalSupply() constant returns (uint totalSupply);
     function balanceOf(address _owner) constant returns (uint balance);
@@ -262,16 +261,14 @@ contract ERC20 {
     event Transfer(address indexed _from, address indexed _to, uint _value);
     event Approval(address indexed _owner, address indexed _spender, uint _value);
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="integer-division">Integer division</h2>
 <p>All integer division rounds down to the nearest integer. If you need more precision, consider using a multiplier, or store both the numerator and denominator.</p>
 
 <p>(In the future, Solidity will have a fixed-point type, which will make this easier.)</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>// bad
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// bad
 uint x = 5 / 2; // Result is 2, all integer division rounds DOWN to the nearest integer
 
 // good
@@ -280,8 +277,7 @@ uint x = (5 * multiplier) / 2;
 
 uint numerator = 5;
 uint denominator = 2;
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Overflow and Underflow</strong> If a balance reaches the maximum uint value (2^256) it will circle back to zero. This checks for that condition. This may or may not be relevant, depending on the implementation. Think about whether or not the uint value has an opportunity to approach such a large number. Think about how the uint variable changes state, and who has authority to make such changes.</p>
 
@@ -316,13 +312,13 @@ uint denominator = 2;
     <ul class="ui list">
       
       
+      <li><a href="/amp/blogs/microsoft-coco-framework/index.html" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a></li>
+      
       <li><a href="/amp/blogs/engineering-ico-fundraiser-platform/index.html" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a></li>
       
       <li><a href="/amp/blogs/how-to-create-mineable-erc20-tokens/index.html" title="How to create mineable ERC20 tokens on Ethereum Solidity">How to create mineable ERC20 tokens on Ethereum Solidity</a></li>
       
       <li><a href="/amp/blogs/guide-launching-successful-ico/index.html" title="Guide to launching a successful ICO">Guide to launching a successful ICO</a></li>
-      
-      <li><a href="/amp/blogs/smart-contract-best-practices-solidity/index.html" title="Solidity Smart contract Security best practices">Solidity Smart contract Security best practices</a></li>
       
     </ul>
   </div>

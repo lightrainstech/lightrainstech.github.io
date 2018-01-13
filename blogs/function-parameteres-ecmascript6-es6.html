@@ -189,40 +189,36 @@
 <h2 id="default-parameter">Default Parameter</h2>
 <p>Default parameter are a way to pass a value to the function parameter when there is no value is being passed by the callee during invocation.</p>
 <p>We specify this value when defining a function,</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function printName ( name = 'there' ) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there' ) {
   return `Hello,  ${name}`
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>We can even use the default parameter of one parameter as part of an expression for another
 paramter. For eg:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function printName ( name = 'there', fullname = name + ' lastName' ) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there', fullname = name + ' lastName' ) {
   return `Hello,  ${name} -  ${fullname} `
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="rest-parameters">Rest Parameters</h2>
 <p>The rest parameter syntax allows us to represent an indefinite number of arguments as an array.</p>
 <p>This is achieved by using a new operator called <strong>Spread Operator</strong> which is represented by <code class="highlighter-rouge">...</code> <strong>3dots</strong></p>
 <p><strong>Spread Operator</strong>
 It is used when we want to pass an array to a function as individual arguments of that function. For
 eg:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function sum (x, y, z ) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sum (x, y, z ) {
   return x + y + z;
 }
 let values = [1, 2, 3]
 // notice the usage of ...
 sum(...values)
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Another Example</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function f(x, ...y) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f(x, ...y) {
  // y is an Array
  return x * y.length;
 }
 f(3, "hello", true) == 6
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>If the last named argument of a function is prefixed with <code class="highlighter-rouge">...</code>, it becomes an array whose elements from 0 (inclusive) to <code class="highlighter-rouge">theArgs.length</code> (exclusive) are supplied by the actual arguments passed to the function.</p>
 <p>In the above example, <code class="highlighter-rouge">theArgs</code> would collect the third argument of the function (because the first one is mapped to a, and the second to b) and all the consecutive argument</p>
 <p>Sources:</p>
@@ -257,6 +253,9 @@ s.setAttribute('data-timestamp', +new Date());
     <h3>Recent Posts</h3>
 <ul>
   <li >
+    <a class="header" href="/blogs/microsoft-coco-framework" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a>
+  </li>
+  <li >
     <a class="header" href="/blogs/engineering-ico-fundraiser-platform" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a>
   </li>
   <li >
@@ -270,9 +269,6 @@ s.setAttribute('data-timestamp', +new Date());
   </li>
   <li >
     <a class="header" href="/blogs/service-discovery-tools-microsrvice" title="Service discovery tools for microservices.">Service discovery tools for microservices.</a>
-  </li>
-  <li >
-    <a class="header" href="/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</a>
   </li>
 </ul>
 <div class="ui items author white">
@@ -301,7 +297,7 @@ s.setAttribute('data-timestamp', +new Date());
    <div class="footers">
   +91 471 4000056 <i class="ellipsis vertical icon"></i> 
  <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
- <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All rights reserved
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2018 All rights reserved
  <p class="slogan">Blockchain Consulting. Technology Supercharged</p>
 </div>
  </div>

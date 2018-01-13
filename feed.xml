@@ -5,9 +5,27 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 04 Dec 2017 15:11:28 +0530</pubDate>
-    <lastBuildDate>Mon, 04 Dec 2017 15:11:28 +0530</lastBuildDate>
-    <generator>Jekyll v3.5.1</generator>
+    <pubDate>Sat, 13 Jan 2018 11:04:48 +0530</pubDate>
+    <lastBuildDate>Sat, 13 Jan 2018 11:04:48 +0530</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Microsoft Coco Framework - Things you need to know</title>
+        <description>What is Coco Framework Coco Framework is an open-source system that enables high-scale, confidential blockchain networks that meet all key enterprise requirements—providing a means to accelerate production enterprise adoption of blockchain technology. Coco achieves this by designing specifically for confidential consortiums, where nodes and actors are explicitly declared and controlled. Based on these requirements, Coco presents an alternative approach to ledger construction, giving enterprises the scalability, distributed governance and enhanced confidentiality they need without sacrificing the inherent security and immutability they expect. What can coco do? Leveraging the power of existing blockchain protocols, trusted execution environments (TEEs) such as Intel SGX and Windows Virtual Secure Mode (VSM), distributed systems and cryptography, Coco enables enterprise-ready blockchain networks that deliver: Throughput and latency approaching database speeds. Richer, more flexible, business-specific confidentiality models. Network policy management through distributed governance. Support for non-deterministic transactions. Coco system overview Coco is a foundation for all blockchain protocols. It provides base components like persistent ledger, node to node and application to node secure communications etc. to other blockchain protocols. Coco system consists of validating nodes termed as VNs. Each VN runs Coco framework and particular blockchain protocol. Every VN can verify the identity of other VN hence they are trusted. As per Coco framework white paper, VN can be further divided into logical components and can be categories into host or enclave. Trusted Execution environment aka TEE A TEE is a way of running code that operates in data that protects the process from disclosure and tampering from outside. The Trusted Execution Environment (TEE) is a secure area of the main processor. It guarantees code and data loaded inside to be protected with respect to confidentiality and integrity. The TEE as an isolated execution environment provides security features such as isolated execution, integrity of Trusted Applications along...</description>
+        <pubDate>Mon, 01 Jan 2018 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/microsoft-coco-framework</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/microsoft-coco-framework</guid>
+        
+        <category>Enterprise Blockchain</category>
+        
+        <category>Microsoft Coco Framework</category>
+        
+        <category>Coco Framework</category>
+        
+        <category>Scalable Blockchain</category>
+        
+        
+      </item>
     
       <item>
         <title>Engineering ICO fundraiser platform</title>
@@ -171,17 +189,14 @@ cd react-redux-example/
 npm start
 
 
-
 Redux is a state management tool for react. It’s the most popular tool used to manage state.
 
 npm install --save redux
 
 
-
 There is a official React bindings for Redux. We can use that for easy binding.
 
 npm install --save react-redux
-
 
 
 So we are ready to start with React and Redux
@@ -194,7 +209,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import {createStore } from 'redux'
 import { Provider } from 'react-redux'
-
 
 Create your store with reducer. We can use a simple basic reducer here…
 
@@ -212,7 +226,6 @@ function reducer(state = [], action) {
 let store = createStore(reducer)
 
 
-
 Use the provider to bind the store in all component
 
  ReactDOM.render(
@@ -222,7 +235,6 @@ Use the provider to bind the store in all component
 )
 
 
-
 Now the store is available in all component. We can import connect from react-redux to get the state in components.
 
 Import connect in your component first
@@ -230,11 +242,9 @@ Import connect in your component first
 import { connect } from 'react-redux'
 
 
-
 Use connect to connect the component with the store
 
 export default connect()(YourComponentName)
-
 
 
 Use mapStateToProps and  mapDispatchToProps  to map the State and Dispatch to the props
@@ -311,7 +321,6 @@ npm ERR! Please try running this command again as root/Administrator.
 
 npm ERR! Please include the following file with any support request:
 npm ERR!     /home/light/npm-debug.log
-
 
 
 Read official documentation
@@ -897,7 +906,6 @@ app.listen(config.port, () =&amp;gt; {
 export default app;
 
 
-
 ES5 Converted
 
 'use strict';
@@ -922,7 +930,6 @@ _express2.default.listen(_env2.default.port, function () {
 });
 
 exports.default = _express2.default;
-
 
 
 Sources
@@ -1053,7 +1060,6 @@ numOperation = new Number(20, 10);
 console.log(numOperation.getSum);
 
 
-
 Subclassing using extend keyword:
 The extends keyword is used in class declarations or class expressions to create a class as a child of another class.
 
@@ -1072,7 +1078,6 @@ class Dog extends Animal {
         console.log(this.name + ' barks.');
     }
 }
-
 
 </description>
         <pubDate>Mon, 01 Aug 2016 02:10:00 +0530</pubDate>
@@ -1121,7 +1126,6 @@ Add Values to set
 
 let myArray = [1, 4, 1, 5, 5, 7, 8, 9, 0, 0]
 let mySet = new Set(myArray)
-
 
 
 Now if you do a console.log(mySet); you will see
@@ -1173,14 +1177,12 @@ function printName ( name = 'there' ) {
   return `Hello,  ${name}`
 }
 
-
 We can even use the default parameter of one parameter as part of an expression for another
 paramter. For eg:
 
 function printName ( name = 'there', fullname = name + ' lastName' ) {
   return `Hello,  ${name} -  ${fullname} `
 }
-
 
 
 Rest Parameters
@@ -1200,14 +1202,12 @@ let values = [1, 2, 3]
 sum(...values)
 
 
-
 Another Example
 function f(x, ...y) {
  // y is an Array
  return x * y.length;
 }
 f(3, &quot;hello&quot;, true) == 6
-
 
 
 If the last named argument of a function is prefixed with ..., it becomes an array whose elements from 0 (inclusive) to theArgs.length (exclusive) are supplied by the actual arguments passed to the function.

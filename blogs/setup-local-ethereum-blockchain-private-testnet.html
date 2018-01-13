@@ -191,62 +191,55 @@
 <p>The Genesis block is the start block of the Blockchain - the first block, block 0, the only block that does not point to a predecessor block. It’s the entry point into the Blockchain database. The Genesis data defines initial parameters of the database and defines a cryptographically valid entry block. You might think thats a flaw in the system being able to decide the starting conditions of the chain, but the consensus algorithm will ensure that no other node will agree with your version of the blockchain unless they have the same genesis block (and some other crucial parameters, discussed later).</p>
 <h3 id="how-to-create-genesis-block">How to Create Genesis Block</h3>
 <p>Great, so how do we make one of these genesis blocks? Well its fairly simple the following JSON is all you really need:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000042"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"mixhash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"difficulty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4000"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"alloc"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-    </span><span class="nt">"coinbase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x00"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"parentHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x0000000000000000000000000000000000000000000000000000000000000000"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"extraData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Custem Ethereum Genesis Block"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"gasLimit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xffffffff"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "nonce": "0x0000000000000042",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "difficulty": "0x4000",
+    "alloc": {},
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "timestamp": "0x00",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "Custem Ethereum Genesis Block",
+    "gasLimit": "0xffffffff"
+}
+</code></pre></div></div>
 <p>Save the JSON into a file lets call it genesis.json and save in your home directory.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>$ geth --genesis &lt;genesis json file path&gt; --datadir &lt;some path to an empty folder&gt; --networkid 123 --nodiscover --maxpeers 0 console
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ geth --genesis &lt;genesis json file path&gt; --datadir &lt;some path to an empty folder&gt; --networkid 123 --nodiscover --maxpeers 0 console
+</code></pre></div></div>
 <p><strong>This command does a few things:</strong></p>
 <p>It utilises the genesis block json to seed the blockchain It uses the datadir to store all state necessary to maintain the newly created blockchain and other data (declared to prevent you clobbering your main net data, wouldn’t want to overwrite all those blocks you spent time downloading!) Use a network id other than ‘1’ to ensure we can’t talk to nodes from the main network – “connections between nodes are valid only if peers have identical protocol version and network id” Disable peer discovery Disable network by setting maxpeers to 0 Starts geth in console mode so you can interact with your new blockchain / node
 Note the difficulty is set very low in the above genesis block, this allowed my local machine to mine blocks in 100’s of milliseconds, that will make it very easy for you to gain ether.</p>
 <h2 id="pre-seeding-accounts-with-allocation---local-eth">Pre-seeding accounts with allocation - Local ETH</h2>
 <p>In the geth console enter</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>personal.newAccount("mypassword"); 0xcc8C048426978c5877212281b8a75F1B4E71a862
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>personal.newAccount("mypassword"); 0xcc8C048426978c5877212281b8a75F1B4E71a862
+</code></pre></div></div>
 <p>The last command above generated a new account with address ‘0xcc8C048426978c5877212281b8a75F1B4E71a862’
 Once you’ve generated your account, quit geth with ctrl-c and remove every folder except keystore/ from your datadir:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>$ cd &lt;your datadir&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd &lt;your datadir&gt;
 $ rm -rf `ls | grep -v keystore`
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>update your genesis block json, adding the following to the alloc key:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>"alloc": {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"alloc": {
   "&lt;your account address e.g. 0xcc8C048426978c5877212281b8a75F1B4E71a862&gt;": {
     "balance": "10000000000000000000"
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Now re-run the geth command using the newly updated genesis json file and the same datadir, when you check your account balance you will find you now have 10 ether:</p>
 <p><strong>Verify 10 ether:</strong></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>$ primary = eth.accounts[0];
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ primary = eth.accounts[0];
 '0xcc8C048426978c5877212281b8a75F1B4E71a862'
 $ balance = web3.fromWei(eth.getBalance(primary), "ether");
 '10'
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="using-the-local-blockchain">Using the local Blockchain</h2>
 <p>Once the local Blockchain is ready, it can be employed using the classic Ethereum client applications.</p>
 <p>As long as you have the main geth process handling the local Blockchain, running under the same user ID, a simple geth attach works. (Note: I didn’t verify this in the code or the documentation on UNIX IPC. I found this out by testing).
 When starting to use the local test network from different workstations, it is indispensable to specify the –networkid 1100. The usage of the Ethereum discovery protocol should be fine on LANs without additional “hops”, but it is also possible to explicitly specify the peer-to-peer “bootstrap” node via –bootnodes and to deactivate the node discovery mode with –nodiscover.
 Mine the local Blockchain</p>
 <p>When working with the local Blockchain, we need the run a Miner in order to have our transactions executed and included in the Blockchain. At the same time, we get some free test-ether that we can play with. Note that it makes no sense to keep the miner running when the test network is not used, and it makes no sense neither to use other resources than the CPU for mining. With a Difficulty configured as low as in our custom Genesis block, the miner will find a valid block during each operation.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>geth --mine -rpccorsdomain "*" --ipcapi "admin,eth,miner" --rpcapi "eth,web3" --networkid 1100 -maxpeers 5 --minerthreads 1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>geth --mine -rpccorsdomain "*" --ipcapi "admin,eth,miner" --rpcapi "eth,web3" --networkid 1100 -maxpeers 5 --minerthreads 1
+</code></pre></div></div>
 <div class="cta-blog">
  <h2 class="ui center aligned icon white header">
     <i class="spy icon"></i>
@@ -282,6 +275,9 @@ s.setAttribute('data-timestamp', +new Date());
     <h3>Recent Posts</h3>
 <ul>
   <li >
+    <a class="header" href="/blogs/microsoft-coco-framework" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a>
+  </li>
+  <li >
     <a class="header" href="/blogs/engineering-ico-fundraiser-platform" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a>
   </li>
   <li >
@@ -295,9 +291,6 @@ s.setAttribute('data-timestamp', +new Date());
   </li>
   <li >
     <a class="header" href="/blogs/service-discovery-tools-microsrvice" title="Service discovery tools for microservices.">Service discovery tools for microservices.</a>
-  </li>
-  <li >
-    <a class="header" href="/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</a>
   </li>
 </ul>
 <div class="ui items author white">
@@ -326,7 +319,7 @@ s.setAttribute('data-timestamp', +new Date());
    <div class="footers">
   +91 471 4000056 <i class="ellipsis vertical icon"></i> 
  <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
- <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All rights reserved
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2018 All rights reserved
  <p class="slogan">Blockchain Consulting. Technology Supercharged</p>
 </div>
  </div>

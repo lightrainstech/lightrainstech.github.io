@@ -190,7 +190,7 @@ Its very easy to install solc using npm the package manager for NodeJS the comma
 If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity.</p>
 <p><strong>Building from Source</strong>
 Assuming you are using Ubuntu 14.04</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-add-repository ppa:george-edison55/cmake-3.x
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-add-repository ppa:george-edison55/cmake-3.x
 sudo apt-get -y update
 sudo apt-get -y install language-pack-en-base
 sudo dpkg-reconfigure locales
@@ -199,29 +199,25 @@ sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 sudo apt-get -y update
 sudo apt-get -y upgrade
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>And pull the solidity source code</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>git clone --recursive https://github.com/ethereum/webthree-umbrella.git
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --recursive https://github.com/ethereum/webthree-umbrella.git
 cd webthree-umbrella
 ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo
 ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="step-2-verify-solidity-compiler">Step 2. Verify Solidity Compiler</h2>
 <p>To ensure solc is installed and ready to use, you can verify it by running <code class="highlighter-rouge">eth.getCompilers()</code> in geth console
 If you have it installed, it should output something like this:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>['Solidity' ]
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['Solidity' ]
+</code></pre></div></div>
 <h2 id="bonus-compile-a-simple-contract">Bonus. Compile a simple contract</h2>
 <p>Let us take this simple contract source:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>source = "contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source = "contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"
+</code></pre></div></div>
 <p>This contract offers a unary method: called with a positive integer a, it returns a * 7.
 You are ready to compile solidity code in the geth JS console using   <code class="highlighter-rouge">eth.compile.solidity</code></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>&gt; contract = eth.compile.solidity(source).test
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; contract = eth.compile.solidity(source).test
 {
   code: '605280600c6000396000f3006000357c010000000000000000000000000000000000000000000000000000000090048063c6888fa114602e57005b60376004356041565b8060005260206000f35b6000600782029050604d565b91905056',
   info: {
@@ -252,8 +248,7 @@ You are ready to compile solidity code in the geth JS console using   <code clas
     source: 'contract test { function multiply(uint a) returns(uint d) { return a * 7; } }'
   }
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>Now you have a deploy-able contract in your console with which you can deploy it to Ethereum Blockchain</p>
 <h3 id="part-22-deploy-the-contract-to-blockchain">Part 2/2 Deploy the contract to blockchain.</h3>
 <p><em>Source</em></p>
@@ -287,6 +282,9 @@ s.setAttribute('data-timestamp', +new Date());
     <h3>Recent Posts</h3>
 <ul>
   <li >
+    <a class="header" href="/blogs/microsoft-coco-framework" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a>
+  </li>
+  <li >
     <a class="header" href="/blogs/engineering-ico-fundraiser-platform" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a>
   </li>
   <li >
@@ -300,9 +298,6 @@ s.setAttribute('data-timestamp', +new Date());
   </li>
   <li >
     <a class="header" href="/blogs/service-discovery-tools-microsrvice" title="Service discovery tools for microservices.">Service discovery tools for microservices.</a>
-  </li>
-  <li >
-    <a class="header" href="/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</a>
   </li>
 </ul>
 <div class="ui items author white">
@@ -331,7 +326,7 @@ s.setAttribute('data-timestamp', +new Date());
    <div class="footers">
   +91 471 4000056 <i class="ellipsis vertical icon"></i> 
  <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
- <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All rights reserved
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2018 All rights reserved
  <p class="slogan">Blockchain Consulting. Technology Supercharged</p>
 </div>
  </div>

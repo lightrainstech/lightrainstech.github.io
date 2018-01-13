@@ -186,7 +186,7 @@
 <a href="https://github.com/niksmac/ethereum-scripts">niksmac/ethereum-scripts</a></p>
 <h2 id="1-print-block-details">1. Print Block Details</h2>
 <p>This function is uswful when you want to print the details of a block in the <code class="highlighter-rouge">console</code></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function printBlock(block) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printBlock(block) {
 	console.log("Block number     : " + block.number + "\n"
 			+ " hash            : " + block.hash + "\n"
 			+ " parentHash      : " + block.parentHash + "\n"
@@ -212,21 +212,19 @@
 				})
 	}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="2-check-all-balances">2. Check all Balances</h2>
 <p>Can be used to cheak balances of all accounts inside your keystore; ie, you own both the keys.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function checkAllBalances() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkAllBalances() {
 	var i =0;
 	eth.accounts.forEach( function(e){
 			console.log("  eth.accounts["+i+"]: " +  e + " \tbalance: " +    web3.fromWei(eth.getBalance(e), "ether") + " ether");
 			i++;
 			})
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="3-get-account-balances-and-including-thedao-tokens">3. Get Account Balances And Including TheDAO Tokens</h2>
-<div class="highlighter-rouge"><pre class="highlight"><code>function padTokens(s, n) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function padTokens(s, n) {
 	var o = s.toPrecision(n);
 	while (o.length &lt; n) {
 		o = " " + o;
@@ -263,11 +261,10 @@ function checkAllBalances() {
 	console.log("------- ------------------------------------------ ---------- ---------------------------");
 	console.log("  " + i + "                                               " + padTokens(theDAOTotal, 10) + " " + padEthers(ethersTotal));
 };
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="4-find-all-tokens">4. Find all tokens</h2>
 <p>Useful when you want all custom tokens in your blockchain, you ever traded acheieved etc.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>var tokenInterface = [{"type": "function","name": "name","constant": true,"inputs": [],"outputs": [{"name": "","type": "string"}]},{"type": "function","name": "decimals","constant": true,"inputs": [],"outputs": [{"name": "","type": "uint8"}]},{"type": "function","name": "balanceOf","constant": true,"inputs": [{"name": "","type": "address"}],"outputs": [{"name": "","type": "uint256"}]},{"type": "function","name": "symbol","constant": true,"inputs": [],"outputs": [{"name": "","type": "string"}]},{"type": "function","name": "transfer","constant": false,"inputs": [{"name": "_to","type": "address"},{"name": "_value","type": "uint256"}],"outputs": []},{"type": "constructor","inputs": [{"name": "_supply","type": "uint256"},{"name": "_name","type": "string"},{"name": "_decimals","type": "uint8"},{"name": "_symbol","type": "string"}]},{"name": "Transfer","type": "event","anonymous": false,"inputs": [{"indexed": true,"name": "from","type": "address"},{"indexed": true,"name": "to","type": "address"},{"indexed": false,"name": "value","type": "uint256"}]}];
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var tokenInterface = [{"type": "function","name": "name","constant": true,"inputs": [],"outputs": [{"name": "","type": "string"}]},{"type": "function","name": "decimals","constant": true,"inputs": [],"outputs": [{"name": "","type": "uint8"}]},{"type": "function","name": "balanceOf","constant": true,"inputs": [{"name": "","type": "address"}],"outputs": [{"name": "","type": "uint256"}]},{"type": "function","name": "symbol","constant": true,"inputs": [],"outputs": [{"name": "","type": "string"}]},{"type": "function","name": "transfer","constant": false,"inputs": [{"name": "_to","type": "address"},{"name": "_value","type": "uint256"}],"outputs": []},{"type": "constructor","inputs": [{"name": "_supply","type": "uint256"},{"name": "_name","type": "string"},{"name": "_decimals","type": "uint8"},{"name": "_symbol","type": "string"}]},{"name": "Transfer","type": "event","anonymous": false,"inputs": [{"indexed": true,"name": "from","type": "address"},{"indexed": true,"name": "to","type": "address"},{"indexed": false,"name": "value","type": "uint256"}]}];
 TokenContract = web3.eth.contract(tokenInterface);
 
 var lowestBlock = 474147; //November 3, 2015 - last time the ABI above was changed
@@ -311,11 +308,10 @@ for (var x=lowestBlock; x &lt; highestBlock; x++) {
 	}
 	//  console.log(eth.getBlock(x).transactions);  //testing
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="5-find-all-non-zero-transactions-in-a-block">5. Find all non-zero transactions in a Block</h2>
 <p>Find Non-Zero Transaction Count In A Range Of Blocks</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function checkTransactionCount(startBlockNumber, endBlockNumber) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function checkTransactionCount(startBlockNumber, endBlockNumber) {
 	console.log("Searching for non-zero transaction counts between blocks "  + startBlockNumber + " and " + endBlockNumber);
 	for (var i = startBlockNumber; i &lt;= endBlockNumber; i++) {
 		var block = eth.getBlock(i);
@@ -326,11 +322,10 @@ for (var x=lowestBlock; x &lt; highestBlock; x++) {
 		}
 	}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <h2 id="6-get-mined-blocks">6. Get mined blocks</h2>
 <p>Get all the blocks mined by a specific address.</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>function getMinedBlocks(miner, startBlockNumber, endBlockNumber) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function getMinedBlocks(miner, startBlockNumber, endBlockNumber) {
 	if (endBlockNumber == null) {
 		endBlockNumber = eth.blockNumber;
 		console.log("Using endBlockNumber: " + endBlockNumber);
@@ -365,8 +360,7 @@ for (var x=lowestBlock; x &lt; highestBlock; x++) {
 		}
 	}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
     </article>
    <div class="ui hidden divider"></div>
 <div class="ui tiny label endorsement">
@@ -395,6 +389,9 @@ s.setAttribute('data-timestamp', +new Date());
     <h3>Recent Posts</h3>
 <ul>
   <li >
+    <a class="header" href="/blogs/microsoft-coco-framework" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a>
+  </li>
+  <li >
     <a class="header" href="/blogs/engineering-ico-fundraiser-platform" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a>
   </li>
   <li >
@@ -408,9 +405,6 @@ s.setAttribute('data-timestamp', +new Date());
   </li>
   <li >
     <a class="header" href="/blogs/service-discovery-tools-microsrvice" title="Service discovery tools for microservices.">Service discovery tools for microservices.</a>
-  </li>
-  <li >
-    <a class="header" href="/blogs/what-is-meant-by-forking-blockchain" title="What is meant by forking in a Blockchain?">What is meant by forking in a Blockchain?</a>
   </li>
 </ul>
 <div class="ui items author white">
@@ -439,7 +433,7 @@ s.setAttribute('data-timestamp', +new Date());
    <div class="footers">
   +91 471 4000056 <i class="ellipsis vertical icon"></i> 
  <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
- <i class="ellipsis vertical icon"></i> &copy; 2010-2017 All rights reserved
+ <i class="ellipsis vertical icon"></i> &copy; 2010-2018 All rights reserved
  <p class="slogan">Blockchain Consulting. Technology Supercharged</p>
 </div>
  </div>

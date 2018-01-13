@@ -234,21 +234,17 @@ pre, code {
 
 <p>We specify this value when defining a function,</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>function printName ( name = 'there' ) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there' ) {
   return `Hello,  ${name}`
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 <p>We can even use the default parameter of one parameter as part of an expression for another
 paramter. For eg:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>function printName ( name = 'there', fullname = name + ' lastName' ) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there', fullname = name + ' lastName' ) {
   return `Hello,  ${name} -  ${fullname} `
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="rest-parameters">Rest Parameters</h2>
 <p>The rest parameter syntax allows us to represent an indefinite number of arguments as an array.</p>
@@ -259,25 +255,21 @@ paramter. For eg:</p>
 It is used when we want to pass an array to a function as individual arguments of that function. For
 eg:</p>
 
-<div class="highlighter-rouge">
-<pre class="highlight"><code>function sum (x, y, z ) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sum (x, y, z ) {
   return x + y + z;
 }
 let values = [1, 2, 3]
 // notice the usage of ...
 sum(...values)
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Another Example</p>
-<div class="highlighter-rouge">
-<pre class="highlight"><code>function f(x, ...y) {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f(x, ...y) {
  // y is an Array
  return x * y.length;
 }
 f(3, "hello", true) == 6
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If the last named argument of a function is prefixed with <code class="highlighter-rouge">...</code>, it becomes an array whose elements from 0 (inclusive) to <code class="highlighter-rouge">theArgs.length</code> (exclusive) are supplied by the actual arguments passed to the function.</p>
 
@@ -298,13 +290,13 @@ f(3, "hello", true) == 6
     <ul class="ui list">
       
       
+      <li><a href="/amp/blogs/microsoft-coco-framework/index.html" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a></li>
+      
       <li><a href="/amp/blogs/engineering-ico-fundraiser-platform/index.html" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a></li>
       
       <li><a href="/amp/blogs/how-to-create-mineable-erc20-tokens/index.html" title="How to create mineable ERC20 tokens on Ethereum Solidity">How to create mineable ERC20 tokens on Ethereum Solidity</a></li>
       
       <li><a href="/amp/blogs/guide-launching-successful-ico/index.html" title="Guide to launching a successful ICO">Guide to launching a successful ICO</a></li>
-      
-      <li><a href="/amp/blogs/smart-contract-best-practices-solidity/index.html" title="Solidity Smart contract Security best practices">Solidity Smart contract Security best practices</a></li>
       
     </ul>
   </div>

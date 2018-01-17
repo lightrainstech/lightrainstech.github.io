@@ -1,0 +1,265 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music Royalties Calculator</title>
+  <link rel="canonical" href="https://lightrains.com/work/music-royalties-calculator" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/work/music-royalties-calculator/"
+  },
+  "headline": "Music Royalties Calculator",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/work/music-royalties-calculator/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2017-11-16T01:01:01+05:30",
+  "dateModified": "2017-11-16T01:01:01+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "The Music Team Royalties Calculator is a single page application prototype that demonstrates a framework where users can register and calculate the share or ..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Music Royalties Calculator">Music Royalties Calculator</h1>
+
+  <amp-img
+  src="/assets/img/blog/"
+  alt="Music Royalties Calculator" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Thu, Nov 16, 17
+    </span>
+    <p>The Music Team Royalties Calculator is a single page application prototype that demonstrates a framework where users can register and calculate the share or royalty revenues for each holder generated by different revenue streams for a given song or track, where the data is stored in the Ethereum blockchain.</p>
+
+<p>In this use case, the blockchain is used as an immutable registry that solves for data integrity across multiple organisations for the music industry and can also serve to automatically simulate the issuing of payments to share or royalty holders.</p>
+
+<p>Smart contracts manage the allocation of shares or royalty revenues for existing and new revenue streams or models based on the contours of copyright law and business practice.These are calculated based on the ownership percentages of publishing and recording rights and of other shareholders.</p>
+
+<h2 id="stakeholders">Stakeholders</h2>
+
+<ul>
+  <li>
+<strong>User:</strong> An individual that interacts with the platform</li>
+  <li>
+<strong>Admin:</strong> The role a User assumes to manage app settings</li>
+  <li>
+<strong>Publishing Rights holders:</strong> The owner(s) of a song’s Publishing Rights own(s) the rights to the composition; usually this is the author or authors of a piece of music. The authors are also the copyright owners unless there is an agreement by which the author assigns the copyright to another person or entity, such as a publisher.</li>
+  <li>
+<strong>Recording Rights holders:</strong> The owner or owners of the Recording Rights own the actual recording of the song’s sound. These rights usually belong to the party that financed the recording.</li>
+  <li>
+<strong>Revenue share holders:</strong> 3rd party or parties who have had publishing or recording rights transferred to them (eg: Social Marketers)</li>
+</ul>
+
+    <a href="https://lightrains.com/work/music-royalties-calculator" title="Music Royalties Calculator" class="nonamp">Full Version of Music Royalties Calculator</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/microsoft-coco-framework/index.html" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a></li>
+      
+      <li><a href="/amp/blogs/engineering-ico-fundraiser-platform/index.html" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a></li>
+      
+      <li><a href="/amp/blogs/how-to-create-mineable-erc20-tokens/index.html" title="How to create mineable ERC20 tokens on Ethereum Solidity">How to create mineable ERC20 tokens on Ethereum Solidity</a></li>
+      
+      <li><a href="/amp/blogs/guide-launching-successful-ico/index.html" title="Guide to launching a successful ICO">Guide to launching a successful ICO</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

@@ -5,6 +5,8 @@ var urlsToCache = [];
 
   urlsToCache.push("/blogs/engineering-ico-fundraiser-platform");
 
+  urlsToCache.push("/work/music-royalties-calculator");
+
   urlsToCache.push("/work/ico-fundraiser-dashboard");
 
   urlsToCache.push("/blogs/how-to-create-mineable-erc20-tokens");

@@ -225,6 +225,10 @@
 <lastmod>2018-01-01T05:30:00+05:30</lastmod>
 </url>
 <url>
+<loc>https://lightrains.com/blogs/lightning-networks-what-and-why</loc>
+<lastmod>2018-02-23T05:30:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/about/lightrains</loc>
 </url>
 <url>
@@ -525,6 +529,15 @@
 <loc>https://lightrains.com/tag/scalable-blockchain/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/lightning-network/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/blockchain-lightning-network/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/bitcoin-scaling/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -693,6 +706,9 @@
 <loc>https://lightrains.com/amp/blogs/microsoft-coco-framework/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/amp/blogs/lightning-networks-what-and-why/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/blogs/page2/</loc>
 </url>
 <url>
@@ -709,5 +725,8 @@
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page7/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/blogs/page8/</loc>
 </url>
 </urlset>

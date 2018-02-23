@@ -5,9 +5,27 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Jan 2018 12:33:11 +0530</pubDate>
-    <lastBuildDate>Wed, 17 Jan 2018 12:33:11 +0530</lastBuildDate>
+    <pubDate>Fri, 23 Feb 2018 12:09:33 +0530</pubDate>
+    <lastBuildDate>Fri, 23 Feb 2018 12:09:33 +0530</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Lightning Network - What and Why</title>
+        <description>The problem with bitcoin blockchain network is scalability. The block size in a blockchain is limited to 1MB, every block is created in every 10 Min and only 7 transaction per second. Lightning network introduced to resolve this problem, there by allowing more transaction at a time. Lightning network(LN) can be defined as decentralised network or payment channel for instant payment which is based on block chain’s smart contract functionality. More specifically Lightning Network is an off-chain protocol for bitcoin micro payments. LN is a bidirectional payment channel which allows transaction between two parties without needing broadcast each and every transaction. How Lightning Network works Bidirectional payment channel A multi-signature wallet/ address is opened by both parties and a small amount is deposited by them from their personal address. This transaction is called funding transaction/opening transaction since it for fund and open a bidirectional channel. One on­-chain transaction is made to deposit the funds. Before this transaction is made, a refund transaction is created, which returns the original deposit to both parties. After the transaction is broadcast on­-chain, the payment channel is open and ready for transfers. Initially this funding is taken as input for the transaction. Let Alice and Bob are the two parties who opened the payment channel with funding of 10 BTC (5 BTC each). Additionally, Alice and Bob both create a secret (a string of numbers), and exchange the hash. Suppose Alice want to send 1 BTC to Bob then, Alice now immediately creates a subsequent transaction from the opening transaction called commitment transaction. With the commitment transaction, Alice sends four bitcoins to herself, and six bitcoins to a second multi-sig address. This address can be unlocked by Bob only after 1000 blocks and unlocked by Alice only if she knows the pre-image of the hash...</description>
+        <pubDate>Fri, 23 Feb 2018 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/lightning-networks-what-and-why</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/lightning-networks-what-and-why</guid>
+        
+        <category>Lightning Network</category>
+        
+        <category>Blockchain Lightning Network</category>
+        
+        <category>Bitcoin Scaling</category>
+        
+        <category>Bitcoin</category>
+        
+        
+      </item>
     
       <item>
         <title>Microsoft Coco Framework - Things you need to know</title>

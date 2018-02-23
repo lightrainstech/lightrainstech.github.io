@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/lightning-networks-what-and-why");
+
   urlsToCache.push("/blogs/microsoft-coco-framework");
 
   urlsToCache.push("/blogs/engineering-ico-fundraiser-platform");
@@ -1255,6 +1257,42 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/scalable-blockchain/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/lightning-network/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/lightning-network/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/blockchain-lightning-network/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/blockchain-lightning-network/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/bitcoin-scaling/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/bitcoin-scaling/");
   
 
 

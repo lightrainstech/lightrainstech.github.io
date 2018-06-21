@@ -1,0 +1,382 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to setup PIVX masternode on Ubuntu</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/setup-pivx-masternode-ubuntu" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/setup-pivx-masternode-ubuntu/"
+  },
+  "headline": "How to setup PIVX masternode on Ubuntu",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/setup-pivx-masternode-ubuntu/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/pivx-masternode-ubuntu.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2018-06-21T05:30:00+05:30",
+  "dateModified": "2018-06-21T05:30:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "A masternode is a server on a decentralized network. It can be uses to complete unique functions which ordinary nodes can’t. It can be used for features like..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="How to setup PIVX masternode on Ubuntu">How to setup PIVX masternode on Ubuntu</h1>
+
+  <amp-img
+  src="/assets/img/blog/pivx-masternode-ubuntu.png"
+  alt="How to setup PIVX masternode on Ubuntu" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Thu, Jun 21, 18
+    </span>
+    <p>A masternode is a server on a decentralized network. It can be uses to complete unique functions which ordinary nodes can’t. It can be used for features like direct send/instant transactions or private transactions.</p>
+
+<p>Because of their increased capabilities, masternodes typically require a sizable investment in order to run. But this is where incentivization comes into play, as masternode operators are rewarded by earning portions of block rewards in whatever given cryptocurrency they’re facilitating.</p>
+
+<p>Masternodes are nodes running the same wallet software on the same blockchain to provide extra services to the network.  These services include:</p>
+<ul>
+  <li>Anonymization increased privacy of transactions</li>
+  <li>Instant transactions</li>
+  <li>A decentralized governance</li>
+  <li>A decentralized budgeting system</li>
+  <li>Immutable proposal and voting systems.</li>
+</ul>
+
+<p>This particular guide will walk you through the process of setting up a <a href="https://pivxmasternode.org/what-is-a-masternode/">PIVX</a> masternode in Ubuntu, either in a cloud server or your home computer.</p>
+
+<p><strong>Basic requirements to run pivx masternode</strong></p>
+
+<ul>
+  <li>10,000 PIV <a href="https://pivx.org/knowledge-base/how-do-i-obtain-piv/">How do I obtain PIV?</a>
+</li>
+  <li>A main computer (Your everyday computer) – This will run the control wallet, hold your collateral 10,000 PIV and can be turned on and off without affecting the masternode.</li>
+  <li>Masternode Server (VPS – The computer that will be on 24/7)</li>
+  <li>A unique IP address for your VPS / Remote wallet</li>
+</ul>
+
+<h2 id="set-up-control-wallet">Set up Control wallet</h2>
+<h3 id="1-generate-masternode-private-key">1. Generate Masternode private key</h3>
+
+<p><code class="highlighter-rouge">masternode genkey</code> will create a private key for you</p>
+
+<h3 id="2-generate-address">2. Generate address</h3>
+<p><code class="highlighter-rouge">getaccountaddress NAME_OF_MASTERNODE</code> will create an address for you.</p>
+
+<h3 id="3-fund-the-control-wallet">3. Fund the control wallet</h3>
+<p>Send 10,000 PIV to the address you generated in step 2 <em><strong>Be absolutely 100% sure that this is copied correctly. We cannot help you, if you send 10,000 PIV to an incorrect address.</strong></em></p>
+
+<h3 id="4-confirm-sent">4. Confirm sent</h3>
+<p><code class="highlighter-rouge">masternode outputs</code> will give you proof of transaction of sending 10,000 PIV</p>
+
+<h3 id="5-assign-the-wallet">5. Assign the wallet</h3>
+<p>Go to PIVX data directory <code class="highlighter-rouge">%Appdata%/PIVX</code> on Windows and <code class="highlighter-rouge">~</code> on Linux. Find <code class="highlighter-rouge">masternode.conf</code> and add the following line to it</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Name of Masternode(Use the name you entered earlier for simplicity)&gt; &lt;Unique IP address&gt;:51472 &lt;The result of Step 1&gt; &lt;Result of Step 4&gt; &lt;The number after the long line in Step 4&gt;
+</code></pre></div></div>
+<p>Substitute it with your own values and without the “&lt;&gt;”s</p>
+
+<h2 id="install-the-wallet-in-ubuntu">Install the wallet in Ubuntu</h2>
+
+<h3 id="6-install-wallet-on-masternode-ubuntu">6. Install wallet on Masternode Ubuntu</h3>
+<p>Install the latest version of the PIVX wallet onto your masternode. The lastest version can be found here: https://github.com/PIVX-Project/PIVX/releases</p>
+
+<p>Latest as of Jun, 21 2018 <a href="https://github.com/PIVX-Project/PIVX/releases/download/v3.1.0.2/pivx-3.1.0.2-x86_64-linux-gnu.tar.gz">Download PIVX Wallet v3.1.0.2</a></p>
+
+<p>Execute the following commands one by one.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~
+wget https://github.com/PIVX-Project/PIVX/releases/download/v3.1.0.2/pivx-3.1.0.2-x86_64-linux-gnu.tar.gz
+tar -zxvf pivx-3.1.0.2-x86_64-linux-gnu.tar.gz
+cd ~/pivx-3.1.0/bin
+./pivxd
+CTRL+C
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.pivx
+vim pivx.conf
+</code></pre></div></div>
+
+<p>then press <code class="highlighter-rouge">i</code> to go into insert mode and make the config look like this:</p>
+
+<blockquote>
+  <p>rpcuser=long random username
+rpcpassword=longer random password
+rpcallowip=127.0.0.1
+server=1
+daemon=1
+logtimestamps=1
+maxconnections=256
+masternode=1
+externalip=your unique public ip address
+masternodeprivkey=Result of Step 1</p>
+</blockquote>
+
+<p>Press <code class="highlighter-rouge">esc</code> and <code class="highlighter-rouge">:wq</code></p>
+
+<h2 id="start-your-masternode">Start your masternode</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/pivx-3.1.0/bin
+./pivxd
+</code></pre></div></div>
+
+<p>From the Control wallet debug console
+<code class="highlighter-rouge">startmasternode alias false &lt;mymnalias&gt;</code></p>
+
+<p>The following should appear:</p>
+
+<blockquote>
+  <p>“overall” : “Successfully started 1 masternodes, failed to start 0, total 1”,
+“detail” : [
+{
+“alias” : “<mymnalias>”,
+“result” : “successful”,
+“error” : “”
+}</mymnalias></p>
+</blockquote>
+
+<h3 id="7-start-the-masternode">7. Start the masternode</h3>
+<p><code class="highlighter-rouge">./pivx-cli startmasternode local false</code> A message “masternode successfully started” should appear</p>
+
+<h3 id="8-check-status">8. check status</h3>
+<p><code class="highlighter-rouge">./pivx-cli masternode status</code> You should see something like:</p>
+
+<blockquote>
+  <p>{
+“txhash” : “334545645643534534324238908f36ff4456454dfffff51311”,
+“outputidx” : 0,
+“netaddr” : “45.11.111.111:51472”,
+“addr” : “D6fujc45645645445645R7TiCwexx1LA1”,
+“status” : 4,
+“message” : “Masternode successfully started”
+}</p>
+</blockquote>
+
+<p><strong>Congratulations! You have successfully created your masternode!</strong></p>
+
+<p>Now the masternode setup is complete, you are safe to remove “enablezeromint=0” from the <code class="highlighter-rouge">pivx.conf</code> file of the control wallet.</p>
+
+<p><div class="cta-blog">
+  <h2 class="ui center aligned icon white header">
+    <i class="spy icon"></i>
+    Talk to one of our  <a href="/consulting/blockchain-consulting">blockchain consultant</a>.
+  </h2>
+
+  
+ <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="ui button big black obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+
+</div>
+</p>
+
+    <a href="https://lightrains.com/blogs/setup-pivx-masternode-ubuntu" title="How to setup PIVX masternode on Ubuntu" class="nonamp">Full Version of How to setup PIVX masternode on Ubuntu</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/setup-pivx-masternode-ubuntu/index.html" title="How to setup PIVX masternode on Ubuntu">How to setup PIVX masternode on Ubuntu</a></li>
+      
+      <li><a href="/amp/blogs/lightning-networks-what-and-why/index.html" title="Lightning Network - What and Why">Lightning Network - What and Why</a></li>
+      
+      <li><a href="/amp/blogs/microsoft-coco-framework/index.html" title="Microsoft Coco Framework - Things you need to know">Microsoft Coco Framework - Things you need to know</a></li>
+      
+      <li><a href="/amp/blogs/engineering-ico-fundraiser-platform/index.html" title="Engineering ICO fundraiser platform">Engineering ICO fundraiser platform</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

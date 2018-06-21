@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/setup-pivx-masternode-ubuntu");
+
   urlsToCache.push("/blogs/lightning-networks-what-and-why");
 
   urlsToCache.push("/blogs/microsoft-coco-framework");
@@ -1293,6 +1295,30 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/bitcoin-scaling/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/masternode/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/masternode/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/pivx/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/pivx/");
   
 
 

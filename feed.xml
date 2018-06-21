@@ -5,9 +5,23 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Jun 2018 12:34:52 +0530</pubDate>
-    <lastBuildDate>Tue, 12 Jun 2018 12:34:52 +0530</lastBuildDate>
+    <pubDate>Thu, 21 Jun 2018 22:14:14 +0530</pubDate>
+    <lastBuildDate>Thu, 21 Jun 2018 22:14:14 +0530</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>How to setup PIVX masternode on Ubuntu</title>
+        <description>A masternode is a server on a decentralized network. It can be uses to complete unique functions which ordinary nodes can’t. It can be used for features like direct send/instant transactions or private transactions. Because of their increased capabilities, masternodes typically require a sizable investment in order to run. But this is where incentivization comes into play, as masternode operators are rewarded by earning portions of block rewards in whatever given cryptocurrency they’re facilitating. Masternodes are nodes running the same wallet software on the same blockchain to provide extra services to the network. These services include: Anonymization increased privacy of transactions Instant transactions A decentralized governance A decentralized budgeting system Immutable proposal and voting systems. This particular guide will walk you through the process of setting up a PIVX masternode in Ubuntu, either in a cloud server or your home computer. Basic requirements to run pivx masternode 10,000 PIV How do I obtain PIV? A main computer (Your everyday computer) – This will run the control wallet, hold your collateral 10,000 PIV and can be turned on and off without affecting the masternode. Masternode Server (VPS – The computer that will be on 24/7) A unique IP address for your VPS / Remote wallet Set up Control wallet 1. Generate Masternode private key masternode genkey will create a private key for you 2. Generate address getaccountaddress NAME_OF_MASTERNODE will create an address for you. 3. Fund the control wallet Send 10,000 PIV to the address you generated in step 2 Be absolutely 100% sure that this is copied correctly. We cannot help you, if you send 10,000 PIV to an incorrect address. 4. Confirm sent masternode outputs will give you proof of transaction of sending 10,000 PIV 5. Assign the wallet Go to PIVX data directory %Appdata%/PIVX on Windows and ~...</description>
+        <pubDate>Thu, 21 Jun 2018 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/setup-pivx-masternode-ubuntu</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/setup-pivx-masternode-ubuntu</guid>
+        
+        <category>Masternode</category>
+        
+        <category>PIVX</category>
+        
+        
+      </item>
     
       <item>
         <title>Lightning Network - What and Why</title>

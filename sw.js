@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/stellar-consensus-protocol-scp");
+
   urlsToCache.push("/blogs/setup-pivx-masternode-ubuntu");
 
   urlsToCache.push("/blogs/lightning-networks-what-and-why");
@@ -1319,6 +1321,54 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/pivx/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/federated-byzantine-agreement/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/federated-byzantine-agreement/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/stellar/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/stellar/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/consensus-protocol/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/consensus-protocol/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/scp/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/scp/");
   
 
 

@@ -190,7 +190,7 @@
 		<a href="/tag/Bitcoin/">Bitcoin <span class="badge">6</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
-		<a href="/tag/Principles/">Principles <span class="badge">5</span></a>
+		<a href="/tag/Principles/">Principles <span class="badge">6</span></a>
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Ethereum/">Ethereum <span class="badge">6</span></a>
@@ -416,6 +416,18 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/PIVX/">PIVX <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Federated Byzantine agreement/">Federated Byzantine agreement <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Stellar/">Stellar <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Consensus Protocol/">Consensus Protocol <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/SCP/">SCP <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

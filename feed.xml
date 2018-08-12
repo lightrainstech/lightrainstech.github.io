@@ -5,9 +5,55 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Aug 2018 21:16:11 +0530</pubDate>
-    <lastBuildDate>Wed, 08 Aug 2018 21:16:11 +0530</lastBuildDate>
+    <pubDate>Sun, 12 Aug 2018 11:27:09 +0530</pubDate>
+    <lastBuildDate>Sun, 12 Aug 2018 11:27:09 +0530</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Stellar Federation Server - Part 1/2</title>
+        <description>The Stellar federation protocol maps Stellar addresses to a unique name spaced string. It’s a way for Stellar client software to resolve email-like addresses such as name*your_domain.com into account IDs like: GCFFPIFOYY7Z...TK6T32V37KEJU. Stellar addresses provide an easy way for users to send and receive payments by using a syntax that interoperates across different domains and providers. When sending a payment, you contact a federation server first to determine what Stellar account ID to pay. Luckily, the bridge server does this for you.
+
+To explain it simply, a Stellar Federation Server is a database with the following table structure which maps a Stellar address to a string(friendly_id).
+
+| id | first_name | last_name | friendly_id         |
+|----|------------|-----------|---------------------|
+| 1  | Tunde      | Adebayo   | tunde_adebayo       |
+| 2  | Lightrains | Tech      | lightrains          |
+
+
+Where Lightrains Stellar address would be lightrains*your_domain.com.
+
+Stellar Federation Server architecture
+
+Source: stellar.org
+
+  Here, your front end app/website will be talking to a intermediate server called bridge server which will be talking directly to a federation server. Bridge server is responsible for querying the federation server and get corresponding address and send transaction or operation to a stellar core via stellar Horizon server.
+
+
+Current federation workflow
+
+Currently, in order to resolve a federation address, the client needs to do the following:
+
+
+  fetch the stellar.toml file from https://&amp;lt;domain&amp;gt;/.well-known/stellar.toml and read the FEDERATION_SERVER entry from it
+  fetch the response from the federation server using secure HTTP GET and required parameters
+  proceed with the payment
+
+
+TODO: How to set up Stellar Federation Server - Part 2/2
+</description>
+        <pubDate>Sun, 12 Aug 2018 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/stellar-federation-server-part1</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/stellar-federation-server-part1</guid>
+        
+        <category>Stellar</category>
+        
+        <category>Stellar Federation Server</category>
+        
+        <category>Principles</category>
+        
+        
+      </item>
     
       <item>
         <title>Stellar Consensus Protocol</title>

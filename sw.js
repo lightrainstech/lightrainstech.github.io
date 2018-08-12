@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/stellar-federation-server-part1");
+
   urlsToCache.push("/blogs/stellar-consensus-protocol-scp");
 
   urlsToCache.push("/blogs/setup-pivx-masternode-ubuntu");
@@ -1369,6 +1371,18 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/scp/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/stellar-federation-server/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/stellar-federation-server/");
   
 
 

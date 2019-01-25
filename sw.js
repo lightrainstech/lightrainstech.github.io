@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/optimizing-performace-react-part1");
+
   urlsToCache.push("/blogs/stellar-federation-server-part1");
 
   urlsToCache.push("/blogs/stellar-consensus-protocol-scp");
@@ -1383,6 +1385,42 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/stellar-federation-server/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/reactjs/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/reactjs/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/javascript/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/javascript/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/performance/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/performance/");
   
 
 

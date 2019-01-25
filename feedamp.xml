@@ -5,10 +5,28 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Aug 2018 14:47:30 +0530</pubDate>
-    <lastBuildDate>Sun, 12 Aug 2018 14:47:30 +0530</lastBuildDate>
-    <generator>Jekyll v3.6.2</generator>
+    <pubDate>Fri, 25 Jan 2019 20:05:26 +0530</pubDate>
+    <lastBuildDate>Fri, 25 Jan 2019 20:05:26 +0530</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
+    
+      <item>
+        <title>React performance Optimization - Part 1/2</title>
+        <description>Overview React is usually quite fast out of the box. We can make it even faster using simple steps and even faster if we dig further and find the bottleneck. We are dividing this series into 2 based on the difficulty of the solution. Part 1 we will be discussing the very easy optimization steps. Part 2 will be little more advanced. Great, lets start with the obvious ones; 1. Use the Production Build Use production build when you are done with development and shipping your app to your client. NODE_ENV is the variable used to identify the environment where the app is getting build. You can set it using NODE_ENV=production node YOUR-SCRIPT.js. If you are using Create React App you can use the predefined npm run build to build the app in production environment. 2. Avoid unwanted renders React re-renders components on every state change. Even though the react virtual dom is much faster than native dom, it will slow down if we make it do additional work than what is necessary to make the change. When a component’s props or state change, React decides whether an actual DOM update is necessary by comparing the newly returned element with...</description>
+        <pubDate>Fri, 04 Jan 2019 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/optimizing-performace-react-part1/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/optimizing-performace-react-part1</guid>
+        
+        <category>React</category>
+        
+        <category>ReactJS</category>
+        
+        <category>Javascript</category>
+        
+        <category>Performance</category>
+        
+        
+      </item>
     
       <item>
         <title>Stellar Federation Server - Part 1/2</title>

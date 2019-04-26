@@ -5,9 +5,41 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Mar 2019 20:37:32 +0530</pubDate>
-    <lastBuildDate>Sat, 30 Mar 2019 20:37:32 +0530</lastBuildDate>
+    <pubDate>Fri, 26 Apr 2019 20:29:10 +0530</pubDate>
+    <lastBuildDate>Fri, 26 Apr 2019 20:29:10 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Untrack</title>
+        <description>Untrack is a desktop app to block all known tracking websites from spying on your internet activity. Untrack stops all tracking websites from tracking your online activity. Untrack stops all tracking websites from tracking your online activity. Tracking domain list is curated and maintained as an open source project. Untrack efficiently blocks ads, tracking and malware. It saves your data, makes your device faster and protects your privacy.
+
+How it works.
+
+It simply replaces your hosts file with a crowdsourced list of all known tracking websites. List of tracking domains are maintained by StevenBlack/hosts
+
+What it blocks
+
+
+  38k+ Tracking websites
+  2k+ Gambling websites
+  12k+ Porn websites
+  2k+ Social media websites
+
+
+Yes, that is a total of 55k+ tracking domains.
+
+Why we did this?
+
+We know that this is a 1 minute job for a programmer to have this running in your computer. But our idea is to allow each and every common internet user to be able to escape from these trackers.
+</description>
+        <pubDate>Fri, 05 Apr 2019 01:01:01 +0530</pubDate>
+        <link>https://lightrains.com/work/untrack-free-open-source-ad-blocker</link>
+        <guid isPermaLink="true">https://lightrains.com/work/untrack-free-open-source-ad-blocker</guid>
+        
+        
+        <category>Open Source</category>
+        
+      </item>
     
       <item>
         <title>React performance Optimization - Part 1/2</title>

@@ -209,7 +209,7 @@
   <li>Get BNB from test <a href="https://www.binance.com/en/dex/testnet/address">faucet</a></li>
 </ul>
 <blockquote>
- <p>Each address can only get 200 BNB from the faucet. To get the necessary test BNB, you might get more from your friends or register more addresses, and transfer all BNB into one wallet.</p>
+ <p>Each address can only get 200 BNB from the faucet. To get the required test BNB, you may ask for more from your friends or register more addresses in the account, and transfer all test BNB into one wallet.</p>
 </blockquote>
 <h2 id="3-createissue-token">3. Create/Issue token</h2>
 <p>To issue a token you need to have basic unix command line experience. You need to use command line utility called <code class="highlighter-rouge">bnbcli</code> which you can download from <a href="https://github.com/binance-chain/node-binary">binance-chain/node-binary</a>.</p>
@@ -257,7 +257,7 @@ key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
 </code></pre></div></div>
 <p>Here we issued a token called LIGHT, the total amount is 1 billion. To avoid abusing, the chain will automatically add three random letters as the suffix. The combined name will be unique on the Chain.</p>
 <h2 id="4-proposal-to-list-token">4. Proposal to list token</h2>
-<p>You need to create a proposal to let validators vote. You can use the following command to create a listing proposal.</p>
+<p>You will have to create a listing proposal to let validators to vote. You can use the following command to create a listing proposal.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov submit-list-proposal \
 --from key01
 --deposit 200000000000:BNB \
@@ -273,7 +273,7 @@ key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
 &gt; Password to sign with 'key01':
 </code></pre></div></div>
 <p>It will prompt you to enter password, enter it.</p>
-<p>In this example, we deposited 2000 BNB for the listing proposal and the initial price is 1 BNB. Please pay attention that according to the official document, the initial price must be 1 BNB or the proposal will be rejected.</p>
+<p>In this example, we deposited 2000 BNB for the token listing proposal and the initial price is set as 1 BNB. According to the official doc, the initial price must be 1 BNB or the proposal will be rejected.</p>
 <p>On successful proposal you will get a proposal ID, you can get it from the <a href="https://testnet-explorer.binance.org/">explorer</a> or via <code class="highlighter-rouge">bnbcli</code> using</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov query-proposals \
 --chain-id=Binance-Chain-Nil \

@@ -5,10 +5,32 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 28 Apr 2019 21:05:58 +0530</pubDate>
-    <lastBuildDate>Sun, 28 Apr 2019 21:05:58 +0530</lastBuildDate>
+    <pubDate>Mon, 29 Apr 2019 18:13:21 +0530</pubDate>
+    <lastBuildDate>Mon, 29 Apr 2019 18:13:21 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
+    
+      <item>
+        <title>How to create and issue token on Binance Chain</title>
+        <description>Binance Chain and Binance DEX are community-driven and created to assist projects that require both fast transactions and improved liquidity in a decentralized manner. While anyone can issue their tokens on Binance Chain, the listing of trading pairs on Binance DEX involves 4 main steps: Proposal, Deposit, Vote, and List. However for the sake of easy understanding lets break this even further into; Create a wallet Get test BNB Issue the token Create a proposal to list your token List your token 1. Create a wallet You can create an account from the testnet website here BinanceTestnet. Enter your strong password and you will need to download the keystore file. Please backup the mnemonic phrase and save both file and phrase carefully. Now you have your keystore file, password and backup mnemonic phrase, you can proceed to next steps. 1.1. See if you can unlock. Go to binance.org/unlock to unlock your wallet and you can see your address there. 2. Get test BNB You need test BNBs to create, list and issue your tokens the fee estimations are the following; Issuing 400 BNB Listing Proposal 2000 BNB Listing 800 BNB i.e. 2400 BNB are required for the issuing/listing. Steps to...</description>
+        <pubDate>Mon, 29 Apr 2019 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/how-create-binance-token/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/how-create-binance-token</guid>
+        
+        <category>Binance Token</category>
+        
+        <category>Token</category>
+        
+        <category>Binance Chain</category>
+        
+        <category>Tutorial</category>
+        
+        <category>Binance DEX</category>
+        
+        <category>DEX</category>
+        
+        
+      </item>
     
       <item>
         <title>React performance Optimization - Part 1/2</title>

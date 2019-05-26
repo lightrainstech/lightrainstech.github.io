@@ -5,10 +5,28 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 16 May 2019 10:39:02 +0530</pubDate>
-    <lastBuildDate>Thu, 16 May 2019 10:39:02 +0530</lastBuildDate>
+    <pubDate>Sun, 26 May 2019 11:06:36 +0530</pubDate>
+    <lastBuildDate>Sun, 26 May 2019 11:06:36 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
+    
+      <item>
+        <title>Changes to watch in Ethereum istanbul</title>
+        <description>Istanbul October 2019 Planned Ethereum Network Upgrade The deadline for EIP proposals for Istanbul was May 17th. All of these EIPs intend to prepare for inclusion in Istanbul, but Core Dev acceptance, implementation, testing, audits, and other work needs to be done to prepare them. Proposed EIPs EIP-615: Subroutines and Static Jumps for the EVM EIP-1057: ProgPoW, a Programmatic Proof-of-Work (contingent on positive audit results) - @IfDefElse EIP-1108: Reduce alt_bn128 precompile gas costs - @zac-williamson EIP-1283: Net gas metering for SSTORE without dirty maps @sorpass EIP-1344: Add ChainID opcode - @fubuloubu EIP-1352: Specify restricted address range for precompiles/system contracts EIP 1380: Reduced gas cost for call to self - @axic @jacqueswww EIP 1559: Fee market change for ETH 1.0 chain EIP-1965: Method to check if a chainID is valid at a specific block Number EIP-1702: Generalized account versioning scheme - @sorpaas EIP-1706: Disable SSTORE with gasleft lower than call stipend EIP 1803: Rename opcodes for clarity - @axic EIP 1829: Precompile for Elliptic Curve Linear Combinations @remco EIP 1884: Reprice Opcodes + optional new opcode, @holiman - Discuss EIP 1930: CALLs with strict gas semantic. Revert if not enough gas available EIP 2028: Calldata gas cost reduction Notable discussions I...</description>
+        <pubDate>Sun, 26 May 2019 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/what-is-ethereum-istanbul-upgrade</guid>
+        
+        <category>Ethereum Istanbul</category>
+        
+        <category>Ethereum</category>
+        
+        <category>Fork</category>
+        
+        <category>HardFork</category>
+        
+        
+      </item>
     
       <item>
         <title>How to create and issue token on Binance Chain</title>

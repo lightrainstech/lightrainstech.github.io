@@ -1,0 +1,326 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Solidity Smart contract Security best practices</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/smart-contract-best-practices-solidity" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/smart-contract-best-practices-solidity/"
+  },
+  "headline": "Solidity Smart contract Security best practices",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/smart-contract-best-practices-solidity/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/smart-contract-best-practices-solidity.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2017-08-07T05:30:00+05:30",
+  "dateModified": "2017-08-07T05:30:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Security of a smart contract is more important than any other software or piece of code just because of the non-editable nature of it in general.Still, there..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Solidity Smart contract Security best practices">Solidity Smart contract Security best practices</h1>
+
+  <amp-img
+  src="/assets/img/blog/smart-contract-best-practices-solidity.png"
+  alt="Solidity Smart contract Security best practices" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Mon, Aug 07, 17
+    </span>
+    <p>Security of a smart contract is more important than any other software or piece of code just because of the non-editable nature of it in general.</p>
+
+<p>Still, there are no widely adopted security standards or best practices for projects to follow. There are no tools for developers to easily create, test, verify and audit smart contracts, and do so collaboratively. Entire Ethereum community is grateful for researchers and developers of <a href="https://github.com/OpenZeppelin/zeppelin-solidity">OpenZeppelin/zeppelin-solidity</a> for the standard and well tested contract sources to relay on.</p>
+
+<ol>
+  <li><a href="#external-calls">External Calls</a></li>
+  <li><a href="#handling-the-funds">Handling the funds</a></li>
+  <li><a href="#erc20-token-standard">Token standard</a></li>
+  <li><a href="#integer-division">Integer Division, Overflow and Underflow</a></li>
+  <li><a href="#use-fallback-functions">Fallback functions</a></li>
+  <li><a href="#race-conditions">Race Conditions</a></li>
+</ol>
+
+<h2 id="external-calls">External Calls</h2>
+<p>Calls to untrusted contracts can introduce several unexpected risks or errors. External calls may execute malicious code in that contract or any other contract that it depends upon. As such, every external call should be treated as a potential security risk, and removed if possible. Understand how <code class="highlighter-rouge">send()</code>, <code class="highlighter-rouge">transfer()</code>, and <code class="highlighter-rouge">call.value()()</code>. Using <code class="highlighter-rouge">send()</code> or <code class="highlighter-rouge">transfer()</code> will prevent reentrancy but it does so at the cost of being incompatible with any contract whose fallback function requires more than 2,300 gas.</p>
+
+<h2 id="handling-the-funds">Handling the funds</h2>
+<p>When developing a crowdsale smart contract, there are several options for handling the collection of funds. Take a look at the common ways in which the funds are getting handled.</p>
+
+<p><strong>In contract:-</strong> The obvious method, we keep the funds in the contract itself during the crowdsale and transfer the funds to the developer address once the crowdsale is over.</p>
+
+<p><strong>Forwarding:-</strong> Instead of temporarily storing the funds in the crowdsale contract, we can immediately forward them to a multisig wallet after each individual investment. However it opens a trust issue that the funds can be used to buy the token and corrupt the corwdsale itself.</p>
+
+<p>As a result an evolved mechanism is to keep the funds in a intermediate multisig contract with a time lock such that the <em><strong>funds are not movable</strong></em> till the crowdsale ends.</p>
+
+<h2 id="erc20-token-standard">ERC20 token standard</h2>
+<p>There were no standard for tokens on etheerum till the <a href="https://github.com/ethereum/EIPs/issues/20">EIP 20</a>. Once that is pulled in now  we have a better standard for the tokens on Ethereum. Using established standards (i.e. the <a href="https://github.com/ethereum/EIPs/issues/20">ERC20 token standard</a>), newly minted tokens are easily integrated into major wallets and exchanges. A general basic example would be;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// https://github.com/ethereum/EIPs/issues/20
+contract ERC20 {
+    function totalSupply() constant returns (uint totalSupply);
+    function balanceOf(address _owner) constant returns (uint balance);
+    function transfer(address _to, uint _value) returns (bool success);
+    function transferFrom(address _from, address _to, uint _value) returns (bool success);
+    function approve(address _spender, uint _value) returns (bool success);
+    function allowance(address _owner, address _spender) constant returns (uint remaining);
+    event Transfer(address indexed _from, address indexed _to, uint _value);
+    event Approval(address indexed _owner, address indexed _spender, uint _value);
+}
+</code></pre></div></div>
+
+<h2 id="integer-division">Integer division</h2>
+<p>All integer division rounds down to the nearest integer. If you need more precision, consider using a multiplier, or store both the numerator and denominator.</p>
+
+<p>(In the future, Solidity will have a fixed-point type, which will make this easier.)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// bad
+uint x = 5 / 2; // Result is 2, all integer division rounds DOWN to the nearest integer
+
+// good
+uint multiplier = 10;
+uint x = (5 * multiplier) / 2;
+
+uint numerator = 5;
+uint denominator = 2;
+</code></pre></div></div>
+
+<p><strong>Overflow and Underflow</strong> If a balance reaches the maximum uint value (2^256) it will circle back to zero. This checks for that condition. This may or may not be relevant, depending on the implementation. Think about whether or not the uint value has an opportunity to approach such a large number. Think about how the uint variable changes state, and who has authority to make such changes.</p>
+
+<h2 id="use-fallback-functions">Use Fallback functions</h2>
+<p><a href="http://solidity.readthedocs.io/en/latest/contracts.html#fallback-function">Fallback functions</a> are called when a contract is sent a message with no arguments (or when no function matches), and only has access to 2,300 gas when called from a .send() or .transfer(). If you wish to be able to receive Ether from a .send() or .transfer(), the most you can do in a fallback function is log an event. Use a proper function if a computation or more gas is required.</p>
+
+<h2 id="race-conditions">Race Conditions</h2>
+<p>One of the major dangers of calling external contracts is that they can take over the control flow, and make changes to your data that the calling function wasn’t expecting. This class of bug can take many forms, and both of the major bugs that led to the DAO’s collapse were bugs of this sort.</p>
+
+<h2 id="security-tools">Security Tools</h2>
+
+<ul>
+  <li>
+<a href="https://github.com/melonproject/oyente">Oyente</a> - Analyze Ethereum code to find common vulnerabilities, based on this <a href="http://www.comp.nus.edu.sg/~loiluu/papers/oyente.pdf">paper</a>.</li>
+  <li>
+<a href="https://github.com/sc-forks/solidity-coverage">SolCover</a> - Code coverage for Solidity testing.</li>
+  <li>
+<a href="https://github.com/raineorshine/solgraph">Solgraph</a> - Generates a DOT graph that visualizes function control flow of a Solidity contract and highlights potential security vulnerabilities.</li>
+</ul>
+
+<p><strong>Sources:-</strong></p>
+<ol>
+  <li><a href="https://github.com/ConsenSys/smart-contract-best-practices">ConsenSys/smart-contract-best-practices</a></li>
+  <li><a href="https://blog.zeppelin.solutions/onward-with-ethereum-smart-contract-security-97a827e47702">Ethereum Smart Contract Security</a></li>
+</ol>
+
+    <a href="https://lightrains.com/blogs/smart-contract-best-practices-solidity" title="Solidity Smart contract Security best practices" class="nonamp">Full Version of Solidity Smart contract Security best practices</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</a></li>
+      
+      <li><a href="/amp/blogs/how-create-binance-token/index.html" title="How to create and issue token on Binance Chain">How to create and issue token on Binance Chain</a></li>
+      
+      <li><a href="/amp/blogs/optimizing-performace-react-part1/index.html" title="React performance Optimization - Part 1/2">React performance Optimization - Part 1/2</a></li>
+      
+      <li><a href="/amp/blogs/stellar-federation-server-part1/index.html" title="Stellar Federation Server - Part 1/2">Stellar Federation Server - Part 1/2</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Changes to watch in Ethereum istanbul</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/what-is-ethereum-istanbul-upgrade" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/what-is-ethereum-istanbul-upgrade/"
+  },
+  "headline": "Changes to watch in Ethereum istanbul",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/what-is-ethereum-istanbul-upgrade/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/ethereum-istanbul-upgrade.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2019-05-26T05:30:00+05:30",
+  "dateModified": "2019-05-26T05:30:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Istanbul October 2019 Planned Ethereum Network UpgradeThe deadline for EIP proposals for Istanbul was May 17th. All of these EIPs intend to prepare for in..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</h1>
+
+  <amp-img
+  src="/assets/img/blog/ethereum-istanbul-upgrade.png"
+  alt="Changes to watch in Ethereum istanbul" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Sun, May 26, 19
+    </span>
+    <h2 id="istanbul-october-2019-planned-ethereum-network-upgrade">Istanbul October 2019 Planned Ethereum Network Upgrade</h2>
+
+<p>The deadline for EIP proposals for Istanbul was May 17th. All of these EIPs intend to prepare for inclusion in Istanbul, but Core Dev acceptance, implementation, testing, audits, and other work needs to be done to prepare them.</p>
+
+<h2 id="proposed-eips">Proposed EIPs</h2>
+
+<ul>
+<li>
+<a href="https://eips.ethereum.org/EIPS/eip-615">EIP-615</a>: Subroutines and Static Jumps for the EVM</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1057">EIP-1057</a>: ProgPoW, a Programmatic Proof-of-Work (contingent on positive audit results) - @IfDefElse</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1108">EIP-1108</a>: Reduce alt_bn128 precompile gas costs - @zac-williamson</li> <li>
+<a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1283.md">EIP-1283</a>: Net gas metering for SSTORE without dirty maps @sorpass</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1344">EIP-1344</a>: Add ChainID opcode - @fubuloubu</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1352">EIP-1352</a>: Specify restricted address range for precompiles/system contracts</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1380">EIP 1380</a>: Reduced gas cost for call to self - @axic @jacqueswww</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1559">EIP 1559</a>: Fee market change for ETH 1.0 chain</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1965">EIP-1965</a>: Method to check if a chainID is valid at a specific block Number</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1702">EIP-1702</a>: Generalized account versioning scheme - @sorpaas</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1706">EIP-1706</a>: Disable SSTORE with gasleft lower than call stipend</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1803">EIP 1803</a>: Rename opcodes for clarity - @axic</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1829">EIP 1829</a>: Precompile for Elliptic Curve Linear Combinations @remco</li> <li>
+<a href="https://github.com/ethereum/EIPs/blob/dcc573e74adc0e6dd25821ddaabf862e8f85e107/EIPS/eip-1884.md">EIP 1884</a>: Reprice Opcodes + optional new opcode, @holiman - <a href="https://ethereum-magicians.org/t/opcode-repricing/3024">Discuss</a>
+</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-1930">EIP 1930</a>: CALLs with strict gas semantic. Revert if not enough gas available</li> <li>
+<a href="https://eips.ethereum.org/EIPS/eip-2028">EIP 2028</a>: Calldata gas cost reduction</li>
+</ul>
+
+<h2 id="notable-discussions">Notable discussions</h2>
+
+<blockquote>
+  <p>I proposed EIP-1344 for Istanbul because I think it’s the most straightforward and flexible proposal for managing chain ID-based domain separation in the application layer. I don’t believe EIP-1965 has to be Accepted to be proposed for Istanbul, so that should not be an issue in proposing it.
+<a href="https://ethereum-magicians.org/t/hardfork-meta-eip-1679-istanbul-discussion/3207/3">fubuloubu</a></p>
+</blockquote>
+
+<p><strong>Source:</strong></p>
+
+<ul>
+  <li>https://en.ethereum.wiki/roadmap/istanbul</li>
+  <li>https://ethereum-magicians.org/t/hardfork-meta-eip-1679-istanbul-discussion/3207</li>
+</ul>
+
+    <a href="https://lightrains.com/blogs/what-is-ethereum-istanbul-upgrade" title="Changes to watch in Ethereum istanbul" class="nonamp">Full Version of Changes to watch in Ethereum istanbul</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</a></li>
+      
+      <li><a href="/amp/blogs/how-create-binance-token/index.html" title="How to create and issue token on Binance Chain">How to create and issue token on Binance Chain</a></li>
+      
+      <li><a href="/amp/blogs/optimizing-performace-react-part1/index.html" title="React performance Optimization - Part 1/2">React performance Optimization - Part 1/2</a></li>
+      
+      <li><a href="/amp/blogs/stellar-federation-server-part1/index.html" title="Stellar Federation Server - Part 1/2">Stellar Federation Server - Part 1/2</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

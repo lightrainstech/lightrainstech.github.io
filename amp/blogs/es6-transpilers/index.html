@@ -1,0 +1,316 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ES6 Transpilers</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/es6-transpilers" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/es6-transpilers/"
+  },
+  "headline": "ES6 Transpilers",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/es6-transpilers/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/es6-transpilers.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2016-08-07T05:10:00+05:30",
+  "dateModified": "2016-08-07T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "What is a TranspilerA source-to-source compiler, transcompiler or transpiler is a type of compiler that takes thesource code of a program written in one p..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="ES6 Transpilers">ES6 Transpilers</h1>
+
+  <amp-img
+  src="/assets/img/blog/es6-transpilers.png"
+  alt="ES6 Transpilers" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Sun, Aug 07, 16
+    </span>
+    <h2 id="what-is-a-transpiler">What is a Transpiler</h2>
+<p>A source-to-source compiler, transcompiler or transpiler is a type of compiler that takes the
+source code of a program written in one programming language as its input and produces the
+equivalent source code in another programming language. A source-to-source compiler translates
+between programming languages that operate at approximately the same level of abstraction, while
+a traditional compiler translates from a higher level programming language to a lower level
+programming language. <a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">wiki</a></p>
+
+<h2 id="list-of-es6-transpilers">List of ES6 Transpilers</h2>
+<ol>
+  <li>
+<a href="http://babeljs.io/">Babel</a>: To transpile ES6 into ES5 for static builds</li>
+  <li>
+<a href="https://github.com/babel/babelify">Babelify</a>: To incorporate babel into your Gulp, Grunt, or npm run build process</li>
+  <li>
+<a href="https://github.com/google/traceur-compiler">Traceur compiler</a>: ES6 features &gt; ES5. Includes
+classes, generators, promises, destructuring patterns, default parameters &amp; more.</li>
+  <li>
+<a href="https://github.com/thlorenz/es6ify">es6ify</a>: Traceur compiler wrapped as a Browserify v2 transform</li>
+</ol>
+
+<h3 id="es6-to-es5-transpilation-example">ES6 to ES5 Transpilation Example</h3>
+<p>For this example we are using <a href="http://babeljs.io/repl/">Babel’s live transpiler</a> to see the code
+in action.</p>
+
+<p><strong>ES6 Code</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import config from './config/env';
+import app from './config/express';
+
+// listen on port config.port
+app.listen(config.port, () =&gt; {
+  debug(`server started on port ${config.port} (${config.env})`);
+});
+
+export default app;
+</code></pre></div></div>
+
+<p><strong>ES5 Converted</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _env = require('./config/env');
+
+var _env2 = _interopRequireDefault(_env);
+
+var _express = require('./config/express');
+
+var _express2 = _interopRequireDefault(_express);
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { default: obj }; }
+
+// listen on port config.port
+_express2.default.listen(_env2.default.port, function () {
+  debug('server started on port ' + _env2.default.port + ' (' + _env2.default.env + ')');
+});
+
+exports.default = _express2.default;
+</code></pre></div></div>
+
+<p><strong>Sources</strong></p>
+
+<ol>
+  <li><a href="https://scotch.io/tutorials/javascript-transpilers-what-they-are-why-we-need-them">https://scotch.io</a></li>
+  <li>https://github.com/bevacqua/es6#introduction</li>
+  <li>https://github.com/addyosmani/es6-tools</li>
+</ol>
+
+    <a href="https://lightrains.com/blogs/es6-transpilers" title="ES6 Transpilers" class="nonamp">Full Version of ES6 Transpilers</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</a></li>
+      
+      <li><a href="/amp/blogs/how-create-binance-token/index.html" title="How to create and issue token on Binance Chain">How to create and issue token on Binance Chain</a></li>
+      
+      <li><a href="/amp/blogs/optimizing-performace-react-part1/index.html" title="React performance Optimization - Part 1/2">React performance Optimization - Part 1/2</a></li>
+      
+      <li><a href="/amp/blogs/stellar-federation-server-part1/index.html" title="Stellar Federation Server - Part 1/2">Stellar Federation Server - Part 1/2</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

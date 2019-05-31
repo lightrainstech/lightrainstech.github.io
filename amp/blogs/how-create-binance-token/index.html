@@ -1,0 +1,426 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to create and issue token on Binance Chain</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/how-create-binance-token" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/how-create-binance-token/"
+  },
+  "headline": "How to create and issue token on Binance Chain",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/how-create-binance-token/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/create-binance-token.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2019-04-29T05:30:00+05:30",
+  "dateModified": "2019-04-29T05:30:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Binance Chain and Binance DEX are community-driven and created to assist projects that require both fast transactions and improved liquidity in a decentraliz..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="How to create and issue token on Binance Chain">How to create and issue token on Binance Chain</h1>
+
+  <amp-img
+  src="/assets/img/blog/create-binance-token.png"
+  alt="How to create and issue token on Binance Chain" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Mon, Apr 29, 19
+    </span>
+    <p>Binance Chain and Binance DEX are community-driven and created to assist projects that require both fast transactions and improved liquidity in a decentralized manner.</p>
+
+<p>While anyone can issue their tokens on Binance Chain, the listing of trading pairs on Binance DEX involves 4 main steps: Proposal, Deposit, Vote, and List. However for the sake of easy understanding lets break this even further into;</p>
+
+<ol>
+  <li>Create a wallet</li>
+  <li>Get test BNB</li>
+  <li>Issue the token</li>
+  <li>Create a proposal to list your token</li>
+  <li>List your token</li>
+</ol>
+
+<h2 id="1-create-a-wallet">1. Create a wallet</h2>
+
+<p>You can create an account from the testnet website here <a href="https://testnet.binance.org/create">BinanceTestnet</a>. Enter your strong password and you will need to download the keystore file. <strong>Please backup the mnemonic phrase and save both file and phrase carefully.</strong></p>
+
+<p>Now you have your keystore file, password and backup mnemonic phrase, you can proceed to next steps.</p>
+
+<h3 id="11-see-if-you-can-unlock">1.1. See if you can unlock.</h3>
+
+<p>Go to <a href="https://testnet.binance.org/unlock">binance.org/unlock</a> to unlock your wallet and you can see your address there.</p>
+
+<h2 id="2-get-test-bnb">2. Get test BNB</h2>
+
+<p>You need test BNBs to create, list and issue your tokens the fee estimations are the following;</p>
+
+<ol>
+  <li>Issuing 400 BNB</li>
+  <li>Listing Proposal 2000 BNB</li>
+  <li>Listing 800 BNB</li>
+</ol>
+
+<p>i.e. 2400 BNB are required for the issuing/listing.</p>
+
+<p><strong>Steps to get test BNB</strong></p>
+
+<ul>
+  <li>Register in Binance (Live exchange) <a href="https://www.binance.com/register.html">Register</a>
+</li>
+  <li>Get BNB from test <a href="https://www.binance.com/en/dex/testnet/address">faucet</a>
+</li>
+</ul>
+
+<blockquote>
+  <p>Each address can only get 200 BNB from the faucet. To get the required test BNB, you may ask for more from your friends or register more addresses in the account, and transfer all test BNB into one wallet.</p>
+</blockquote>
+
+<h2 id="3-createissue-token">3. Create/Issue token</h2>
+
+<p>To issue a token you need to have basic unix command line experience. You need to use command line utility called <code class="highlighter-rouge">bnbcli</code> which you can download from <a href="https://github.com/binance-chain/node-binary">binance-chain/node-binary</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone git@github.com:binance-chain/node-binary.git
+$ cd ./cli/testnet/mac or cd ./cli/testnet/linux
+$ ./bnbcli
+</code></pre></div></div>
+
+<p>In some cases you need to set appropriate permissions to get this utility working you can achieve this by typing <code class="highlighter-rouge">chmod a+x bnbcli</code> from a MacOS terminal. Use appropriate command based on your OS/Arch.</p>
+
+<h3 id="31-import-your-wallet">3.1 Import your wallet</h3>
+
+<p>You need to import your testnet wallet to the <code class="highlighter-rouge">bnbcli</code> utility with the following steps</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli keys add key01 --recover
+Enter a passphrase for your key:
+Repeat the passphrase:
+&gt; Enter your recovery seed phrase:
+</code></pre></div></div>
+
+<p>You need to enter your wallet password and then the mnemonic phrase to import the wallet locally. After successful import you will get your new wallet under name <code class="highlighter-rouge">key01</code></p>
+
+<p><code class="highlighter-rouge">./bnbcli keys list</code> to see whether your keys are imported correctly.</p>
+
+<p>You should see something like</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>› ./bnbcli keys list
+NAME:	TYPE:	ADDRESS:						    PUBKEY:
+key01	local	tbnb15ppky5sxd0h78en***	bnbp1addwnpe***
+key02	local	tbnb1rh0zpgfmhye042a***	bnbp1addwnpe***
+key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
+....
+</code></pre></div></div>
+
+<h3 id="32-issue-token">3.2. Issue Token</h3>
+
+<p>See all available command line options under <a href="https://docs.binance.org/tokens.html#issue">Asset Management</a></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli token issue \
+--token-name "Lightrains LIGHT" \
+--total-supply 100000000000000000 \
+--symbol LIGHT \
+--mintable \
+--from key01 \
+--chain-id=Binance-Chain-Nile \
+--node=data-seed-pre-2-s1.binance.org:80 \
+--json \
+--voting-period 7200
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><code class="highlighter-rouge">--voting-period</code> should be set to 7200, i have tried many values according to Binance doc and this particular value seems to be working all the time.</p>
+</blockquote>
+
+<p>You will get a responce like</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Committed at block 1887 (tx hash: A06E5AD582E4E92B324F3B05C5D85634FEB, … Issued LIGHT-123…)
+</code></pre></div></div>
+
+<p>Here we issued a token called LIGHT, the total amount is 1 billion. To avoid abusing, the chain will automatically add three random letters as the suffix. The combined name will be unique on the Chain.</p>
+
+<h2 id="4-proposal-to-list-token">4. Proposal to list token</h2>
+
+<p>You will have to create a listing proposal to let validators to vote. You can use the following command to create a listing proposal.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov submit-list-proposal \
+--from key01
+--deposit 200000000000:BNB \
+--base-asset-symbol LIGHT-123 \
+--quote-asset-symbol BNB \
+--init-price 100000000 \
+--title "List LIGHT-123/BNB" \
+--description "list LIGHT-123/BNB" \
+--expire-time FUTURE_TIME_EPOCH \
+--chain-id=Binance-Chain-Nile \
+--node=data-seed-pre-2-s1.binance.org:80 \
+--json
+&gt; Password to sign with 'key01':
+</code></pre></div></div>
+
+<p>It will prompt you to enter password, enter it.</p>
+
+<p>In this example, we deposited 2000 BNB for the token listing proposal and the initial price is set as 1 BNB. According to the official doc, the initial price must be 1 BNB or the proposal will be rejected.</p>
+
+<p>On successful proposal you will get a proposal ID, you can get it from the <a href="https://testnet-explorer.binance.org/">explorer</a> or via <code class="highlighter-rouge">bnbcli</code> using</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov query-proposals \
+--chain-id=Binance-Chain-Nil \
+--node=data-seed-pre-2-s1.binance.org:80
+ 1 — list BNB/BTC.B-9CE
+ 2 — list XRP.B-2A4/BNB
+ …
+ 415 — list LIGHT-123
+</code></pre></div></div>
+
+<p>here our proposal id is 415</p>
+
+<p>According to the announcement, auto-voter is switched on. All the qualified proposal should be voted.</p>
+
+<h2 id="5-list-your-token">5. List your token</h2>
+
+<p>Once the proposal is passed, you can them list your token. The fee of listing is 800 BNB.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli dex list -s LIGHT-123 \
+--quote-asset-symbol BNB \
+--from test \
+--init-price 100000000 \
+--proposal-id 415 \
+--chain-id=Binance-Chain-Nile \
+--node=data-seed-pre-2-s1.binance.org:80 \
+--json
+</code></pre></div></div>
+
+<p><strong>That’s it. Your token is successfully listed now!</strong></p>
+
+<p><strong>Sources</strong></p>
+
+<ul>
+  <li><a href="https://community.binance.org/t/guidelines-on-how-to-list-your-token-on-binance-dex-dex/1596">community.binance.org</a></li>
+</ul>
+
+<p><div class="cta-blog">
+  <h2 class="ui center aligned icon white header">
+    <i class="spy icon"></i>
+    Talk to one of our  <a href="/consulting/blockchain-consulting">blockchain consultant</a>.
+  </h2>
+
+  
+ <a href="mailto:hexlxlo@xligxhtrxaxixnxs.com" title="Email to Lightrains Technolabs" class="ui button big black obsa">hexlxlo@xligxhtrxaxixnxs.com</a>
+
+</div>
+</p>
+
+    <a href="https://lightrains.com/blogs/how-create-binance-token" title="How to create and issue token on Binance Chain" class="nonamp">Full Version of How to create and issue token on Binance Chain</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</a></li>
+      
+      <li><a href="/amp/blogs/how-create-binance-token/index.html" title="How to create and issue token on Binance Chain">How to create and issue token on Binance Chain</a></li>
+      
+      <li><a href="/amp/blogs/optimizing-performace-react-part1/index.html" title="React performance Optimization - Part 1/2">React performance Optimization - Part 1/2</a></li>
+      
+      <li><a href="/amp/blogs/stellar-federation-server-part1/index.html" title="Stellar Federation Server - Part 1/2">Stellar Federation Server - Part 1/2</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

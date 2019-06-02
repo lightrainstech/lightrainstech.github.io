@@ -5,8 +5,8 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 31 May 2019 20:12:31 +0530</pubDate>
-    <lastBuildDate>Fri, 31 May 2019 20:12:31 +0530</lastBuildDate>
+    <pubDate>Sun, 02 Jun 2019 12:00:23 +0530</pubDate>
+    <lastBuildDate>Sun, 02 Jun 2019 12:00:23 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -727,13 +727,13 @@ your current cursor position.
   set showbreak=+++ Identify breaked lines with +++
   set textwidth=100 Line wrap (number of cols)
   set showmatch Highlight matching brace
-  set hlsearch  Highlight all search results
+  set hlsearch Highlight all search results
   set smartcase Enable smart-case search
-  set ignorecase  Always case-insensitive
+  set ignorecase Always case-insensitive
   set incsearch Searches for strings incrementally
-  set autoindent  Auto-indent new lines
+  set autoindent Auto-indent new lines
   set smartindent Enable smart-indent
-  set smarttab  Enable smart-tabs
+  set smarttab Enable smart-tabs
   set softtabstop=4 Number of spaces per Tab
   autocmd BufRead,BufNewFile *.md setlocal spell Enables spell check for markdown files, ending with extension md
   set complete+=kspell Enables spelling auto complete.
@@ -744,13 +744,13 @@ Advanced Settings
 
   set ruler “ Show row and column ruler information
   set showtabline=0 “ Show tab bar
-  set undolevels=200  “ Number of undo levels
-  set backspace=indent,eol,start  “ Backspace behaviours
+  set undolevels=200 “ Number of undo levels
+  set backspace=indent,eol,start “ Backspace behaviours
   filetype plugin on Enables filetype detection along with plugins.
   set tabstop=2 Set tabstop to tell vim 2 columns a tab counts for
   set shiftwidth=2 Set number of space characters inserted for indentation
   set shiftround Round indent to multiple of ‘shiftwidth’.
-  set expandtab spaces to insert a 
+  set expandtab spaces to insert a Tab
   set clipboard=unnamed Use the system clipboard
   set regexpengine=1 Enables regular expression engine
   set autoread Watch for file changes outside vim
@@ -760,6 +760,7 @@ Advanced Settings
 
 
 Remember
+
 You can view the help text for any commands by running :help COMMAND eg; :help regexpengine
 </description>
         <pubDate>Tue, 29 Nov 2016 05:10:00 +0530</pubDate>

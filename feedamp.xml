@@ -5,10 +5,28 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Jun 2019 12:00:23 +0530</pubDate>
-    <lastBuildDate>Sun, 02 Jun 2019 12:00:23 +0530</lastBuildDate>
+    <pubDate>Wed, 03 Jul 2019 20:38:43 +0530</pubDate>
+    <lastBuildDate>Wed, 03 Jul 2019 20:38:43 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
+    
+      <item>
+        <title>Widevine - DRM for the new web</title>
+        <description>Widevine DRM Widevine’s DRM solution provides the capability to license, securely distribute and protect playback of content on any consumer device. Content owners, multiple service operators and digital media providers can utilize Widevine’s solutions to ensure revenue generating services keep flowing to whatever device consumers desire. Digital rights management (DRM) tools or technological protection measures (TPM) are a set of access control technologies for restricting the use of proprietary hardware and copyrighted works. DRM technologies try to control the use, modification, and distribution of copyrighted works (such as software and multimedia content), as well as systems within devices that enforce these policies. wiki What makes Widevine so demanding? Widevine DRM is a combination of leading technologies like. MPEG-DASH: This is an open-source adaptive bitrate for streaming video across the internet. DASH leverages standard protocols like HTTP using existing web infrastructure to deliver video to every device. Common Encryption (CENC): CENC supports key-mapping across multiple DRM schemes, and is not limited to a single DRM scheme. A single file can be decrypted using multiple DRM schemes, so the same file can be used across every device. Encrypted Media Extensions (EME): EME manages the exchange of DRM license keys between servers and...</description>
+        <pubDate>Wed, 03 Jul 2019 05:30:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/google-widewine-drm-introduction/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/google-widewine-drm-introduction</guid>
+        
+        <category>Widevine</category>
+        
+        <category>DRM</category>
+        
+        <category>DRM Platform</category>
+        
+        <category>Google Widewine</category>
+        
+        
+      </item>
     
       <item>
         <title>Changes to watch in Ethereum istanbul</title>

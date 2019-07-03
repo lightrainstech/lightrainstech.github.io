@@ -1,0 +1,280 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Widevine - DRM for the new web</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/google-widewine-drm-introduction" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/google-widewine-drm-introduction/"
+  },
+  "headline": "Widevine - DRM for the new web",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/google-widewine-drm-introduction/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/widewine-drm.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2019-07-03T05:30:00+05:30",
+  "dateModified": "2019-07-03T05:30:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Widevine DRMWidevine’s DRM solution provides the capability to license, securely distribute and protect playback of content on any consumer device. Conten..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Widevine - DRM for the new web">Widevine - DRM for the new web</h1>
+
+  <amp-img
+  src="/assets/img/blog/widewine-drm.png"
+  alt="Widevine - DRM for the new web" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Wed, Jul 03, 19
+    </span>
+    <h2 id="widevine-drm">Widevine DRM</h2>
+
+<p>Widevine’s DRM solution provides the capability to license, securely distribute and protect playback of content on any consumer device. Content owners, multiple service operators and digital media providers can utilize Widevine’s solutions to ensure revenue generating services keep flowing to whatever device consumers desire.</p>
+
+<blockquote>
+  <p><strong>Digital rights management (DRM)</strong> tools or technological protection measures (TPM) are a set of access control technologies for restricting the use of proprietary hardware and copyrighted works. DRM technologies try to control the use, modification, and distribution of copyrighted works (such as software and multimedia content), as well as systems within devices that enforce these policies. <a href="https://en.wikipedia.org/wiki/Digital_rights_management">wiki</a></p>
+</blockquote>
+
+<h2 id="what-makes-widevine-so-demanding">What makes Widevine so demanding?</h2>
+
+<p>Widevine DRM is a combination of leading technologies like.</p>
+
+<ol>
+  <li>
+<strong>MPEG-DASH:</strong> This is an open-source adaptive bitrate for streaming video across the internet. DASH leverages standard protocols like HTTP using existing web infrastructure to deliver video to every device.</li>
+  <li>
+<strong>Common Encryption (CENC):</strong> CENC supports key-mapping across multiple DRM schemes, and is not limited to a single DRM scheme. A single file can be decrypted using multiple DRM schemes, so the same file can be used across every device.</li>
+  <li>
+<strong>Encrypted Media Extensions (EME):</strong> EME manages the exchange of DRM license keys between servers and devices. Using EME a single solution can be used to encrypt content for every device.</li>
+</ol>
+
+<h2 id="how-does-it-actually-work">How does it actually work?</h2>
+
+<p><amp-img src="https://1yy04i3k9fyt3vqjsf2mv610yvm-wpengine.netdna-ssl.com/wp-content/uploads/2015/07/website-illos-23.png" alt="image" class="ui image fluid" width="1644" height="757" layout="responsive"></amp-img></p>
+
+<p>(image from encoding.com)</p>
+
+<blockquote>
+  <p><strong>Sources:</strong></p>
+</blockquote>
+
+<ul>
+  <li>https://en.wikipedia.org/wiki/Widevine</li>
+  <li>https://en.wikipedia.org/wiki/Digital_rights_management</li>
+</ul>
+
+    <a href="https://lightrains.com/blogs/google-widewine-drm-introduction" title="Widevine - DRM for the new web" class="nonamp">Full Version of Widevine - DRM for the new web</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/google-widewine-drm-introduction/index.html" title="Widevine - DRM for the new web">Widevine - DRM for the new web</a></li>
+      
+      <li><a href="/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</a></li>
+      
+      <li><a href="/amp/blogs/how-create-binance-token/index.html" title="How to create and issue token on Binance Chain">How to create and issue token on Binance Chain</a></li>
+      
+      <li><a href="/amp/blogs/optimizing-performace-react-part1/index.html" title="React performance Optimization - Part 1/2">React performance Optimization - Part 1/2</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/google-widewine-drm-introduction");
+
   urlsToCache.push("/blogs/what-is-ethereum-istanbul-upgrade");
 
   urlsToCache.push("/blogs/how-create-binance-token");
@@ -1543,6 +1545,54 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/hardfork/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/widevine/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/widevine/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/drm/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/drm/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/drm-platform/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/drm-platform/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/google-widewine/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/google-widewine/");
   
 
 

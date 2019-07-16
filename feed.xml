@@ -5,9 +5,24 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Jul 2019 20:38:43 +0530</pubDate>
-    <lastBuildDate>Wed, 03 Jul 2019 20:38:43 +0530</lastBuildDate>
+    <pubDate>Tue, 16 Jul 2019 18:19:03 +0530</pubDate>
+    <lastBuildDate>Tue, 16 Jul 2019 18:19:03 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Codewall 2</title>
+        <description>
+</description>
+        <pubDate>Tue, 16 Jul 2019 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/codewall-2</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/codewall-2</guid>
+        
+        <category>Codewall</category>
+        
+        <category>Downloads</category>
+        
+        
+      </item>
     
       <item>
         <title>Widevine - DRM for the new web</title>
@@ -608,9 +623,9 @@ Use mapStateToProps and  mapDispatchToProps  to map the State and Dispatch to th
         <link>https://lightrains.com/blogs/codewall</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/codewall</guid>
         
-        <category>Downloads</category>
-        
         <category>Codewall</category>
+        
+        <category>Downloads</category>
         
         
       </item>

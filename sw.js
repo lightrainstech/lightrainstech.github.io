@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/codewall-2");
+
   urlsToCache.push("/blogs/google-widewine-drm-introduction");
 
   urlsToCache.push("/blogs/what-is-ethereum-istanbul-upgrade");
@@ -1046,18 +1048,6 @@ var urlsToCache = [];
   
 
   
-    urlsToCache.push("/tag/downloads/atom.xml");
-  
-
-  
-
-  
-    urlsToCache.push("/tag/downloads/");
-  
-
-  
-
-  
     urlsToCache.push("/tag/codewall/atom.xml");
   
 
@@ -1065,6 +1055,18 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/codewall/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/downloads/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/downloads/");
   
 
   

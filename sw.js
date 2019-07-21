@@ -288,11 +288,11 @@ var urlsToCache = [];
   
 
   
-    urlsToCache.push("/about/technology");
+    urlsToCache.push("/about/work-process-technology");
   
 
   
-    urlsToCache.push("/about/technology");
+    urlsToCache.push("/about/work-process-technology");
   
 
   

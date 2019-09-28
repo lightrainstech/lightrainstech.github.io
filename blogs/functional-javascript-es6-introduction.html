@@ -233,9 +233,9 @@
 </code></pre></div></div>
 <p>2) Filter</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Anna'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Maria'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Anna</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Maria</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
 <span class="p">];</span>
 
 <span class="kd">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="nx">student</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">;</span>
@@ -249,9 +249,9 @@
 </code></pre></div></div>
 <p>4) Chaining</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Anna'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'John'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'Maria'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Anna</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Maria</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
 <span class="p">];</span>
 
 <span class="kd">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="nx">student</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">;</span>
@@ -312,7 +312,7 @@
 <span class="kd">const</span> <span class="nx">exclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!`</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">angry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">toUpperCase</span><span class="p">);</span>
 
-<span class="nx">angry</span><span class="p">(</span><span class="s2">"stop this"</span><span class="p">);</span>
+<span class="nx">angry</span><span class="p">(</span><span class="dl">"</span><span class="s2">stop this</span><span class="dl">"</span><span class="p">);</span>
 <span class="c1">// STOP THIS!</span>
 </code></pre></div></div>
 <p>2) Combining three functions to generate another one</p>
@@ -323,7 +323,7 @@
 <span class="kd">const</span> <span class="nx">moreExclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!!!!!`</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">reallyAngry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">toUpperCase</span><span class="p">,</span> <span class="nx">moreExclaim</span><span class="p">));</span>
 
-<span class="nx">reallyAngry</span><span class="p">(</span><span class="s2">"stop this"</span><span class="p">);</span>
+<span class="nx">reallyAngry</span><span class="p">(</span><span class="dl">"</span><span class="s2">stop this</span><span class="dl">"</span><span class="p">);</span>
 <span class="c1">// STOP THIS!!!!!!</span>
 </code></pre></div></div>
 <h3 id="destructuring">Destructuring</h3>
@@ -341,13 +341,13 @@
 <span class="c1">// 1 [2, 3]</span>
 </code></pre></div></div>
 <p>3) Optional parameters</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ajax</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">"localhost"</span><span class="p">,</span> <span class="na">port</span><span class="p">:</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">80</span><span class="p">},</span> <span class="p">...</span><span class="nx">data</span><span class="p">)</span>  <span class="o">=&gt;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Url:"</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="s2">"Port:"</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="s2">"Rest:"</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ajax</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">localhost</span><span class="dl">"</span><span class="p">,</span> <span class="na">port</span><span class="p">:</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">80</span><span class="p">},</span> <span class="p">...</span><span class="nx">data</span><span class="p">)</span>  <span class="o">=&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Url:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Port:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Rest:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
 
-<span class="nx">ajax</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="s2">"someHost"</span> <span class="p">},</span> <span class="s2">"additional"</span><span class="p">,</span> <span class="s2">"data"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">);</span>
+<span class="nx">ajax</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">someHost</span><span class="dl">"</span> <span class="p">},</span> <span class="dl">"</span><span class="s2">additional</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
 <span class="c1">// Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]</span>
 
-<span class="nx">ajax</span><span class="p">({</span> <span class="p">},</span> <span class="s2">"additional"</span><span class="p">,</span> <span class="s2">"data"</span><span class="p">,</span> <span class="s2">"hello"</span><span class="p">);</span>
+<span class="nx">ajax</span><span class="p">({</span> <span class="p">},</span> <span class="dl">"</span><span class="s2">additional</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
 <span class="c1">// Url: localhost Port: 80 Rest: [ 'additional', 'data', 'hello' ]</span>
 </code></pre></div></div>
 <h3 id="currying">Currying</h3>
@@ -355,7 +355,7 @@
 <p>1) Currying an Object</p>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">name</span> <span class="o">=&gt;</span> <span class="nx">grade</span> <span class="o">=&gt;</span> <span class="s2">`Name: </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2"> | Grade: </span><span class="p">${</span><span class="nx">grade</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
 
-<span class="nx">student</span><span class="p">(</span><span class="s2">"Matt"</span><span class="p">)(</span><span class="mi">8</span><span class="p">);</span>
+<span class="nx">student</span><span class="p">(</span><span class="dl">"</span><span class="s2">Matt</span><span class="dl">"</span><span class="p">)(</span><span class="mi">8</span><span class="p">);</span>
 <span class="c1">// Name: Matt | Grade: 8</span>
 </code></pre></div></div>
 <p>2) Currying a Sum</p>

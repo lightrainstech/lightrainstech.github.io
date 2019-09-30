@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/automated-api-testing-nodejs");
+
   urlsToCache.push("/blogs/codewall-2");
 
   urlsToCache.push("/blogs/google-widewine-drm-introduction");
@@ -1603,6 +1605,42 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/google-widewine/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/tdd/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/tdd/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/api/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/api/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/test/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/test/");
   
 
 

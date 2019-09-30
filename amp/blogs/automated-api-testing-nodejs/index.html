@@ -1,0 +1,404 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Automated API testing with nodejs</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/automated-api-testing-nodejs" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/automated-api-testing-nodejs/"
+  },
+  "headline": "Automated API testing with nodejs",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/automated-api-testing-nodejs/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/automated-api-testing-nodejs.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2019-09-30T05:10:00+05:30",
+  "dateModified": "2019-09-30T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "We are going automate the api testing as much as possible, and potentially make it separate from the app in development.**Tools**-   _Mocha_: Mocha is a java..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Automated API testing with nodejs">Automated API testing with nodejs</h1>
+
+  <amp-img
+  src="/assets/img/blog/automated-api-testing-nodejs.png"
+  alt="Automated API testing with nodejs" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Mon, Sep 30, 19
+    </span>
+    <p>We are going automate the api testing as much as possible, and potentially make it separate from the app in development.</p>
+
+<p><strong>Tools</strong></p>
+
+<ul>
+  <li>
+<em>Mocha</em>: Mocha is a javascript testing framework that makes asynchronous testing easy.</li>
+  <li>
+<em>Chai</em>: Unlike Jasmine, an additional assertion library must be used to supplement Mocha</li>
+  <li>
+<em>SuperTest</em>: SuperTest is an extension of SuperAgent, a lightweight HTTP AJAX request library</li>
+</ul>
+
+<h3 id="app-starter">App starter</h3>
+
+<p>Following is the basic packages needed for run this project, you can add individual modules too</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "name": "node-api-testing",
+    "version": "1.0.0",
+    "description": "API Testing",
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "faker": "^4.1.0",
+        "mocha": "^6.2.1",
+        "supertest": "^4.0.2"
+    },
+    "scripts": {
+        "prestart": "npm install;",
+        "start": "mocha --timeout 25000 --colors"
+    }
+}
+</code></pre></div></div>
+
+<p>To install modules individually use <code class="highlighter-rouge">yarn add chai mocha supertest --dev</code>. Make sure that you have <code class="highlighter-rouge">mocha</code> installed globally. Run <code class="highlighter-rouge">yarn global add mocha</code></p>
+
+<p>Install all the dependencies using <code class="highlighter-rouge">yarn</code> or <code class="highlighter-rouge">yarn install</code></p>
+
+<h2 id="create-tests">Create tests</h2>
+
+<p>Create your <code class="highlighter-rouge">test</code> folder in the project root run <code class="highlighter-rouge">mkdir test</code></p>
+
+<p><strong>The directory must be called <code class="highlighter-rouge">test</code> for Mocha to find test files to run.</strong></p>
+
+<p>for the test we are following a naming pattern like <code class="highlighter-rouge">[controller]_test.js</code> you can create your own.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let should = require('chai').should(),
+    expect = require('chai').expect,
+    supertest = require('supertest'),
+    api = supertest('http://127.0.0.0:3000'),
+    faker = require('faker')
+
+let tokenSymbol = faker.lorem.word()
+let result
+
+describe('Token', function() {
+    before(function(done) {
+        api.post('/api/tokens')
+            .set('Accept', 'application/x-www-form-urlencoded')
+            .send({
+                name: faker.name.findName(),
+                symbol: tokenSymbol,
+                owner: faker.lorem.word(),
+                userId: faker.random.uuid(),
+                txHash: faker.lorem.word()
+            })
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .end(function(err, res) {
+                done()
+            })
+    })
+
+    it('should return a 200 response', function(done) {
+        api.get(`/api/tokens/${tokenSymbol}`)
+            .set('Accept', 'application/json')
+            .expect(200, done)
+    })
+
+    it('should return a 400 response', function(done) {
+        api.get('/api/tokens/hello')
+            .set('Accept', 'application/json')
+            .expect(400, done)
+    })
+})
+</code></pre></div></div>
+
+<p>The above code is pretty self explanatory, however we will go through it line by line;</p>
+
+<h2 id="running-tests">Running tests</h2>
+
+<p>Running test is easy as running <code class="highlighter-rouge">yarn run test</code> or <code class="highlighter-rouge">yarn test</code>. Make sure the api project is running and you have given correct path in the test file.</p>
+
+<h2 id="code-breakdown">Code breakdown</h2>
+
+<h4 id="1-require-and-initiate-modules">1. Require and initiate modules</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let should = require('chai').should(),
+    expect = require('chai').expect,
+    supertest = require('supertest'),
+    api = supertest('http://127.0.0.0:3000'),
+    faker = require('faker')
+</code></pre></div></div>
+
+<h4 id="2-initialise-any-variable-that-we-may-want-to-reuse">2. Initialise any variable that we may want to reuse</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let tokenSymbol = faker.lorem.word()
+let result
+</code></pre></div></div>
+
+<h4 id="3-require-and-initiate-modules">3. Require and initiate modules</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>describe('Token', function() {
+  ...
+</code></pre></div></div>
+
+<p>This will appear as a heading for the tests, we named it as Token.</p>
+
+<h4 id="3-preparing-the-test-cases">3. Preparing the test cases</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before(function(done) {
+    api.post('/api/tokens')
+        .set('Accept', 'application/x-www-form-urlencoded')
+        .send({
+            name: faker.name.findName(),
+            symbol: tokenSymbol,
+            owner: faker.lorem.word(),
+            userId: faker.random.uuid(),
+            txHash: faker.lorem.word()
+        })
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end(function(err, res) {
+            result = res
+            done()
+        })
+})
+</code></pre></div></div>
+
+<p>Here we are telling mocha to create a post request to an endpoint named <code class="highlighter-rouge">/api/tokens</code> and creating some data using it. And we are saving the response in a variable called <code class="highlighter-rouge">result</code>. This variable can be used to test against possible errors and structure validation using <a href="https://github.com/hapijs/joi">hapijs/joi</a> or similar.</p>
+
+<h4 id="4-testing-http-codes">4. Testing http codes</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it('should return a 200 response', function(done) {
+    api.get(`/api/tokens/${tokenSymbol}`)
+        .set('Accept', 'application/json')
+        .expect(200, done)
+})
+</code></pre></div></div>
+
+<p>and</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it('should return a 400 response', function(done) {
+    api.get('/api/tokens/hello')
+        .set('Accept', 'application/json')
+        .expect(400, done)
+})
+
+</code></pre></div></div>
+
+    <a href="https://lightrains.com/blogs/automated-api-testing-nodejs" title="Automated API testing with nodejs" class="nonamp">Full Version of Automated API testing with nodejs</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/automated-api-testing-nodejs/index.html" title="Automated API testing with nodejs">Automated API testing with nodejs</a></li>
+      
+      <li><a href="/amp/blogs/google-widewine-drm-introduction/index.html" title="Widevine - DRM for the new web">Widevine - DRM for the new web</a></li>
+      
+      <li><a href="/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</a></li>
+      
+      <li><a href="/amp/blogs/how-create-binance-token/index.html" title="How to create and issue token on Binance Chain">How to create and issue token on Binance Chain</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

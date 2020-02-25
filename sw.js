@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/work/crypto-membership-platform");
+
   urlsToCache.push("/blogs/automated-api-testing-nodejs");
 
   urlsToCache.push("/blogs/codewall-2");
@@ -315,6 +317,12 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/category/blockchain/");
+  
+
+  
+
+  
+    urlsToCache.push("/category/blockchain/page2/");
   
 
   

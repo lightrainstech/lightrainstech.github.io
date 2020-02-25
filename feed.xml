@@ -5,9 +5,38 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 20 Feb 2020 14:22:35 +0530</pubDate>
-    <lastBuildDate>Thu, 20 Feb 2020 14:22:35 +0530</lastBuildDate>
+    <pubDate>Tue, 25 Feb 2020 21:56:29 +0530</pubDate>
+    <lastBuildDate>Tue, 25 Feb 2020 21:56:29 +0530</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Akolade</title>
+        <description>Akolade is the industry’s first platform with a focus on online content creators, that allows them to earn recurring revenues in crypto. Akolade allows content creator to earn direct revenues in cryptocurrencies from their supporters across borders, seamlessly.
+
+Mission
+
+To help content creators produce independent content, enabling their audiences to support in cryptocurrencies, anywhere, anytime.
+
+Product features
+
+The Akolade platform will provide the essential tools for the content creators to manage their subscriber-base and grow their earnings based on detailed insights from the platform.
+
+
+  Subscription Management tools
+  Analytics
+  Payments in Stellar Lumens and other cryptocurrencies with third-party service integration
+  Content notifications and publishing options
+  Social interactions between supporters and creators
+
+</description>
+        <pubDate>Thu, 05 Dec 2019 01:01:01 +0530</pubDate>
+        <link>https://lightrains.com/work/crypto-membership-platform</link>
+        <guid isPermaLink="true">https://lightrains.com/work/crypto-membership-platform</guid>
+        
+        
+        <category>Blockchain</category>
+        
+      </item>
     
       <item>
         <title>Automated API testing with nodejs</title>

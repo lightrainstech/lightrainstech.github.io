@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/dns-over-https-doh");
+
   urlsToCache.push("/work/crypto-membership-platform");
 
   urlsToCache.push("/blogs/automated-api-testing-nodejs");
@@ -1649,6 +1651,42 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/test/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/doh/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/doh/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/privacy/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/privacy/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/security/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/security/");
   
 
 

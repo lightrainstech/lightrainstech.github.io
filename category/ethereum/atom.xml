@@ -499,6 +499,15 @@
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/test/">test <span class="badge">1</span></a>
 		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/doh/">doh <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/privacy/">privacy <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/security/">security <span class="badge">1</span></a>
+		</div>
 </div>
  </div>
 </article>

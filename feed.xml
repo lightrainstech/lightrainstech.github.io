@@ -5,9 +5,25 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 Apr 2020 15:20:34 +0530</pubDate>
-    <lastBuildDate>Thu, 02 Apr 2020 15:20:34 +0530</lastBuildDate>
+    <pubDate>Fri, 10 Apr 2020 11:53:01 +0530</pubDate>
+    <lastBuildDate>Fri, 10 Apr 2020 11:53:01 +0530</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>DNS over HTTPS</title>
+        <description>DNS over HTTPS (DoH) is a protocol for performing remote Domain Name System (DNS) resolution via the HTTPS protocol. Goal of the method is to increase user privacy and security by preventing eavesdropping and manipulation of DNS data by man-in-the-middle attacks by using the HTTPS protocol to encrypt the data between the DoH client and the DoH-based DNS resolver. Encryption by itself does not protect privacy, encryption is simply a method to obfuscate the data. What is DNS: the Domain Name System The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources. How can DNS be exploited? A resolver will tell each DNS server what domain you are looking for. This request sometimes includes your full IP address. Or if not your full IP address, increasingly often the request includes most of your IP address, which can easily be combined with other information to figure out your identity. How to fix this with Trusted Recursive Resolver (TRR) and DNS over HTTPS (DoH)? There are three threats here: You could end up using an untrustworthy resolver that tracks your requests, or tampers with responses from DNS servers. On-path routers can track or tamper in the same way. DNS servers can track your DNS requests. What are the Pros and Cons of DoH? Pros It prevents man-in-the-middle attacks – since DNS queries are traditionally sent in plain-text, DoH can reduce the risk of man in the middle attacks where someone can see what DNS queries you are running between you and your - recursive server because it encrypts your queries. The encryption with DoH can protect sensitive information that...</description>
+        <pubDate>Fri, 10 Apr 2020 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/dns-over-https-doh</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/dns-over-https-doh</guid>
+        
+        <category>doh</category>
+        
+        <category>privacy</category>
+        
+        <category>security</category>
+        
+        
+      </item>
     
       <item>
         <title>Akolade</title>

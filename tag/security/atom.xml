@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Security Articles
-    Tagged #Security</title>
+    <title>security Articles
+    Tagged #security</title>
     <meta name="description" content="Security all posts under tag security" />
 <meta property="og:url" content="https://lightrains.com/tag/security/atom.xml">
 <meta property="og:type" content="website">
@@ -499,6 +499,15 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/test/">test <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/doh/">doh <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/privacy/">privacy <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/security/">security <span class="badge">1</span></a>
 		</div>
 </div>
  </div>

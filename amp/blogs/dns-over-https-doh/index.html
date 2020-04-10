@@ -1,0 +1,299 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DNS over HTTPS</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/dns-over-https-doh" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+body {
+  padding: 10px;
+  animation: amp-timeout 0x 5s 1 normal forwards;
+  padding-top: 30px;
+  background-color: #f4f4f2;
+  color: #333332;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Monaco', Courier;
+}
+.h1 {
+  font-size: 20px;
+}
+.ui.highlight {
+  font-size: 18pt;
+  border-left: 3px solid #a7bd0d;
+  padding: 15px;
+  margin: 20px 5px;
+  font-style: italic;
+  background: #fbfbfb;
+  color: #21ba45;
+}
+p {
+  color: #333;
+  line-height: 26px;
+  display: block;
+}
+@keyframes amp-timeout {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+a {
+  color: #1678c2;
+  background: transparent;
+  color: #666666;
+  display: inline;
+  text-decoration: underline;
+}
+.related.ui.segment {
+  border-top: 5px solid #202020;
+  background: rgba(48, 54, 4, 0.12);
+  padding: 5px
+}
+.related.ui.segment h3 {
+  margin-top: 0;
+}
+.ampmenu a {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color: #303030;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+amp-img {
+  background-color: gray;
+}
+.ampmenu {
+  background: rgba(255, 255, 255, 0.95);
+  width: 98%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 99
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body hr {
+  border: 0;
+  border-top: 1px solid #b3b3b3;
+  display: block;
+  margin: 50px auto 40px auto;
+  width: 20%;
+}
+body a:focus, body a:hover {
+  color: #ff4136;
+}
+.post-title{
+  font-size: 35px;
+  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.content {
+  display: block;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.05px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 98%;
+}
+.timespan {
+  font-size: 15px;
+  clear: both;
+  opacity: 0.7;
+}
+a.nonamp{
+  text-align: center;
+  display: block;
+  margin: 10px;
+}
+ul, ol {
+  list-style: none;
+  margin-left: 8px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li {
+  margin: 6px 0;
+}
+li:before {
+  content: "\0BB \020";
+}
+pre, code {
+  background: #333;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "Lightrains Technolabs Pvt Ltd",
+  "url" : "https://lightrains.com",
+  "telephone": "+914714000056",
+  "foundingDate": "2012-12-28",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Trivandrum",
+    "addressRegion": "Kerala",
+    "postalCode": "695581",
+    "streetAddress": "G3B, Thejaswini, Technopark Campus"
+  },
+  "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+  "sameAs" : ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","https://plus.google.com/108900746872278115127","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/dns-over-https-doh/"
+  },
+  "headline": "DNS over HTTPS",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/dns-over-https-doh/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/dns-over-https-doh.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2020-04-10T05:10:00+05:30",
+  "dateModified": "2020-04-10T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "DNS over HTTPS ([DoH](https://en.wikipedia.org/wiki/DNS_over_HTTPS)) is a protocol for performing remote Domain Name System (DNS) resolution via the HTTPS pr..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="DNS over HTTPS">DNS over HTTPS</h1>
+
+  <amp-img
+  src="/assets/img/blog/dns-over-https-doh.png"
+  alt="DNS over HTTPS" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Fri, Apr 10, 20
+    </span>
+    <p>DNS over HTTPS (<a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS">DoH</a>) is a protocol for performing remote Domain Name System (DNS) resolution via the HTTPS protocol. Goal of the method is to increase user privacy and security by preventing eavesdropping and manipulation of DNS data by man-in-the-middle attacks by using the HTTPS protocol to encrypt the data between the DoH client and the DoH-based DNS resolver.</p>
+
+<p>Encryption by itself does not protect privacy, encryption is simply a method to obfuscate the data.</p>
+
+<h2 id="what-is-dns-the-domain-name-system">What is DNS: the Domain Name System</h2>
+
+<p>The Domain Name System (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources.</p>
+
+<h2 id="how-can-dns-be-exploited">How can DNS be exploited?</h2>
+
+<p>A resolver will tell each DNS server what domain you are looking for. This request sometimes includes your full IP address. Or if not your full IP address, increasingly often the request includes most of your IP address, which can easily be combined with other information to figure out your identity.</p>
+
+<h2 id="how-to-fix-this-with-trusted-recursive-resolver-trr-and-dns-over-https-doh">How to fix this with Trusted Recursive Resolver (TRR) and DNS over HTTPS (DoH)?</h2>
+
+<p>There are three threats here:</p>
+
+<ul>
+  <li>You could end up using an untrustworthy resolver that tracks your requests, or tampers with responses from DNS servers.</li>
+  <li>On-path routers can track or tamper in the same way.</li>
+  <li>DNS servers can track your DNS requests.</li>
+</ul>
+
+<h2 id="what-are-the-pros-and-cons-of-doh">What are the Pros and Cons of DoH?</h2>
+
+<h3 id="pros">Pros</h3>
+
+<ul>
+  <li>It prevents man-in-the-middle attacks – since DNS queries are traditionally sent in plain-text, DoH can reduce the risk of man in the middle attacks where someone can see what DNS queries you are running between you and your - recursive server because it encrypts your queries.</li>
+  <li>The encryption with DoH can protect sensitive information that DNS hijacking methodologies employ and obfuscate data that could be sniffed by third-party observers and ISPs.</li>
+  <li>Because DoH centralizes DNS traffic to a few DoH enable servers, load time performance is typically improved.</li>
+</ul>
+
+<h3 id="cons">Cons</h3>
+
+<ul>
+  <li>It overrides any sort of DNS filtering your network is doing to provide insight into security and your network info</li>
+  <li>It provides a different experience from web browsing and to the rest of your computer and network. You might have some DNS packets going to one recursive server and then some going through your network settings, so you may have a different experience from browser to the rest of your network.</li>
+  <li>It weakens cyber-security. By encrypting DNS queries, companies using DNS monitoring for cybersecurity measures will lose visibility into data such as query type, response and originating IP that are used to determine bad actors.</li>
+</ul>
+
+<h3 id="browser-support">Browser support</h3>
+
+<p>Firefox and Chrome are still in the experimental phases of testing encrypted DNS, so most of your connections likely won’t take advantage of it for now anyway, and there are still ways to opt out of using it at all. But as with the push to get websites to adopt HTTPS encryption, encrypted DNS will likely move forward now if Chrome and Firefox find that the change doesn’t have too much of an impact on speed or reliability for users.</p>
+
+<p><amp-img src="/assets/img/dns-over-https-doh.png" alt="DNS over HTTPS (DoH)" class="ui image fluid" layout="responsive"></amp-img></p>
+
+<p><strong>Continue reading</strong></p>
+
+<ul>
+  <li>https://hacks.mozilla.org/2018/05/a-cartoon-intro-to-dns-over-https/</li>
+  <li>https://www.cloudflare.com/learning/dns/what-is-dns/</li>
+  <li>https://www.toptal.com/web/encrypted-safe-with-esni-doh-dot</li>
+  <li>https://www.zdnet.com/article/dns-over-https-will-eventually-roll-out-in-all-major-browsers-despite-isp-opposition/</li>
+</ul>
+
+    <a href="https://lightrains.com/blogs/dns-over-https-doh" title="DNS over HTTPS" class="nonamp">Full Version of DNS over HTTPS</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/dns-over-https-doh/index.html" title="DNS over HTTPS">DNS over HTTPS</a></li>
+      
+      <li><a href="/amp/blogs/automated-api-testing-nodejs/index.html" title="Automated API testing with nodejs">Automated API testing with nodejs</a></li>
+      
+      <li><a href="/amp/blogs/google-widewine-drm-introduction/index.html" title="Widevine - DRM for the new web">Widevine - DRM for the new web</a></li>
+      
+      <li><a href="/amp/blogs/what-is-ethereum-istanbul-upgrade/index.html" title="Changes to watch in Ethereum istanbul">Changes to watch in Ethereum istanbul</a></li>
+      
+    </ul>
+  </div>
+</body>
+</html>

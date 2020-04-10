@@ -273,6 +273,10 @@
 <lastmod>2019-12-05T01:01:01+05:30</lastmod>
 </url>
 <url>
+<loc>https://lightrains.com/blogs/dns-over-https-doh</loc>
+<lastmod>2020-04-10T05:10:00+05:30</lastmod>
+</url>
+<url>
 <loc>https://lightrains.com/about/lightrains</loc>
 </url>
 <url>
@@ -669,6 +673,15 @@
 <loc>https://lightrains.com/tag/test/</loc>
 </url>
 <url>
+<loc>https://lightrains.com/tag/doh/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/privacy/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/tag/security/</loc>
+</url>
+<url>
 <loc>https://lightrains.com/amp/blogs/psc-hub-kerala-psc-questions-available-telegram-bot/</loc>
 </url>
 <url>
@@ -871,6 +884,9 @@
 </url>
 <url>
 <loc>https://lightrains.com/amp/work/crypto-membership-platform/</loc>
+</url>
+<url>
+<loc>https://lightrains.com/amp/blogs/dns-over-https-doh/</loc>
 </url>
 <url>
 <loc>https://lightrains.com/blogs/page2/</loc>

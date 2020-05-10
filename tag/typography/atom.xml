@@ -10,6 +10,8 @@
 <meta property="og:url" content="https://lightrains.com/tag/typography/atom.xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Categories and Tags">
+<meta property="og:image" content="https://lightrains.com/assets/images/hiring.png">
+<meta name="twitter:image" content="https://lightrains.com/assets/images/hiring.png">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Lightrains Technolabs">
 <meta property="og:locale" content="en_US">
@@ -164,7 +166,7 @@
 <h3>Categories</h3>
 <div class="row">
 		<div class="col-12 col-lg-12">
-			<a href="/category/Blockchain/">Blockchain <span class="badge">9</span></a>
+			<a href="/category/Blockchain/">Blockchain <span class="badge">10</span></a>
 		</div>
 		<div class="col-12 col-lg-12">
 			<a href="/category/Ethereum/">Ethereum <span class="badge">6</span></a>

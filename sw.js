@@ -3,6 +3,8 @@ var urlsToCache = [];
 
   urlsToCache.push("/blogs/dns-over-https-doh");
 
+  urlsToCache.push("/work/sto-digital-securities-platform");
+
   urlsToCache.push("/work/crypto-membership-platform");
 
   urlsToCache.push("/blogs/automated-api-testing-nodejs");

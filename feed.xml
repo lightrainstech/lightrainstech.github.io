@@ -5,9 +5,9 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Apr 2020 14:49:18 +0530</pubDate>
-    <lastBuildDate>Fri, 10 Apr 2020 14:49:18 +0530</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Sun, 10 May 2020 15:57:59 +0530</pubDate>
+    <lastBuildDate>Sun, 10 May 2020 15:57:59 +0530</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>DNS over HTTPS</title>
@@ -22,6 +22,47 @@
         
         <category>security</category>
         
+        
+      </item>
+    
+      <item>
+        <title>Digital Securities Platform</title>
+        <description>A global digital securities platform facilitating the capital raise for issuers and providing access to institutional-grade opportunities for investors
+
+Digital Securities Issuance
+
+
+  Equity
+  Fixed Income
+  Real Estate
+  Investment Funds
+  Revenue Streams
+
+
+Life-Cycle Management
+
+
+  Payment distributions
+  Governance
+  Cap table management
+  Economic rights
+
+
+Liquidity &amp;amp; Custody
+
+
+  Institutional-grade solutions
+  Dedicated partnerships
+  Proprietary security technology
+  (private key safety)
+
+</description>
+        <pubDate>Thu, 05 Mar 2020 01:01:01 +0530</pubDate>
+        <link>https://lightrains.com/work/sto-digital-securities-platform</link>
+        <guid isPermaLink="true">https://lightrains.com/work/sto-digital-securities-platform</guid>
+        
+        
+        <category>Blockchain</category>
         
       </item>
     

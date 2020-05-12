@@ -302,33 +302,33 @@ simple, modern, BSD-licensed alternative to programs such as GNU screen.</p>
 <h3 id="from-source">From source</h3>
 
 <p>By default, tmux will use the utempter library to update utmp(5), if it is
-installed. Run configure with <code class="highlighter-rouge">--disable-utempter</code> to disable this.</p>
+installed. Run configure with <code class="language-plaintext highlighter-rouge">--disable-utempter</code> to disable this.</p>
 
 <p>To build tmux from a release tarball, do:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./configure &amp;&amp; make
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./configure &amp;&amp; make
 $ sudo make install
 </code></pre></div></div>
 
 <p>To get and build the latest from version control:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/tmux/tmux.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/tmux/tmux.git
 $ cd tmux
 $ sh autogen.sh
 $ ./configure &amp;&amp; make
 </code></pre></div></div>
 
 <h3 id="install-tmux-in-mac-osx">Install tmux in Mac OSX</h3>
-<p>Yes, you can do <code class="highlighter-rouge">brew install tmux</code></p>
+<p>Yes, you can do <code class="language-plaintext highlighter-rouge">brew install tmux</code></p>
 
 <p><strong>Starting Tmux</strong> <br>
-You can start a tmux session by <code class="highlighter-rouge">tmux attach</code> or simply <code class="highlighter-rouge">tmux a</code> command.</p>
+You can start a tmux session by <code class="language-plaintext highlighter-rouge">tmux attach</code> or simply <code class="language-plaintext highlighter-rouge">tmux a</code> command.</p>
 
 <h2 id="managing-the-configuration">Managing the configuration.</h2>
-<p>You can manage all the configurations with <code class="highlighter-rouge">.tmux.conf</code> file. Which will reside in your home folder. You can check with <code class="highlighter-rouge">cat ~/.tmux.conf</code> to see whether there is any.</p>
+<p>You can manage all the configurations with <code class="language-plaintext highlighter-rouge">.tmux.conf</code> file. Which will reside in your home folder. You can check with <code class="language-plaintext highlighter-rouge">cat ~/.tmux.conf</code> to see whether there is any.</p>
 
 <h2 id="multiple-pane-synchronization">Multiple Pane Synchronization</h2>
-<p>What <code class="highlighter-rouge">setw synchronise-panes</code> gives us is that it simultaneously sends keyboard input from one pane to the rest of the panes. (In this case, we can also see the the Elixir REPL is far superior because of the colored output.)</p>
+<p>What <code class="language-plaintext highlighter-rouge">setw synchronise-panes</code> gives us is that it simultaneously sends keyboard input from one pane to the rest of the panes. (In this case, we can also see the the Elixir REPL is far superior because of the colored output.)</p>
 
 <p>Obviously, this demonstration is a mere party trick to impress developers and nothing more. A good use case is having to perform a repetitive operation on multiple machines. For example, imagine having a tmux session connected to four remote hosts and having to executer the exact same command on all of them.</p>
 
@@ -349,7 +349,7 @@ You can start a tmux session by <code class="highlighter-rouge">tmux attach</cod
 </h3>
 <p>A set of tmux options that should be acceptable to everyone.</p>
 
-<p>This is how my own <code class="highlighter-rouge">.tmux.conf</code> file looks like, i shall explain what all are there.
+<p>This is how my own <code class="language-plaintext highlighter-rouge">.tmux.conf</code> file looks like, i shall explain what all are there.
 {% gist niksmac/76c1381482938d23e8ea2c39f4ef0511 %}</p>
 
 <h4 id="some-good-reads">Some good reads</h4>

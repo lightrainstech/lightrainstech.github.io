@@ -303,14 +303,14 @@
 
 <p>We specify this value when defining a function,</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there' ) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there' ) {
   return `Hello,  ${name}`
 }
 </code></pre></div></div>
 <p>We can even use the default parameter of one parameter as part of an expression for another
 paramter. For eg:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there', fullname = name + ' lastName' ) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function printName ( name = 'there', fullname = name + ' lastName' ) {
   return `Hello,  ${name} -  ${fullname} `
 }
 </code></pre></div></div>
@@ -318,13 +318,13 @@ paramter. For eg:</p>
 <h2 id="rest-parameters">Rest Parameters</h2>
 <p>The rest parameter syntax allows us to represent an indefinite number of arguments as an array.</p>
 
-<p>This is achieved by using a new operator called <strong>Spread Operator</strong> which is represented by <code class="highlighter-rouge">...</code> <strong>3dots</strong></p>
+<p>This is achieved by using a new operator called <strong>Spread Operator</strong> which is represented by <code class="language-plaintext highlighter-rouge">...</code> <strong>3dots</strong></p>
 
 <p><strong>Spread Operator</strong>
 It is used when we want to pass an array to a function as individual arguments of that function. For
 eg:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sum (x, y, z ) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sum (x, y, z ) {
   return x + y + z;
 }
 let values = [1, 2, 3]
@@ -333,16 +333,16 @@ sum(...values)
 </code></pre></div></div>
 
 <p>Another Example</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f(x, ...y) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function f(x, ...y) {
  // y is an Array
  return x * y.length;
 }
 f(3, "hello", true) == 6
 </code></pre></div></div>
 
-<p>If the last named argument of a function is prefixed with <code class="highlighter-rouge">...</code>, it becomes an array whose elements from 0 (inclusive) to <code class="highlighter-rouge">theArgs.length</code> (exclusive) are supplied by the actual arguments passed to the function.</p>
+<p>If the last named argument of a function is prefixed with <code class="language-plaintext highlighter-rouge">...</code>, it becomes an array whose elements from 0 (inclusive) to <code class="language-plaintext highlighter-rouge">theArgs.length</code> (exclusive) are supplied by the actual arguments passed to the function.</p>
 
-<p>In the above example, <code class="highlighter-rouge">theArgs</code> would collect the third argument of the function (because the first one is mapped to a, and the second to b) and all the consecutive argument</p>
+<p>In the above example, <code class="language-plaintext highlighter-rouge">theArgs</code> would collect the third argument of the function (because the first one is mapped to a, and the second to b) and all the consecutive argument</p>
 
 <p>Sources:</p>
 

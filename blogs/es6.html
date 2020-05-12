@@ -397,7 +397,7 @@ interface Iterable {
 </code></pre>
 <p>More info: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of">MDN for…of</a></p>
 <h3 id="generators">Generators</h3>
-<p>Generators simplify iterator-authoring using <code class="highlighter-rouge">function*</code> and <code class="highlighter-rouge">yield</code>.  A function declared as function* returns a Generator instance.  Generators are subtypes of iterators which include additional  <code class="highlighter-rouge">next</code> and <code class="highlighter-rouge">throw</code>.  These enable values to flow back into the generator, so <code class="highlighter-rouge">yield</code> is an expression form which returns a value (or throws).</p>
+<p>Generators simplify iterator-authoring using <code class="language-plaintext highlighter-rouge">function*</code> and <code class="language-plaintext highlighter-rouge">yield</code>.  A function declared as function* returns a Generator instance.  Generators are subtypes of iterators which include additional  <code class="language-plaintext highlighter-rouge">next</code> and <code class="language-plaintext highlighter-rouge">throw</code>.  These enable values to flow back into the generator, so <code class="language-plaintext highlighter-rouge">yield</code> is an expression form which returns a value (or throws).</p>
 <pre><code class="language-JavaScript">var fibonacci = {
  [Symbol.iterator]: function*() {
    var pre = 0, cur = 1;
@@ -579,10 +579,10 @@ c["key"] === undefined
 </code></pre>
 <p>More info: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">MDN Symbol</a></p>
 <h3 id="subclassable-built-ins">Subclassable Built-ins</h3>
-<p>In ES6, built-ins like <code class="highlighter-rouge">Array</code>, <code class="highlighter-rouge">Date</code> and DOM <code class="highlighter-rouge">Element</code>s can be subclassed.</p>
-<p>Object construction for a function named <code class="highlighter-rouge">Ctor</code> now uses two-phases (both virtually dispatched):</p>
+<p>In ES6, built-ins like <code class="language-plaintext highlighter-rouge">Array</code>, <code class="language-plaintext highlighter-rouge">Date</code> and DOM <code class="language-plaintext highlighter-rouge">Element</code>s can be subclassed.</p>
+<p>Object construction for a function named <code class="language-plaintext highlighter-rouge">Ctor</code> now uses two-phases (both virtually dispatched):</p>
 <ul>
-  <li>Call <code class="highlighter-rouge">Ctor[@@create]</code> to allocate the object, installing any special behavior</li>
+  <li>Call <code class="language-plaintext highlighter-rouge">Ctor[@@create]</code> to allocate the object, installing any special behavior</li>
   <li>Invoke constructor on new instance to initialize</li>
 </ul>
 <pre><code class="language-JavaScript">// Pseudo-code of Array

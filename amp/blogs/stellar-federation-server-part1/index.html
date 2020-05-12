@@ -291,23 +291,23 @@
     <span class="timespan">
       Sun, Aug 12, 18
     </span>
-    <p>The <a href="https://www.stellar.org/developers/guides/concepts/federation.html">Stellar federation protocol</a> maps Stellar addresses to a unique name spaced string. It’s a way for Stellar client software to resolve email-like addresses such as <code class="highlighter-rouge">name*your_domain.com</code> into account IDs like: <code class="highlighter-rouge">GCFFPIFOYY7Z...TK6T32V37KEJU</code>. Stellar addresses provide an easy way for users to send and receive payments by using a syntax that interoperates across different domains and providers. When sending a payment, you contact a federation server first to determine what Stellar account ID to pay. Luckily, the bridge server does this for you.</p>
+    <p>The <a href="https://www.stellar.org/developers/guides/concepts/federation.html">Stellar federation protocol</a> maps Stellar addresses to a unique name spaced string. It’s a way for Stellar client software to resolve email-like addresses such as <code class="language-plaintext highlighter-rouge">name*your_domain.com</code> into account IDs like: <code class="language-plaintext highlighter-rouge">GCFFPIFOYY7Z...TK6T32V37KEJU</code>. Stellar addresses provide an easy way for users to send and receive payments by using a syntax that interoperates across different domains and providers. When sending a payment, you contact a federation server first to determine what Stellar account ID to pay. Luckily, the bridge server does this for you.</p>
 
-<p>To explain it simply, a Stellar Federation Server is a database with the following table structure which maps a Stellar address to a string(<code class="highlighter-rouge">friendly_id</code>).</p>
+<p>To explain it simply, a Stellar Federation Server is a database with the following table structure which maps a Stellar address to a string(<code class="language-plaintext highlighter-rouge">friendly_id</code>).</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| id | first_name | last_name | friendly_id         |
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| id | first_name | last_name | friendly_id         |
 |----|------------|-----------|---------------------|
 | 1  | Tunde      | Adebayo   | tunde_adebayo       |
 | 2  | Lightrains | Tech      | lightrains          |
 </code></pre></div></div>
 
-<p>Where <code class="highlighter-rouge">Lightrains</code> Stellar address would be <code class="highlighter-rouge">lightrains*your_domain.com</code>.</p>
+<p>Where <code class="language-plaintext highlighter-rouge">Lightrains</code> Stellar address would be <code class="language-plaintext highlighter-rouge">lightrains*your_domain.com</code>.</p>
 
 <h2 id="stellar-federation-server-architecture">Stellar Federation Server architecture</h2>
 <p><amp-img src="https://www.stellar.org/developers/guides/anchor/assets/anchor-send-payment-federation.png" alt="Stellar Federation Server architecture" class="ui fluid image" width="1801" height="885" layout="responsive"></amp-img>
 <em>Source: stellar.org</em></p>
 <blockquote>
-  <p>Here, your front end app/website will be talking to a intermediate server called <code class="highlighter-rouge">bridge server</code> which will be talking directly to a federation server. Bridge server is responsible for querying the federation server and get corresponding address and send transaction or operation to a stellar core via stellar Horizon server.</p>
+  <p>Here, your front end app/website will be talking to a intermediate server called <code class="language-plaintext highlighter-rouge">bridge server</code> which will be talking directly to a federation server. Bridge server is responsible for querying the federation server and get corresponding address and send transaction or operation to a stellar core via stellar Horizon server.</p>
 </blockquote>
 
 <h3 id="current-federation-workflow">Current federation workflow</h3>
@@ -315,8 +315,8 @@
 <p>Currently, in order to resolve a federation address, the client needs to do the following:</p>
 
 <ol>
-  <li>fetch the <code class="highlighter-rouge">stellar.toml</code> file from <code class="highlighter-rouge">https://&lt;domain&gt;/.well-known/stellar.toml</code> and read the <code class="highlighter-rouge">FEDERATION_SERVER</code> entry from it</li>
-  <li>fetch the response from the federation server using secure HTTP <code class="highlighter-rouge">GET</code> and required parameters</li>
+  <li>fetch the <code class="language-plaintext highlighter-rouge">stellar.toml</code> file from <code class="language-plaintext highlighter-rouge">https://&lt;domain&gt;/.well-known/stellar.toml</code> and read the <code class="language-plaintext highlighter-rouge">FEDERATION_SERVER</code> entry from it</li>
+  <li>fetch the response from the federation server using secure HTTP <code class="language-plaintext highlighter-rouge">GET</code> and required parameters</li>
   <li>proceed with the payment</li>
 </ol>
 

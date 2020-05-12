@@ -319,21 +319,21 @@
 <h2 id="set-up-control-wallet">Set up Control wallet</h2>
 <h3 id="1-generate-masternode-private-key">1. Generate Masternode private key</h3>
 
-<p><code class="highlighter-rouge">masternode genkey</code> will create a private key for you</p>
+<p><code class="language-plaintext highlighter-rouge">masternode genkey</code> will create a private key for you</p>
 
 <h3 id="2-generate-address">2. Generate address</h3>
-<p><code class="highlighter-rouge">getaccountaddress NAME_OF_MASTERNODE</code> will create an address for you.</p>
+<p><code class="language-plaintext highlighter-rouge">getaccountaddress NAME_OF_MASTERNODE</code> will create an address for you.</p>
 
 <h3 id="3-fund-the-control-wallet">3. Fund the control wallet</h3>
 <p>Send 10,000 PIV to the address you generated in step 2 <em><strong>Be absolutely 100% sure that this is copied correctly. We cannot help you, if you send 10,000 PIV to an incorrect address.</strong></em></p>
 
 <h3 id="4-confirm-sent">4. Confirm sent</h3>
-<p><code class="highlighter-rouge">masternode outputs</code> will give you proof of transaction of sending 10,000 PIV</p>
+<p><code class="language-plaintext highlighter-rouge">masternode outputs</code> will give you proof of transaction of sending 10,000 PIV</p>
 
 <h3 id="5-assign-the-wallet">5. Assign the wallet</h3>
-<p>Go to PIVX data directory <code class="highlighter-rouge">%Appdata%/PIVX</code> on Windows and <code class="highlighter-rouge">~</code> on Linux. Find <code class="highlighter-rouge">masternode.conf</code> and add the following line to it</p>
+<p>Go to PIVX data directory <code class="language-plaintext highlighter-rouge">%Appdata%/PIVX</code> on Windows and <code class="language-plaintext highlighter-rouge">~</code> on Linux. Find <code class="language-plaintext highlighter-rouge">masternode.conf</code> and add the following line to it</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Name of Masternode(Use the name you entered earlier for simplicity)&gt; &lt;Unique IP address&gt;:51472 &lt;The result of Step 1&gt; &lt;Result of Step 4&gt; &lt;The number after the long line in Step 4&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Name of Masternode(Use the name you entered earlier for simplicity)&gt; &lt;Unique IP address&gt;:51472 &lt;The result of Step 1&gt; &lt;Result of Step 4&gt; &lt;The number after the long line in Step 4&gt;
 </code></pre></div></div>
 <p>Substitute it with your own values and without the “&lt;&gt;”s</p>
 
@@ -346,7 +346,7 @@
 
 <p>Execute the following commands one by one.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~
 wget https://github.com/PIVX-Project/PIVX/releases/download/v3.1.0.2/pivx-3.1.0.2-x86_64-linux-gnu.tar.gz
 tar -zxvf pivx-3.1.0.2-x86_64-linux-gnu.tar.gz
 cd ~/pivx-3.1.0/bin
@@ -354,11 +354,11 @@ cd ~/pivx-3.1.0/bin
 CTRL+C
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.pivx
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/.pivx
 vim pivx.conf
 </code></pre></div></div>
 
-<p>then press <code class="highlighter-rouge">i</code> to go into insert mode and make the config look like this:</p>
+<p>then press <code class="language-plaintext highlighter-rouge">i</code> to go into insert mode and make the config look like this:</p>
 
 <blockquote>
   <p>rpcuser=long random username
@@ -373,16 +373,16 @@ externalip=your unique public ip address
 masternodeprivkey=Result of Step 1</p>
 </blockquote>
 
-<p>Press <code class="highlighter-rouge">esc</code> and <code class="highlighter-rouge">:wq</code></p>
+<p>Press <code class="language-plaintext highlighter-rouge">esc</code> and <code class="language-plaintext highlighter-rouge">:wq</code></p>
 
 <h2 id="start-your-masternode">Start your masternode</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/pivx-3.1.0/bin
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/pivx-3.1.0/bin
 ./pivxd
 </code></pre></div></div>
 
 <p>From the Control wallet debug console
-<code class="highlighter-rouge">startmasternode alias false &lt;mymnalias&gt;</code></p>
+<code class="language-plaintext highlighter-rouge">startmasternode alias false &lt;mymnalias&gt;</code></p>
 
 <p>The following should appear:</p>
 
@@ -397,10 +397,10 @@ masternodeprivkey=Result of Step 1</p>
 </blockquote>
 
 <h3 id="7-start-the-masternode">7. Start the masternode</h3>
-<p><code class="highlighter-rouge">./pivx-cli startmasternode local false</code> A message “masternode successfully started” should appear</p>
+<p><code class="language-plaintext highlighter-rouge">./pivx-cli startmasternode local false</code> A message “masternode successfully started” should appear</p>
 
 <h3 id="8-check-status">8. check status</h3>
-<p><code class="highlighter-rouge">./pivx-cli masternode status</code> You should see something like:</p>
+<p><code class="language-plaintext highlighter-rouge">./pivx-cli masternode status</code> You should see something like:</p>
 
 <blockquote>
   <p>{
@@ -415,7 +415,7 @@ masternodeprivkey=Result of Step 1</p>
 
 <p><strong>Congratulations! You have successfully created your masternode!</strong></p>
 
-<p>Now the masternode setup is complete, you are safe to remove “enablezeromint=0” from the <code class="highlighter-rouge">pivx.conf</code> file of the control wallet.</p>
+<p>Now the masternode setup is complete, you are safe to remove “enablezeromint=0” from the <code class="language-plaintext highlighter-rouge">pivx.conf</code> file of the control wallet.</p>
 
 <p>{% include cta-blog.html %}</p>
 

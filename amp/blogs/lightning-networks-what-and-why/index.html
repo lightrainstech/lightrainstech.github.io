@@ -291,9 +291,9 @@
     <span class="timespan">
       Fri, Feb 23, 18
     </span>
-    <p>The problem with bitcoin blockchain network is scalability. The block size in a blockchain is limited to <code class="highlighter-rouge">1MB</code>, every block is created in every <code class="highlighter-rouge">10 Min</code> and only <code class="highlighter-rouge">7 transaction per second</code>. Lightning network introduced to resolve this problem, there by allowing more transaction at a time.</p>
+    <p>The problem with bitcoin blockchain network is scalability. The block size in a blockchain is limited to <code class="language-plaintext highlighter-rouge">1MB</code>, every block is created in every <code class="language-plaintext highlighter-rouge">10 Min</code> and only <code class="language-plaintext highlighter-rouge">7 transaction per second</code>. Lightning network introduced to resolve this problem, there by allowing more transaction at a time.</p>
 
-<p>Lightning network(LN) can be defined as decentralised network or payment channel for instant payment which is based on block chain’s smart contract functionality. More specifically Lightning Network is an <code class="highlighter-rouge">off-chain protocol</code> for bitcoin <code class="highlighter-rouge">micro payments</code>.</p>
+<p>Lightning network(LN) can be defined as decentralised network or payment channel for instant payment which is based on block chain’s smart contract functionality. More specifically Lightning Network is an <code class="language-plaintext highlighter-rouge">off-chain protocol</code> for bitcoin <code class="language-plaintext highlighter-rouge">micro payments</code>.</p>
 
 <p>LN is a bidirectional payment channel which allows transaction between two parties without needing broadcast each and every transaction.</p>
 
@@ -303,7 +303,7 @@
 
 <ul>
   <li>A multi-signature wallet/ address is opened by both parties and a small amount is deposited by them from their personal address. This transaction is called funding transaction/opening transaction since it for fund and open a bidirectional channel.</li>
-  <li>One <code class="highlighter-rouge">on­-chain</code> transaction is made to deposit the funds. Before this transaction is made, a refund transaction is created, which returns the original deposit to both parties. After the transaction is broadcast on­-chain, the <code class="highlighter-rouge">payment channel</code> is open and ready for transfers.</li>
+  <li>One <code class="language-plaintext highlighter-rouge">on­-chain</code> transaction is made to deposit the funds. Before this transaction is made, a refund transaction is created, which returns the original deposit to both parties. After the transaction is broadcast on­-chain, the <code class="language-plaintext highlighter-rouge">payment channel</code> is open and ready for transfers.</li>
 </ul>
 
 <blockquote>
@@ -311,7 +311,7 @@
 </blockquote>
 
 <ul>
-  <li>Let Alice and Bob are the two parties who opened the payment channel with funding of 10 BTC (5 BTC each). Additionally, Alice and Bob both create a secret (a string of numbers), and exchange the hash. Suppose Alice want to send 1 BTC to Bob then, Alice now immediately creates a subsequent transaction from the opening transaction called commitment transaction. With the commitment transaction, Alice sends four bitcoins to herself, and six bitcoins to a second multi-sig address. This address can be unlocked by Bob only <code class="highlighter-rouge">after 1000 blocks</code> and unlocked by Alice only if she knows the pre-image of the hash given by Bob. Alice signs the commitment transaction and give to Bob.</li>
+  <li>Let Alice and Bob are the two parties who opened the payment channel with funding of 10 BTC (5 BTC each). Additionally, Alice and Bob both create a secret (a string of numbers), and exchange the hash. Suppose Alice want to send 1 BTC to Bob then, Alice now immediately creates a subsequent transaction from the opening transaction called commitment transaction. With the commitment transaction, Alice sends four bitcoins to herself, and six bitcoins to a second multi-sig address. This address can be unlocked by Bob only <code class="language-plaintext highlighter-rouge">after 1000 blocks</code> and unlocked by Alice only if she knows the pre-image of the hash given by Bob. Alice signs the commitment transaction and give to Bob.</li>
   <li>Bob also creates the commitment transaction which is mirrored one of Alice. In this commitment transaction Bob sends 6 BTC to himself and 4 BTC to a second multi-sig address. This address is unlocked by Alice only after 1000 blocks and unlocked by Bob if he knows pre-image of hash given by Alice. Bob signs the transaction and gives to Alice.</li>
 </ul>
 

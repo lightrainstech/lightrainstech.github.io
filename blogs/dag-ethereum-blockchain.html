@@ -201,11 +201,11 @@
 Ethash PoW is memory hard, making it basically ASIC resistant. This basically means that calculating the PoW requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabyte size data) is called a DAG. Clients wishing to store the DAG in a cache should conform to this spec in order to share the cache with other clients:</p>
 <h3 id="where-is-dag-stored">Where is DAG stored</h3>
 <p>The DAG should be stored in a 1GB dump (for the initial epoch, anyway), in a file:</p>
-<p>Mac/Linux: <code class="highlighter-rouge">$(HOME)/.ethash/full-R&lt;REVISION&gt;-&lt;SEEDHASH&gt;</code>
-Windows: <code class="highlighter-rouge">$(HOME)/Appdata/Local/Ethash/full-R&lt;REVISION&gt;-&lt;SEEDHASH&gt;</code></p>
+<p>Mac/Linux: <code class="language-plaintext highlighter-rouge">$(HOME)/.ethash/full-R&lt;REVISION&gt;-&lt;SEEDHASH&gt;</code>
+Windows: <code class="language-plaintext highlighter-rouge">$(HOME)/Appdata/Local/Ethash/full-R&lt;REVISION&gt;-&lt;SEEDHASH&gt;</code></p>
 <h3 id="format">Format</h3>
-<p>Each file should begin with an 8-byte magic number, <code class="highlighter-rouge">0xfee1deadbaddcafe</code>, written in little-endian format (i.e., bytes <code class="highlighter-rouge">fe ca dd ba ad de e1 fe</code>).</p>
-<p>The Ethash algorithm expects the DAG as a two-dimensional array of <code class="highlighter-rouge">uint32s</code> (4-byte unsigned ints), with dimension <code class="highlighter-rouge">(n × 16)</code> where n is a large number. (n starts at <code class="highlighter-rouge">16777186</code> and grows from there.) Following the magic number, the rows of the DAG should be written sequentially into the file, with no delimiter between rows and each <code class="highlighter-rouge">unint32</code> encoded in little-endian format.</p>
+<p>Each file should begin with an 8-byte magic number, <code class="language-plaintext highlighter-rouge">0xfee1deadbaddcafe</code>, written in little-endian format (i.e., bytes <code class="language-plaintext highlighter-rouge">fe ca dd ba ad de e1 fe</code>).</p>
+<p>The Ethash algorithm expects the DAG as a two-dimensional array of <code class="language-plaintext highlighter-rouge">uint32s</code> (4-byte unsigned ints), with dimension <code class="language-plaintext highlighter-rouge">(n × 16)</code> where n is a large number. (n starts at <code class="language-plaintext highlighter-rouge">16777186</code> and grows from there.) Following the magic number, the rows of the DAG should be written sequentially into the file, with no delimiter between rows and each <code class="language-plaintext highlighter-rouge">unint32</code> encoded in little-endian format.</p>
 <h4 id="sources">Sources</h4>
 <ol>
   <li><a href="https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md">Dagger-Hashimoto</a></li>

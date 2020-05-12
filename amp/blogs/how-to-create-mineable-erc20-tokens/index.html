@@ -313,9 +313,9 @@ Mining if the process of creating new tokens(achieving consensus on some data), 
 
 <h3 id="1-block-rewards">1. Block Rewards</h3>
 
-<p>There are some ways to tie your coin supply to a mathematical formula. One of the simplest ways would be to make it a “merged mining” with ether, meaning that anyone who finds a block on ethereum would also get a reward from your coin, given that anyone calls the reward function on that block. You can do it using the special keyword <code class="highlighter-rouge">coinbase</code> that refers to the miner who finds the block.</p>
+<p>There are some ways to tie your coin supply to a mathematical formula. One of the simplest ways would be to make it a “merged mining” with ether, meaning that anyone who finds a block on ethereum would also get a reward from your coin, given that anyone calls the reward function on that block. You can do it using the special keyword <code class="language-plaintext highlighter-rouge">coinbase</code> that refers to the miner who finds the block.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function issueBlockReward() {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function issueBlockReward() {
     balanceOf[block.coinbase] += 5;
 }
 </code></pre></div></div>
@@ -324,7 +324,7 @@ Mining if the process of creating new tokens(achieving consensus on some data), 
 
 <p>It’s also possible to add a mathematical formula, so that anyone who can do math can win a reward. On this next example you have to calculate the cubic root of the current challenge gets a point and the right to set the next challenge:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uint currentChallenge = 1; // Can you figure out the cubic root of this number?
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uint currentChallenge = 1; // Can you figure out the cubic root of this number?
 
 function rewardMathGeniuses(uint answerToCurrentReward, uint nextChallenge) {
     require(answerToCurrentReward**3 == currentChallenge); // If answer is wrong do not continue
@@ -338,7 +338,7 @@ function rewardMathGeniuses(uint answerToCurrentReward, uint nextChallenge) {
 
 <p>But if you like Hashing as a form of random issuance of coins, you can still create your own ethereum based currency that has a proof of work issuance:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bytes32 public currentChallenge; // The coin starts with a challenge
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bytes32 public currentChallenge; // The coin starts with a challenge
 uint public timeOfLastProof; // Variable to keep track of when rewards were given
 uint public difficulty = 10**32; // Difficulty starts reasonably low
 

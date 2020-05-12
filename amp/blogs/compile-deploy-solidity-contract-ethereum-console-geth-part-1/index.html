@@ -298,7 +298,7 @@
 <h2 id="step-1-install-solidity-compiler-solc">Step 1. Install Solidity Compiler Solc</h2>
 
 <p><strong>Easy way</strong>
-Its very easy to install solc using npm the package manager for NodeJS the command is <code class="highlighter-rouge">npm install solc</code></p>
+Its very easy to install solc using npm the package manager for NodeJS the command is <code class="language-plaintext highlighter-rouge">npm install solc</code></p>
 
 <p><strong>Easier way Browser-Solidity</strong>
 If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity.</p>
@@ -306,7 +306,7 @@ If you just want to try Solidity for small contracts, you can try browser-solidi
 <p><strong>Building from Source</strong>
 Assuming you are using Ubuntu 14.04</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-add-repository ppa:george-edison55/cmake-3.x
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-add-repository ppa:george-edison55/cmake-3.x
 sudo apt-get -y update
 sudo apt-get -y install language-pack-en-base
 sudo dpkg-reconfigure locales
@@ -319,7 +319,7 @@ sudo apt-get -y upgrade
 
 <p>And pull the solidity source code</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --recursive https://github.com/ethereum/webthree-umbrella.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone --recursive https://github.com/ethereum/webthree-umbrella.git
 cd webthree-umbrella
 ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo
 ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0
@@ -327,22 +327,22 @@ cd webthree-umbrella
 
 <h2 id="step-2-verify-solidity-compiler">Step 2. Verify Solidity Compiler</h2>
 
-<p>To ensure solc is installed and ready to use, you can verify it by running <code class="highlighter-rouge">eth.getCompilers()</code> in geth console
+<p>To ensure solc is installed and ready to use, you can verify it by running <code class="language-plaintext highlighter-rouge">eth.getCompilers()</code> in geth console
 If you have it installed, it should output something like this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['Solidity' ]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['Solidity' ]
 </code></pre></div></div>
 
 <h2 id="bonus-compile-a-simple-contract">Bonus. Compile a simple contract</h2>
 
 <p>Let us take this simple contract source:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source = "contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source = "contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"
 </code></pre></div></div>
 <p>This contract offers a unary method: called with a positive integer a, it returns a * 7.
-You are ready to compile solidity code in the geth JS console using   <code class="highlighter-rouge">eth.compile.solidity</code></p>
+You are ready to compile solidity code in the geth JS console using   <code class="language-plaintext highlighter-rouge">eth.compile.solidity</code></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; contract = eth.compile.solidity(source).test
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; contract = eth.compile.solidity(source).test
 {
   code: '605280600c6000396000f3006000357c010000000000000000000000000000000000000000000000000000000090048063c6888fa114602e57005b60376004356041565b8060005260206000f35b6000600782029050604d565b91905056',
   info: {

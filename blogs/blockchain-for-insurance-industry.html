@@ -208,21 +208,21 @@ The greatest advantage of blockchains is its decentralized protocol which is oft
 <h2 id="how-can-we-keep-the-files-on-the-blockchain">How CAN we keep the files on the Blockchain</h2>
 <p>Assume that we want to keep the data of applicants on the blockchain, well there are multiple ways of doing it,</p>
 <ol>
-  <li>On the Blockchain as <code class="highlighter-rouge">meta</code> information</li>
+  <li>On the Blockchain as <code class="language-plaintext highlighter-rouge">meta</code> information</li>
   <li>Save the file somewhere else and keep the hash on the blockchain</li>
 </ol>
-<p><strong>1. On the Blockchain as <code class="highlighter-rouge">meta</code> information</strong></p>
+<p><strong>1. On the Blockchain as <code class="language-plaintext highlighter-rouge">meta</code> information</strong></p>
 <p>Even though it is technically possible to do so, there are some limitations on the Blockchain itself like, file size and amount payable for the network to write the files onto the Blockchain. Because of these reasons we would look into either <a href="/blogs/what-private-permissioned-blockchain">Private Permissioned Blockchain</a>_ or the <em>Save the file somewhere else and keep the hash on the blockchain</em> method.</p>
 <p><strong>2. Save the Hash only</strong></p>
 <p>Here we will hash the file using a well known nearly “un-hackable” algorithm to create the hash of the file. The hash is created in such a way that any computer running the same function on the same file will return only same result.</p>
-<p>Assume we have word <code class="highlighter-rouge">blockchain</code> when we hash it using <code class="highlighter-rouge">sha256</code> function we will get <code class="highlighter-rouge">ef7797e13d3a75526946a3bcf00daec9fc9c9c4d51ddc7cc5df888f74dd434d1</code> which will be same for all computers around the world. Hence there is some sort of consensus (<a href="https://en.wikipedia.org/wiki/Common_knowledge_(logic)">Common knowledge (logic)</a>) which keeps the system trust-less</p>
+<p>Assume we have word <code class="language-plaintext highlighter-rouge">blockchain</code> when we hash it using <code class="language-plaintext highlighter-rouge">sha256</code> function we will get <code class="language-plaintext highlighter-rouge">ef7797e13d3a75526946a3bcf00daec9fc9c9c4d51ddc7cc5df888f74dd434d1</code> which will be same for all computers around the world. Hence there is some sort of consensus (<a href="https://en.wikipedia.org/wiki/Common_knowledge_(logic)">Common knowledge (logic)</a>) which keeps the system trust-less</p>
 <p><img src="/assets/img/blog/blockchain-for-insurance-workflow.png" alt="Blockchain for Insurance Industry" class="ui image fluid" />
 <small>
 If you are interested in the technicality of hashing the data in blockchain <a href="http://blog.ezyang.com/2011/06/the-cryptography-of-bitcoin/" title="The Cryptography of Bitcoin">here</a> is a nice read and <a href="https://en.bitcoin.it/wiki/Block_hashing_algorithm" title="Block hashing algorithm">here</a>
 </small></p>
 <p>So we have solved the issue of file size getting stored on the blockchain, by saving the hash of the file.</p>
 <h2 id="how-do-we-verify-the-authenticity-of-the-data">How do we verify the authenticity of the data?</h2>
-<p>Blockchain handles this with <code class="highlighter-rouge">Keyless signature</code> to verify electronic data. Each request is returned a keyless signature which allows a third party to verify the transaction properties (time, identity, integrity) of the data using the blockchain as a reference. The keyless signature enables the individual properties and attributes of each transaction (including claims) to be verified without reliance on trusted parties and manual intervention.</p>
+<p>Blockchain handles this with <code class="language-plaintext highlighter-rouge">Keyless signature</code> to verify electronic data. Each request is returned a keyless signature which allows a third party to verify the transaction properties (time, identity, integrity) of the data using the blockchain as a reference. The keyless signature enables the individual properties and attributes of each transaction (including claims) to be verified without reliance on trusted parties and manual intervention.</p>
 <h3 id="opportunities-for-insurers">Opportunities for insurers</h3>
 <h4 id="1-decentralized-infrastructure">1. Decentralized infrastructure</h4>
 <p>It will create need for new regulation and controls. It will Potentially reduces transparency and controls for governments and regulators based on the existing model.</p>

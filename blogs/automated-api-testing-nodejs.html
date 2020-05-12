@@ -200,7 +200,7 @@
 </ul>
 <h3 id="app-starter">App starter</h3>
 <p>Following is the basic packages needed for run this project, you can add individual modules too</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "name": "node-api-testing",
     "version": "1.0.0",
     "description": "API Testing",
@@ -216,13 +216,13 @@
     }
 }
 </code></pre></div></div>
-<p>To install modules individually use <code class="highlighter-rouge">yarn add chai mocha supertest --dev</code>. Make sure that you have <code class="highlighter-rouge">mocha</code> installed globally. Run <code class="highlighter-rouge">yarn global add mocha</code></p>
-<p>Install all the dependencies using <code class="highlighter-rouge">yarn</code> or <code class="highlighter-rouge">yarn install</code></p>
+<p>To install modules individually use <code class="language-plaintext highlighter-rouge">yarn add chai mocha supertest --dev</code>. Make sure that you have <code class="language-plaintext highlighter-rouge">mocha</code> installed globally. Run <code class="language-plaintext highlighter-rouge">yarn global add mocha</code></p>
+<p>Install all the dependencies using <code class="language-plaintext highlighter-rouge">yarn</code> or <code class="language-plaintext highlighter-rouge">yarn install</code></p>
 <h2 id="create-tests">Create tests</h2>
-<p>Create your <code class="highlighter-rouge">test</code> folder in the project root run <code class="highlighter-rouge">mkdir test</code></p>
-<p><strong>The directory must be called <code class="highlighter-rouge">test</code> for Mocha to find test files to run.</strong></p>
-<p>for the test we are following a naming pattern like <code class="highlighter-rouge">[controller]_test.js</code> you can create your own.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let should = require('chai').should(),
+<p>Create your <code class="language-plaintext highlighter-rouge">test</code> folder in the project root run <code class="language-plaintext highlighter-rouge">mkdir test</code></p>
+<p><strong>The directory must be called <code class="language-plaintext highlighter-rouge">test</code> for Mocha to find test files to run.</strong></p>
+<p>for the test we are following a naming pattern like <code class="language-plaintext highlighter-rouge">[controller]_test.js</code> you can create your own.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let should = require('chai').should(),
     expect = require('chai').expect,
     supertest = require('supertest'),
     api = supertest('http://127.0.0.0:3000'),
@@ -264,26 +264,26 @@ describe('Token', function() {
 </code></pre></div></div>
 <p>The above code is pretty self explanatory, however we will go through it line by line;</p>
 <h2 id="running-tests">Running tests</h2>
-<p>Running test is easy as running <code class="highlighter-rouge">yarn run test</code> or <code class="highlighter-rouge">yarn test</code>. Make sure the api project is running and you have given correct path in the test file.</p>
+<p>Running test is easy as running <code class="language-plaintext highlighter-rouge">yarn run test</code> or <code class="language-plaintext highlighter-rouge">yarn test</code>. Make sure the api project is running and you have given correct path in the test file.</p>
 <h2 id="code-breakdown">Code breakdown</h2>
 <h4 id="1-require-and-initiate-modules">1. Require and initiate modules</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let should = require('chai').should(),
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let should = require('chai').should(),
     expect = require('chai').expect,
     supertest = require('supertest'),
     api = supertest('http://127.0.0.0:3000'),
     faker = require('faker')
 </code></pre></div></div>
 <h4 id="2-initialise-any-variable-that-we-may-want-to-reuse">2. Initialise any variable that we may want to reuse</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let tokenSymbol = faker.lorem.word()
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let tokenSymbol = faker.lorem.word()
 let result
 </code></pre></div></div>
 <h4 id="3-require-and-initiate-modules">3. Require and initiate modules</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>describe('Token', function() {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>describe('Token', function() {
   ...
 </code></pre></div></div>
 <p>This will appear as a heading for the tests, we named it as Token.</p>
 <h4 id="3-preparing-the-test-cases">3. Preparing the test cases</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before(function(done) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before(function(done) {
     api.post('/api/tokens')
         .set('Accept', 'application/x-www-form-urlencoded')
         .send({
@@ -301,16 +301,16 @@ let result
         })
 })
 </code></pre></div></div>
-<p>Here we are telling mocha to create a post request to an endpoint named <code class="highlighter-rouge">/api/tokens</code> and creating some data using it. And we are saving the response in a variable called <code class="highlighter-rouge">result</code>. This variable can be used to test against possible errors and structure validation using <a href="https://github.com/hapijs/joi">hapijs/joi</a> or similar.</p>
+<p>Here we are telling mocha to create a post request to an endpoint named <code class="language-plaintext highlighter-rouge">/api/tokens</code> and creating some data using it. And we are saving the response in a variable called <code class="language-plaintext highlighter-rouge">result</code>. This variable can be used to test against possible errors and structure validation using <a href="https://github.com/hapijs/joi">hapijs/joi</a> or similar.</p>
 <h4 id="4-testing-http-codes">4. Testing http codes</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it('should return a 200 response', function(done) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it('should return a 200 response', function(done) {
     api.get(`/api/tokens/${tokenSymbol}`)
         .set('Accept', 'application/json')
         .expect(200, done)
 })
 </code></pre></div></div>
 <p>and</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it('should return a 400 response', function(done) {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>it('should return a 400 response', function(done) {
     api.get('/api/tokens/hello')
         .set('Accept', 'application/json')
         .expect(400, done)

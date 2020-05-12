@@ -206,14 +206,14 @@
 <blockquote>
  <p>parity –chain dev</p>
 </blockquote>
-<h3 id="features-of-parity---chain-dev">Features of <code class="highlighter-rouge">parity --chain dev</code></h3>
+<h3 id="features-of-parity---chain-dev">Features of <code class="language-plaintext highlighter-rouge">parity --chain dev</code></h3>
 <ol>
   <li>Transactions will get sealed at most every 2 seconds</li>
   <li>The address created with an empty phrase contains a lot of tokens that can be used to send transactions</li>
 </ol>
 <h2 id="customizing-the-development-chain">Customizing the development chain</h2>
 <p>The default configuration should work fine in most cases, however it can be customized. The following example spec can be passed to –chain option where accounts contains a custom account with lots of Ether.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
     "name": "DevelopmentChain",
     "engine": {
         "instantSeal": { "params": {} }

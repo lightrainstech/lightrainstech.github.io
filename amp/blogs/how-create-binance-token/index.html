@@ -340,32 +340,32 @@
 
 <h2 id="3-createissue-token">3. Create/Issue token</h2>
 
-<p>To issue a token you need to have basic unix command line experience. You need to use command line utility called <code class="highlighter-rouge">bnbcli</code> which you can download from <a href="https://github.com/binance-chain/node-binary">binance-chain/node-binary</a>.</p>
+<p>To issue a token you need to have basic unix command line experience. You need to use command line utility called <code class="language-plaintext highlighter-rouge">bnbcli</code> which you can download from <a href="https://github.com/binance-chain/node-binary">binance-chain/node-binary</a>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone git@github.com:binance-chain/node-binary.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone git@github.com:binance-chain/node-binary.git
 $ cd ./cli/testnet/mac or cd ./cli/testnet/linux
 $ ./bnbcli
 </code></pre></div></div>
 
-<p>In some cases you need to set appropriate permissions to get this utility working you can achieve this by typing <code class="highlighter-rouge">chmod a+x bnbcli</code> from a MacOS terminal. Use appropriate command based on your OS/Arch.</p>
+<p>In some cases you need to set appropriate permissions to get this utility working you can achieve this by typing <code class="language-plaintext highlighter-rouge">chmod a+x bnbcli</code> from a MacOS terminal. Use appropriate command based on your OS/Arch.</p>
 
 <h3 id="31-import-your-wallet">3.1 Import your wallet</h3>
 
-<p>You need to import your testnet wallet to the <code class="highlighter-rouge">bnbcli</code> utility with the following steps</p>
+<p>You need to import your testnet wallet to the <code class="language-plaintext highlighter-rouge">bnbcli</code> utility with the following steps</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli keys add key01 --recover
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli keys add key01 --recover
 Enter a passphrase for your key:
 Repeat the passphrase:
 &gt; Enter your recovery seed phrase:
 </code></pre></div></div>
 
-<p>You need to enter your wallet password and then the mnemonic phrase to import the wallet locally. After successful import you will get your new wallet under name <code class="highlighter-rouge">key01</code></p>
+<p>You need to enter your wallet password and then the mnemonic phrase to import the wallet locally. After successful import you will get your new wallet under name <code class="language-plaintext highlighter-rouge">key01</code></p>
 
-<p><code class="highlighter-rouge">./bnbcli keys list</code> to see whether your keys are imported correctly.</p>
+<p><code class="language-plaintext highlighter-rouge">./bnbcli keys list</code> to see whether your keys are imported correctly.</p>
 
 <p>You should see something like</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>› ./bnbcli keys list
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>› ./bnbcli keys list
 NAME:	TYPE:	ADDRESS:						    PUBKEY:
 key01	local	tbnb15ppky5sxd0h78en***	bnbp1addwnpe***
 key02	local	tbnb1rh0zpgfmhye042a***	bnbp1addwnpe***
@@ -377,7 +377,7 @@ key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
 
 <p>See all available command line options under <a href="https://docs.binance.org/tokens.html#issue">Asset Management</a></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli token issue \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli token issue \
 --token-name "Lightrains LIGHT" \
 --total-supply 100000000000000000 \
 --symbol LIGHT \
@@ -391,12 +391,12 @@ key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
 </code></pre></div></div>
 
 <blockquote>
-  <p><code class="highlighter-rouge">--voting-period</code> should be set to 7200, i have tried many values according to Binance doc and this particular value seems to be working all the time.</p>
+  <p><code class="language-plaintext highlighter-rouge">--voting-period</code> should be set to 7200, i have tried many values according to Binance doc and this particular value seems to be working all the time.</p>
 </blockquote>
 
 <p>You will get a responce like</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Committed at block 1887 (tx hash: A06E5AD582E4E92B324F3B05C5D85634FEB, … Issued LIGHT-123…)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Committed at block 1887 (tx hash: A06E5AD582E4E92B324F3B05C5D85634FEB, … Issued LIGHT-123…)
 </code></pre></div></div>
 
 <p>Here we issued a token called LIGHT, the total amount is 1 billion. To avoid abusing, the chain will automatically add three random letters as the suffix. The combined name will be unique on the Chain.</p>
@@ -405,7 +405,7 @@ key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
 
 <p>You will have to create a listing proposal to let validators to vote. You can use the following command to create a listing proposal.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov submit-list-proposal \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov submit-list-proposal \
 --from key01
 --deposit 200000000000:BNB \
 --base-asset-symbol LIGHT-123 \
@@ -424,9 +424,9 @@ key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
 
 <p>In this example, we deposited 2000 BNB for the token listing proposal and the initial price is set as 1 BNB. According to the official doc, the initial price must be 1 BNB or the proposal will be rejected.</p>
 
-<p>On successful proposal you will get a proposal ID, you can get it from the <a href="https://testnet-explorer.binance.org/">explorer</a> or via <code class="highlighter-rouge">bnbcli</code> using</p>
+<p>On successful proposal you will get a proposal ID, you can get it from the <a href="https://testnet-explorer.binance.org/">explorer</a> or via <code class="language-plaintext highlighter-rouge">bnbcli</code> using</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov query-proposals \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli gov query-proposals \
 --chain-id=Binance-Chain-Nil \
 --node=data-seed-pre-2-s1.binance.org:80
  1 — list BNB/BTC.B-9CE
@@ -443,7 +443,7 @@ key03	local	tbnb1gnd743gtq640kqm***	bnbp1addwnpe***
 
 <p>Once the proposal is passed, you can them list your token. The fee of listing is 800 BNB.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli dex list -s LIGHT-123 \
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bnbcli dex list -s LIGHT-123 \
 --quote-asset-symbol BNB \
 --from test \
 --init-price 100000000 \

@@ -202,7 +202,7 @@
   <li><a href="#race-conditions">Race Conditions</a></li>
 </ol>
 <h2 id="external-calls">External Calls</h2>
-<p>Calls to untrusted contracts can introduce several unexpected risks or errors. External calls may execute malicious code in that contract or any other contract that it depends upon. As such, every external call should be treated as a potential security risk, and removed if possible. Understand how <code class="highlighter-rouge">send()</code>, <code class="highlighter-rouge">transfer()</code>, and <code class="highlighter-rouge">call.value()()</code>. Using <code class="highlighter-rouge">send()</code> or <code class="highlighter-rouge">transfer()</code> will prevent reentrancy but it does so at the cost of being incompatible with any contract whose fallback function requires more than 2,300 gas.</p>
+<p>Calls to untrusted contracts can introduce several unexpected risks or errors. External calls may execute malicious code in that contract or any other contract that it depends upon. As such, every external call should be treated as a potential security risk, and removed if possible. Understand how <code class="language-plaintext highlighter-rouge">send()</code>, <code class="language-plaintext highlighter-rouge">transfer()</code>, and <code class="language-plaintext highlighter-rouge">call.value()()</code>. Using <code class="language-plaintext highlighter-rouge">send()</code> or <code class="language-plaintext highlighter-rouge">transfer()</code> will prevent reentrancy but it does so at the cost of being incompatible with any contract whose fallback function requires more than 2,300 gas.</p>
 <h2 id="handling-the-funds">Handling the funds</h2>
 <p>When developing a crowdsale smart contract, there are several options for handling the collection of funds. Take a look at the common ways in which the funds are getting handled.</p>
 <p><strong>In contract:-</strong> The obvious method, we keep the funds in the contract itself during the crowdsale and transfer the funds to the developer address once the crowdsale is over.</p>
@@ -210,7 +210,7 @@
 <p>As a result an evolved mechanism is to keep the funds in a intermediate multisig contract with a time lock such that the <em><strong>funds are not movable</strong></em> till the crowdsale ends.</p>
 <h2 id="erc20-token-standard">ERC20 token standard</h2>
 <p>There were no standard for tokens on etheerum till the <a href="https://github.com/ethereum/EIPs/issues/20">EIP 20</a>. Once that is pulled in now  we have a better standard for the tokens on Ethereum. Using established standards (i.e. the <a href="https://github.com/ethereum/EIPs/issues/20">ERC20 token standard</a>), newly minted tokens are easily integrated into major wallets and exchanges. A general basic example would be;</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// https://github.com/ethereum/EIPs/issues/20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// https://github.com/ethereum/EIPs/issues/20
 contract ERC20 {
     function totalSupply() constant returns (uint totalSupply);
     function balanceOf(address _owner) constant returns (uint balance);
@@ -225,7 +225,7 @@ contract ERC20 {
 <h2 id="integer-division">Integer division</h2>
 <p>All integer division rounds down to the nearest integer. If you need more precision, consider using a multiplier, or store both the numerator and denominator.</p>
 <p>(In the future, Solidity will have a fixed-point type, which will make this easier.)</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// bad
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// bad
 uint x = 5 / 2; // Result is 2, all integer division rounds DOWN to the nearest integer
 
 // good

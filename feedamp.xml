@@ -5,10 +5,26 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Oct 2020 11:21:42 +0530</pubDate>
-    <lastBuildDate>Fri, 02 Oct 2020 11:21:42 +0530</lastBuildDate>
+    <pubDate>Fri, 02 Oct 2020 23:41:21 +0530</pubDate>
+    <lastBuildDate>Fri, 02 Oct 2020 23:41:21 +0530</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
+    
+      <item>
+        <title>Hedera Hashgraph Development Services</title>
+        <description>Hedera is a public distributed ledger for building and deploying decentralized applications and microservices. You can use Hedera’s network services–Cryptocurrency, Consensus, Smart Contracts, and File Service–atop the hashgraph consensus algorithm, to build applications with high throughput, fair ordering, and low-latency consensus finality in seconds without relying on centralized infrastructure. What is hashgraph? Hashgraph is a distributed consensus algorithm and data structure that is fast, fair, and secure. This indirectly creates a trusted community, even when members do not necessarily trust each other. Hedera is the only authorized public network to use hashgraph. You can learn more about the consensus algorithm Hedera Hashgraph Development Services Using Hedera’s network services such as cryptocurrency, file service and smart contracts, we build decentralized apps on the Hedera Hashgraph platform that delivers high throughput and decentralized trust. Our Hedera Hashgraph developers can also integrate your existing app or permission blockchain network with a Hedera network. 1. Custom Hedera Hashgraph App Development We develop and deploy enterprise-grade dApps on the Hedera Hashgraph network with Hedera Hashgraph APIs, Consensus Service, File Service and Smart Contracts. 2. Hedera Hashgraph Platform Integration We can integrate your existing application or blockchain network with the Hedera Hashgraph platform by migrating the...</description>
+        <pubDate>Fri, 02 Oct 2020 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/hedera-hashgraph-development-services/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/hedera-hashgraph-development-services</guid>
+        
+        <category>Hedera Hashgraph</category>
+        
+        <category>Hashgraph</category>
+        
+        <category>Blockchain</category>
+        
+        
+      </item>
     
       <item>
         <title>DNS over HTTPS</title>

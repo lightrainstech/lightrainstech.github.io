@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/hedera-hashgraph-development-services");
+
   urlsToCache.push("/blogs/dns-over-https-doh");
 
   urlsToCache.push("/work/sto-digital-securities-platform");
@@ -1691,8 +1693,32 @@ var urlsToCache = [];
     urlsToCache.push("/tag/security/");
   
 
+  
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v6';
+  
+    urlsToCache.push("/tag/hedera-hashgraph/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/hedera-hashgraph/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/hashgraph/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/hashgraph/");
+  
+
+
+var CACHE_NAME = 'lightrains-technolabs-cache-v7';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

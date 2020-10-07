@@ -1,0 +1,373 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>What is WalletConnect protocol</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/walletconnect-protocol-dapps" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+    body {
+        padding: 10px;
+        animation: amp-timeout 0x 5s 1 normal forwards;
+        padding-top: 30px;
+        background-color: #f4f4f2;
+        color: #333332;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        line-height: 1.4;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Monaco', Courier;
+    }
+    .h1 {
+        font-size: 20px;
+    }
+    .ui.highlight {
+        font-size: 18pt;
+        border-left: 3px solid #a7bd0d;
+        padding: 15px;
+        margin: 20px 5px;
+        font-style: italic;
+        background: #fbfbfb;
+        color: #21ba45;
+    }
+    p {
+        color: #333;
+        line-height: 26px;
+        display: block;
+    }
+    @keyframes amp-timeout {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    a {
+        color: #1678c2;
+        background: transparent;
+        color: #666666;
+        display: inline;
+        text-decoration: underline;
+    }
+    .related.ui.segment {
+        border-top: 5px solid #202020;
+        background: rgba(48, 54, 4, 0.12);
+        padding: 5px;
+    }
+    .related.ui.segment h3 {
+        margin-top: 0;
+    }
+    .ampmenu a {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        color: #303030;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    amp-img {
+        background-color: gray;
+    }
+    .ampmenu {
+        background: rgba(255, 255, 255, 0.95);
+        width: 98%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        z-index: 99;
+    }
+    html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    body hr {
+        border: 0;
+        border-top: 1px solid #b3b3b3;
+        display: block;
+        margin: 50px auto 40px auto;
+        width: 20%;
+    }
+    body a:focus,
+    body a:hover {
+        color: #ff4136;
+    }
+    .post-title {
+        font-size: 35px;
+        letter-spacing: -0.02em;
+        letter-spacing: -0.04em;
+        line-height: 1.1;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .content {
+        display: block;
+        font-size: 18px;
+        font-style: normal;
+        letter-spacing: 0.05px;
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 98%;
+    }
+    .timespan {
+        font-size: 15px;
+        clear: both;
+        opacity: 0.7;
+    }
+    a.nonamp {
+        text-align: center;
+        display: block;
+        margin: 10px;
+    }
+    ul,
+    ol {
+        list-style: none;
+        margin-left: 8px;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+    li {
+        margin: 6px 0;
+    }
+    li:before {
+        content: '\0BB \020';
+    }
+    pre,
+    code {
+        background: #333;
+        color: #fff;
+        padding: 3px;
+        border-radius: 2px;
+        -o-border-radius: 2px;
+        -moz-border-radius: 2px;
+    }
+    .cta-blog {
+        display: none;
+        visible: hidden;
+        width: 0;
+        height: 0;
+    }
+</style>
+<style amp-boilerplate>
+    body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+    }
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }</style
+><noscript
+    ><style amp-boilerplate>
+        body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none;
+        }
+    </style></noscript
+>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Lightrains Technolabs",
+        "legalName": "Lightrains Technolabs Private Limited",
+        "url": "https://lightrains.com",
+        "telephone": "+914714000056",
+        "email": "hello(at)lightrains.com",
+        "foundingDate": "2012-12-28",
+        "slogan": "Technology Supercharged",
+        "description": "A global technology solution provider enabling enterprises to apply Blockchain and AI in their businesses.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Trivandrum",
+            "addressRegion": "Kerala",
+            "postalCode": "695581",
+            "streetAddress": "Module 2, Gayathri, Technopark Campus, Trivandrum, 695581"
+        },
+        "founder": {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Nikhil Mohan",
+            "jobTitle": "Director of Technology",
+            "url": "https://nikhilmohan.in/",
+            "sameAs": ["https://twitter.com/niksmac_", "https://github.com/niksmac"]
+        },
+        "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+        "sameAs": ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+    }
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/walletconnect-protocol-dapps/"
+  },
+  "headline": "What is WalletConnect protocol",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/walletconnect-protocol-dapps/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/WalletConnect.png",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2020-10-07T05:10:00+05:30",
+  "dateModified": "2020-10-07T05:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "> WalletConnect allows the user to scan a QR code from the wallet app to unlock and use their wallet seamlessly in the web UI. What is WalletConnect?Wallet..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="What is WalletConnect protocol">What is WalletConnect protocol</h1>
+
+  <amp-img
+  src="/assets/img/blog/WalletConnect.png"
+  alt="What is WalletConnect protocol" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Wed, Oct 07, 20
+    </span>
+    <blockquote>
+  <p>WalletConnect allows the user to scan a QR code from the wallet app to unlock and use their wallet seamlessly in the web UI.</p>
+</blockquote>
+
+<h2 id="what-is-walletconnect">What is WalletConnect?</h2>
+
+<p>WalletConnect is an open protocol made to facilitate a secure connection between mobile cryptocurrency wallets and desktop applications, such as dapps. Transactions are made through an encrypted connection by scanning a QR code, and are confirmed on the mobile device. As the private key never leaves the user’s device, their funds are never at risk and the possibility of a hijack is very low.</p>
+
+<p><strong>WalletConnect enables Dapp developers to integrate with multiple wallets through a single implementation.</strong></p>
+
+<ul>
+  <li>enable users to use their mobile wallets with Dapps without having to install a browser extension</li>
+  <li>enable users to use the wallet of their choice without worrying about which Dapps have integrated with which wallets</li>
+  <li>simplify wallet integration for Dapp developers instead of requiring them to integrate each wallet individually</li>
+  <li>provide flexibility to Dapp developers about which Wallet Connect bridge servers they want to use to communicate with mobile wallets</li>
+  <li>provide control to the mobile wallet developers on how push notifications are sent to their users</li>
+</ul>
+
+<h2 id="how-does-it-work">How does it work?</h2>
+
+<p>WalletConnect connects web applications to supported mobile wallets. WalletConnect session is started by a scanning a QR code (desktop) or by clicking an application deep link (mobile).</p>
+
+<h2 id="why-should-i-use-walletconnect">Why Should I Use WalletConnect?</h2>
+
+<p>A few of the most popular options for interacting with a dapp include using a desktop browser-only extension like Metamask, or a mobile wallet/Ethereum browser like Cipher or Status. The problem with these solutions is that funds are generally ‘stuck’ on one platform, and would make it difficult to switch between mobile and desktop, unless the recovery phrase would be exported which could result in serious security implications.</p>
+
+<h2 id="using-walletconnect-with-binance-api">Using WalletConnect with Binance API</h2>
+
+<h3 id="protocol-differences">Protocol Differences</h3>
+
+<p>Since we do not use <strong>Ethereum transactions</strong>, there are some <a href="https://docs.binance.org/guides/concepts/walletconnect.html">differences</a>:</p>
+
+<ul>
+  <li>Typically <code class="language-plaintext highlighter-rouge">sendTransaction</code> is used with Ethereum transaction parameters in WalletConnect dApp integrations. But in Binance Chain’s case, instead of invoking sendTransaction in the WalletConnect flow, the new sendCustomRequest call is used instead with a method called <code class="language-plaintext highlighter-rouge">bnb_sign</code> (see below).</li>
+  <li>The external wallet provider is responsible for sending back the signature and public key of the transaction but should not broadcast the transaction itself. We have instead defined a custom <code class="language-plaintext highlighter-rouge">result</code> format in the form of stringified JSON containing the signature and public key. The reason for this is that the wallet app probably does not have access to the complete serialized binary form of the transaction (as this requires Amino encoding).</li>
+  <li>The web wallet will send back a second custom call (after <code class="language-plaintext highlighter-rouge">bnb_sign</code>) called <code class="language-plaintext highlighter-rouge">bnb_tx_confirmation</code>, which contains the boolean result of the transaction build/broadcast and any error message encountered by the web wallet during broadcasting. In a complete implementation, this confirmation callback should be responded to with a call to <code class="language-plaintext highlighter-rouge">approveRequest</code>.</li>
+</ul>
+
+<p><strong>Sources:</strong></p>
+
+<ul>
+  <li><a href="https://walletconnect.org">WalletConnect</a></li>
+  <li><a href="https://docs.binance.org/guides/concepts/walletconnect.html">WalletConnect with Binance API</a></li>
+  <li><a href="https://walletconnect.readthedocs.io/en/latest/">WalletConnect Docs</a></li>
+</ul>
+
+    <a href="https://lightrains.com/blogs/walletconnect-protocol-dapps" title="What is WalletConnect protocol" class="nonamp">Full Version of What is WalletConnect protocol</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/walletconnect-protocol-dapps/index.html" title="What is WalletConnect protocol">What is WalletConnect protocol</a></li>
+      
+      <li><a href="/amp/blogs/hedera-hashgraph-development-services/index.html" title="Hedera Hashgraph Development Services">Hedera Hashgraph Development Services</a></li>
+      
+      <li><a href="/amp/blogs/dns-over-https-doh/index.html" title="DNS over HTTPS">DNS over HTTPS</a></li>
+      
+      <li><a href="/amp/blogs/automated-api-testing-nodejs/index.html" title="Automated API testing with nodejs">Automated API testing with nodejs</a></li>
+      
+    </ul>
+    <p class="slogan">Lightrains Technolabs | Blockchain Consulting. Technology Supercharged</p>
+  </div>
+</body>
+</html>

@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/walletconnect-protocol-dapps");
+
   urlsToCache.push("/blogs/hedera-hashgraph-development-services");
 
   urlsToCache.push("/blogs/dns-over-https-doh");
@@ -1717,8 +1719,44 @@ var urlsToCache = [];
     urlsToCache.push("/tag/hashgraph/");
   
 
+  
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v7';
+  
+    urlsToCache.push("/tag/walletconnect/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/walletconnect/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/wallet/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/wallet/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/protocol/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/protocol/");
+  
+
+
+var CACHE_NAME = 'lightrains-technolabs-cache-v8';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

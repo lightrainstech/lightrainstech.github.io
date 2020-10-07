@@ -5,10 +5,28 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Oct 2020 23:41:21 +0530</pubDate>
-    <lastBuildDate>Fri, 02 Oct 2020 23:41:21 +0530</lastBuildDate>
+    <pubDate>Wed, 07 Oct 2020 08:50:08 +0530</pubDate>
+    <lastBuildDate>Wed, 07 Oct 2020 08:50:08 +0530</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
+    
+      <item>
+        <title>What is WalletConnect protocol</title>
+        <description>WalletConnect allows the user to scan a QR code from the wallet app to unlock and use their wallet seamlessly in the web UI. What is WalletConnect? WalletConnect is an open protocol made to facilitate a secure connection between mobile cryptocurrency wallets and desktop applications, such as dapps. Transactions are made through an encrypted connection by scanning a QR code, and are confirmed on the mobile device. As the private key never leaves the user’s device, their funds are never at risk and the possibility of a hijack is very low. WalletConnect enables Dapp developers to integrate with multiple wallets through a single implementation. enable users to use their mobile wallets with Dapps without having to install a browser extension enable users to use the wallet of their choice without worrying about which Dapps have integrated with which wallets simplify wallet integration for Dapp developers instead of requiring them to integrate each wallet individually provide flexibility to Dapp developers about which Wallet Connect bridge servers they want to use to communicate with mobile wallets provide control to the mobile wallet developers on how push notifications are sent to their users How does it work? WalletConnect connects web applications to supported...</description>
+        <pubDate>Wed, 07 Oct 2020 05:10:00 +0530</pubDate>
+        <link>https://lightrains.com/amp/blogs/walletconnect-protocol-dapps/index.html</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/walletconnect-protocol-dapps</guid>
+        
+        <category>WalletConnect</category>
+        
+        <category>Wallet</category>
+        
+        <category>Blockchain</category>
+        
+        <category>Protocol</category>
+        
+        
+      </item>
     
       <item>
         <title>Hedera Hashgraph Development Services</title>

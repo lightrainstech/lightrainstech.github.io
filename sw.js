@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/work/kerala-psc-app-quizzed");
+
   urlsToCache.push("/blogs/walletconnect-protocol-dapps");
 
   urlsToCache.push("/blogs/hedera-hashgraph-development-services");
@@ -1756,7 +1758,7 @@ var urlsToCache = [];
   
 
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v8';
+var CACHE_NAME = 'lightrains-technolabs-cache-v9';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

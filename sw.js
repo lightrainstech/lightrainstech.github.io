@@ -1,6 +1,10 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/formsure-alternative-google-forms");
+
+  urlsToCache.push("/work/formsure-form-builder");
+
   urlsToCache.push("/work/kerala-psc-app-quizzed");
 
   urlsToCache.push("/blogs/walletconnect-protocol-dapps");
@@ -393,6 +397,18 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/category/open-source/");
+  
+
+  
+
+  
+    urlsToCache.push("/category/other/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/category/other/");
   
 
   
@@ -1757,8 +1773,44 @@ var urlsToCache = [];
     urlsToCache.push("/tag/protocol/");
   
 
+  
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v9';
+  
+    urlsToCache.push("/tag/formsure/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/formsure/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/story/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/story/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/product-review/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/product-review/");
+  
+
+
+var CACHE_NAME = 'lightrains-technolabs-cache-v10';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

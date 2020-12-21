@@ -198,6 +198,9 @@
 		<div class="col-12 col-lg-12">
 			<a href="/category/Open Source/">Open Source <span class="badge">2</span></a>
 		</div>
+		<div class="col-12 col-lg-12">
+			<a href="/category/Other/">Other <span class="badge">1</span></a>
+		</div>
 </div>
 <a name="tags"></a>
 <h3>Tags</h3>
@@ -540,6 +543,15 @@
 		</div>
 		<div class="col-lg-3 col-sm-4 col-12">
 		<a href="/tag/Protocol/">Protocol <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Formsure/">Formsure <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Story/">Story <span class="badge">1</span></a>
+		</div>
+		<div class="col-lg-3 col-sm-4 col-12">
+		<a href="/tag/Product Review/">Product Review <span class="badge">1</span></a>
 		</div>
 </div>
    </div>

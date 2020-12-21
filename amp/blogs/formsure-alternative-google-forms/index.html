@@ -1,0 +1,354 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Why we moved to Formsure from Google Forms</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/formsure-alternative-google-forms" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+    body {
+        padding: 10px;
+        animation: amp-timeout 0x 5s 1 normal forwards;
+        padding-top: 30px;
+        background-color: #f4f4f2;
+        color: #333332;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        line-height: 1.4;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Monaco', Courier;
+    }
+    .h1 {
+        font-size: 20px;
+    }
+    .ui.highlight {
+        font-size: 18pt;
+        border-left: 3px solid #a7bd0d;
+        padding: 15px;
+        margin: 20px 5px;
+        font-style: italic;
+        background: #fbfbfb;
+        color: #21ba45;
+    }
+    p {
+        color: #333;
+        line-height: 26px;
+        display: block;
+    }
+    @keyframes amp-timeout {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    a {
+        color: #1678c2;
+        background: transparent;
+        color: #666666;
+        display: inline;
+        text-decoration: underline;
+    }
+    .related.ui.segment {
+        border-top: 5px solid #202020;
+        background: rgba(48, 54, 4, 0.12);
+        padding: 5px;
+    }
+    .related.ui.segment h3 {
+        margin-top: 0;
+    }
+    .ampmenu a {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        color: #303030;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    amp-img {
+        background-color: gray;
+    }
+    .ampmenu {
+        background: rgba(255, 255, 255, 0.95);
+        width: 98%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        z-index: 99;
+    }
+    html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    body hr {
+        border: 0;
+        border-top: 1px solid #b3b3b3;
+        display: block;
+        margin: 50px auto 40px auto;
+        width: 20%;
+    }
+    body a:focus,
+    body a:hover {
+        color: #ff4136;
+    }
+    .post-title {
+        font-size: 35px;
+        letter-spacing: -0.02em;
+        letter-spacing: -0.04em;
+        line-height: 1.1;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .content {
+        display: block;
+        font-size: 18px;
+        font-style: normal;
+        letter-spacing: 0.05px;
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 98%;
+    }
+    .timespan {
+        font-size: 15px;
+        clear: both;
+        opacity: 0.7;
+    }
+    a.nonamp {
+        text-align: center;
+        display: block;
+        margin: 10px;
+    }
+    ul,
+    ol {
+        list-style: none;
+        margin-left: 8px;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+    li {
+        margin: 6px 0;
+    }
+    li:before {
+        content: '\0BB \020';
+    }
+    pre,
+    code {
+        background: #333;
+        color: #fff;
+        padding: 3px;
+        border-radius: 2px;
+        -o-border-radius: 2px;
+        -moz-border-radius: 2px;
+    }
+    .cta-blog {
+        display: none;
+        visible: hidden;
+        width: 0;
+        height: 0;
+    }
+</style>
+<style amp-boilerplate>
+    body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+    }
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }</style
+><noscript
+    ><style amp-boilerplate>
+        body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none;
+        }
+    </style></noscript
+>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Lightrains Technolabs",
+        "legalName": "Lightrains Technolabs Private Limited",
+        "url": "https://lightrains.com",
+        "telephone": "+914714000056",
+        "email": "hello(at)lightrains.com",
+        "foundingDate": "2012-12-28",
+        "slogan": "Technology Supercharged",
+        "description": "A global technology solution provider enabling enterprises to apply Blockchain and AI in their businesses.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Trivandrum",
+            "addressRegion": "Kerala",
+            "postalCode": "695581",
+            "streetAddress": "Module 2, Gayathri, Technopark Campus, Trivandrum, 695581"
+        },
+        "founder": {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Nikhil Mohan",
+            "jobTitle": "Director of Technology",
+            "url": "https://nikhilmohan.in/",
+            "sameAs": ["https://twitter.com/niksmac_", "https://github.com/niksmac"]
+        },
+        "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+        "sameAs": ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+    }
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/formsure-alternative-google-forms/"
+  },
+  "headline": "Why we moved to Formsure from Google Forms",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/formsure-alternative-google-forms/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/formsure-meta.jpg",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2020-12-21T08:10:00+05:30",
+  "dateModified": "2020-12-21T08:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Though similar to a [traditional form builder](https://formsure.co) in appearance and flow, Formsure is designed to provide the best creation and usage exper..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Why we moved to Formsure from Google Forms">Why we moved to Formsure from Google Forms</h1>
+
+  <amp-img
+  src="/assets/img/blog/formsure-meta.jpg"
+  alt="Why we moved to Formsure from Google Forms" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Mon, Dec 21, 20
+    </span>
+    <p>Though similar to a <a href="https://formsure.co">traditional form builder</a> in appearance and flow, Formsure is designed to provide the best creation and usage experience that someone can have.</p>
+
+<p>We, at Lightrains were using quite a lot of <strong>Google Forms</strong> lately; from collecting client details to fill up initial project descriptions from our various clients.</p>
+
+<blockquote>
+  <p>The data collection through Formsure is thorough, the approach is refined, and the summary reports are complete in all respects. Formsure’s surveys and polls have helped us to gain peace of mind in knowing that our brand is favoured and represented appropriately to our employees as well as the brand ambassadors.</p>
+</blockquote>
+
+<h2 id="powerful-features-for-better-user-engagement">Powerful Features For Better User Engagement</h2>
+
+<ul>
+  <li>Easy Drag &amp; Drop Interface</li>
+  <li>Automatic Saving</li>
+  <li>Multiple Choice Question</li>
+  <li>File Upload</li>
+  <li>Collect Payments</li>
+</ul>
+
+<h2 id="different-form-templates">Different form templates</h2>
+
+<ul>
+  <li><a href="https://formsure.co/form-template/lead-generation-free-trial-request">Free Trial Request Form Template</a></li>
+  <li><a href="https://formsure.co/form-template/lead-generation-product-enquiry">Product Enquiry Form Template</a></li>
+  <li><a href="https://formsure.co/form-template/product-delivery-form-template">Delivery Feedback Form Template</a></li>
+  <li><a href="https://formsure.co/form-templates/">And more…</a></li>
+</ul>
+
+    <a href="https://lightrains.com/blogs/formsure-alternative-google-forms" title="Why we moved to Formsure from Google Forms" class="nonamp">Full Version of Why we moved to Formsure from Google Forms</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/formsure-alternative-google-forms/index.html" title="Why we moved to Formsure from Google Forms">Why we moved to Formsure from Google Forms</a></li>
+      
+      <li><a href="/amp/blogs/walletconnect-protocol-dapps/index.html" title="What is WalletConnect protocol">What is WalletConnect protocol</a></li>
+      
+      <li><a href="/amp/blogs/hedera-hashgraph-development-services/index.html" title="Hedera Hashgraph Development Services">Hedera Hashgraph Development Services</a></li>
+      
+      <li><a href="/amp/blogs/dns-over-https-doh/index.html" title="DNS over HTTPS">DNS over HTTPS</a></li>
+      
+    </ul>
+    <p class="slogan">Lightrains Technolabs | Blockchain Consulting. Technology Supercharged</p>
+  </div>
+</body>
+</html>

@@ -5,9 +5,25 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Jan 2021 06:47:33 +0530</pubDate>
-    <lastBuildDate>Fri, 01 Jan 2021 06:47:33 +0530</lastBuildDate>
-    <generator>Jekyll v4.0.1</generator>
+    <pubDate>Fri, 08 Jan 2021 08:05:28 +0530</pubDate>
+    <lastBuildDate>Fri, 08 Jan 2021 08:05:28 +0530</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>MongoDB Solutions to data growth</title>
+        <description>MongoDB provides the sharding feature for you to store massive data. However, the storage costs increase with the growth of data volume. Typically, the value of log data decreases over time. Data generated one year ago or even three months ago, which is valueless to the analysis, needs to be cleared to reduce storage costs. MongoDB allows you to use the following solutions to meet such a requirement. Data sharding When the number of service nodes that generate logs increases, the requirements for the write and storage capabilities of a log storage service also increase. In this case, you can use the sharding feature provided by MongoDB to distribute the log data across multiple shards. Use a field that indicates the timestamp as the shard key Use the hashed sharding method Use the ranged sharding method Solutions to data growth Use TTL indexes: Time to live (TTL) indexes are special single-field indexes that MongoDB can use to automatically remove documents from a collection after a certain amount of time. In the preceding example, the time field indicates the time when the request was sent. You can run the following command to create a TTL index on the time field and specify that MongoDB removes the document after 30 hours: db.events.createIndex( { time: 1 }, { expireAfterSeconds: 108000 } ).   Use capped collections: If you do not have strict limits on the storage period, whereas you want to limit the storage space, you can use capped collections to store log data. Capped collections work in the following way: After you specify a maximum storage space or a maximum number of stored documents for a capped collection, once one of the limits is reached, MongoDB automatically removes the oldest documents in the collection. For example, you can run the following command...</description>
+        <pubDate>Thu, 07 Jan 2021 08:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/mongodb-solutions-to-data-growth</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/mongodb-solutions-to-data-growth</guid>
+        
+        <category>MongoDB</category>
+        
+        <category>Handbook</category>
+        
+        <category>Principles</category>
+        
+        
+      </item>
     
       <item>
         <title>Why we moved to Formsure from Google Forms</title>
@@ -270,7 +286,7 @@ The Akolade platform will provide the essential tools for the content creators t
     
       <item>
         <title>Automated API testing with nodejs</title>
-        <description>We are going automate the api testing as much as possible, and potentially make it separate from the app in development. Tools Mocha: Mocha is a javascript testing framework that makes asynchronous testing easy. Chai: Unlike Jasmine, an additional assertion library must be used to supplement Mocha SuperTest: SuperTest is an extension of SuperAgent, a lightweight HTTP AJAX request library App starter Following is the basic packages needed for run this project, you can add individual modules too { &quot;name&quot;: &quot;node-api-testing&quot;, &quot;version&quot;: &quot;1.0.0&quot;, &quot;description&quot;: &quot;API Testing&quot;, &quot;devDependencies&quot;: { &quot;chai&quot;: &quot;^4.2.0&quot;, &quot;faker&quot;: &quot;^4.1.0&quot;, &quot;mocha&quot;: &quot;^6.2.1&quot;, &quot;supertest&quot;: &quot;^4.0.2&quot; }, &quot;scripts&quot;: { &quot;prestart&quot;: &quot;npm install;&quot;, &quot;start&quot;: &quot;mocha --timeout 25000 --colors&quot; } } To install modules individually use yarn add chai mocha supertest --dev. Make sure that you have mocha installed globally. Run yarn global add mocha Install all the dependencies using yarn or yarn install Create tests Create your test folder in the project root run mkdir test The directory must be called test for Mocha to find test files to run. for the test we are following a naming pattern like [controller]_test.js you can create your own. let should = require('chai').should(), expect = require('chai').expect, supertest = require('supertest'), api = supertest('http://127.0.0.0:3000'), faker = require('faker') let tokenSymbol = faker.lorem.word() let result describe('Token', function() { before(function(done) { api.post('/api/tokens') .set('Accept', 'application/x-www-form-urlencoded') .send({ name: faker.name.findName(), symbol: tokenSymbol, owner: faker.lorem.word(), userId: faker.random.uuid(), txHash: faker.lorem.word() }) .expect('Content-Type', /json/) .expect(200) .end(function(err, res) { done() }) }) it('should return a 200 response', function(done) { api.get(`/api/tokens/${tokenSymbol}`) .set('Accept', 'application/json') .expect(200, done) }) it('should return a 400 response', function(done) { api.get('/api/tokens/hello') .set('Accept', 'application/json') .expect(400, done) }) }) The above code is pretty self explanatory, however we will go through it line by line; Running tests Running test is easy as running yarn run test or yarn test. Make sure the api project is running...</description>
+        <description>We are going automate the api testing as much as possible, and potentially make it separate from the app in development. Tools Mocha: Mocha is a javascript testing framework that makes asynchronous testing easy. Chai: Unlike Jasmine, an additional assertion library must be used to supplement Mocha SuperTest: SuperTest is an extension of SuperAgent, a lightweight HTTP AJAX request library App starter Following is the basic packages needed for run this project, you can add individual modules too { &quot;name&quot;: &quot;node-api-testing&quot;, &quot;version&quot;: &quot;1.0.0&quot;, &quot;description&quot;: &quot;API Testing&quot;, &quot;devDependencies&quot;: { &quot;chai&quot;: &quot;^4.2.0&quot;, &quot;faker&quot;: &quot;^4.1.0&quot;, &quot;mocha&quot;: &quot;^6.2.1&quot;, &quot;supertest&quot;: &quot;^4.0.2&quot; }, &quot;scripts&quot;: { &quot;prestart&quot;: &quot;npm install;&quot;, &quot;start&quot;: &quot;mocha --timeout 25000 --colors&quot; } } To install modules individually use yarn add chai mocha supertest --dev. Make sure that you have mocha installed globally. Run yarn global add mocha Install all the dependencies using yarn or yarn install Create tests Create your test folder in the project root run mkdir test The directory must be called test for Mocha to find test files to run. for the test we are following a naming pattern like [controller]_test.js you can create your own. let should = require(&apos;chai&apos;).should(), expect = require(&apos;chai&apos;).expect, supertest = require(&apos;supertest&apos;), api = supertest(&apos;http://127.0.0.0:3000&apos;), faker = require(&apos;faker&apos;) let tokenSymbol = faker.lorem.word() let result describe(&apos;Token&apos;, function() { before(function(done) { api.post(&apos;/api/tokens&apos;) .set(&apos;Accept&apos;, &apos;application/x-www-form-urlencoded&apos;) .send({ name: faker.name.findName(), symbol: tokenSymbol, owner: faker.lorem.word(), userId: faker.random.uuid(), txHash: faker.lorem.word() }) .expect(&apos;Content-Type&apos;, /json/) .expect(200) .end(function(err, res) { done() }) }) it(&apos;should return a 200 response&apos;, function(done) { api.get(`/api/tokens/${tokenSymbol}`) .set(&apos;Accept&apos;, &apos;application/json&apos;) .expect(200, done) }) it(&apos;should return a 400 response&apos;, function(done) { api.get(&apos;/api/tokens/hello&apos;) .set(&apos;Accept&apos;, &apos;application/json&apos;) .expect(400, done) }) }) The above code is pretty self explanatory, however we will go through it line by line; Running tests Running test is easy as running yarn run test or yarn test. Make sure the api project is running...</description>
         <pubDate>Mon, 30 Sep 2019 05:10:00 +0530</pubDate>
         <link>https://lightrains.com/blogs/automated-api-testing-nodejs</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/automated-api-testing-nodejs</guid>
@@ -833,16 +849,16 @@ How to connect React to the Redux store?
 
 Import React,  ReactDOM, createStore from redux and Provider from react-redux
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import {createStore } from 'redux'
-import { Provider } from 'react-redux'
+import React from &apos;react&apos;
+import ReactDOM from &apos;react-dom&apos;
+import {createStore } from &apos;redux&apos;
+import { Provider } from &apos;react-redux&apos;
 
 Create your store with reducer. We can use a simple basic reducer here…
 
 function reducer(state = [], action) {
   switch (action.type) {
-    case 'ADD_ACTION':
+    case &apos;ADD_ACTION&apos;:
       return [
     ...state,
     action
@@ -859,7 +875,7 @@ Use the provider to bind the store in all component
  ReactDOM.render(
   &amp;lt;Provider store={store}&amp;gt;
     &amp;lt;App /&amp;gt;
-  &amp;lt;/Provider&amp;gt;,document.getElementById('root')
+  &amp;lt;/Provider&amp;gt;,document.getElementById(&apos;root&apos;)
 )
 
 
@@ -867,7 +883,7 @@ Now the store is available in all component. We can import connect from react-re
 
 Import connect in your component first
 
-import { connect } from 'react-redux'
+import { connect } from &apos;react-redux&apos;
 
 
 Use connect to connect the component with the store
@@ -938,12 +954,12 @@ npm ERR! code EACCES
 npm ERR! errno -13
 npm ERR! syscall access
 
-npm ERR! Error: EACCES: permission denied, access '/usr/lib/node_modules'
-npm ERR!  { Error: EACCES: permission denied, access '/usr/lib/node_modules'
+npm ERR! Error: EACCES: permission denied, access &apos;/usr/lib/node_modules&apos;
+npm ERR!  { Error: EACCES: permission denied, access &apos;/usr/lib/node_modules&apos;
 npm ERR!   errno: -13,
-npm ERR!   code: 'EACCES',
-npm ERR!   syscall: 'access',
-npm ERR!   path: '/usr/lib/node_modules' }
+npm ERR!   code: &apos;EACCES&apos;,
+npm ERR!   syscall: &apos;access&apos;,
+npm ERR!   path: &apos;/usr/lib/node_modules&apos; }
 npm ERR!
 npm ERR! Please try running this command again as root/Administrator.
 
@@ -1345,7 +1361,7 @@ Source
     
       <item>
         <title>Functional Programming in JavaScript</title>
-        <description>In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. wiki If you’re looking for a quick start in Functional Programming, JavaScript is the perfect language for you. Here’s why: Almost all programmers have tweaked and / or written JavaScript code at some point of time — hence there should be a certain familiarity JavaScript comes as close to a standardized programming language we’ll get — it’s the only programming language available across all web browsers JavaScript comes with a very familiar C like syntax and should be readable to most programmers Functions have always been first class members in JavaScript, support for Functional Programming is very good and in many ways JavaScript has been ahead of its time JavaScript doesn’t have Java like Class based Object Oriented Programming support so in many ways you’re forced to be Functional in JavaScript Main fancy words you will hear Pure functions Higher-order functions Recursion Functor Compose Destructuring Currying Pure functions Returns the same result given same parameters. It’s execution doesn’t depend on the state of the system. 1) Impure let number = 1; const increment = () =&amp;gt; number += 1; increment(); // 2 2) Pure const increment = n =&amp;gt; n + 1; increment(1); // 2 Higher-order functions Functions that operate on other functions, either by taking them as arguments or by returning them. 1) Sum const sum = (x, y) =&amp;gt; x + y; const calculate = (fn, x, y) =&amp;gt; fn(x, y); calculate(sum, 1, 2); // 3 2) Filter let students = [ {name: 'Anna', grade: 6}, {name:...</description>
+        <description>In computer science, functional programming is a programming paradigm—a style of building the structure and elements of computer programs—that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. wiki If you’re looking for a quick start in Functional Programming, JavaScript is the perfect language for you. Here’s why: Almost all programmers have tweaked and / or written JavaScript code at some point of time — hence there should be a certain familiarity JavaScript comes as close to a standardized programming language we’ll get — it’s the only programming language available across all web browsers JavaScript comes with a very familiar C like syntax and should be readable to most programmers Functions have always been first class members in JavaScript, support for Functional Programming is very good and in many ways JavaScript has been ahead of its time JavaScript doesn’t have Java like Class based Object Oriented Programming support so in many ways you’re forced to be Functional in JavaScript Main fancy words you will hear Pure functions Higher-order functions Recursion Functor Compose Destructuring Currying Pure functions Returns the same result given same parameters. It’s execution doesn’t depend on the state of the system. 1) Impure let number = 1; const increment = () =&amp;gt; number += 1; increment(); // 2 2) Pure const increment = n =&amp;gt; n + 1; increment(1); // 2 Higher-order functions Functions that operate on other functions, either by taking them as arguments or by returning them. 1) Sum const sum = (x, y) =&amp;gt; x + y; const calculate = (fn, x, y) =&amp;gt; fn(x, y); calculate(sum, 1, 2); // 3 2) Filter let students = [ {name: &apos;Anna&apos;, grade: 6}, {name:...</description>
         <pubDate>Wed, 21 Sep 2016 05:10:00 +0530</pubDate>
         <link>https://lightrains.com/blogs/functional-javascript-es6-introduction</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/functional-javascript-es6-introduction</guid>
@@ -1524,8 +1540,8 @@ in action.
 
 ES6 Code
 
-import config from './config/env';
-import app from './config/express';
+import config from &apos;./config/env&apos;;
+import app from &apos;./config/express&apos;;
 
 // listen on port config.port
 app.listen(config.port, () =&amp;gt; {
@@ -1537,17 +1553,17 @@ export default app;
 
 ES5 Converted
 
-'use strict';
+&apos;use strict&apos;;
 
 Object.defineProperty(exports, &quot;__esModule&quot;, {
   value: true
 });
 
-var _env = require('./config/env');
+var _env = require(&apos;./config/env&apos;);
 
 var _env2 = _interopRequireDefault(_env);
 
-var _express = require('./config/express');
+var _express = require(&apos;./config/express&apos;);
 
 var _express2 = _interopRequireDefault(_express);
 
@@ -1555,7 +1571,7 @@ function _interopRequireDefault(obj) { return obj &amp;amp;&amp;amp; obj.__esMod
 
 // listen on port config.port
 _express2.default.listen(_env2.default.port, function () {
-  debug('server started on port ' + _env2.default.port + ' (' + _env2.default.env + ')');
+  debug(&apos;server started on port &apos; + _env2.default.port + &apos; (&apos; + _env2.default.env + &apos;)&apos;);
 });
 
 exports.default = _express2.default;
@@ -1699,12 +1715,12 @@ class Animal {
         this.name = name;
     }
     speak() {
-        console.log(this.name + ' makes a noise.');
+        console.log(this.name + &apos; makes a noise.&apos;);
     }
 }
 class Dog extends Animal {
     speak() {
-        console.log(this.name + ' barks.');
+        console.log(this.name + &apos; barks.&apos;);
     }
 }
 
@@ -1767,7 +1783,7 @@ Map is similar to Set but it manges key-value pair instead of individual values.
 Create a Map
 
 var myMap = new Map(); will create an instance of Map and to add values to it we can do let
-myOtherMap = new Map([['a', 2], [1, 'b']])
+myOtherMap = new Map([[&apos;a&apos;, 2], [1, &apos;b&apos;]])
 
 console.log(myOtherMap); will show Map {&quot;a&quot; =&amp;gt; 2, 1 =&amp;gt; &quot;b&quot;}
 
@@ -1802,14 +1818,14 @@ Default parameter are a way to pass a value to the function parameter when there
 
 We specify this value when defining a function,
 
-function printName ( name = 'there' ) {
+function printName ( name = &apos;there&apos; ) {
   return `Hello,  ${name}`
 }
 
 We can even use the default parameter of one parameter as part of an expression for another
 paramter. For eg:
 
-function printName ( name = 'there', fullname = name + ' lastName' ) {
+function printName ( name = &apos;there&apos;, fullname = name + &apos; lastName&apos; ) {
   return `Hello,  ${name} -  ${fullname} `
 }
 
@@ -2003,7 +2019,7 @@ COO
     
       <item>
         <title>Compile and Deploy Solidity Contract</title>
-        <description>Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K. Step 1. Install Solidity Compiler Solc Easy way Its very easy to install solc using npm the package manager for NodeJS the command is npm install solc Easier way Browser-Solidity If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity. Building from Source Assuming you are using Ubuntu 14.04 sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade And pull the solidity source code git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 Step 2. Verify Solidity Compiler To ensure solc is installed and ready to use, you can verify it by running eth.getCompilers() in geth console If you have it installed, it should output something like this: ['Solidity' ] Bonus. Compile a simple contract Let us take this simple contract source: source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; This contract offers a unary method: called with a positive integer a, it returns a * 7. You are ready to compile solidity code in the geth JS console using eth.compile.solidity &amp;gt; contract = eth.compile.solidity(source).test { code:...</description>
+        <description>Contracts live on the blockchain in an Ethereum-specific binary format (Ethereum Virtual Machine (=EVM) bytecode). This tutorial explains how to deploy the byte code to Ethereum Blockchain For the frontier release, geth supports solidity compilation through system call to solc, the command line solidity compiler by Christian R. and Lefteris K. Step 1. Install Solidity Compiler Solc Easy way Its very easy to install solc using npm the package manager for NodeJS the command is npm install solc Easier way Browser-Solidity If you just want to try Solidity for small contracts, you can try browser-solidity which does not need any installation. If you want to use it without connection to the Internet, you can also just save the page locally or clone http://github.com/chriseth/browser-solidity. Building from Source Assuming you are using Ubuntu 14.04 sudo apt-add-repository ppa:george-edison55/cmake-3.x sudo apt-get -y update sudo apt-get -y install language-pack-en-base sudo dpkg-reconfigure locales sudo apt-get -y install software-properties-common sudo add-apt-repository -y ppa:ethereum/ethereum sudo add-apt-repository -y ppa:ethereum/ethereum-dev sudo apt-get -y update sudo apt-get -y upgrade And pull the solidity source code git clone --recursive https://github.com/ethereum/webthree-umbrella.git cd webthree-umbrella ./webthree-helpers/scripts/ethupdate.sh --no-push --simple-pull --project solidity # update Solidity repo ./webthree-helpers/scripts/ethbuild.sh --no-git --project solidity --all --cores 4 -DEVMJIT=0 Step 2. Verify Solidity Compiler To ensure solc is installed and ready to use, you can verify it by running eth.getCompilers() in geth console If you have it installed, it should output something like this: [&apos;Solidity&apos; ] Bonus. Compile a simple contract Let us take this simple contract source: source = &quot;contract test { function multiply(uint a) returns(uint d) { return a * 7; } }&quot; This contract offers a unary method: called with a positive integer a, it returns a * 7. You are ready to compile solidity code in the geth JS console using eth.compile.solidity &amp;gt; contract = eth.compile.solidity(source).test { code:...</description>
         <pubDate>Fri, 17 Jun 2016 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</link>
         <guid isPermaLink="true">https://lightrains.com/blogs/compile-deploy-solidity-contract-ethereum-console-geth-part-1</guid>

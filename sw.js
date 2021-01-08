@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/mongodb-solutions-to-data-growth");
+
   urlsToCache.push("/blogs/formsure-alternative-google-forms");
 
   urlsToCache.push("/work/formsure-form-builder");
@@ -1809,8 +1811,20 @@ var urlsToCache = [];
     urlsToCache.push("/tag/product-review/");
   
 
+  
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v12';
+  
+    urlsToCache.push("/tag/mongodb/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/mongodb/");
+  
+
+
+var CACHE_NAME = 'lightrains-technolabs-cache-v13';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

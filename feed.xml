@@ -5,8 +5,8 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 08 Jan 2021 08:05:28 +0530</pubDate>
-    <lastBuildDate>Fri, 08 Jan 2021 08:05:28 +0530</lastBuildDate>
+    <pubDate>Wed, 20 Jan 2021 08:28:59 +0530</pubDate>
+    <lastBuildDate>Wed, 20 Jan 2021 08:28:59 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -699,6 +699,7 @@ Stakeholders
 
 Highlights
 
+
   Allow anyone in the world to participate. Leverage blockchain technology for a frictionless, global sale.
   Designed and built with the highest security standards used in OpenZeppelin.
   Seamlessly accept ETH, BTC or other major blockchain assets, sent from any type of wallet.
@@ -706,11 +707,12 @@ Highlights
 
 Features
 
-  KYC registration (Optional)
+
+  KYC registrations (Optional)
   Wallet Creation (Optional)
   Accepts ETH, BTC or other major blockchain assets
   Detailed Analytics
-  Multilingual Support
+  Multi-lingual
   Pre-sale options
   Private investment Management
   ERC20 standard tokens (Exchange compatible)
@@ -1136,13 +1138,14 @@ You can view the help text for any commands by running :help COMMAND eg; :help r
     
       <item>
         <title>Liquid Voting</title>
-        <description>Liquid Voting is a blockchain based voting/decision making platform made at hack4people Hackathon by team  lightrains. (niksmac, kp666 &amp;amp; sibizulu)
+        <description>Liquid Voting is a blockchain based voting/decision making platform made at hack4people Hackathon by team lightrains. (niksmac, kp666 &amp;amp; sibizulu)
 
 Corruption exist because of concentrating of power. Our solution brings that power to the masses. This is brought by the power of decentralization on top of a tamper proof public blockchain. The voting platform is so powerful that it can pave the path to liquid democracy. The real impact is when we use the platform for day to day decision making in government activities.
 
 This platform uses Ethereum Private network as the Blockchain platform, and Solidity Smart contracts to record the votes as well as elections. Votes are saved in a tamper proof manner and the candidate can change the vote if the need arises.
 
 Inspiration
+
 
   “The ballot is stronger than the bullet.”
 -Abraham Lincoln
@@ -1195,6 +1198,7 @@ Project
 Rover.IM is an alternative to WhatsApp where we can keep the sensitive data in-house and keep the information private without compromising performance.
 
 Features
+
 
   End-to-End encrypted Chat (MTProto)
   Send/receive documents, photo, audio and video;
@@ -2037,6 +2041,7 @@ COO
 We Sync and Brought together the user generated and branded content Social Media Feeds into one place from over four Social Networks.
 
 How Hitsup Works for you
+
 Connect &amp;amp; Merges Social Media Feeds: Connect yours or your company’s social media updates or feeds to a single social Media Wall. Hitsup merges content from any of your social platforms into homogenous streams. So, for instance, one stream can contain posts of Twitter, Facebook and Google+. All posts have the same data-format, no matter where they were composed.
 
 Unified Social Media Content: Hitsup seamlessly integrate unified social content into your website, application or content management system
@@ -2064,6 +2069,7 @@ Configure streams online in your browser.
 
 Technology Stack
 
+
   Ethereum Blockchain
   Embark Framework
   Solidity - smart-contract language
@@ -2071,6 +2077,7 @@ Technology Stack
 
 
 Potential benefits
+
 
   Cost Reductions
   Efficiency Improvements
@@ -2121,9 +2128,11 @@ How to enable Canned Responses in Gmail
         <description>MetroMatinee is a top entertainment Malayalam movie website, providing the latest daily Malayalam movie and celebrity news inside information in a fun, irreverent tone.
 
 Why Drupal was chosen:
-Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionalty. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.
+
+Drupal was really the only considered platform for this project. Drupal is so flexible, and with an excellent API framework can accommodate almost all conceivable functionality. Having worked with Drupal on many enterprise projects, we knew it could handle the expectations of such an important client.
 
 Project (goals, requirements and outcome):
+
 Technically there were a few key requirements:
 
 
@@ -2169,9 +2178,11 @@ We dedicated 2 weeks for a comprehensive study of the information architecture. 
 Overall, the fact that the client was very clear about their requests and needs from the beginning was enormously helpful in our effort to focus more on the concept, the design and the development. Requirements being met, the whole project kept us busy for 5 months. We exclusively worked with SCRUM methods, delivering segments of the website every 10 days.
 
 Why Drupal was chosen:
+
 Drupal was chosen because of its wide variety of contributed modules and community support
 
 Key modules/theme/distribution used:
+
 
   Organic groups
   Views
@@ -2234,6 +2245,7 @@ Key elements
 Solo PDF Reader supports multi-touch zooming, text search, portrait and landscape orientations. More than 50,000 users now use Solo PDF to access, read and share a large variety of PDF types, including documents, portfolios, scanned files, images etc.
 
 Solo PDF Reader is free to download. No hidden charges.
+
 
   Compatible with almost every Android device.
   Solo PDF Reader is the best available app for reading pdf files.
@@ -2408,7 +2420,7 @@ Sources
     
       <item>
         <title>Pegke Loyalty</title>
-        <description>Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favorite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items. Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest. Why Drupal was chosen: Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities. High quality contributed modules which enable it to scale well to support very high traffic. Out of the box rich content management features and can be extended to match the very specific requirements of our website. An intuitive admin interface, enabling our web editorial team to update the site quickly and easily Key modules/theme/distribution used: Advanced CSS/JS Aggregation Location Metatag Views Ubercart Session Limit Token Support Ticketing System Mandrill Why these modules/theme/distribution were chosen: Advanced CSS/JS Aggregation: Make sure we are not making too many unnecessary http requests and wasting our resources. Location: Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our needs. Metatag: Metatag is one of the unavoidable...</description>
+        <description>Pegke Customer Loyalty &amp;amp; Rewards Software that not only rewards the customers for their brand loyalty but also makes the customers stay loyal to their favourite franchises. Pegke is an easy-to-use software designed and shaped elegantly by Technopark engineers that is advantageous to both the business and customers. After setting up their account, the business owners are able to set loyalty points for specific sales and are also able to reward customers based on their accumulated points and redeemable items. Pegke Loyalty helps in measuring how successfully your marketing strategies are turning out to be. How often the customers are revisiting the store and what drives them the most. When it comes to marketing we have a built in platform for merchants to target their prospective customers based on geographical area as well as their purchase interest. Why Drupal was chosen: Leveraging Drupal 7, unleashed Technologies was able to develop an enterprise platform that would empower Pegke and its franchisees to control and manage their offers and increase revenues through improved user experience and SEO capabilities. High quality contributed modules which enable it to scale well to support very high traffic. Out of the box rich content management features and can be extended to match the very specific requirements of our website. An intuitive admin interface, enabling our web editorial team to update the site quickly and easily Key modules/theme/distribution used: Advanced CSS/JS Aggregation Location Metatag Views Ubercart Session Limit Token Support Ticketing System Mandrill Why these modules/theme/distribution were chosen: Advanced CSS/JS Aggregation: Make sure we are not making too many unnecessary http requests and wasting our resources. Location: Location is our primary feature, we wanted to get it working as quick as possible with a pre-planned manner and Location fits our needs. Metatag: Metatag is one of the unavoidable...</description>
         <pubDate>Sat, 13 Jun 2015 11:19:48 +0530</pubDate>
         <link>https://lightrains.com/work/pegke-loyalty</link>
         <guid isPermaLink="true">https://lightrains.com/work/pegke-loyalty</guid>

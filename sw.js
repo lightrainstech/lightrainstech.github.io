@@ -1824,7 +1824,7 @@ var urlsToCache = [];
   
 
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v13';
+var CACHE_NAME = 'lightrains-technolabs-cache-v14';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

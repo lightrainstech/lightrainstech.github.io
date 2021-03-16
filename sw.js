@@ -236,11 +236,9 @@ var urlsToCache = [];
   
 
   
-    urlsToCache.push("/consulting/es6-javascript-development");
-  
 
   
-    urlsToCache.push("/consulting/es6-javascript-development");
+    urlsToCache.push("/es6");
   
 
   

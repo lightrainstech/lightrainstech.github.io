@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/what-is-nft-non-fungible-tokens");
+
   urlsToCache.push("/blogs/mongodb-solutions-to-data-growth");
 
   urlsToCache.push("/blogs/formsure-alternative-google-forms");
@@ -1819,6 +1821,42 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/tag/mongodb/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/nft/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/nft/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/non-fungible-tokens/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/non-fungible-tokens/");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/defi/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/tag/defi/");
   
 
 

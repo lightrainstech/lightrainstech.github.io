@@ -5,9 +5,25 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Mar 2021 22:59:07 +0530</pubDate>
-    <lastBuildDate>Tue, 16 Mar 2021 22:59:07 +0530</lastBuildDate>
+    <pubDate>Fri, 26 Mar 2021 19:16:33 +0530</pubDate>
+    <lastBuildDate>Fri, 26 Mar 2021 19:16:33 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>What is an NFT aka Non Fungible Tokens</title>
+        <description>Most simply, an NFT is an entry on a blockchain, the same decentralized digital ledger technology that underlies cryptocurrencies like bitcoin. But unlike most bitcoin–which is fungible, meaning that one coin is essentially indistinguishable from another and equivalent in value–tokens on these blockchains are non-fungible. A non-fungible token (NFT) is a cryptographic token that represents something unique, and has an individual characteristic that sets it apart. Owning an NFT is like owning a one-of-a-kind work of art or a collectible antique. NFTs are unique tokens or digital assets that generate value because of their uniqueness. What’s special about the tokens? For a buyer, they provide a secure certificate of ownership over a digital object, protecting the good’s value. The internet makes it easy to duplicate and forge something, and without an indisputable ownership record such as an NFT, the good is essentially worthless. For a seller, NFTs make it not only possible to sell something today, but also to keep earning tomorrow. Artists in particular have historically struggled to reap rewards if their work appreciates in value. How to make an NFT? Anyone can create an NFT. All that’s needed is a digital wallet, a small purchase of ethereum and a connection to an NFT marketplace where you’ll be able to upload and turn the content into an NFT or crypto art. NFT examples The NFT world is relatively new. In theory, the scope for NFTs is anything that is unique that needs provable ownership. Here are some examples of NFTs that exist today, to help you get the idea: A unique digital artwork. An in-game item. A digital collectible. A domain name. NFTs and DeFi The NFT world and the decentralized finance (DeFi) world are starting to work together in a number of interesting ways. NFT-backed loans There are...</description>
+        <pubDate>Thu, 25 Mar 2021 08:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/what-is-nft-non-fungible-tokens</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/what-is-nft-non-fungible-tokens</guid>
+        
+        <category>NFT</category>
+        
+        <category>Non Fungible Tokens</category>
+        
+        <category>DeFi</category>
+        
+        
+      </item>
     
       <item>
         <title>MongoDB Solutions to data growth</title>

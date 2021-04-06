@@ -308,6 +308,14 @@ var urlsToCache = [];
   
 
   
+    urlsToCache.push("/careers/marketing-sales");
+  
+
+  
+    urlsToCache.push("/careers/marketing-sales");
+  
+
+  
     urlsToCache.push("/consulting/smart-contract-solidity");
   
 

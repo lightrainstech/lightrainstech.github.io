@@ -5,8 +5,8 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Apr 2021 07:53:15 +0530</pubDate>
-    <lastBuildDate>Fri, 23 Apr 2021 07:53:15 +0530</lastBuildDate>
+    <pubDate>Fri, 23 Apr 2021 08:52:37 +0530</pubDate>
+    <lastBuildDate>Fri, 23 Apr 2021 08:52:37 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -48,7 +48,9 @@ Red more
         <guid isPermaLink="true">https://lightrains.com/work/nft-marketplace-binance-bsc</guid>
         
         
-        <category>Other</category>
+        <category>Blockchain</category>
+        
+        <category>Smart Contract</category>
         
       </item>
     

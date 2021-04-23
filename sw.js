@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/work/nft-marketplace-binance-bsc");
+
   urlsToCache.push("/blogs/what-is-nft-non-fungible-tokens");
 
   urlsToCache.push("/blogs/mongodb-solutions-to-data-growth");

@@ -5,9 +5,52 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Apr 2021 07:57:47 +0530</pubDate>
-    <lastBuildDate>Tue, 06 Apr 2021 07:57:47 +0530</lastBuildDate>
+    <pubDate>Fri, 23 Apr 2021 07:53:15 +0530</pubDate>
+    <lastBuildDate>Fri, 23 Apr 2021 07:53:15 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>NFT Marketplace</title>
+        <description>NFTs are non-fungible tokens. They are unique items that you can’t replace with something else. For example, a one-of-a-kind trading card is an NFT – you can’t just replace it with any other card. If you trade your card for some other card, you have something different. These differ from fungible items, which are often the same as each other.
+
+Network (Blockchain)
+
+Binance Smart Chain
+
+Supported Wallets
+
+
+  Metamask
+  WalletConnect
+  TrustWallet
+  Binance Chain Wallet
+
+
+Features
+
+
+  NFT Minting
+  NFT Administration
+  Configureable commission structure
+  Search and Filters
+  Voting
+  Auction
+
+
+Red more
+
+
+  What is an NFT aka Non Fungible Tokens
+
+</description>
+        <pubDate>Thu, 22 Apr 2021 01:01:01 +0530</pubDate>
+        <link>https://lightrains.com/work/nft-marketplace-binance-bsc</link>
+        <guid isPermaLink="true">https://lightrains.com/work/nft-marketplace-binance-bsc</guid>
+        
+        
+        <category>Other</category>
+        
+      </item>
     
       <item>
         <title>What is an NFT aka Non Fungible Tokens</title>

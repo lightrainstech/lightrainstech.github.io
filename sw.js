@@ -302,6 +302,14 @@ var urlsToCache = [];
   
 
   
+    urlsToCache.push("/consulting/nft-marketplace-development");
+  
+
+  
+    urlsToCache.push("/consulting/nft-marketplace-development");
+  
+
+  
     urlsToCache.push("/about/portfolio");
   
 
@@ -1870,7 +1878,7 @@ var urlsToCache = [];
   
 
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v22';
+var CACHE_NAME = 'lightrains-technolabs-cache-v234';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

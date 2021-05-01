@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/work/yield-farming-defi");
+
   urlsToCache.push("/work/nft-marketplace-binance-bsc");
 
   urlsToCache.push("/blogs/what-is-nft-non-fungible-tokens");
@@ -429,6 +431,18 @@ var urlsToCache = [];
 
   
     urlsToCache.push("/category/other/");
+  
+
+  
+
+  
+    urlsToCache.push("/category/defi/atom.xml");
+  
+
+  
+
+  
+    urlsToCache.push("/category/defi/");
   
 
   
@@ -1878,7 +1892,7 @@ var urlsToCache = [];
   
 
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v234';
+var CACHE_NAME = 'lightrains-technolabs-cache-v235';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

@@ -5,9 +5,39 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 01 May 2021 09:59:07 +0530</pubDate>
-    <lastBuildDate>Sat, 01 May 2021 09:59:07 +0530</lastBuildDate>
+    <pubDate>Sat, 01 May 2021 17:56:30 +0530</pubDate>
+    <lastBuildDate>Sat, 01 May 2021 17:56:30 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>DeFi Yield Farming</title>
+        <description>DeFi projects offer users incentives to deposit tokens and provide liquidity to their protocols is popularly known as Yield Farming. Yield Farming is also called as liquidity mining and it is a growing method of receiving rewards from cryptocurrency capital investments. Liquidity mining funds are retained in liquidity pools by liquidity providers, they can also earn rewards for investment in that exchange interface.
+
+Annual Percentage Rate (APR)
+It mainly refers to the yearly rate of returns are imposed on borrowers but the payment was paid to capital investors.
+
+Annual Percentage Yield:(APY)
+It is an annual rate of return that would be changed on capital borrowers and later paid to the capital providers. APY is not a well-defined APR but only that former allows compounding of interest to bring in more returns to the investor
+
+
+  DeFi Dapp Development
+  DeFi Token Development
+  DeFi Smart Contract Development
+  DeFi Lending &amp;amp; Borrowing Platform Development
+
+</description>
+        <pubDate>Wed, 28 Apr 2021 01:01:01 +0530</pubDate>
+        <link>https://lightrains.com/work/yield-farming-defi</link>
+        <guid isPermaLink="true">https://lightrains.com/work/yield-farming-defi</guid>
+        
+        
+        <category>Blockchain</category>
+        
+        <category>Smart Contract</category>
+        
+        <category>DeFi</category>
+        
+      </item>
     
       <item>
         <title>NFT Marketplace</title>
@@ -51,6 +81,8 @@ Red more
         <category>Blockchain</category>
         
         <category>Smart Contract</category>
+        
+        <category>DeFi</category>
         
       </item>
     

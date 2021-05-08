@@ -1498,18 +1498,6 @@ var urlsToCache = [];
   
 
   
-    urlsToCache.push("/tag/javascript/atom.xml");
-  
-
-  
-
-  
-    urlsToCache.push("/tag/javascript/");
-  
-
-  
-
-  
     urlsToCache.push("/tag/performance/atom.xml");
   
 
@@ -1738,18 +1726,6 @@ var urlsToCache = [];
   
 
   
-    urlsToCache.push("/tag/security/atom.xml");
-  
-
-  
-
-  
-    urlsToCache.push("/tag/security/");
-  
-
-  
-
-  
     urlsToCache.push("/tag/hedera-hashgraph/atom.xml");
   
 
@@ -1892,7 +1868,7 @@ var urlsToCache = [];
   
 
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v236';
+var CACHE_NAME = 'lightrains-technolabs-cache-v238';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

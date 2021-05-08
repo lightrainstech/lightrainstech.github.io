@@ -5,8 +5,8 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 May 2021 10:03:47 +0530</pubDate>
-    <lastBuildDate>Sun, 02 May 2021 10:03:47 +0530</lastBuildDate>
+    <pubDate>Sat, 08 May 2021 10:55:59 +0530</pubDate>
+    <lastBuildDate>Sat, 08 May 2021 10:55:59 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
     
@@ -219,7 +219,7 @@ Different form templates
         
         <category>ReactJS</category>
         
-        <category>Javascript</category>
+        <category>JavaScript</category>
         
         <category>Performance</category>
         
@@ -385,7 +385,7 @@ Different form templates
         
         <category>ICO</category>
         
-        <category>Security</category>
+        <category>security</category>
         
         <category>Handbook</category>
         

@@ -329,87 +329,107 @@
 </ul>
 
 <h3 id="pure-functions">Pure functions</h3>
+
 <p>Returns the same result given same parameters. It’s execution doesn’t depend on the state of the system.</p>
 
-<p>1) Impure</p>
+<ol>
+  <li>Impure</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">number</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="nx">increment</span><span class="p">();</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">number</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">number</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nx">increment</span><span class="p">()</span>
 <span class="c1">// 2</span>
 </code></pre></div></div>
 
-<p>2) Pure</p>
+<ol>
+  <li>Pure</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-<span class="nx">increment</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nx">increment</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="c1">// 2</span>
 </code></pre></div></div>
 
 <h3 id="higher-order-functions">Higher-order functions</h3>
+
 <p>Functions that operate on other functions, either by taking them as arguments or by returning them.</p>
 
-<p>1) Sum</p>
+<ol>
+  <li>Sum</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">calculate</span> <span class="o">=</span> <span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">fn</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
-<span class="nx">calculate</span><span class="p">(</span><span class="nx">sum</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
+<span class="kd">const</span> <span class="nx">calculate</span> <span class="o">=</span> <span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">fn</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
+<span class="nx">calculate</span><span class="p">(</span><span class="nx">sum</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="c1">// 3</span>
 </code></pre></div></div>
 
-<p>2) Filter</p>
+<ol>
+  <li>Filter</li>
+</ol>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Anna</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Maria</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
-<span class="p">];</span>
+    <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Anna</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Maria</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span> <span class="p">}</span>
+<span class="p">]</span>
 
-<span class="kd">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="nx">student</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">;</span>
-<span class="nx">students</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isApproved</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="p">(</span><span class="nx">student</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span>
+<span class="nx">students</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isApproved</span><span class="p">)</span>
 <span class="c1">// [ { name: 'Anna', grade: 6 }, { name: 'Maria', grade: 9 } ]</span>
 </code></pre></div></div>
-<p>3) Map</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">byName</span> <span class="o">=</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
-<span class="nx">students</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">byName</span><span class="p">);</span>
+<ol>
+  <li>Map</li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">byName</span> <span class="o">=</span> <span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span>
+<span class="nx">students</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">byName</span><span class="p">)</span>
 <span class="c1">// [ 'Anna', 'John', 'Maria' ]</span>
 </code></pre></div></div>
 
-<p>4) Chaining</p>
+<ol>
+  <li>Chaining</li>
+</ol>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">students</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Anna</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span><span class="p">},</span>
-    <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Maria</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span><span class="p">}</span>
-<span class="p">];</span>
+    <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Anna</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">6</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">4</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Maria</span><span class="dl">'</span><span class="p">,</span> <span class="na">grade</span><span class="p">:</span> <span class="mi">9</span> <span class="p">}</span>
+<span class="p">]</span>
 
-<span class="kd">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="nx">student</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">byName</span> <span class="o">=</span> <span class="nx">obj</span> <span class="o">=&gt;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
-<span class="nx">students</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isApproved</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">byName</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">isApproved</span> <span class="o">=</span> <span class="p">(</span><span class="nx">student</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">6</span>
+<span class="kd">const</span> <span class="nx">byName</span> <span class="o">=</span> <span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">name</span>
+<span class="nx">students</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isApproved</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">byName</span><span class="p">)</span>
 <span class="c1">// ['Anna', 'Maria']</span>
 </code></pre></div></div>
 
-<p>5) Reduce</p>
+<ol>
+  <li>Reduce</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">totalGrades</span> <span class="o">=</span> <span class="nx">students</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">student</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">totalGrades</span> <span class="o">=</span> <span class="nx">students</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">sum</span><span class="p">,</span> <span class="nx">student</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">sum</span> <span class="o">+</span> <span class="nx">student</span><span class="p">.</span><span class="nx">grade</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="nx">totalGrades</span>
 <span class="c1">// 19</span>
 </code></pre></div></div>
 
 <h3 id="recursion">Recursion</h3>
+
 <p>Whenever a function calls itself, creating a loop.</p>
 
-<p>1) Countdown</p>
+<ol>
+  <li>Countdown</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">countdown</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">countdown</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
-        <span class="nx">countdown</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
+        <span class="nx">countdown</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">countdown</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="nx">countdown</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="cm">/*
 5
 4
@@ -419,116 +439,139 @@
 */</span>
 </code></pre></div></div>
 
-<p>2) Factorial</p>
+<ol>
+  <li>Factorial</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">factorial</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">=&gt;</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">factorial</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">num</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">return</span> <span class="mi">1</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="nx">num</span> <span class="o">*</span> <span class="nx">factorial</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">));</span>
+        <span class="k">return</span> <span class="nx">num</span> <span class="o">*</span> <span class="nx">factorial</span><span class="p">(</span><span class="nx">num</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="nx">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="c1">//120</span>
 </code></pre></div></div>
 
 <h3 id="functor">Functor</h3>
+
 <p>An object that has a map method. The map method of the functor takes it’s own contents and transforms each of them using the transformation callback passed to map, and returns a new functor, which contains the structure as the first functor, but with the transformed values.</p>
 
-<p>1) Adding a value to all the elements in a array</p>
+<ol>
+  <li>Adding a value to all the elements in a array</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">plus1</span> <span class="o">=</span> <span class="nx">num</span> <span class="o">=&gt;</span> <span class="nx">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">plus1</span> <span class="o">=</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">num</span> <span class="o">+</span> <span class="mi">1</span>
 
-<span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">plus1</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nx">numbers</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">plus1</span><span class="p">)</span>
 <span class="c1">// [2, 3, 4]</span>
 </code></pre></div></div>
 
 <h3 id="compose">Compose</h3>
+
 <p>The composition of two or more functions returns a new function.</p>
 
-<p>1) Combining two functions to generate another one</p>
+<ol>
+  <li>Combining two functions to generate another one</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">compose</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">g</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>
-<span class="kd">const</span> <span class="nx">toUpperCase</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
-<span class="kd">const</span> <span class="nx">exclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!`</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">angry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">toUpperCase</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">compose</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span><span class="p">,</span> <span class="nx">g</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span>
+<span class="kd">const</span> <span class="nx">toUpperCase</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span>
+<span class="kd">const</span> <span class="nx">exclaim</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!`</span>
+<span class="kd">const</span> <span class="nx">angry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">toUpperCase</span><span class="p">)</span>
 
-<span class="nx">angry</span><span class="p">(</span><span class="dl">"</span><span class="s2">stop this</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">angry</span><span class="p">(</span><span class="dl">'</span><span class="s1">stop this</span><span class="dl">'</span><span class="p">)</span>
 <span class="c1">// STOP THIS!</span>
 </code></pre></div></div>
 
-<p>2) Combining three functions to generate another one</p>
+<ol>
+  <li>Combining three functions to generate another one</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">compose</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">g</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="nx">x</span><span class="p">));</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">compose</span> <span class="o">=</span> <span class="p">(</span><span class="nx">f</span><span class="p">,</span> <span class="nx">g</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">f</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span>
 
-<span class="kd">const</span> <span class="nx">toUpperCase</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
-<span class="kd">const</span> <span class="nx">exclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!`</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">moreExclaim</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!!!!!`</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">reallyAngry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">toUpperCase</span><span class="p">,</span> <span class="nx">moreExclaim</span><span class="p">));</span>
+<span class="kd">const</span> <span class="nx">toUpperCase</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">()</span>
+<span class="kd">const</span> <span class="nx">exclaim</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!`</span>
+<span class="kd">const</span> <span class="nx">moreExclaim</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`</span><span class="p">${</span><span class="nx">x</span><span class="p">}</span><span class="s2">!!!!!`</span>
+<span class="kd">const</span> <span class="nx">reallyAngry</span> <span class="o">=</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">exclaim</span><span class="p">,</span> <span class="nx">compose</span><span class="p">(</span><span class="nx">toUpperCase</span><span class="p">,</span> <span class="nx">moreExclaim</span><span class="p">))</span>
 
-<span class="nx">reallyAngry</span><span class="p">(</span><span class="dl">"</span><span class="s2">stop this</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">reallyAngry</span><span class="p">(</span><span class="dl">'</span><span class="s1">stop this</span><span class="dl">'</span><span class="p">)</span>
 <span class="c1">// STOP THIS!!!!!!</span>
 </code></pre></div></div>
 
 <h3 id="destructuring">Destructuring</h3>
+
 <p>Extract data from arrays or objects using a syntax that mirrors the construction of array and object literals. Or “Pattern Matching”.</p>
 
-<p>1) Select from pattern</p>
+<ol>
+  <li>Select from pattern</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
-<span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="nx">foo</span><span class="p">();</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
+<span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="nx">foo</span><span class="p">()</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
 <span class="c1">// 1 2</span>
 </code></pre></div></div>
 
-<p>2) Accumulates the rest values</p>
+<ol>
+  <li>Accumulates the rest values</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="p">[</span><span class="nx">a</span><span class="p">,</span> <span class="p">...</span><span class="nx">b</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span>
 <span class="c1">// 1 [2, 3]</span>
 </code></pre></div></div>
 
-<p>3) Optional parameters</p>
+<ol>
+  <li>Optional parameters</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ajax</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">localhost</span><span class="dl">"</span><span class="p">,</span> <span class="na">port</span><span class="p">:</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">80</span><span class="p">},</span> <span class="p">...</span><span class="nx">data</span><span class="p">)</span>  <span class="o">=&gt;</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Url:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Port:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Rest:</span><span class="dl">"</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">ajax</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">url</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">localhost</span><span class="dl">'</span><span class="p">,</span> <span class="na">port</span><span class="p">:</span> <span class="nx">p</span> <span class="o">=</span> <span class="mi">80</span> <span class="p">},</span> <span class="p">...</span><span class="nx">data</span><span class="p">)</span> <span class="o">=&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Url:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">url</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Port:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">p</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Rest:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span>
 
-<span class="nx">ajax</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="dl">"</span><span class="s2">someHost</span><span class="dl">"</span> <span class="p">},</span> <span class="dl">"</span><span class="s2">additional</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">ajax</span><span class="p">({</span> <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">someHost</span><span class="dl">'</span> <span class="p">},</span> <span class="dl">'</span><span class="s1">additional</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">data</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">)</span>
 <span class="c1">// Url: someHost Port: 80 Rest: [ 'additional', 'data', 'hello' ]</span>
 
-<span class="nx">ajax</span><span class="p">({</span> <span class="p">},</span> <span class="dl">"</span><span class="s2">additional</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">ajax</span><span class="p">({},</span> <span class="dl">'</span><span class="s1">additional</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">data</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span><span class="p">)</span>
 <span class="c1">// Url: localhost Port: 80 Rest: [ 'additional', 'data', 'hello' ]</span>
 </code></pre></div></div>
 
 <h3 id="currying">Currying</h3>
+
 <p>Taking a function that takes multiple arguments and turning it into a chain of functions each taking one argument and returning the next function, until the last returns the result.</p>
 
-<p>1) Currying an Object</p>
+<ol>
+  <li>Currying an Object</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">name</span> <span class="o">=&gt;</span> <span class="nx">grade</span> <span class="o">=&gt;</span> <span class="s2">`Name: </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2"> | Grade: </span><span class="p">${</span><span class="nx">grade</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">grade</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="s2">`Name: </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2"> | Grade: </span><span class="p">${</span><span class="nx">grade</span><span class="p">}</span><span class="s2">`</span>
 
-<span class="nx">student</span><span class="p">(</span><span class="dl">"</span><span class="s2">Matt</span><span class="dl">"</span><span class="p">)(</span><span class="mi">8</span><span class="p">);</span>
+<span class="nx">student</span><span class="p">(</span><span class="dl">'</span><span class="s1">Matt</span><span class="dl">'</span><span class="p">)(</span><span class="mi">8</span><span class="p">)</span>
 <span class="c1">// Name: Matt | Grade: 8</span>
 </code></pre></div></div>
 
-<p>2) Currying a Sum</p>
+<ol>
+  <li>Currying a Sum</li>
+</ol>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">y</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span>
 
-<span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">addFive</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">addFive</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="nx">increment</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="nx">increment</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="c1">//4</span>
 
-<span class="nx">addFive</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+<span class="nx">addFive</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="c1">// 15</span>
 </code></pre></div></div>
 
 <h4 id="sources">Sources</h4>
+
 <p><a href="https://github.com/js-functional/js-funcional">https://github.com/js-functional/js-funcional</a></p>
 
 <p><a href="http://srirangan.net/2011-12-functional-programming-in-javascript">http://srirangan.net/2011-12-functional-programming-in-javascript</a></p>

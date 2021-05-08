@@ -320,6 +320,14 @@ var urlsToCache = [];
   
 
   
+    urlsToCache.push("/careers/react-js-front-end-developer");
+  
+
+  
+    urlsToCache.push("/careers/react-js-front-end-developer");
+  
+
+  
     urlsToCache.push("/careers/marketing-sales");
   
 
@@ -1868,7 +1876,7 @@ var urlsToCache = [];
   
 
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v238';
+var CACHE_NAME = 'lightrains-technolabs-cache-v239';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

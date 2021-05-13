@@ -1,6 +1,8 @@
 var urlsToCache = [];
 
 
+  urlsToCache.push("/blogs/nft-standards-erc-721-erc-1155");
+
   urlsToCache.push("/work/yield-farming-defi");
 
   urlsToCache.push("/work/nft-marketplace-binance-bsc");
@@ -1876,7 +1878,7 @@ var urlsToCache = [];
   
 
 
-var CACHE_NAME = 'lightrains-technolabs-cache-v239';
+var CACHE_NAME = 'lightrains-technolabs-cache-v240';
 
 self.addEventListener('install', function(event) {
   // Perform install steps

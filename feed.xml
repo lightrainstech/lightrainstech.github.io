@@ -5,9 +5,25 @@
     <description>Blockchain Consulting.</description>
     <link>https://lightrains.com/</link>
     <atom:link href="https://lightrains.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 May 2021 11:16:58 +0530</pubDate>
-    <lastBuildDate>Sat, 08 May 2021 11:16:58 +0530</lastBuildDate>
+    <pubDate>Fri, 14 May 2021 00:06:54 +0530</pubDate>
+    <lastBuildDate>Fri, 14 May 2021 00:06:54 +0530</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Various NFT Standards</title>
+        <description>Token standards create a uniform set of rules (or in this case code), which allow for: Easy integration across a number of platforms. Interoperability. Increased utility value and network effect, as the token can be used in more places/for more applications. ERC-721 Built on top of the Ethereum blockchain, the first real iteration of a non-fungible standard came about with ERC721. It was popularised in late 2017 with the rapid adoption of CryptoKitties, a game which allowed for the purchase, and subsequent ‘breeding’ of digital cats. These cats were bought and sold as a virtual token, and some have fetched prices over $200, 000! At its peak, CryptoKitties was responsible for more than 10% of total transactions on the Ethereum network. ERC-1155 Created by the team at Enjin, this standard allows for both fungible and non-fungible items in the same smart contract. In doing so, ERC-1155 reduces the amount of data required, creating smoother deployments and requiring a lot less network power. The best example of ERC-1155 is seen in blockchain gaming. Rather than requiring a new contract for every in-game item, you can now create multiple items using the same contract. Moreover, say you collect weapons and coins (crypto) in a game, you can now achieve both with ERC-1155, drastically reducing the resources required to efficiently run blockchain based games, and allowing them to be stored in a simple wallet interface. ERC-994 Created a system where DNFT’s can identify an area or zone (let’s say the suburb you live in), and can then delegate NFT’s to represent individual houses or parcels of land. In this way, ownership of property can be tokenised whilst also providing a way to update land registries, and legally verify their sale. It was designed with the following essentials: A non-conflicting geospace Legal validity and...</description>
+        <pubDate>Mon, 10 May 2021 08:10:00 +0530</pubDate>
+        <link>https://lightrains.com/blogs/nft-standards-erc-721-erc-1155</link>
+        <guid isPermaLink="true">https://lightrains.com/blogs/nft-standards-erc-721-erc-1155</guid>
+        
+        <category>NFT</category>
+        
+        <category>Non Fungible Tokens</category>
+        
+        <category>DeFi</category>
+        
+        
+      </item>
     
       <item>
         <title>DeFi Yield Farming</title>

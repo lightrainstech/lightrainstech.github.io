@@ -1,0 +1,377 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Various NFT Standards</title>
+  <link rel="canonical" href="https://lightrains.com/blogs/nft-standards-erc-721-erc-1155" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-custom="">
+    body {
+        padding: 10px;
+        animation: amp-timeout 0x 5s 1 normal forwards;
+        padding-top: 30px;
+        background-color: #f4f4f2;
+        color: #333332;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        line-height: 1.4;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Monaco', Courier;
+    }
+    .h1 {
+        font-size: 20px;
+    }
+    .ui.highlight {
+        font-size: 18pt;
+        border-left: 3px solid #a7bd0d;
+        padding: 15px;
+        margin: 20px 5px;
+        font-style: italic;
+        background: #fbfbfb;
+        color: #21ba45;
+    }
+    p {
+        color: #333;
+        line-height: 26px;
+        display: block;
+    }
+    @keyframes amp-timeout {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    a {
+        color: #1678c2;
+        background: transparent;
+        color: #666666;
+        display: inline;
+        text-decoration: underline;
+    }
+    .related.ui.segment {
+        border-top: 5px solid #202020;
+        background: rgba(48, 54, 4, 0.12);
+        padding: 5px;
+    }
+    .related.ui.segment h3 {
+        margin-top: 0;
+    }
+    .ampmenu a {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        color: #303030;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+    amp-img {
+        background-color: gray;
+    }
+    .ampmenu {
+        background: rgba(255, 255, 255, 0.95);
+        width: 98%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        z-index: 99;
+    }
+    html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+    body hr {
+        border: 0;
+        border-top: 1px solid #b3b3b3;
+        display: block;
+        margin: 50px auto 40px auto;
+        width: 20%;
+    }
+    body a:focus,
+    body a:hover {
+        color: #ff4136;
+    }
+    .post-title {
+        font-size: 35px;
+        letter-spacing: -0.02em;
+        letter-spacing: -0.04em;
+        line-height: 1.1;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .content {
+        display: block;
+        font-size: 18px;
+        font-style: normal;
+        letter-spacing: 0.05px;
+        line-height: 1.5;
+        margin: 0 auto;
+        max-width: 98%;
+    }
+    .timespan {
+        font-size: 15px;
+        clear: both;
+        opacity: 0.7;
+    }
+    a.nonamp {
+        text-align: center;
+        display: block;
+        margin: 10px;
+    }
+    ul,
+    ol {
+        list-style: none;
+        margin-left: 8px;
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+    li {
+        margin: 6px 0;
+    }
+    li:before {
+        content: '\0BB \020';
+    }
+    pre,
+    code {
+        background: #333;
+        color: #fff;
+        padding: 3px;
+        border-radius: 2px;
+        -o-border-radius: 2px;
+        -moz-border-radius: 2px;
+    }
+    .cta-blog {
+        display: none;
+        visible: hidden;
+        width: 0;
+        height: 0;
+    }
+</style>
+<style amp-boilerplate>
+    body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+    }
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }
+    @keyframes -amp-start {
+        from {
+            visibility: hidden;
+        }
+        to {
+            visibility: visible;
+        }
+    }</style
+><noscript
+    ><style amp-boilerplate>
+        body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none;
+        }
+    </style></noscript
+>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Lightrains Technolabs",
+        "legalName": "Lightrains Technolabs Private Limited",
+        "url": "https://lightrains.com",
+        "telephone": "+914714000056",
+        "email": "hello(at)lightrains.com",
+        "foundingDate": "2012-12-28",
+        "slogan": "Technology Supercharged",
+        "description": "A global technology solution provider enabling enterprises to apply Blockchain and AI in their businesses.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Trivandrum",
+            "addressRegion": "Kerala",
+            "postalCode": "695581",
+            "streetAddress": "Module 2, Gayathri, Technopark Campus, Trivandrum, 695581"
+        },
+        "founder": {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Nikhil Mohan",
+            "jobTitle": "Director of Technology",
+            "url": "https://nikhilmohan.in/",
+            "sameAs": ["https://twitter.com/niksmac_", "https://github.com/niksmac"]
+        },
+        "logo": "https://lightrains.com/assets/img/lightrains-logo.png",
+        "sameAs": ["https://twitter.com/lightrainstech","https://medium.com/lightrains","https://www.facebook.com/lightrainstechnolabs","http://www.linkedin.com/company/1322794","https://github.com/lightrainstech"]
+    }
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"https://lightrains.com/blogs/nft-standards-erc-721-erc-1155/"
+  },
+  "headline": "Various NFT Standards",
+  "about": "Blockchain Consulting.",
+  "sameAs": "https://lightrains.com/blogs/nft-standards-erc-721-erc-1155/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://lightrains.com/assets/img/blog/nft-standards.jpg",
+    "height": 1000,
+    "width": 700
+  },
+  "datePublished": "2021-05-10T08:10:00+05:30",
+  "dateModified": "2021-05-10T08:10:00+05:30",
+  "author": {
+     "@type": "Person",
+     "name": "Nikhil Mohan"
+   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lightrains Technolabs",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lightrains.com/assets/img/lightrains-logo.png",
+      "width": 192,
+      "height": 60
+    }
+  },
+  "description": "Token standards create a uniform set of rules (or in this case code), which allow for:- Easy integration across a number of platforms.- Interoperability.- In..."
+}
+</script>
+
+</head>
+<body>
+  
+  <div class="ampmenu">
+  <a href="/">Home</a>
+  <a href="/amp">Blog</a>
+  <a href="/about/lightrains" >About</a>
+  <a href="/about/contact">Contact</a>
+</div>
+
+  <h1 class="post-title ui header huge" itemprop="name headline" title="Various NFT Standards">Various NFT Standards</h1>
+
+  <amp-img
+  src="/assets/img/blog/nft-standards.jpg"
+  alt="Various NFT Standards" height="216" width="360" on="tap:headline-img-lightbox"
+  layout="responsive" role="img" tabindex="0"
+  ></amp-img>
+
+  <div class="content">
+    <span class="timespan">
+      Mon, May 10, 21
+    </span>
+    <p>Token standards create a uniform set of rules (or in this case code), which allow for:</p>
+
+<ul>
+  <li>Easy integration across a number of platforms.</li>
+  <li>Interoperability.</li>
+  <li>Increased utility value and network effect, as the token can be used in more places/for more applications.</li>
+</ul>
+
+<h2 id="erc-721">ERC-721</h2>
+
+<p>Built on top of the Ethereum blockchain, the first real iteration of a non-fungible standard came about with <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md">ERC721</a>. It was popularised in late 2017 with the rapid adoption of CryptoKitties, a game which allowed for the purchase, and subsequent ‘breeding’ of digital cats. These cats were bought and sold as a virtual token, and some have fetched prices over $200, 000! At its peak, CryptoKitties was responsible for more than 10% of total transactions on the Ethereum network.</p>
+
+<h2 id="erc-1155">ERC-1155</h2>
+
+<p>Created by the team at Enjin, this standard allows for both fungible and non-fungible items in the same smart contract. In doing so, ERC-1155 reduces the amount of data required, creating smoother deployments and requiring a lot less network power.</p>
+
+<p>The best example of <a href="https://eips.ethereum.org/EIPS/eip-1155">ERC-1155</a> is seen in blockchain gaming. Rather than requiring a new contract for every in-game item, you can now create multiple items using the same contract. Moreover, say you collect weapons and coins (crypto) in a game, you can now achieve both with ERC-1155, drastically reducing the resources required to efficiently run blockchain based games, and allowing them to be stored in a simple wallet interface.</p>
+
+<h2 id="erc-994">ERC-994</h2>
+
+<p>Created a system where DNFT’s can identify an area or zone (let’s say the suburb you live in), and can then delegate NFT’s to represent individual houses or parcels of land. In this way, ownership of property can be tokenised whilst also providing a way to update land registries, and legally verify their sale. It was designed with the following essentials:</p>
+
+<ul>
+  <li>A non-conflicting geospace</li>
+  <li>Legal validity and physical sovereignty</li>
+  <li>Compatibility with financial contracts</li>
+</ul>
+
+<h2 id="erc-420">ERC-420</h2>
+
+<p>Also known as the ‘dank’ standard, ERC-420 is more than just an afternoon on the couch. This standard was proposed by the PepeDapp guys and is designed with digital trading cards in mind. It takes into account that in a deck of trading cards, you usually end up with a number of the same card (often referred to as resource cards). If you can cast your mind back to Pokémon cards, we’re talking about the energy cards, or those required to actually use your Pokémons attacks. The same goes for Magic the Gathering with Mana.</p>
+
+<h2 id="erc-809">ERC-809</h2>
+
+<p>This is the standard for renting out your NFT’s, by creating an API to allow any “rival” NFT to be rented. In this case, the NFT is considered rival if being in possession of the NFT simultaneously prevents consumption/access to other individuals. The example given in the Github proposal is driving a car is rival but watching the sunset is non-rival. That is, driving a car prevents others from driving the car, and in the same way, being the renter of an NFT would inhibit other peoples access or use of it.</p>
+
+<h2 id="erc-1201">ERC-1201</h2>
+
+<p>Inspired by ERC-809, the ERC-1201 standard proposes to tokenise rental rights, as opposed to just allowing for them. This creates a means for the rented NFT to be easily exchanged between parties. It is probably easiest to think of it as follows:</p>
+
+<ul>
+  <li>ERC-721 creates an NFT for your house.</li>
+  <li>ERC-809 creates a standard set of commands allowing you to rent said house.</li>
+  <li>ERC-1201 tokenises this right, and in a practical sense, means the leaseholder could sub-lease your house, simply by exchanging the token.</li>
+</ul>
+
+<h2 id="erc-998">ERC-998</h2>
+
+<p>A standard extension for any non-fungible token to own another non-fungible ERC-721 or fungible ERC-20 tokens. Transferring the token composition means transferring the entire hierarchy of items. For example, a cryptokitty may own a scratching post and a feeding dish; the dish may contain some amount of fungible “chow” tokens. If I sell the cryptokitty, I sell all of the belongings of the cryptokitty. <a href="https://github.com/ethereum/eips/issues/998">ERC-998</a></p>
+
+    <a href="https://lightrains.com/blogs/nft-standards-erc-721-erc-1155" title="Various NFT Standards" class="nonamp">Full Version of Various NFT Standards</a>
+  </div>
+  
+  <div class="related ui segment">
+    <h3>Related Posts</h3>
+    <ul class="ui list">
+      
+      
+      <li><a href="/amp/blogs/nft-standards-erc-721-erc-1155/index.html" title="Various NFT Standards">Various NFT Standards</a></li>
+      
+      <li><a href="/amp/blogs/what-is-nft-non-fungible-tokens/index.html" title="What is an NFT aka Non Fungible Tokens">What is an NFT aka Non Fungible Tokens</a></li>
+      
+      <li><a href="/amp/blogs/mongodb-solutions-to-data-growth/index.html" title="MongoDB Solutions to data growth">MongoDB Solutions to data growth</a></li>
+      
+      <li><a href="/amp/blogs/formsure-alternative-google-forms/index.html" title="Why we moved to Formsure from Google Forms">Why we moved to Formsure from Google Forms</a></li>
+      
+    </ul>
+    <p class="slogan">Lightrains Technolabs | Blockchain Consulting. Technology Supercharged</p>
+  </div>
+</body>
+</html>

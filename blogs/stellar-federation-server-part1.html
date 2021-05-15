@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+  <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -118,43 +118,43 @@
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1496x2048.png">
 <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/assets/favicons/apple-touch-startup-image-1536x2008.png">
 </head>
-    <body
-        id="page-blog"
-        class="page page-blog path-inner"
-    >
-       <div class="ui top big sidebar vertical menu">
-            <a class="item" href="/">
-                <i class="large home icon"></i>
-                Home
-            </a>
-            <a class="item" href="/about/lightrains">
-                <i class="large smile icon"></i>
-                About Us
-            </a>
-            <a class="item" href="/about/careers">
-                <i class="large code icon"></i>
-                Careers
-            </a>
-            <a class="item" href="/about/portfolio">
-                <i class="large shipping icon"></i>
-                Portfolio
-            </a>
-            <a class="item" href="/consulting">
-                <i class="large spy icon"></i>
-                Consulting
-            </a>
-            <a class="item" href="/blogs">
-                <i class="large block layout icon"></i>
-                Blog
-            </a>
-            <a class="item" href="/about/contact">
-                <i class="large send icon"></i>
-                Contact
-            </a>
-       </div>
-       <div class="pusher">
-           <div class="ui container">
-                <header class="site-header">
+  <body
+    id="page-blog"
+    class="page page-blog path-inner"
+  >
+   <div class="ui top big sidebar vertical menu">
+      <a class="item" href="/">
+        <i class="large home icon"></i>
+        Home
+      </a>
+      <a class="item" href="/about/lightrains">
+        <i class="large smile icon"></i>
+        About Us
+      </a>
+      <a class="item" href="/about/careers">
+        <i class="large code icon"></i>
+        Careers
+      </a>
+      <a class="item" href="/about/portfolio">
+        <i class="large shipping icon"></i>
+        Portfolio
+      </a>
+      <a class="item" href="/consulting">
+        <i class="large spy icon"></i>
+        Consulting
+      </a>
+      <a class="item" href="/blogs">
+        <i class="large block layout icon"></i>
+        Blog
+      </a>
+      <a class="item" href="/about/contact">
+        <i class="large send icon"></i>
+        Contact
+      </a>
+   </div>
+   <div class="pusher">
+     <div class="ui container">
+        <header class="site-header">
    <div class="widescreen computer mobile only">
        <div class="ui secondary menu">
             <a href="/" class="item left" title="Home of Lightrains Technolabs"
@@ -250,19 +250,19 @@
        </div>
    </div>
 </header>
-           </div>
-           <div class="ui container">
-                <header class="post-header">
-   <h1 class="post-title" id="title">Stellar Federation Server - Part 1/2</h1>
+     </div>
+     <div class="ui container">
+        <header class="post-header">
+ <h1 class="post-title" id="title">Stellar Federation Server - Part 1/2</h1>
 </header>
 <div class="ui grid stackable">
-   <div class="ui eleven wide column text page-text">
-       <h2 class="post-subtitle" itemprop="name headline">
-            A way for Stellar client software to resolve email-like addresses to a stellar address.
-       </h2>
-          <img class="ui fluid image"
-        id="tgiv_cover" src="/assets/img/blog/stellar-federation-server.png" alt="Stellar Federation Server - Part 1/2">
-       <div class="ui hidden divider"></div>
+ <div class="ui eleven wide column text page-text">
+   <h2 class="post-subtitle" itemprop="name headline">
+      A way for Stellar client software to resolve email-like addresses to a stellar address.
+   </h2>
+      <img class="ui fluid image" loading="lazy"
+    id="tgiv_cover" src="/assets/img/blog/stellar-federation-server.png" alt="Stellar Federation Server - Part 1/2">
+   <div class="ui hidden divider"></div>
 <div class="author">
   by <a href="http://nikhilmohan.in" id="tgiv_author" target="_blank">Nikhil M</a> posted on <span>Sun, Aug 12, 2018</span> in <a href="/tag/stellar">Stellar</a> 
  <div class="ui pointing dropdown icon circular button right floated">
@@ -312,8 +312,8 @@
  </div>
 </div>
 <div class="ui hidden divider"></div>
-        <article>
-           <p>The <a href="https://www.stellar.org/developers/guides/concepts/federation.html">Stellar federation protocol</a> maps Stellar addresses to a unique name spaced string. It’s a way for Stellar client software to resolve email-like addresses such as <code class="language-plaintext highlighter-rouge">name*your_domain.com</code> into account IDs like: <code class="language-plaintext highlighter-rouge">GCFFPIFOYY7Z...TK6T32V37KEJU</code>. Stellar addresses provide an easy way for users to send and receive payments by using a syntax that interoperates across different domains and providers. When sending a payment, you contact a federation server first to determine what Stellar account ID to pay. Luckily, the bridge server does this for you.</p>
+    <article>
+     <p>The <a href="https://www.stellar.org/developers/guides/concepts/federation.html">Stellar federation protocol</a> maps Stellar addresses to a unique name spaced string. It’s a way for Stellar client software to resolve email-like addresses such as <code class="language-plaintext highlighter-rouge">name*your_domain.com</code> into account IDs like: <code class="language-plaintext highlighter-rouge">GCFFPIFOYY7Z...TK6T32V37KEJU</code>. Stellar addresses provide an easy way for users to send and receive payments by using a syntax that interoperates across different domains and providers. When sending a payment, you contact a federation server first to determine what Stellar account ID to pay. Luckily, the bridge server does this for you.</p>
 <p>To explain it simply, a Stellar Federation Server is a database with the following table structure which maps a Stellar address to a string(<code class="language-plaintext highlighter-rouge">friendly_id</code>).</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| id | first_name | last_name | friendly_id         |
 |----|------------|-----------|---------------------|
@@ -335,8 +335,8 @@
   <li>proceed with the payment</li>
 </ol>
 <h4 id="todo-how-to-set-up-stellar-federation-server---part-22">TODO: How to set up Stellar Federation Server - Part 2/2</h4>
-        </article>
-       <div class="ui hidden divider"></div>
+    </article>
+   <div class="ui hidden divider"></div>
 <div class="ui tiny label endorsement">
   All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply endorsement.
 </div>
@@ -350,10 +350,10 @@ s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
-   </div>
-   <div class="ui five wide column">
-       <div class="ui hidden divider"></div>
-        <h3>Posted In</h3>
+ </div>
+ <div class="ui five wide column">
+   <div class="ui hidden divider"></div>
+    <h3>Posted In</h3>
 <div class="ui black labels">
   <a href="/tag/principles/" class="ui label" title="Blogs Tagged Principles" >Principles</a>
   <a href="/tag/stellar/" class="ui label" title="Blogs Tagged Stellar" >Stellar</a>
@@ -396,12 +396,12 @@ s.setAttribute('data-timestamp', +new Date());
    </div>
  </div>
 </div>
-   </div>
+ </div>
 </div>
-           </div>
-           <div class="fullw">
-               <div class="ui container footer">
-                   <div class="ui inverted vertical footer segment">
+     </div>
+     <div class="fullw">
+       <div class="ui container footer">
+         <div class="ui inverted vertical footer segment">
    <div class="ui container">
        <div class="ui inverted divided equal height stackable grid">
            <div class="two wide column">
@@ -474,9 +474,9 @@ s.setAttribute('data-timestamp', +new Date());
 </div>
    </div>
 </div>
-               </div>
-           </div>
-            <script>
+       </div>
+     </div>
+      <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -516,7 +516,7 @@ s.setAttribute('data-timestamp', +new Date());
     }
 </script>
 <script src="/assets/js/bundle-front.min.js"></script>
-       </div>
-    </body>
+   </div>
+  </body>
 
 <script>if ("serviceWorker" in navigator) {navigator.serviceWorker.register("/sw.js").then(function(registration) {console.log("ServiceWorker registration successful with scope: ",    registration.scope);}).catch(function(err) {console.log("ServiceWorker registration failed: ", err);});}</script>
